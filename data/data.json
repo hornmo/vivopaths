@@ -1,0 +1,214 @@
+[
+  {
+    "authors":[
+      {
+	"id": "26",
+	"fullname": "Lambert Heller",
+	"name": "L Heller",
+	"count": "21",
+	"publications": {
+	  "32": 1,
+	  "33": 1,
+	  "60": 1,
+	  "77": 1
+	},
+	"authors": {
+	  "4": 3,
+	  "9": 1
+	},
+	"keywords": {
+	  "1": 1,
+	  "2": 3,
+	  "3": 4,
+	  "4": 1
+	},
+	"type": 0
+      },
+      {
+	"id": "4",
+	"fullname": "Ina Blümel",
+	"name": "I Blümel",
+	"count": "6",
+	"publications": {
+	  "33": 1,
+	  "77": 1,
+	  "76": 1
+	},
+	"authors": {
+	  "26": 3,
+	  "9": 1
+	},
+	"type": 0
+      },
+      {
+	"id": "9",
+	"fullname": "Simone Cartellieri",
+	"name": "S Cartellieri",
+	"count": "1",
+	"publications": {
+	  "60": 1
+	},
+	"authors": {
+	  "4": 3
+	},
+	"keywords": {
+	  "2": 1,
+	  "4": 1
+	},
+	"type": 0
+      }
+    ],
+    "publications":[
+      {
+	"id": "32",
+	"title": "Aspekte der Kommunikation mit Wissenschaftsblogs",
+	"uri": null,
+	"authors": {
+	  "26": 1
+	},
+	"abstract": null,
+	"keywords": {
+	  "1": 1,
+	  "3": 1
+	},
+	"year": "2014",
+	"type": 1
+      },
+      {
+	"id": "33",
+	"title": "Aspekte der Kommunikation mit Twitter",
+	"uri": null,
+	"authors": {
+	  "26": 1
+	},
+	"abstract": null,
+	"keywords": {
+	  "2": 1,
+	  "3": 1
+	},
+	"year": "2014",
+	"type": 1
+      },
+      {
+	"id": "60",
+	"title": "Entwicklung eines Verfahrens zur automatischen Sammlung, Erschließung und Bereitstellung multimedialer Open-Access-Objekte mittels der Infrastruktur von Wikimedia Commons und Wikidata",
+	"uri": null,
+	"authors": {
+	  "26": 1,
+	  "4": 1,
+	  "9": 1
+	},
+	"abstract": null,
+	"keywords": {
+	  "2": 1,
+	  "4": 1
+	},
+	"year": "2011",
+	"type": 1
+      },
+      {
+	"id": "77",
+	"title": "The Quest for Research Information",
+	"uri": null,
+	"authors": {
+	  "26": 1,
+	  "4": 1
+	},
+	"abstract": null,
+	"keywords": {
+	  "2": 1,
+	  "3": 1
+	},
+	"year": "2014",
+	"type": 1
+      },
+      {
+	"id": "76",
+	"title": "Taming the Wilderness of Open Research Information",
+	"uri": null,
+	"authors": {
+	  "4": 1
+	},
+	"abstract": null,
+	"keywords": {
+	  "3": 1
+	},
+	"year": "2014",
+	"type": 1
+      }
+    ],
+    "keywords":[
+      {
+	"id": "1",
+	"title": "Literaturverwaltung",
+	"count": 1,
+	"publications": {
+	  "32": 1
+	},
+	"authors": {
+	  "26": 1
+	},
+	"keywords": {
+	  "3": 1
+	},
+	"type": 2
+      },
+      {
+	"id": "2",
+	"title": "Kommunikation",
+	"count": 3,
+	"publications": {
+	  "33": 1,
+	  "60": 1,
+	  "77": 1
+	},
+	"authors": {
+	  "26": 3,
+	  "4": 2,
+	  "9": 1
+	},
+	"keywords": {
+	  "3": 2,
+	  "4": 1
+	},
+	"type": 2
+      },
+      {
+	"id": "3",
+	"title": "Open Science",
+	"count": 4,
+	"publications": {
+	  "32": 1,
+	  "33": 1,
+	  "76": 1,
+	  "77": 1
+	},
+	"authors": {
+	  "26": 1
+	},
+	"keywords": {
+	  "1": 1,
+	  "2": 2
+	},
+	"type": 2
+      },
+      {
+	"id": "4",
+	"title": "Open Access",
+	"count": 1,
+	"publications": {
+	  "60": 1
+	},
+	"authors": {
+	  "26": 1,
+	  "4": 1,
+	  "9": 1
+	},
+	"keywords": {
+	  "2": 1
+	},
+	"type": 2
+      }
+    ]
+  }
+]

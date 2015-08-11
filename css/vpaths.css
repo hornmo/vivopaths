@@ -1,0 +1,48 @@
+
+#top{
+  height:40px;
+  background-color:#ddd;
+  text-align:center;
+}
+#search input{
+  margin:7px;
+  width:250px;
+  padding: 3px 5px;
+}
+#suggestions{
+  width:250px;
+  border:1px solid #000;
+  margin:0 auto;
+  opacity: 0;
+  text-align:left;
+  z-index:10;
+  position:relative;
+}
+#suggestions div{
+  border-bottom:1px solid #efefef;
+  padding:2px;
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+}
+
+#canvas{ z-index: 2 }
+
+#labels{ 
+  z-index: 4; 
+  width:100%;
+}
+.label{
+  position:absolute;
+}
+.author{
+  color:#3377CC;
+}
+.pub{
+  color:#77AA33;
+}
+.keyword{
+  color:#CC7733;
+}
+
+

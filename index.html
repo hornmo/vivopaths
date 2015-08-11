@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="js/vpaths.js"></script>
+    <link href="css/vpaths.css" rel="stylesheet"></link>
+    <script type="text/javascript">
+    function init() {
+      $('#canvas').css({height: $(document).height()});
+      view = new View("#display").init();
+    }
+    </script>
+  </head>
+  <body onload="init()">
+    <header>
+      <div id="top">
+	<div id="search">
+	  <input type="text" />
+	</div>
+	<div id="suggestions"></div>
+      </div>
+    </header>
+    <div id="labels">
+    </div>
+    <div id="canvas">
+      <svg id="display"></svg>
+    </div>
+  </body>
+</html>
