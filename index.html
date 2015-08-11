@@ -7,7 +7,7 @@
     <link href="css/vpaths.css" rel="stylesheet"></link>
     <script type="text/javascript">
     function init() {
-      $('#canvas').css({height: $(document).height()});
+      $('#canvas').css({height: $(document).height() - HEADERH});
       view = new View("#display").init();
     }
     </script>

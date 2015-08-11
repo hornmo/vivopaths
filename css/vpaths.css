@@ -17,6 +17,7 @@
   text-align:left;
   z-index:10;
   position:relative;
+  background-color:#fff;
 }
 #suggestions div{
   border-bottom:1px solid #efefef;
@@ -26,7 +27,10 @@
   cursor:pointer;
 }
 
-#canvas{ z-index: 2 }
+#canvas{ 
+  z-index: 2;
+  position:fixed;
+}
 
 #labels{ 
   z-index: 4; 
@@ -34,15 +38,19 @@
 }
 .label{
   position:absolute;
+  z-index: 4;
+  padding: 7px;
 }
 .author{
   color:#3377CC;
+  max-width:200px;
 }
 .pub{
   color:#77AA33;
 }
 .keyword{
   color:#CC7733;
+  max-width:200px;
 }
 
 

@@ -1,7 +1,7 @@
 var SPEED = 500;
 var FONTMIN = 10;
 var FONTMAX = 20;
-var MIDMINWIDTH = 300;
+var MIDMINWIDTH = 200;
 var SIDEMINWIDTH = 200;
 var HEADERH = 40;
 var SEARCHPH = "search!";
@@ -16,7 +16,7 @@ function View(svg){
     this.sections = this.setSections();
     S.attr({
       width: this.width, 
-      height: this.height
+      height: this.height - HEADERH
     });
     $('#search input').attr('placeholder', SEARCHPH);
     this.fontsize = this.interval(this.width * this.height, 800 * 600, 2560 * 1600, FONTMIN, FONTMAX, false);
@@ -25,7 +25,7 @@ function View(svg){
     this.keywords = [];
     this.events();
     this.getData();
-    this.searchTerm;
+    this.edges = [];
     
     return this;
   };
@@ -39,8 +39,8 @@ function View(svg){
       s[2] = [w, h];
     }else{
       s[0] = [200, h];
-      s[1] = [w-200, h];
-      s[2] = [w, h];
+      s[1] = [w, h];
+      s[2] = s[0];
     }
     return s;
   }
@@ -56,7 +56,7 @@ function View(svg){
   this.getPars = function(){
     var parString = window.location.search.substring(1);
     var pars = parString.split('&');
-    var ret = []
+    var ret = [];
     for(var i = 0; i < pars.length; i++){
 	var pair = pars[i].split('=');
 	ret.push(pair);
@@ -89,10 +89,12 @@ function View(svg){
 	}
       }
     });
-    this.drawLabels(that.selected);
+    this.drawLabels();
+    this.drawEdges();
   };
   this.events = function(){
     var that = this;
+    var draw = null;
     $('#search input').focus(function(){
       $(this).attr('placeholder', '');
     });
@@ -114,11 +116,27 @@ function View(svg){
 	$('#suggestions').css('opacity', 0);
 	$('.suggested').remove();
 	$('#search input').val('');
+	S.clear();
+	view.authors = [];
+	view.publications = [];
+	view.keywords = [];
 	that.idToSelection(sid);
     });
     $(window).resize(function (e){
       view.sections = that.setSections();
-      that.drawLabels();
+      var noh = view.sections[0][1] - HEADERH;
+      S.clear();
+      S.attr({
+	width: that.width, 
+	height: noh
+      });
+      clearTimeout(draw);
+      draw = setTimeout(function(){
+	that.drawLabels();
+	setTimeout(function(){
+	  that.drawEdges();
+	}, SPEED);
+      }, SPEED);
     })
   }
   this.idToSelection = function(id){
@@ -135,6 +153,7 @@ function View(svg){
       view.selection[0][0] = 'keyword';
     }
     view.selection[0][1] = splitID[1];
+    window.location.search='?'+ view.selection[0][0] + '=' + view.selection[0][1];
     that.updateLabels();
   }
   this.showSuggestions = function(term){
@@ -184,20 +203,32 @@ function View(svg){
     for(i=0; i < view.publications.length; i++){
       var pub = view.publications[i];
       var maxpubs = 10;
+      var iid = '#'+ pub.type + '_' + pub.id;
+      var lastpos = {top: HEADERH }
+      var lasth = 0;
       var maxwidth = that.sections[1][0] - that.sections[0][0];
+      var hleft = that.sections[0][1] - (lastpos.top + lasth);
       var pos = [];
-      if(i < 10){
+      if(i < maxpubs && hleft >= 100){
 	if(i > 0){
-	  pos = that.getPos(pub.type, view.publications[i-1]);
+	  pos = that.getPos(pub.type, i, pub);
 	}else{
-	  pos = that.getPos(pub.type, 0);
+	  pos = that.getPos(pub.type, i, 0);
 	}
 	$('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span>'+pub.title+'</span></div>');
+	var w = $(iid).width();
+	var h = $(iid).height();
+	pos[1][0] = pos[0][0] + w;
+	pos[1][1] = pos[0][1] + h;
+	view.publications[i].p = pos;
+	view.publications[i].active = true;
       }
+      lastpos = $(iid).position();
+      lasth = $(iid).height();
     };
     for(i=0; i < view.authors.length; i++){
       var a = view.authors[i];
-      var pos = that.getPos(a.type, a);
+      var pos = that.getPos(a.type, i, a);
       var iid = '#'+ a.type + '_' + a.id;
       if(pos[0][1] !== false){
 	$('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+a.name+'</span></div>');
@@ -206,23 +237,73 @@ function View(svg){
 	pos[1][0] = pos[0][0] + w;
 	pos[1][1] = pos[0][1] + h;
 	view.authors[i].p = pos;
+	view.authors[i].active = true;
       }
     };
     console.log(view.authors);
     for(i=0; i < view.keywords.length; i++){
       var k = view.keywords[i];
-      var pos = that.getPos(k.type, k);
+      var pos = that.getPos(k.type, i, k);
+      var iid = '#'+ k.type + '_' + k.id;
       if(pos[0][1] !== false){
 	$('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+k.title+'</span></div>');
+	var w = $(iid).width();
+	var h = $(iid).height();
+	pos[1][0] = pos[0][0] + w;
+	pos[1][1] = pos[0][1] + h;
+	view.keywords[i].p = pos;
+	view.keywords[i].active = true;
       }
     };
   }
-  this.getPos = function(type, item){
+  this.drawEdges = function(){
+    var that = this;
+    $.each(view.authors, function(k, a){
+      if(a.publications && !a.selected){
+	$.each(a.publications, function(kp, vp){
+	  $.each(view.publications, function(gk, gv){
+	    if(kp == gv.id && gv.active){
+	      console.log(a.p);
+	      var mya = ((a.p[0][1] + a.p[1][1]) / 2) - HEADERH;
+	      var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
+	      var cx = (a.p[1][0] + gv.p[0][0]) / 2;
+	      
+	      var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
+	      S.path(path).attr({stroke: "#ccc", strokeWidth: 1, fill: "none", opacity: 0, class: "path"});
+	    }
+	  });
+	});
+      }
+    });
+    $.each(view.keywords, function(k, a){
+      if(a.publications && !a.selected){
+	$.each(a.publications, function(kp, vp){
+	  $.each(view.publications, function(gk, gv){
+	    if(kp == gv.id && gv.active){
+	      var mya = ((a.p[0][1] + a.p[1][1]) / 2) - HEADERH;
+	      var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
+	      if(that.sections[0][0] > 200){
+		var cx = (a.p[0][0] + gv.p[1][0]) / 2;
+		var path = 'M'+ a.p[0][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
+	      }else{
+		var cx = (a.p[1][0] + gv.p[0][0]) / 2;
+		var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
+	      }
+	      S.path(path).attr({stroke: "#ccc", strokeWidth: 1, fill: "none", opacity: 0, class: "path" });
+	    }
+	  });
+	});
+      }
+    });
+    S.selectAll('.path').animate({opacity: 1}, SPEED/2);
+  }
+  this.getPos = function(type, no, item){
     var that = this;
     var p = [[],[]];
+    var space = that.sections[1][1] / view.publications.length;
     if(type == 1){
       p[0][0] = that.sections[0][0];
-      if(item != 0){
+/*      if(item != 0){
 	var iid = '#'+ type + '_' + item.id;
 	var ppos = $(iid).position();
 	var ph = $(iid).height();
@@ -230,15 +311,15 @@ function View(svg){
 	p[0][1] = ppos.top + ph + 30;
       }else{
 	p[0][1] = HEADERH + 50;
-      }    
+      }  */
+      p[0][1] = space*no + (space/2);
     }
     else{
       if(!item.selected){
 	var i = 0;
-	if(item.type == 0){
+	if(item.type == 0 || that.sections[0][0] == 200){
 	  p[0][0] = 50;
-	}
-	if(item.type == 2){
+	}else if(item.type == 2 && that.sections[0][0] > 200){
 	  p[0][0] = that.sections[1][0] + 50;
 	}
 	p[0][1] = 0;
@@ -246,7 +327,7 @@ function View(svg){
 	  $.each(view.publications, function(pk,pv){
 	    if(ik == pv.id){
 	      var pid = '#'+ 1 + '_' + ik;
-	      var ppos = $(pid).position();
+	      var ppos = $(pid).offset();
 	      var ph = $(pid).height();
 	      p[0][1] += (2*ppos.top + ph)/2;
 	      i++;
@@ -255,18 +336,23 @@ function View(svg){
 	});
 	if(i > 0){
 	  p[0][1] /= i;
+	  var oa = '';
 	  if(item.type == 0){
-	    var oa = $('.label.author');
-	    var minoverlap = p[0][1]-10;
-	    var maxoverlap = p[0][1]+20;
-	    $.each(oa, function(k,v){
-	      var t = parseInt($(this).css('top'), 10);
-	      var l = $(this).css('left');
-	      if(t >= minoverlap && t <= maxoverlap){
-		p[0][0] += 100;
-	      }
-	    });
+	    oa = $('.label.author');
+	  }else if(item.type == 2){
+	    oa = $('.label.keyword');
 	  }
+	  var minoverlap = p[0][1]-FONTMAX;
+	  var maxoverlap = p[0][1]+FONTMAX;
+	  $.each(oa, function(k,v){
+	    var t = parseInt($(this).css('top'), 10);
+	    var l = $(this).css('left');
+	    var w = $(this).width();
+	    if(t >= minoverlap && t <= maxoverlap){
+	      p[0][0] += w + 20;
+	      p[0][1] += 20;
+	    }
+	  });
 	}else{
 	  p[0][1] = false;
 	}
