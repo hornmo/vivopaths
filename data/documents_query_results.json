@@ -1,0 +1,415 @@
+{
+  "head": {
+    "vars": [ "document_id" , "title" , "no_authors" , "authors" , "names" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article49" } ,
+        "title": { "type": "literal" , "value": "\"Wow, someone wants to publish me!\" \u2014 Revisited" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article52" } ,
+        "title": { "type": "literal" , "value": "1.000 Antworten auf die Frage: Literaturverwaltung \u2014 Was benutzen Sie, was brauchen Sie?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article3" } ,
+        "title": { "type": "literal" , "value": "3D @Technische Informationsbibliothek (TIB)" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article4" } ,
+        "title": { "type": "literal" , "value": "3D @Technische Informationsbibliothek (TIB)" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article71" } ,
+        "title": { "type": "literal" , "value": "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/45" } ,
+        "names": { "type": "literal" , "value": "Lindlar,  Michelle" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article42" } ,
+        "title": { "type": "literal" , "value": "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/58" } ,
+        "names": { "type": "literal" , "value": "Nürnberger,  Dorothee" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article30" } ,
+        "title": { "type": "literal" , "value": "Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext." } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/55" } ,
+        "names": { "type": "literal" , "value": "Nebelung,  Lars" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article32" } ,
+        "title": { "type": "literal" , "value": "Aspekte der Kommunikation mit Wissenschaftsblogs" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article65" } ,
+        "title": { "type": "literal" , "value": "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium " } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/45" } ,
+        "names": { "type": "literal" , "value": "Lindlar,  Michelle" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article41" } ,
+        "title": { "type": "literal" , "value": "Bibliotheksverbünde, Virtuelle Fachbibliotheken" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/27" } ,
+        "names": { "type": "literal" , "value": "Hohlfeld,  Michael" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article73" } ,
+        "title": { "type": "literal" , "value": "Building Information Modeling \u2013 A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/45" } ,
+        "names": { "type": "literal" , "value": "Lindlar,  Michelle" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article24" } ,
+        "title": { "type": "literal" , "value": "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/83" } ,
+        "names": { "type": "literal" , "value": "Wilhelm,  Christine" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article19" } ,
+        "title": { "type": "literal" , "value": "Current developments in document delivery in Germany " } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/5" } ,
+        "names": { "type": "literal" , "value": "Brammer,  Markus" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article64" } ,
+        "title": { "type": "literal" , "value": "Das Netzwerk und die Institution" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article31" } ,
+        "title": { "type": "literal" , "value": "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/56" } ,
+        "names": { "type": "literal" , "value": "Neumann,  Janna" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article26" } ,
+        "title": { "type": "literal" , "value": "DataCite and DOI names for research data" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/56" } ,
+        "names": { "type": "literal" , "value": "Neumann,  Janna" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article2" } ,
+        "title": { "type": "literal" , "value": "Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/1" } ,
+        "names": { "type": "literal" , "value": "Bähr,  Thomas" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article10" } ,
+        "title": { "type": "literal" , "value": "Development Thinking and Practice on the German National Science and Technology Library" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/6" } ,
+        "names": { "type": "literal" , "value": "Brase,  Jan" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article9" } ,
+        "title": { "type": "literal" , "value": "Digitale Bibliothek und Portal GetInfo in der TIB Hannover" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/67" } ,
+        "names": { "type": "literal" , "value": "Roscoe,  Elena" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article66" } ,
+        "title": { "type": "literal" , "value": "Discovery Metadata - Metadata Standards vs. New Requirements" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article12" } ,
+        "title": { "type": "literal" , "value": "Dokumentlieferung" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/61" } ,
+        "names": { "type": "literal" , "value": "Olf,  Jens" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article28" } ,
+        "title": { "type": "literal" , "value": "E-Books in wissenschaftlichen Bibliotheken" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/n1094" } ,
+        "names": { "type": "literal" , "value": "Niemeyer, Sandra " }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article29" } ,
+        "title": { "type": "literal" , "value": "E-Books in wissenschaftlichen Bibliotheken" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/n1094" } ,
+        "names": { "type": "literal" , "value": "Niemeyer, Sandra " }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article39" } ,
+        "title": { "type": "literal" , "value": "E-IRG White Paper 2013 " } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article17" } ,
+        "title": { "type": "literal" , "value": "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/77" } ,
+        "names": { "type": "literal" , "value": "Tobschall,  Esther" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article5" } ,
+        "title": { "type": "literal" , "value": "Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article22" } ,
+        "title": { "type": "literal" , "value": "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/75" } ,
+        "names": { "type": "literal" , "value": "Strobel,  Sven" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article50" } ,
+        "title": { "type": "literal" , "value": "ForscherInnen gemeinsam neue Wege im Web eröffnen \u2014 Das Open Science Lab der TIB Hannover" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article33" } ,
+        "title": { "type": "literal" , "value": "Freie Lizenzen und Nachnutzung" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/80" } ,
+        "names": { "type": "literal" , "value": "Tullney,  Marco" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article78" } ,
+        "title": { "type": "literal" , "value": "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article15" } ,
+        "title": { "type": "literal" , "value": "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces." } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/17" } ,
+        "names": { "type": "literal" , "value": "Franzkowiak,  Anette" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article14" } ,
+        "title": { "type": "literal" , "value": "Linked Heritage  - ein europäisches Projekt" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/50" } ,
+        "names": { "type": "literal" , "value": "Mensing,  Petra" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article20" } ,
+        "title": { "type": "literal" , "value": "Literaturauswahl und -bestellung leichter gemacht!" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/76" } ,
+        "names": { "type": "literal" , "value": "Tempel,  Bernhard" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article13" } ,
+        "title": { "type": "literal" , "value": "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB)." } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/12" } ,
+        "names": { "type": "literal" , "value": "Derr,  Elena" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article34" } ,
+        "title": { "type": "literal" , "value": "Open Access" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/80" } ,
+        "names": { "type": "literal" , "value": "Tullney,  Marco" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article7" } ,
+        "title": { "type": "literal" , "value": "Open Access - Was sagen die Bibliotheken?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/68" } ,
+        "names": { "type": "literal" , "value": "Rosemann,  Uwe" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article53" } ,
+        "title": { "type": "literal" , "value": "Open Access Week - Open Access für Geisteswissenschaftler?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/76" } ,
+        "names": { "type": "literal" , "value": "Tempel,  Bernhard" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article43" } ,
+        "title": { "type": "literal" , "value": "Open Access, Open Content und gemeinfreies Kulturerbe" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article6" } ,
+        "title": { "type": "literal" , "value": "Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article54" } ,
+        "title": { "type": "literal" , "value": "Präsentationsfolien als Buch - wer braucht das?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/76" } ,
+        "names": { "type": "literal" , "value": "Tempel,  Bernhard" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article51" } ,
+        "title": { "type": "literal" , "value": "Publikationsberatung: Neun Thesen vom #iCamp12" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article25" } ,
+        "title": { "type": "literal" , "value": "RADAR \u2013 Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/56" } ,
+        "names": { "type": "literal" , "value": "Neumann,  Janna" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article81" } ,
+        "title": { "type": "literal" , "value": "Resümee: Was bleibt mir von dieser Tagung ?" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/55" } ,
+        "names": { "type": "literal" , "value": "Nebelung,  Lars" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article70" } ,
+        "title": { "type": "literal" , "value": "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/76" } ,
+        "names": { "type": "literal" , "value": "Tempel,  Bernhard" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article21" } ,
+        "title": { "type": "literal" , "value": "Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/75" } ,
+        "names": { "type": "literal" , "value": "Strobel,  Sven" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article48" } ,
+        "title": { "type": "literal" , "value": "Sieben Gründe Zotero auszuprobieren" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article40" } ,
+        "title": { "type": "literal" , "value": "Speicherung & Datenverwaltung in Produktion und Archiv" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/1" } ,
+        "names": { "type": "literal" , "value": "Bähr,  Thomas" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article27" } ,
+        "title": { "type": "literal" , "value": "TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/65" } ,
+        "names": { "type": "literal" , "value": "Plank,  Margret" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article74" } ,
+        "title": { "type": "literal" , "value": "TIB's Portal for audiovisual media - New ways of indexing and retrieval" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/65" } ,
+        "names": { "type": "literal" , "value": "Plank,  Margret" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article76" } ,
+        "title": { "type": "literal" , "value": "Taming the Wilderness of Open Research Information" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article18" } ,
+        "title": { "type": "literal" , "value": "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/67" } ,
+        "names": { "type": "literal" , "value": "Roscoe,  Elena" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article77" } ,
+        "title": { "type": "literal" , "value": "The Quest for Research Information" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article69" } ,
+        "title": { "type": "literal" , "value": "Towards an automatic multi-label classification of 3D architectural models" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article80" } ,
+        "title": { "type": "literal" , "value": "VIVO for Scientific Communities - Making researchers & their activities discoverable" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "names": { "type": "literal" , "value": "Blümel,  Ina" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article23" } ,
+        "title": { "type": "literal" , "value": "Wissen auf einen Klick" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "names": { "type": "literal" , "value": "Heller,  Lambert" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article47" } ,
+        "title": { "type": "literal" , "value": "arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/77" } ,
+        "names": { "type": "literal" , "value": "Tobschall,  Esther" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article45" } ,
+        "title": { "type": "literal" , "value": "arXiv - Veteran und Vorreiter" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/77" } ,
+        "names": { "type": "literal" , "value": "Tobschall,  Esther" }
+      } ,
+      {
+        "document_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article46" } ,
+        "title": { "type": "literal" , "value": "arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /" } ,
+        "no_authors": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/77" } ,
+        "names": { "type": "literal" , "value": "Tobschall,  Esther" }
+      }
+    ]
+  }
+}

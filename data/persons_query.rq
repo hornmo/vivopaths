@@ -1,0 +1,13 @@
+SELECT ?person_id ?name (COUNT(DISTINCT ?title) AS ?no_publications) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?documents) (GROUP_CONCAT(DISTINCT ?title; separator="; ") AS ?titles)
+WHERE
+{
+?authorship_id a vivo:Authorship .
+?authorship_id vivo:relates ?person_id .
+?person_id a foaf:Person .
+?person_id rdfs:label ?name .
+?document_id a bibo:Document .
+?document_id rdfs:label ?title .
+?document_id vivo:relatedBy ?authorship_id .
+}
+GROUP BY ?person_id ?name
+ORDER BY ?name
