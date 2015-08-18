@@ -1,169 +1,197 @@
 [{
   "head": {
-    "vars": [ "person_id" , "name" , "counts" , "documents" , "titles" ]
+    "vars": [ "person_id" , "name" , "no_publications" , "documents" , "titles" , "researcharea_ids" , "researchareas" ]
   } ,
   "results": {
     "bindings": [
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/4" } ,
         "name": { "type": "literal" , "value": "Blümel,  Ina" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "6" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "6" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article76; http://vivo.mydomain.edu/individual/article69; http://vivo.mydomain.edu/individual/article77; http://vivo.mydomain.edu/individual/article78; http://vivo.mydomain.edu/individual/article80; http://vivo.mydomain.edu/individual/article3; http://vivo.mydomain.edu/individual/article4" } ,
-        "titles": { "type": "literal" , "value": "Taming the Wilderness of Open Research Information; Towards an automatic multi-label classification of 3D architectural models; The Quest for Research Information; From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession; VIVO for Scientific Communities - Making researchers & their activities discoverable; 3D @Technische Informationsbibliothek (TIB)" }
+        "titles": { "type": "literal" , "value": "Taming the Wilderness of Open Research Information; Towards an automatic multi-label classification of 3D architectural models; The Quest for Research Information; From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession; VIVO for Scientific Communities - Making researchers & their activities discoverable; 3D @Technische Informationsbibliothek (TIB)" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc47; http://vivo.mydomain.edu/individual/conc70; http://vivo.mydomain.edu/individual/conc82; http://vivo.mydomain.edu/individual/conc78; http://vivo.mydomain.edu/individual/conc17; http://vivo.mydomain.edu/individual/conc97; http://vivo.mydomain.edu/individual/conc95; http://vivo.mydomain.edu/individual/conc1; http://vivo.mydomain.edu/individual/conc5; http://vivo.mydomain.edu/individual/conc49" } ,
+        "researchareas": { "type": "literal" , "value": "information extraction ; multimedia object; Point Cloud ; Open Science; classification; Semantic Web; Science 2.0;  retrieval; 3D-Modell; Informationswissenschaft" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/5" } ,
         "name": { "type": "literal" , "value": "Brammer,  Markus" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article19" } ,
-        "titles": { "type": "literal" , "value": "Current developments in document delivery in Germany " }
+        "titles": { "type": "literal" , "value": "Current developments in document delivery in Germany " } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc63; http://vivo.mydomain.edu/individual/conc52; http://vivo.mydomain.edu/individual/conc28" } ,
+        "researchareas": { "type": "literal" , "value": "Lizenz; Interlibrary Loan; document delivery" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/6" } ,
         "name": { "type": "literal" , "value": "Brase,  Jan" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article10" } ,
-        "titles": { "type": "literal" , "value": "Development Thinking and Practice on the German National Science and Technology Library" }
+        "titles": { "type": "literal" , "value": "Development Thinking and Practice on the German National Science and Technology Library" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc30; http://vivo.mydomain.edu/individual/conc91; http://vivo.mydomain.edu/individual/conc19; http://vivo.mydomain.edu/individual/conc87; http://vivo.mydomain.edu/individual/conc39" } ,
+        "researchareas": { "type": "literal" , "value": "DOI; research; DataCite; publication; Forschungsdaten" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/1" } ,
         "name": { "type": "literal" , "value": "Bähr,  Thomas" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article40; http://vivo.mydomain.edu/individual/article2" } ,
-        "titles": { "type": "literal" , "value": "Speicherung & Datenverwaltung in Produktion und Archiv; Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012" }
+        "titles": { "type": "literal" , "value": "Speicherung & Datenverwaltung in Produktion und Archiv; Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc54; http://vivo.mydomain.edu/individual/conc22; http://vivo.mydomain.edu/individual/conc6" } ,
+        "researchareas": { "type": "literal" , "value": "Langzeitarchivierung; Datenverwaltung; Archiv" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/12" } ,
         "name": { "type": "literal" , "value": "Derr,  Elena" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article13" } ,
-        "titles": { "type": "literal" , "value": "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB)." }
+        "titles": { "type": "literal" , "value": "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB)." } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc67; http://vivo.mydomain.edu/individual/conc77; http://vivo.mydomain.edu/individual/conc33" } ,
+        "researchareas": { "type": "literal" , "value": "Metadaten; Open Educational Resources; Dublin Core" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/17" } ,
         "name": { "type": "literal" , "value": "Franzkowiak,  Anette" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article15" } ,
-        "titles": { "type": "literal" , "value": "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces." }
+        "titles": { "type": "literal" , "value": "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces." } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc90; http://vivo.mydomain.edu/individual/conc56; http://vivo.mydomain.edu/individual/conc57" } ,
+        "researchareas": { "type": "literal" , "value": "renovation; library building ; library equipment" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
         "name": { "type": "literal" , "value": "Heller,  Lambert" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article48; http://vivo.mydomain.edu/individual/article66; http://vivo.mydomain.edu/individual/article50; http://vivo.mydomain.edu/individual/article43; http://vivo.mydomain.edu/individual/article51; http://vivo.mydomain.edu/individual/article6; http://vivo.mydomain.edu/individual/article52; http://vivo.mydomain.edu/individual/article32; http://vivo.mydomain.edu/individual/article23; http://vivo.mydomain.edu/individual/article64; http://vivo.mydomain.edu/individual/article39; http://vivo.mydomain.edu/individual/article49; http://vivo.mydomain.edu/individual/article5" } ,
-        "titles": { "type": "literal" , "value": "Sieben Gründe Zotero auszuprobieren; Discovery Metadata - Metadata Standards vs. New Requirements; ForscherInnen gemeinsam neue Wege im Web eröffnen \u2014 Das Open Science Lab der TIB Hannover; Open Access, Open Content und gemeinfreies Kulturerbe; Publikationsberatung: Neun Thesen vom #iCamp12; Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends; 1.000 Antworten auf die Frage: Literaturverwaltung \u2014 Was benutzen Sie, was brauchen Sie?; Aspekte der Kommunikation mit Wissenschaftsblogs; Wissen auf einen Klick; Das Netzwerk und die Institution; E-IRG White Paper 2013 ; \"Wow, someone wants to publish me!\" \u2014 Revisited; Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?" }
+        "titles": { "type": "literal" , "value": "Sieben Gründe Zotero auszuprobieren; Discovery Metadata - Metadata Standards vs. New Requirements; ForscherInnen gemeinsam neue Wege im Web eröffnen \u2014 Das Open Science Lab der TIB Hannover; Open Access, Open Content und gemeinfreies Kulturerbe; Publikationsberatung: Neun Thesen vom #iCamp12; Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends; 1.000 Antworten auf die Frage: Literaturverwaltung \u2014 Was benutzen Sie, was brauchen Sie?; Aspekte der Kommunikation mit Wissenschaftsblogs; Wissen auf einen Klick; Das Netzwerk und die Institution; E-IRG White Paper 2013 ; \"Wow, someone wants to publish me!\" \u2014 Revisited; Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc47; http://vivo.mydomain.edu/individual/conc74; http://vivo.mydomain.edu/individual/conc34; http://vivo.mydomain.edu/individual/conc41; http://vivo.mydomain.edu/individual/conc79; http://vivo.mydomain.edu/individual/conc78; http://vivo.mydomain.edu/individual/conc58; http://vivo.mydomain.edu/individual/conc61; http://vivo.mydomain.edu/individual/conc23; http://vivo.mydomain.edu/individual/conc95; http://vivo.mydomain.edu/individual/conc40; http://vivo.mydomain.edu/individual/conc89; http://vivo.mydomain.edu/individual/conc67; http://vivo.mydomain.edu/individual/conc1; http://vivo.mydomain.edu/individual/conc25" } ,
+        "researchareas": { "type": "literal" , "value": "information extraction ; Nutzungsrechte; Dynamic Publication Format; Forschungsinformationssystem; Peer Review; Open Science; Linked Open Data; Literaturverwaltung; Dezentralität; Science 2.0; Forschungsinformation; Publizieren; Metadaten;  retrieval; digitales Publizieren" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/27" } ,
         "name": { "type": "literal" , "value": "Hohlfeld,  Michael" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article41" } ,
-        "titles": { "type": "literal" , "value": "Bibliotheksverbünde, Virtuelle Fachbibliotheken" }
+        "titles": { "type": "literal" , "value": "Bibliotheksverbünde, Virtuelle Fachbibliotheken" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc78; http://vivo.mydomain.edu/individual/conc45; http://vivo.mydomain.edu/individual/conc27; http://vivo.mydomain.edu/individual/conc9" } ,
+        "researchareas": { "type": "literal" , "value": "Open Science; GetInfo; discovery system; AV-Medien" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/45" } ,
         "name": { "type": "literal" , "value": "Lindlar,  Michelle" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "3" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "3" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article71; http://vivo.mydomain.edu/individual/article65; http://vivo.mydomain.edu/individual/article73" } ,
-        "titles": { "type": "literal" , "value": "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project; Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ; Building Information Modeling \u2013 A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?" }
+        "titles": { "type": "literal" , "value": "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project; Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ; Building Information Modeling \u2013 A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc84; http://vivo.mydomain.edu/individual/conc26; http://vivo.mydomain.edu/individual/conc96; http://vivo.mydomain.edu/individual/conc54; http://vivo.mydomain.edu/individual/conc14; http://vivo.mydomain.edu/individual/conc11; http://vivo.mydomain.edu/individual/conc101; http://vivo.mydomain.edu/individual/conc29; http://vivo.mydomain.edu/individual/conc36; http://vivo.mydomain.edu/individual/conc2; http://vivo.mydomain.edu/individual/conc3; http://vivo.mydomain.edu/individual/conc75; http://vivo.mydomain.edu/individual/conc6" } ,
+        "researchareas": { "type": "literal" , "value": "preservation; Digitalisierung; semantic enrichment; Langzeitarchivierung; building information modeling; Bibliothek; system architecture; Document Management Systems; facility management; 3D documentation; 3D scanning; ontologies; Archiv" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/50" } ,
         "name": { "type": "literal" , "value": "Mensing,  Petra" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article14" } ,
-        "titles": { "type": "literal" , "value": "Linked Heritage  - ein europäisches Projekt" }
+        "titles": { "type": "literal" , "value": "Linked Heritage  - ein europäisches Projekt" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc69; http://vivo.mydomain.edu/individual/conc67" } ,
+        "researchareas": { "type": "literal" , "value": "Mint (aggregation tool); Metadaten" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/55" } ,
         "name": { "type": "literal" , "value": "Nebelung,  Lars" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article81; http://vivo.mydomain.edu/individual/article30" } ,
-        "titles": { "type": "literal" , "value": "Resümee: Was bleibt mir von dieser Tagung ?; Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext." }
+        "titles": { "type": "literal" , "value": "Resümee: Was bleibt mir von dieser Tagung ?; Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext." } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc35; http://vivo.mydomain.edu/individual/conc31; http://vivo.mydomain.edu/individual/conc6" } ,
+        "researchareas": { "type": "literal" , "value": "Erschließung; Dokumentation; Archiv" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/56" } ,
         "name": { "type": "literal" , "value": "Neumann,  Janna" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "3" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "3" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article31; http://vivo.mydomain.edu/individual/article26; http://vivo.mydomain.edu/individual/article25" } ,
-        "titles": { "type": "literal" , "value": "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend; DataCite and DOI names for research data; RADAR \u2013 Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft" }
-      } ,
-      {
-        "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/n1094" } ,
-        "name": { "datatype": "http://www.w3.org/2001/XMLSchema#string" , "type": "typed-literal" , "value": "Niemeyer, Sandra " } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article28; http://vivo.mydomain.edu/individual/article29" } ,
-        "titles": { "type": "literal" , "value": "E-Books in wissenschaftlichen Bibliotheken" }
+        "titles": { "type": "literal" , "value": "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend; DataCite and DOI names for research data; RADAR \u2013 Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc65; http://vivo.mydomain.edu/individual/conc30; http://vivo.mydomain.edu/individual/conc91; http://vivo.mydomain.edu/individual/conc63; http://vivo.mydomain.edu/individual/conc7; http://vivo.mydomain.edu/individual/conc21; http://vivo.mydomain.edu/individual/conc19; http://vivo.mydomain.edu/individual/conc87; http://vivo.mydomain.edu/individual/conc93; http://vivo.mydomain.edu/individual/conc8; http://vivo.mydomain.edu/individual/conc39; http://vivo.mydomain.edu/individual/conc16; http://vivo.mydomain.edu/individual/conc67; http://vivo.mydomain.edu/individual/conc77; http://vivo.mydomain.edu/individual/conc66; http://vivo.mydomain.edu/individual/conc33; http://vivo.mydomain.edu/individual/conc15; http://vivo.mydomain.edu/individual/conc71" } ,
+        "researchareas": { "type": "literal" , "value": "metadata schema; DOI; research; Lizenz; audiovisual media; Datenarchivierung; DataCite; publication; Retrieval AV; automated indexing; Forschungsdaten; citation index; Metadaten; Open Educational Resources; metadata standards; Dublin Core; citation impact; multimedia retrieval" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/58" } ,
         "name": { "type": "literal" , "value": "Nürnberger,  Dorothee" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article42" } ,
-        "titles": { "type": "literal" , "value": "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken" }
+        "titles": { "type": "literal" , "value": "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc81; http://vivo.mydomain.edu/individual/conc43" } ,
+        "researchareas": { "type": "literal" , "value": "Personalmanagement; Führungskompetenz" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/61" } ,
         "name": { "type": "literal" , "value": "Olf,  Jens" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article12" } ,
-        "titles": { "type": "literal" , "value": "Dokumentlieferung" }
+        "titles": { "type": "literal" , "value": "Dokumentlieferung" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc63; http://vivo.mydomain.edu/individual/conc32; http://vivo.mydomain.edu/individual/conc45" } ,
+        "researchareas": { "type": "literal" , "value": "Lizenz; Dokumentlieferung; GetInfo" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/65" } ,
         "name": { "type": "literal" , "value": "Plank,  Margret" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article74; http://vivo.mydomain.edu/individual/article27" } ,
-        "titles": { "type": "literal" , "value": "TIB's Portal for audiovisual media - New ways of indexing and retrieval; TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing" }
+        "titles": { "type": "literal" , "value": "TIB's Portal for audiovisual media - New ways of indexing and retrieval; TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc65; http://vivo.mydomain.edu/individual/conc18; http://vivo.mydomain.edu/individual/conc7; http://vivo.mydomain.edu/individual/conc68; http://vivo.mydomain.edu/individual/conc8; http://vivo.mydomain.edu/individual/conc1; http://vivo.mydomain.edu/individual/conc105; http://vivo.mydomain.edu/individual/conc71" } ,
+        "researchareas": { "type": "literal" , "value": "metadata schema; Data Science; audiovisual media; Metadaten automatisch; automated indexing;  retrieval; Video; multimedia retrieval" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/67" } ,
         "name": { "type": "literal" , "value": "Roscoe,  Elena" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article18; http://vivo.mydomain.edu/individual/article9" } ,
-        "titles": { "type": "literal" , "value": "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig); Digitale Bibliothek und Portal GetInfo in der TIB Hannover" }
+        "titles": { "type": "literal" , "value": "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig); Digitale Bibliothek und Portal GetInfo in der TIB Hannover" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc45; http://vivo.mydomain.edu/individual/conc24" } ,
+        "researchareas": { "type": "literal" , "value": "GetInfo; digitale Bibliothek " }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/68" } ,
         "name": { "type": "literal" , "value": "Rosemann,  Uwe" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article7" } ,
-        "titles": { "type": "literal" , "value": "Open Access - Was sagen die Bibliotheken?" }
+        "titles": { "type": "literal" , "value": "Open Access - Was sagen die Bibliotheken?" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc13; http://vivo.mydomain.edu/individual/conc42; http://vivo.mydomain.edu/individual/conc44; http://vivo.mydomain.edu/individual/conc0; http://vivo.mydomain.edu/individual/conc106; http://vivo.mydomain.edu/individual/conc37; http://vivo.mydomain.edu/individual/conc12; http://vivo.mydomain.edu/individual/conc73" } ,
+        "researchareas": { "type": "literal" , "value": "Bibliotheksverband; Forschungsinfrastruktur; Geschäftsmodelle (OA);  Open Access ; Virtuelle Fachbibliothek; Finanzierung (OA); Bibliotheksmanagement; nicht-textuelle Materialen" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/75" } ,
         "name": { "type": "literal" , "value": "Strobel,  Sven" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article22; http://vivo.mydomain.edu/individual/article21" } ,
-        "titles": { "type": "literal" , "value": "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems; Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition" }
+        "titles": { "type": "literal" , "value": "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems; Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc35; http://vivo.mydomain.edu/individual/conc72; http://vivo.mydomain.edu/individual/conc104; http://vivo.mydomain.edu/individual/conc105" } ,
+        "researchareas": { "type": "literal" , "value": "Erschließung; Named Entity Recognition ; Verschlagwortung; Video" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/76" } ,
         "name": { "type": "literal" , "value": "Tempel,  Bernhard" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article54; http://vivo.mydomain.edu/individual/article70; http://vivo.mydomain.edu/individual/article20; http://vivo.mydomain.edu/individual/article53" } ,
-        "titles": { "type": "literal" , "value": "Präsentationsfolien als Buch - wer braucht das?; Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie; Literaturauswahl und -bestellung leichter gemacht!; Open Access Week - Open Access für Geisteswissenschaftler?" }
+        "titles": { "type": "literal" , "value": "Präsentationsfolien als Buch - wer braucht das?; Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie; Literaturauswahl und -bestellung leichter gemacht!; Open Access Week - Open Access für Geisteswissenschaftler?" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc98; http://vivo.mydomain.edu/individual/conc0; http://vivo.mydomain.edu/individual/conc62; http://vivo.mydomain.edu/individual/conc106; http://vivo.mydomain.edu/individual/conc89; http://vivo.mydomain.edu/individual/conc88" } ,
+        "researchareas": { "type": "literal" , "value": "Sozialwissenschaften;  Open Access ; Literaturwissenschaften; Virtuelle Fachbibliothek; Publizieren; Publikationsformen" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/77" } ,
         "name": { "type": "literal" , "value": "Tobschall,  Esther" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article17; http://vivo.mydomain.edu/individual/article45; http://vivo.mydomain.edu/individual/article47; http://vivo.mydomain.edu/individual/article46" } ,
-        "titles": { "type": "literal" , "value": "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten; arXiv - Veteran und Vorreiter; arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen; arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /" }
+        "titles": { "type": "literal" , "value": "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten; arXiv - Veteran und Vorreiter; arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen; arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc78; http://vivo.mydomain.edu/individual/conc0; http://vivo.mydomain.edu/individual/conc37; http://vivo.mydomain.edu/individual/conc45; http://vivo.mydomain.edu/individual/conc27" } ,
+        "researchareas": { "type": "literal" , "value": "Open Science;  Open Access ; Finanzierung (OA); GetInfo; discovery system" }
       } ,
       {
         "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/80" } ,
         "name": { "type": "literal" , "value": "Tullney,  Marco" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
+        "no_publications": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
         "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article34; http://vivo.mydomain.edu/individual/article33" } ,
-        "titles": { "type": "literal" , "value": "Open Access; Freie Lizenzen und Nachnutzung" }
-      } ,
-      {
-        "person_id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/83" } ,
-        "name": { "type": "literal" , "value": "Wilhelm,  Christine" } ,
-        "counts": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "documents": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article24" } ,
-        "titles": { "type": "literal" , "value": "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon" }
+        "titles": { "type": "literal" , "value": "Open Access; Freie Lizenzen und Nachnutzung" } ,
+        "researcharea_ids": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc63; http://vivo.mydomain.edu/individual/conc79; http://vivo.mydomain.edu/individual/conc39; http://vivo.mydomain.edu/individual/conc89" } ,
+        "researchareas": { "type": "literal" , "value": "Lizenz; Peer Review; Forschungsdaten; Publizieren" }
       }
     ]
   }
