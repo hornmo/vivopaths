@@ -4,7 +4,7 @@ body{
   padding:0px;
 }
 #top{
-  height:40px;
+  height:60px;
   background-color:#ddd;
   text-align:center;
 }
@@ -46,13 +46,11 @@ body{
   z-index: 4;
   border:2px solid transparent;
   padding:2px 4px;
-  background:rgba(255,255,255,0.3);
+  background:rgba(255,255,255,0.35);
 }
 .label:hover{
   cursor:pointer;
   background-color:#fff;
-}
-.label span{
 }
 .label.hovered{
   opacity:1;
@@ -60,6 +58,10 @@ body{
 .author{
   color:#3377CC;
   max-width:200px;
+}
+.author.selected{
+  color:#fff;
+  background-color:#3377CC;
 }
 .author.connected{
   background:rgba(214, 228, 245, 0.8);
@@ -69,6 +71,11 @@ body{
 }
 .pub{
   color:#77AA33;
+  margin-right:10px;
+}
+.pub.selected{
+  color:#fff;
+  background-color:#77AA33;
 }
 .pub.connected{
   background:rgba(228, 245, 214, 0.8);
@@ -79,6 +86,10 @@ body{
 .keyword{
   color:#CC7733;
   max-width:200px;
+}
+.keyword.selected{
+  color:#fff;
+  background-color:#CC7733;
 }
 .keyword.hovered{
   border: 2px solid #CC7733;

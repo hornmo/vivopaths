@@ -2,12 +2,14 @@ var SPEED = 500;
 var FONTMIN = 10;
 var FONTMAX = 20;
 var MIDMINWIDTH = 200;
-var SIDEMINWIDTH = 200;
-var HEADERH = 40;
+var SIDEMINWIDTH = 300;
+var HEADERH = 60;
 var SEARCHPH = "search!";
 var TYPES = { 0: "authors", 1: "publications", 2: "keywords" };
 var BORDERS = 2;
 var OPACFOCUS = 0.8;
+var MAXSIDELABELWIDTH = 200;
+var OUTERMARGIN = 50;
 
 function View(svg){
   var S = Snap(svg);
@@ -23,12 +25,14 @@ function View(svg){
     });
     $('#search input').attr('placeholder', SEARCHPH);
     this.fontsize = this.interval(this.width * this.height, 800 * 600, 2560 * 1600, FONTMIN, FONTMAX, false);
-    this.authors = [];
-    this.publications = [];
-    this.keywords = [];
+    this.authors = {};
+    this.selected = {};
+    this.publications = {};
+    this.keywords = {};
     this.events();
     this.getData();
     this.edges = [];
+    this.wait = 0;
     
     return this;
   };
@@ -41,7 +45,7 @@ function View(svg){
       s[1] = [w*2/3, h];
       s[2] = [w, h];
     }else{
-      s[0] = [200, h];
+      s[0] = [SIDEMINWIDTH, h];
       s[1] = [w, h];
       s[2] = s[0];
     }
@@ -50,37 +54,46 @@ function View(svg){
   this.getData = function(){
     var that = this;
     jQuery.getJSON("data/data.json", function(r,s){
-      view.data = r[0];
+      that.data = r[0];
       if(that.selection != ''){
 	that.updateLabels();
       }
     });
   }
   this.getPars = function(){
-    var parString = window.location.search.substring(1);
-    var pars = parString.split('&');
+    var parString = $.address.value();
+    var pars = parString.substr(1);
+    pars = pars.split(':');
     var ret = [];
     for(var i = 0; i < pars.length; i++){
-	var pair = pars[i].split('=');
+	var pair = pars[i].split('_');
 	ret.push(pair);
     }
     return ret;
   };
   this.updateLabels = function(){
+    delete this.authors;
+    delete this.keywords;
+    delete this.publications;
+    delete this.selected;
+    this.selected = [];
+    this.authors = [];
+    this.keywords = [];
+    this.publications = [];
     var that = this;
+    var s = {};
     var sel = {
-      type: that.selection[0][0] + "s",
+      type: TYPES[that.selection[0][0]],
       value: that.selection[0][1]
     }
     $.each(TYPES, function(k,v){
-      if(sel.type === v){
-	for(a in that.data[sel.type]){
-	  if(that.data[sel.type][a].id == sel.value){
-	    var s = that.data[sel.type][a];
-	    s.selected = 1;
-	    that[sel.type].push(s);
+      if(sel.type == this){
+	$.each(that.data[sel.type], function(ik, iv){
+	  if(this.id == sel.value){
+	    that[sel.type].push(this);
+	    that.selected.push(this);
 	    $.each(TYPES, function(key, val){
-	      for(id in s[val]){
+	      for(id in that.selected[0][val]){
 		for(rel in that.data[val]){
 		  if(that.data[val][rel].id == id){
 		    that[val].push(that.data[val][rel]);
@@ -89,11 +102,13 @@ function View(svg){
 	      }
 	    });
 	  }
-	}
+	})
       }
     });
-    this.drawLabels();
-    this.drawEdges();
+    setTimeout(function(){
+      view.drawLabels();
+      view.drawEdges();
+    },200)
   };
   this.events = function(){
     var that = this;
@@ -121,21 +136,18 @@ function View(svg){
 	$('.suggested').remove();
 	$('#search input').val('');
 	S.clear();
-	view.authors = [];
-	view.publications = [];
-	view.keywords = [];
 	$('.label').fadeTo(SPEED, 0);
 	setTimeout(function(){
 	  that.idToSelection(sid);
 	},SPEED);
     });
     $(window).resize(function (e){
-      view.sections = that.setSections();
-      var noh = view.sections[0][1] - HEADERH;
+      that.sections = that.setSections();
+      var newh = that.sections[0][1] - HEADERH;
       S.clear();
       S.attr({
-	width: that.width, 
-	height: noh
+	width: $(window).width(), 
+	height: newh
       });
       $('.label').fadeTo(SPEED, 0);
       clearTimeout(edges);
@@ -186,12 +198,13 @@ function View(svg){
 	  p = '[id$='+ pid[1] + ']';
 	  indirCross = $(p).filter('[id^=' + opp.ch +']');
 	  indirSame = $(p).filter('[id^=' + typeC +']');
-	  $('#1_' + pid[1].substr(1)).addClass('connected');
+	  if(view.selected[0].type != 1){
+	    $('#1_' + pid[1].substr(1)).addClass('connected');
+	  }
 	  $.each(indirCross, function(ki, vi){
 	    var conid = "[id=" + vi.id + "]";
 	    var ceid = vi.id.split('X');
 	    var elid = '#' + opp.no + '_' + ceid[0].substr(1);
-	    console.log(elid);
 	    S.select(conid).attr({opacity: OPACFOCUS});
 	    $(elid).addClass('connected');
 	  });
@@ -200,6 +213,7 @@ function View(svg){
 	    if(vi.id != j){
 	      var ceid = vi.id.split('X');
 	      var elid = '#' + typeN + '_' + ceid[0].substr(1);
+	      S.select('[id='+vi.id+']').attr({opacity: OPACFOCUS, strokeDasharray: "5 5" });
 	      $(elid).addClass('connected');
 	    };
 	  })
@@ -210,8 +224,17 @@ function View(svg){
     $('#labels').on("mouseleave", ".hovered", function(e){
       $(this).removeClass('hovered');
       $('.label').removeClass('connected');
-      S.selectAll('path').attr({opacity: 0.2});
+      S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
     });
+    $('#labels').on("mouseup", ".hovered", function(e){
+      S.clear();
+      var to = null;
+      lid = $(this).attr('id');
+      clearTimeout(to);
+      setTimeout(function(){
+	to = that.idToSelection(lid);
+      }, SPEED/5);
+    })
   }
   this.idToSelection = function(id){
     var that = this;
@@ -219,15 +242,17 @@ function View(svg){
     if(id.indexOf('_') == 1){
       splitID = id.split('_');
     }
-    if(splitID[0] === '0'){
-      view.selection[0][0] = 'author';
-    }else if(splitID[0] === '1'){
-      view.selection[0][0] = 'publication';
-    }else if(splitID[0] === '2'){
-      view.selection[0][0] = 'keyword';
-    }
-    view.selection[0][1] = splitID[1];
-    window.location.search='?'+ view.selection[0][0] + '=' + view.selection[0][1];
+//     if(splitID[0] === '0'){
+//       that.selection[0][0] = 'author';
+//     }else if(splitID[0] === '1'){
+//       that.selection[0][0] = 'publication';
+//     }else if(splitID[0] === '2'){
+//       that.selection[0][0] = 'keyword';
+//     }
+    that.selection[0][0] = splitID[0];
+    that.selection[0][1] = splitID[1];
+    $.address.value(id);
+    //window.location.search='?'+ view.selection[0][0] + '=' + view.selection[0][1];
     that.updateLabels();
   }
   this.showSuggestions = function(term){
@@ -278,54 +303,78 @@ function View(svg){
     $('.label').remove();
     for(i=0; i < that.publications.length; i++){
       var pub = that.publications[i];
+      var lastpub = that.publications[i-1];
+      var sel = '';
+      if(pub.id == that.selected[0].id && pub.type == that.selected[0].type){
+	sel = ' selected';
+      }
       var maxpubs = 10;
       var iid = '#'+ pub.type + '_' + pub.id;
       var maxwidth = that.sections[1][0] - that.sections[0][0];
-      var hleft = that.sections[0][1] - lastpos.top + lasth;
+      var hremaining = that.sections[0][1] - lastpos.top - HEADERH + lasth;
       var pos = [];
-      if(i < maxpubs && hleft >= 200){
+      if(i < maxpubs && hremaining >= 150){
 	if(i > 0){
-	  pos = that.getPos(pub.type, i, pub);
+	  pos = that.getPos(pub.type, i, lastpub);
 	}else{
 	  pos = that.getPos(pub.type, i, 0);
 	}
-	$('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span style="">'+pub.title+' ('+pub.year+')</span></div>');
+	$('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span style="">'+pub.title+' ('+pub.year+')</span></div>');
 	var w = $(iid).width();
 	var h = $(iid).height();
 	pos[1][0] = pos[0][0] + w + 12;
 	pos[1][1] = pos[0][1] + h + 10;
-	view.publications[i].p = pos;
-	view.publications[i].active = true;
+	that.publications[i].p = pos;
+	that.publications[i].active = true;
+      }if(that.publications[i].active){
+	lastpos = $(iid).offset();
+	lasth = $(iid).height();
+      }else{
+	lastpos = that.sections[0][1];
+	lasth = 0;
       }
-      lastpos = $(iid).offset();
-      lasth = $(iid).height();
     };
     for(i=0; i < that.authors.length; i++){
       var a = that.authors[i];
+      var sel = '';
+      if(a.id == that.selected[0].id && a.type == that.selected[0].type){
+	sel = ' selected';
+      }
       var pos = that.getPos(a.type, i, a);
       var iid = '#'+ a.type + '_' + a.id;
       if(pos[0][1] !== false){
-	$('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+a.name+'</span></div>');
+	$('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+a.name+'</span></div>');
 	var w = $(iid).width();
 	var h = $(iid).height();
 	pos[1][0] = pos[0][0] + w + 10;
 	pos[1][1] = pos[0][1] + h + 10;
-	view.authors[i].p = pos;
-	view.authors[i].active = true;
+	that.authors[i].p = pos;
+	that.authors[i].active = true;
       }
     };
     for(i=0; i < that.keywords.length; i++){
       var k = that.keywords[i];
+      var sel = '';
+      if(k.id == that.selected[0].id && k.type == that.selected[0].type){
+	sel = ' selected';
+      }
       var pos = that.getPos(k.type, i, k);
       var iid = '#'+ k.type + '_' + k.id;
       if(pos[0][1] !== false){
-	$('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+k.title+'</span></div>');
-	var w = $(iid).width();
-	var h = $(iid).height();
-	pos[1][0] = pos[0][0] + w + 10;
+	if(that.sections[0][0] > SIDEMINWIDTH){
+	  $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="right:'+(OUTERMARGIN + BORDERS)+'px;top:'+pos[0][1]+'px;"><span>'+k.title+'</span></div>');
+	  var w = $(iid).width();
+	  var h = $(iid).height();
+	  pos[0][0] = pos[1][0] - w - 10;
+	}else{
+	  $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span>'+k.title+'</span></div>');
+	  var w = $(iid).width();
+	  var h = $(iid).height();
+	  pos[1][0] = pos[0][0] + w + 10;
+	}
 	pos[1][1] = pos[0][1] + h + 10;
-	view.keywords[i].p = pos;
-	view.keywords[i].active = true;
+	that.keywords[i].p = pos;
+	that.keywords[i].active = true;
       }
     };
     $('.label').fadeTo(SPEED, 1);
@@ -334,7 +383,7 @@ function View(svg){
     var that = this;
     var stroke = '#3377CC';
     $.each(that.authors, function(k, a){
-      if(a.publications && !a.selected){
+      if(a.publications && a.type + '_' + a.id != that.selected[0].type + '_' + that.selected[0].id){
 	$.each(a.publications, function(kp, vp){
 	  $.each(that.publications, function(gk, gv){
 	    if(kp == gv.id && gv.active){
@@ -352,7 +401,7 @@ function View(svg){
     });
     $.each(that.keywords, function(k, a){
       var stroke = '#CC7733';
-      if(a.publications && !a.selected){
+      if(a.publications && a.type + '_' + a.id != that.selected[0].type + '_' + that.selected[0].id){
 	$.each(a.publications, function(kp, vp){
 	  $.each(that.publications, function(gk, gv){
 	    if(kp == gv.id && gv.active){
@@ -361,7 +410,7 @@ function View(svg){
 	      var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
 	      var rmid = that.sections[1][0] + 6;
 	      // view.edges[0].push(edge);
-	      if(that.sections[0][0] > 200){
+	      if(that.sections[0][0] > SIDEMINWIDTH){
 		var cx = (a.p[0][0] + gv.p[1][0]) / 2;
 		var path = 'M'+ a.p[0][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
 	      }else{
@@ -387,59 +436,78 @@ function View(svg){
     }
     if(type == 1){
       p[0][0] = that.sections[0][0] + BORDERS;
-/*      if(item != 0){
-	var iid = '#'+ type + '_' + item.id;
-	var ppos = $(iid).position();
-	var ph = $(iid).height();
-	var pw = $(iid).width();
-	p[0][1] = ppos.top + ph + 30;
+      if(item != 0){
+	var lid = '#'+ type + '_' + item.id;
+	var ppos = $(lid).position();
+	var ph = $(lid).height();
+	var pw = $(lid).width();
+	if(space >= ph){
+	  p[0][1] = space*no + (space/2);
+	}else{
+	  p[0][1] = item.p[1][1] + BORDERS;
+	}
       }else{
-	p[0][1] = HEADERH + 50;
-      }  */
-      p[0][1] = space*no + (space/2);
+	if(space*no + (space/2) >= HEADERH){
+	  p[0][1] = space*no + (space/2);
+	}else{
+	  p[0][1] = HEADERH;
+	}
+      }
     }
     else{
-      if(!item.selected){
+      if(item.type + '_' + item.id != that.selected[0].type + '_' + that.selected[0].id){
 	var i = 0;
-	if(item.type == 0 || that.sections[0][0] == 200){
+	if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
 	  $.each(that.authors, function(ak, av){
 	    
 	  });
-	  p[0][0] = 50 + BORDERS;
-	}else if(item.type == 2 && that.sections[0][0] > 200){
-	  p[0][0] = that.sections[2][0] - 250  + BORDERS;
+	  p[0][0] = OUTERMARGIN + BORDERS;
+	}else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+	  p[1][0] = that.sections[2][0] - OUTERMARGIN - BORDERS;
 	}
 	p[0][1] = 0;
 	$.each(item.publications, function(ik,iv){
 	  $.each(that.publications, function(pk,pv){
-	    if(ik == pv.id){
+	    if(ik == pv.id && pv.active){
 	      var pid = '#'+ 1 + '_' + ik;
 	      var ppos = $(pid).offset();
 	      var ph = $(pid).height();
-	      p[0][1] += (2*ppos.top + ph)/2 - that.fontsize/2;
+	      var ypos = (2*ppos.top + ph)/2 - that.fontsize/2;
+		p[0][1] += ypos;
 	      i++;
 	    }
 	  })
 	});
 	if(i > 0){
 	  p[0][1] /= i;
+	  if(p[0][1] <= that.sections[0][1]/2){
+	    p[0][1] += 60;
+	  }else{
+	    p[0][1] -= 60;
+	  }
 	  var ol = '';
 	  if(item.type == 0){
 	    oa = $('.label.author');
 	  }else if(item.type == 2){
-	    oa = $('.label.keyword');
+	    if(that.sections[0][0] > SIDEMINWIDTH){
+	      oa = $('.label.keyword');
+	    }else{
+	      oa = $('.label').not('.pub');
+	    }
 	  }
-	  var minoverlap = p[0][1]-FONTMAX;
-	  var maxoverlap = p[0][1]+FONTMAX;
 	  $.each(oa, function(k,v){
 	    var t = parseInt($(this).css('top'), 10);
 	    var l = $(this).css('left');
 	    var w = $(this).width();
+	    var minoverlap = p[0][1] - FONTMAX - BORDERS;
+	    var maxoverlap = p[0][1] + FONTMAX + BORDERS;
 	    if(t >= minoverlap && t <= maxoverlap){
-	      if(item.type == 2 && that.sections[0][0] > 200){
-		p[0][0] -= w + FONTMAX + BORDERS;
+	      if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+		p[0][1] += 2*FONTMAX + BORDERS;
+	      }else if(item.type == 2 && that.sections[0][0] == SIDEMINWIDTH){
+		p[0][1] -= 2*FONTMAX + BORDERS;
 	      }else{
-		p[0][0] += w + FONTMAX + BORDERS;
+		p[0][1] += 2*FONTMAX + BORDERS;
 	      }
 	     // p[0][1] += FONTMAX + BORDERS;
 	    }
@@ -448,8 +516,13 @@ function View(svg){
 	  p[0][1] = false;
 	}
       }else{
-	p[0][0] = 50 + BORDERS;
-	p[0][1] = 20 + HEADERH;
+	if(item.type == 0){
+	  p[0][0] = OUTERMARGIN + BORDERS;
+	  p[0][1] = HEADERH + BORDERS;
+	}else{
+	  p[0][0] = that.sections[2][0] - MAXSIDELABELWIDTH - OUTERMARGIN - BORDERS;
+	  p[0][1] = HEADERH + BORDERS;
+	}	
       }
     }
     return p;
