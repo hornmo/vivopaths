@@ -1,0 +1,4 @@
+# Was es noch so gibt
+# FILTER (langMatches(lang(?name),"de"))
+#
+# CONSTRUCT { TRIPLE }
