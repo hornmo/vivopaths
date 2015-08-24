@@ -2,3 +2,7 @@
 # FILTER (langMatches(lang(?name),"de"))
 #
 # CONSTRUCT { TRIPLE }
+#
+#
+# ?person_id vivo:hasResearchArea ?researcharea_id .
+# ?researcharea_id rdfs:label ?researcharea.
