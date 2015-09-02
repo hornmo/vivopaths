@@ -22,7 +22,7 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
-SELECT (?keyword_id AS ?id) (?bezeichnung AS ?title) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?author_id; separator="; ") AS ?authors) (GROUP_CONCAT(DISTINCT ?keyword_id; separator="; ") AS ?keywords)
+SELECT (?keyword_id AS ?id) (?bezeichnung AS ?title) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?author_id; separator="; ") AS ?authors)
 WHERE
 {
 ?document_id a bibo:Document .
