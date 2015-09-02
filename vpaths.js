@@ -221,7 +221,7 @@ function View(svg){
 	  }               
       }
     });
-    $.address.change(function(){ that.getPars(); });
+    $.address.externalChange(function(){ that.updateLabels(); });
     $('#labels').on("mouseenter", ".label:not(.selected)", function(e){
       var lid = $(this).attr('id');
       var typeN = lid.substr(0,1);
@@ -281,12 +281,9 @@ function View(svg){
 	  });
 	  $.each(indirSame, function(ki, vi){
 	    var j = pid.join('X');
-	    console.log(vi.id + ' - ' + j);
-	    console.log(vi.id === j);
 	    if(vi.id !== j){
 	      var ceid = vi.id.split('X');
 	      var elid = '#' + typeN + '_' + ceid[0].substr(1);
-	      console.log(elid);
 	      S.select('[id='+vi.id+']').attr({opacity: OPACFOCUS, strokeDasharray: "5 5" });
 	      $(elid).addClass('connected');
 	    };
@@ -376,7 +373,6 @@ function View(svg){
 	  styles.top = (selItem.p[1][1]) + 'px';
 	}
 	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-	  console.log('text');
 	  styles.right = OUTERMARGIN + 'px';
 	}else{
 	  styles.left = selItem.p[0][0] + 'px';
@@ -388,7 +384,6 @@ function View(svg){
       }
     })
     $(document).mouseup(function(e){
-      console.log($(e.target).attr('class'));
       var subject = $("#context");
       if(that.context.visible == true && $(e.target).parent().attr('class') != 'label-icon' && e.target.id != subject.attr('id') && !subject.has(e.target).length){
 	that.context.visible = false;
@@ -479,7 +474,7 @@ function View(svg){
     var sel = that.selected.length;
     var selHeight = sel*2*FONTMAX;
     var pubsTotal = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(1.8*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
     var withinLimits = [0,0];
     $.each(that.pubSplit, function(key, pubs){
       v =  '';
@@ -490,8 +485,6 @@ function View(svg){
     });
     if(pubsTotal > maxpubs){
       $.each(that.pubSplit, function(key, pubs){
-	console.log(maxpubs/3);
-	console.log(withinLimits);
 	if(this.length > Math.floor(maxpubs/3)){
 	  if(withinLimits[0] == 0){
 	    that.offsets[key][1] = Math.floor(maxpubs/3);
@@ -501,12 +494,12 @@ function View(svg){
 	    that.offsets[key][1] = (maxpubs - withinLimits[1] - 1)
 	  }
 	}else{
-	  that.offsets[key][1] = this.length-1;
+	  that.offsets[key][1] = this.length ? this.length-1 : 0;
 	}
       })
     }else{
       $.each(that.offsets, function(key, array){
-	this[1] = that.pubSplit[key].length-1;
+	this[1] = that.pubSplit[key].length ? that.pubSplit[key].length-1 : 0;
       })
     }
   }
@@ -671,12 +664,13 @@ function View(svg){
     var selHeight = sel*2*FONTMAX;
     var p = [[],[]];
     var space = null;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(1.7*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
     var totalPubs = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
     if(totalPubs > 0 && totalPubs <= maxpubs){
-      space = (that.sections[1][1] - HEADERH - selHeight) / (totalPubs);
+      space = (that.sections[1][1] - HEADERH) / (totalPubs + sel);
     }else{
-      space = (that.sections[1][1] - HEADERH - selHeight) / (maxpubs +1);
+      space = (that.sections[1][1] - HEADERH - selHeight) / (maxpubs + 2);
+      console.log('test');
     }
     if(item.type == 1){
       p[0][0] = that.sections[0][0] + BORDERS;
@@ -684,13 +678,13 @@ function View(svg){
 	if(sector == 'top'){
 	  p[0][1] = HEADERH + space*no + (space/3);
 	}else if(sector == 'mid'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1]) + 0.85*selHeight + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.5*selHeight + (space/3);
 	}else if(sector == 'bottom'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + that.offsets.mid[1]) + 1.7*selHeight + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + selHeight + (space/3);
 	}
 	
       }else if(that.selected.length == 1){
-	p[0][1] = HEADERH + space*no + 0.85*selHeight + (space/3);
+	p[0][1] = HEADERH + space*no + selHeight + (space/3);
       }
     }
     else{
@@ -726,37 +720,44 @@ function View(svg){
 	  }else{
 	    p[0][1] -= 30;
 	  }
-	  var ol = '';
-	  var changeW = 0;
-	  var minoverlap = p[0][1] - FONTMAX - BORDERS;
-	  var maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
-	  if(item.type == 0){
-	    oa = $('.label.author');
-	  }else if(item.type == 2){
-	    if(that.sections[0][0] > SIDEMINWIDTH){
-	      oa = $('.label.keyword');
-	    }else{
-	      oa = $('.label').not('.pub');
-	    }
+	}else{
+	  var rndY = Math.random()*(that.sections[0][1] - HEADERH - FONTMAX); 
+	  p[0][1] = HEADERH + rndY;
+	}
+	var ol = '';
+	var changeW = 0;
+	var minoverlap = p[0][1] - FONTMAX - BORDERS;
+	var maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
+	if(item.type == 0){
+	  oa = $('.label.author');
+	}else if(item.type == 2){
+	  if(that.sections[0][0] > SIDEMINWIDTH){
+	    oa = $('.label.keyword');
+	  }else{
+	    oa = $('.label').not('.pub');
 	  }
+	}
+	for(i=0;i<=4;i++){
 	  $.each(oa, function(k,v){   
 	    var t = parseInt($(this).css('top'), 10);
 	    var h = $(this).height();
-
+	    
 	    if(t + h >= minoverlap && t <= maxoverlap){
 	      var olmin = (t+h) - p[0][1];
 	      var olmax = t - (p[0][1] + h);
 	      if(olmin >= olmax){
 		p[0][1] += olmin + BORDERS + 8;
 	      }else{
-		p[0][1] -= olmax + BORDERS + 8;
+		p[0][1] -= olmax - BORDERS + 8;
 	      }
 	    }
 	    if(p[0][1] <= HEADERH){
-	      p[0][1] = HEADERH;
+	      p[0][1] = HEADERH + 6;
 	    }else if(p[0][1] >= that.sections[0][1] - FONTMAX - BORDERS){
 	      p[0][1] = that.sections[0][1] - FONTMAX - BORDERS;
 	    }
+	    minoverlap = p[0][1] - FONTMAX - BORDERS;
+	    maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
 	  });
 	  $.each(oa, function(k,v){   
 	    var t = parseInt($(this).css('top'), 10);
@@ -771,16 +772,16 @@ function View(svg){
 	    if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
 	      changeW = w;
 	    }
+	    minoverlap = p[0][1] - FONTMAX - BORDERS;
+	    maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
 	  });
 	  if(changeW != 0){
 	    if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
-	      p[0][0] = OUTERMARGIN + BORDERS + changeW;
+	      p[0][0] = OUTERMARGIN + BORDERS + changeW + 30;
 	    }else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-	      p[1][0] = OUTERMARGIN + BORDERS + changeW;
+	      p[1][0] = OUTERMARGIN + BORDERS + changeW + 30;
 	    }
 	  }
-	}else{
-	  p[0][1] = false;
 	}
       }else{
 	p[0][0] = that.sections[0][0] + BORDERS;
@@ -836,8 +837,8 @@ function View(svg){
     var that =  this;
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
-      if(lwidth >= mwidth*0.9){
-	slabel = trimByPixel(label, mwidth*0.8);
+      if(lwidth >= mwidth - 80){
+	slabel = trimByPixel(label, mwidth - 80);
 	slabel += "...";
       }else{
 	slabel = label;
