@@ -23,16 +23,17 @@ PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
 
-SELECT (?author_id AS ?uri) (?author_id AS ?id) (?name AS ?fullname) ?name (COUNT(DISTINCT ?document_id) AS ?count) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords)
+SELECT (?author_id AS ?id) (?name AS ?fullname) (?author_id AS ?uri) ?photo ?name (COUNT(DISTINCT ?document_id) AS ?count) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords)
 WHERE
 {
 ?author_id a foaf:Person .
 ?author_id rdfs:label ?name .
+OPTIONAL {?author_id vitro-public:mainImage ?photo }
 ?authorship_id a vivo:Authorship .
 ?authorship_id vivo:relates ?author_id .
 ?document_id a bibo:Document .
 ?document_id vivo:relatedBy ?authorship_id .
-?document_id vivo:hasSubjectArea ?keyword .
+OPTIONAL {?document_id vivo:hasSubjectArea ?keyword }
 }
-GROUP BY ?author_id ?name
+GROUP BY ?author_id ?photo ?name
 ORDER BY ?name

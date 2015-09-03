@@ -1,9 +1,3 @@
-{
-  "head": {
-    "vars": [ "id" , "fullname" , "uri" , "photo" , "name" , "count" , "publications" , "keywords" ]
-  } ,
-  "results": {
-    "bindings": [
       {
         "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/4" } ,
         "fullname": { "type": "literal" , "value": "Blümel,  Ina" } ,
@@ -217,6 +211,3 @@
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article24" } ,
         "keywords": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/conc11" }
       }
-    ]
-  }
-}
