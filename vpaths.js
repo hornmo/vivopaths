@@ -1,10 +1,10 @@
 var SPEED = 500;
-var FONTMIN = 10;
-var FONTMAX = 20;
+var FONTMIN = 13;
+var FONTMAX = 21;
 var MIDMINWIDTH = 200;
 var SIDEMINWIDTH = 300;
 var HEADERH = 80;
-var SEARCHPH = "search!";
+var SEARCHPH = "Suche";
 var TYPES = { 0: "authors", 1: "publications", 2: "keywords" };
 var BORDERS = 2;
 var OPACFOCUS = 0.8;
@@ -24,7 +24,7 @@ function View(svg){
       height: this.height - HEADERH
     });
     $('#search input').attr('placeholder', SEARCHPH);
-    this.fontsize = this.interval(this.width * this.height, 800 * 600, 2560 * 1600, FONTMIN, FONTMAX, false);
+    this.fontsize = this.interval(this.width * this.height, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
     this.authors = {};
     this.selected = [];
     this.publications = {};
@@ -96,7 +96,7 @@ function View(svg){
     var that = this;
     var s = {};
     var sel = [];
-    if(that.selection.length){
+    if(that.selection.length >= 1){
       $.each(that.selection, function(k,v){
 	  sel.push({
 	    type: TYPES[v[0]],
@@ -165,23 +165,48 @@ function View(svg){
     var timeout = false;
     var delta = 200;
     $('#search input').focus(function(event){
+      	var index = -1;
       $(this).attr('placeholder', '');
       $('#search input').keyup(function(event){
-	if(event.keyCode == 40) { 
-	  event.preventDefault()	  
-	};
+	var suggestions = $('.suggested');
+	if(event.keyCode == 40 || event.keyCode == 38){
+	  event.preventDefault();
+	  if(event.keyCode == 40) {
+	    index = (index + 1) % suggestions.length  ;
+	  }else if(event.keyCode == 38){
+	    index = (index + suggestions.length - 1) % suggestions.length;
+	  }
+	  if(suggestions){
+	    var str = '#' + suggestions[index].id + '.suggested';
+	    $('.suggested.suggested-focus').removeClass('suggested-focus');
+	    $(str).addClass('suggested-focus');
+	    $(this).val(suggestions[index].innerText);
+	  }
+	}else if(event.keyCode === 13){
+	  var sid = $('.suggested-focus').attr('id');
+	  $('#suggestions').css('opacity', 0);
+	  $('.suggested').remove();
+	  $('#search input').val('');
+	  S.clear();
+	  $('.label').fadeTo(SPEED, 0);
+	  setTimeout(function(){
+	    that.idToSelection(sid, 1);
+	  },SPEED);
+	}
       })
     });
     $('#search input').blur(function(){
       $(this).attr('placeholder', SEARCHPH);
     });
-    $('#search input').keyup(function(){
-      var searchTerm = $(this).val();
-      var addDiv = 0;
-      $('.suggested').remove();
-      $('#suggestions').css('opacity', 0);
-      if(searchTerm != ''){
-	that.showSuggestions(searchTerm);
+    $('#search input').keyup(function(e){
+      if(event.keyCode !== 40 && event.keyCode !== 38 && event.keyCode !== 13){
+	var searchTerm = $(this).val();
+	var addDiv = 0;
+	$('.suggested').remove();
+	$('#suggestions').css('opacity', 0);
+	if(searchTerm != ''){
+	  that.showSuggestions(searchTerm);
+	}
       }
     });
     $('#suggestions').unbind;
@@ -199,12 +224,14 @@ function View(svg){
     $(window).resize(function (e){
       that.sections = that.setSections();
       var newh = that.sections[0][1] - HEADERH;
+      var neww = $(window).width();
       S.clear();
       $('#canvas').css('height', newh);
       S.attr({
-	width: $(window).width(), 
+	width: neww, 
 	height: newh
       });
+      that.fontsize = that.interval(neww * newh, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
       $('.label').fadeTo(SPEED, 0);
       rtime = new Date();
       if (timeout === false) {
@@ -291,6 +318,16 @@ function View(svg){
 	});
       }
       S.selectAll(eid).attr({opacity: OPACFOCUS});
+//       $('#labels').on("mousedown", ".label-text:not(.pub)", function(e){
+// 	var localid = $(this).parent().attr('id');
+//       console.log(lid);
+// 	$('#labels').on("mouseup", ".label-text:not(.pub)", function(e){
+// 	  var cid = $(this).parent().attr('id');
+// 	  if(cid != lid){
+// 	    console.log(cid +' vs '+ lid);
+// 	  }
+// 	})
+//       });
     });
     $('#labels').on("mouseleave", ".hovered", function(e){
       var id = $(this).attr('id');
@@ -320,7 +357,7 @@ function View(svg){
 	to = that.idToSelection(lid, 2);
       }, SPEED/5);
     })
-    $('#labels').on("mouseup", ".remove", function(e){
+    $('#labels').on("mouseup", ".label-selected-remove", function(e){
       S.clear();
       var to = null;
       lid = $(this).parent().attr('id');
@@ -355,43 +392,93 @@ function View(svg){
 	that.context.visible = true;
 	that.context.item = selItem;
 	if(selItem.type === 0){
-	  $('#context').append('<span id="context-head">'+selItem.fullname+'</span>');
-	  if(selItem.photo){
-	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.photo+'" /></span>');
+	  var pos = '';
+	  if(selItem.positions){
+	    pos = '<p style="max-width:270px;"><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
 	  }
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
+	  $('#context').append('<div id="context-head"><span>'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
+	  if(selItem.image){
+	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.image+'" /></span>');
+	  }
 	}else if(selItem.type === 1){
 	  $('#context').append('<span id="context-head">'+selItem.title+'</span>');
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Nachweis in VIVO</a></p>');
 	}else if(selItem.type === 2){
-	  $('#context').append('<span id="context-head">'+selItem.title+'</span>');
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Nachweis in VIVO</a></p>');
+	  $('#context').append('<span id="context-head"><span>'+selItem.title+'</span></span>');
+	  that.getGND(selItem.title);
 	}
+	$('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
 	if(selItem.p[0][1] >= HEADERH + 200 ){
 	  styles.bottom = (that.sections[0][1] - selItem.p[0][1] + 10) + 'px';
 	}else{
 	  styles.top = (selItem.p[1][1]) + 'px';
 	}
-	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH && !selItem.selected){
 	  styles.right = OUTERMARGIN + 'px';
 	}else{
 	  styles.left = selItem.p[0][0] + 'px';
 	}
 	styles.border = '2px solid' + COLORS[splitID[0]];
-	styles.width = '350px';
+	if(selItem.image){
+	  styles.width = '400px';
+	}else{
+	  styles.width = '300px';
+	}
 	$('#context').css(styles);
 	$('#context').fadeTo(SPEED/5, 1);
       }
     })
     $(document).mouseup(function(e){
+      var parent = $(e.target).parent().attr('class');
       var subject = $("#context");
-      if(that.context.visible == true && $(e.target).parent().attr('class') != 'label-icon' && e.target.id != subject.attr('id') && !subject.has(e.target).length){
+      if(that.context.visible == true && parent != 'label-icon' && e.target.id != subject.attr('id') && !subject.has(e.target).length){
 	that.context.visible = false;
 	$('#context').children().remove();
 	$('#context').css({top: "", bottom:"", left: "", border: "", height: "", width: ""});
 	$('#context').fadeTo(SPEED/5, 0);
       }
+      if(parent != 'suggested' && $(e.target).id != 'search'){
+	$('#suggestions').css('opacity', 0);
+	$('.suggested').remove();
+	$('#search input').val('');
+      }
     })
+  }
+  this.getGND = function(label){
+    var url = 'http://lobid.org/subject?format=full&name=' + label;
+    var obj = {};
+    var gndLink = '';
+    $.ajax({
+      url: url,
+      jsonp: 'callback',
+      jsonpCallback:'JSON_CALLBACK',
+      dataType: 'jsonp',
+      success: function(json){
+	if(json[1]){
+	  json.splice(0,1);
+	  $.each(json, function(k, v){
+	    var subject = this['@graph'][0];
+	    if(subject.preferredNameForTheSubjectHeading){
+	      if(subject.preferredNameForTheSubjectHeading == label){
+		obj.uri = subject['@id'];
+		obj.id = subject.gndIdentifier;
+		if(subject.definition){
+		  obj.definition = subject.definition['@value'];
+		}
+	      }
+	    }
+	  });
+	  if(obj.uri){
+	  $('#context > p').append('<a href="'+ obj.uri +'">GND-Eintrag</a>');
+	  }
+	}
+      },
+      error: function(e){
+	console.log(this);
+      }
+    })
+    if(obj.uri){
+      return obj;
+    }
   }
   this.idToSelection = function(id, mode){
     var that = this;
@@ -474,7 +561,7 @@ function View(svg){
     var sel = that.selected.length;
     var selHeight = sel*2*FONTMAX;
     var pubsTotal = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*that.fontsize));
     var withinLimits = [0,0];
     $.each(that.pubSplit, function(key, pubs){
       v =  '';
@@ -506,7 +593,7 @@ function View(svg){
   this.drawLabels = function(){
     var that = this;
     var combID = '';
-    var remElem = '<span class="remove" title="Remove"><i class="fa fa-times"></i></span>';
+    var remElem = '<span class="label-selected-remove" title="Remove"><i class="fa fa-times"></i></span>';
     var rem = '';
     var sel = '';
     $('.label').remove();
@@ -533,7 +620,7 @@ function View(svg){
 	var pos = [];
 	if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
 	  pos = that.getPos(pub, i, key);
-	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'">'+shortt+' ('+pub.year+')</span>'+rem+'</div>');
+	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'">'+shortt+' ('+pub.year+')</span>'+rem+'</div>');
 	  var w = $(iid).width();
 	  var h = $(iid).height();
 	  pos[1][0] = pos[0][0] + w + 12;
@@ -664,13 +751,12 @@ function View(svg){
     var selHeight = sel*2*FONTMAX;
     var p = [[],[]];
     var space = null;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*that.fontsize));
     var totalPubs = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
     if(totalPubs > 0 && totalPubs <= maxpubs){
       space = (that.sections[1][1] - HEADERH) / (totalPubs + sel);
     }else{
       space = (that.sections[1][1] - HEADERH - selHeight) / (maxpubs + 2);
-      console.log('test');
     }
     if(item.type == 1){
       p[0][0] = that.sections[0][0] + BORDERS;
@@ -819,6 +905,7 @@ function View(svg){
     return p;
   }
   this.shortenLabel = function(type, label){
+    var that = this;
     function getTextWidth(text, font) {
 	var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
 	var context = canvas.getContext("2d");
@@ -827,18 +914,18 @@ function View(svg){
 	return metrics.width;
     };
     function trimByPixel(str, width) {
-      var spn = $('<span class="temp" style="visibility:hidden;font-size:15pt"></span>').text(str).appendTo('body');
+      var spn = $('<span class="temp" style="visibility:hidden;font-size:'+that.fontsize+'"></span>').text(str).appendTo('body');
       var txt = str;
       while (spn.width() > width) { txt = txt.slice(0, -1); spn.text(txt + "..."); }
       return txt;
     }
-    var lwidth = getTextWidth(label, "15pt 'Generika Light'" );
+    var lwidth = getTextWidth(label, that.fontsize+" Generika Light" );
     var slabel = '';
     var that =  this;
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
-      if(lwidth >= mwidth - 80){
-	slabel = trimByPixel(label, mwidth - 80);
+      if(lwidth >= mwidth - 10*that.fontsize){
+	slabel = trimByPixel(label, mwidth - 10*that.fontsize);
 	slabel += "...";
       }else{
 	slabel = label;

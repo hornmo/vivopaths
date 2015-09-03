@@ -41,10 +41,8 @@ body{
   padding: 0.3em;
   cursor:pointer;
 }
-.suggested.author:before{
-  content:"\f007";
-  font-family: FontAwesome;
-  padding-right: 0.3em;
+.suggested-focus{
+  background-color:#eee;
 }
 .suggested.author:before{
   content:"\f007";
@@ -68,7 +66,6 @@ body{
 #context{
   z-index: 5;
   opacity: 0;
-  min-height:150px;
   position:absolute;
   background-color: #fff;
   overflow:auto;
@@ -77,10 +74,15 @@ body{
 }
 #context-head{
   float:left;
+  margin:10px 10px 45px 10px;
+  max-width:290px;
+}
+#context-head span{
   font-size: 1.2em;
-  margin-top:10px;
-  margin-left:10px;
-  margin-bottom: 45px;
+  font-weight: bold;
+}
+#context-count{
+
 }
 #context-right{
   float:right;
@@ -95,6 +97,9 @@ body{
   position:absolute;
   margin: 17px 0px 15px 10px;
   bottom: 5px;
+}
+#context-links a{
+  margin-right: 10px;
 }
 #labels{ 
   z-index: 4; 
@@ -164,6 +169,27 @@ body{
 .keyword.connected{
   background:rgba(245, 228, 214, 0.8);
 }
+.organisation{
+  color:#AA44AA;
+}
+.organisation.selected{
+  color:#fff;
+  background-color:#AA44AA;
+}
+.organisation.hovered{
+  border: 2px solid #AA44AA;
+}
+.organisation.connected{
+  background:rgba(170, 68, 170, 0.8);
+}
+
+
+.context-icon i{
+  padding-right:0.3em;
+  font-size: 0.7em;
+  cursor:default;
+}
+
 .compare{
   border-left:1px solid #ddd;
   padding-left:0.4em;
@@ -172,7 +198,7 @@ body{
 .compare:hover{
   opacity: 1;
 }
-.remove{
+.label-selected-remove{
   padding-left:0.3em;
   border-left:1px solid #fff;
 }
