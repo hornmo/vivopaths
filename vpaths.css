@@ -1,8 +1,8 @@
-@font-face{
+/*@font-face{
   font-family: "Generika Light";
   src:	url('../fonts/Generika-Light_web.woff') format('woff'), 
 	url('../fonts/Generika-Light_web.ttf') format('truetype');
-}
+}*/
 body{
   margin:0px;
   padding:0px;
@@ -62,6 +62,14 @@ body{
 #canvas{ 
   z-index: 2;
   position:absolute;
+  cursor:default;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #context{
   z-index: 5;
@@ -101,6 +109,9 @@ body{
 #context-links a{
   margin-right: 10px;
 }
+.loading-icon{
+  margin-left:50px;
+}
 #labels{ 
   z-index: 4; 
   width:100%;
@@ -112,9 +123,23 @@ body{
   border:2px solid transparent;
   padding:2px 4px;
   background:rgba(255,255,255,0.35);
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .label-text{
   padding-right: 5px;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 } 
 .label:hover{
   cursor:pointer;
@@ -193,6 +218,7 @@ body{
 .compare{
   border-left:1px solid #ddd;
   padding-left:0.4em;
+  background-color:#fff;
   opacity: 0.35;
 }
 .compare:hover{
