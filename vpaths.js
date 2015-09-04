@@ -814,9 +814,9 @@ function View(svg){
 	if(sector == 'top'){
 	  p[0][1] = HEADERH + space*no + (space/3);
 	}else if(sector == 'mid'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.5*(that.pubSplit.top.length ? selHeight : 0) + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + (space/3);
 	}else if(sector == 'bottom'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + 0.5*(that.pubSplit.top.length ? selHeight : 0) + 0.5*(that.pubSplit.mid.length ? selHeight : 0) + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + 0.4*(that.pubSplit.mid.length ? selHeight : 0) + (space/3);
 	}
 	
       }else if(that.selected.length == 1){
