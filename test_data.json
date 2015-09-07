@@ -5,9 +5,10 @@
 	"id": "26",
 	"fullname": "Lambert Heller",
 	"uri": "https://test.osl.tib.eu/vivo-tib/individual?uri=http%3A%2F%2Fvivo.mydomain.edu%2Findividual%2F26",
-	"photo": "https://test.osl.tib.eu/vivo-tib/file/n2039/lambert.jpg",
+	"image": "https://test.osl.tib.eu/vivo-tib/file/n2039/lambert.jpg",
+	"positions":["Leitung", "Open Science Lab", "Entwicklung"],
 	"name": "L Heller",
-	"count": "4",
+	"count": "8",
 	"publications": {
 	  "32": 1,
 	  "33": 1,
@@ -36,7 +37,8 @@
 	"fullname": "Ina Blümel",
 	"name": "I Blümel",
 	"uri":"https://test.osl.tib.eu/vivo-tib/individual?uri=http%3A%2F%2Fvivo.mydomain.edu%2Findividual%2F4",
-	"count": "3",
+	"positions":["Open Science Lab", "Entwicklung"],
+	"count": "4",
 	"publications": {
 	  "60": 1,
 	  "77": 1,
@@ -62,6 +64,7 @@
 	"fullname": "Simone Cartellieri",
 	"name": "S Cartellieri",
 	"uri": "https://test.osl.tib.eu/vivo-tib/individual?uri=http%3A%2F%2Fvivo.mydomain.edu%2Findividual%2F4",
+	"positions":["Drittmittel und Transfer", "Entwicklung"],
 	"count": "1",
 	"publications": {
 	  "60": 1
@@ -86,11 +89,9 @@
 	  "65": 1
 	},
 	"authors": {
-	  "4": 1
 	},
 	"keywords": {
-	  "54": 1,
-	  "4653": 1
+	  "54": 1
 	},
 	"type": 0
       },
@@ -99,6 +100,7 @@
 	"fullname": "Martin Mehlberg",
 	"name": "M Mehlberg",
 	"uri": "https://test.osl.tib.eu/vivo-tib/individual?uri=http%3A%2F%2Fvivo.mydomain.edu%2Findividual%2F48",
+	"positions":["Open Science Lab", "Entwicklung"],
 	"count": "1",
 	"publications": {
 	  "77": 1
@@ -303,7 +305,7 @@
 	"id": "2",
 	"title": "Kommunikation",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n398",
-	"count": 3,
+	"count": 6,
 	"publications": {
 	  "33": 1,
 	  "60": 1,
@@ -328,14 +330,14 @@
 	"id": "3",
 	"title": "Open Science",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc78",
-	"count": 4,
+	"count": 10,
 	"publications": {
 	  "32": 1,
 	  "33": 1,
 	  "76": 1,
 	  "77": 1,
 	  "78": 1,
-	  "79": 1,
+	  "65": 1,
 	  "80": 1,
 	  "81": 1,
 	  "82": 1,
@@ -374,7 +376,7 @@
 	"id": "4653",
 	"title": "3D",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n4653",
-	"count": 3,
+	"count": 1,
 	"publications": {
 	  "78": 1
 	},
@@ -382,8 +384,7 @@
 	  "4": 1
 	},
 	"keywords": {
-	  "7053": 1,
-	  "54": 1
+	  "7053": 1
 	},
 	"type": 2
       },
@@ -391,7 +392,7 @@
 	"id": "7053",
 	"title": "Punktwolken",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n4653",
-	"count": 3,
+	"count": 1,
 	"publications": {
 	  "78": 1
 	},
@@ -407,7 +408,7 @@
 	"id": "54",
 	"title": "Langzeitarchivierung",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc54",
-	"count": 3,
+	"count": 1,
 	"publications": {
 	  "65": 1
 	},
@@ -415,7 +416,6 @@
 	  "45": 1
 	},
 	"keywords": {
-	  "4653": 1
 	},
 	"type": 2
       }

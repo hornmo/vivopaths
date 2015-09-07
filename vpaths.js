@@ -1,10 +1,10 @@
 var SPEED = 500;
-var FONTMIN = 10;
-var FONTMAX = 20;
+var FONTMIN = 15;
+var FONTMAX = 21;
 var MIDMINWIDTH = 200;
 var SIDEMINWIDTH = 300;
 var HEADERH = 80;
-var SEARCHPH = "search!";
+var SEARCHPH = "Suche";
 var TYPES = { 0: "authors", 1: "publications", 2: "keywords" };
 var BORDERS = 2;
 var OPACFOCUS = 0.8;
@@ -24,24 +24,25 @@ function View(svg){
       height: this.height - HEADERH
     });
     $('#search input').attr('placeholder', SEARCHPH);
-    this.fontsize = this.interval(this.width * this.height, 800 * 600, 2560 * 1600, FONTMIN, FONTMAX, false);
+    this.fontsize = this.interval(this.width * this.height, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
     this.authors = {};
     this.selected = [];
     this.publications = {};
     this.keywords = {};
     this.order = 'year';
-    this.events();
     this.getData();
+    this.events();
     this.pubSplit = {top: [], mid: [], bottom:[]};
     this.offsets = { top: [0,0], mid: [0,0], bottom: [0,0] };
     this.context = {visible: false, item: '' };
+    this.selStatus = ['',false,''];
     return this;
   };
   this.setSections = function(){
     var w = $(window).width();
     var h = $(window).height();
     var s = [];
-    if(w/3 >= SIDEMINWIDTH){
+    if(w/3 >= SIDEMINWIDTH && w >= 1024){
       s[0] = [w/3, h];
       s[1] = [w*2/3, h];
       s[2] = [w, h];
@@ -96,7 +97,7 @@ function View(svg){
     var that = this;
     var s = {};
     var sel = [];
-    if(that.selection.length){
+    if(that.selection.length >= 1 && that.data){
       $.each(that.selection, function(k,v){
 	  sel.push({
 	    type: TYPES[v[0]],
@@ -152,7 +153,6 @@ function View(svg){
       that.orderPubs();
       setTimeout(function(){
 	that.drawLabels();
-	that.drawEdges();
       },200);
     }else{
       S.clear();
@@ -162,26 +162,54 @@ function View(svg){
   this.events = function(){
     var that = this;
     var rtime;
+    var to = null;
     var timeout = false;
     var delta = 200;
     $('#search input').focus(function(event){
+      	var index = -1;
       $(this).attr('placeholder', '');
       $('#search input').keyup(function(event){
-	if(event.keyCode == 40) { 
-	  event.preventDefault()	  
-	};
+	var suggestions = $('.suggested');
+	if(event.keyCode == 40 || event.keyCode == 38){
+	  event.preventDefault();
+	  if(event.keyCode == 40) {
+	    index = (index + 1) % suggestions.length;
+	  }else if(event.keyCode == 38){
+	    index = (index + suggestions.length - 1) % suggestions.length;
+	  }
+	  if(suggestions){
+	    var str = '#' + suggestions[index].id + '.suggested';
+	    $('.suggested.suggested-focus').removeClass('suggested-focus');
+	    $(str).addClass('suggested-focus');
+	    $(this).val(suggestions[index].innerText);
+	  }
+	}else if(event.keyCode === 13){
+	  var sid = $('.suggested-focus').attr('id');
+	  $('#suggestions').css('opacity', 0);
+	  $('.suggested').remove();
+	  $('#search input').val('');
+	  $('#search input').blur();
+	  index = -1;
+	  S.clear();
+	  $('.label').fadeTo(SPEED, 0);
+	  setTimeout(function(){
+	    that.idToSelection(sid, 1);
+	  },SPEED);
+	}
       })
     });
     $('#search input').blur(function(){
       $(this).attr('placeholder', SEARCHPH);
     });
-    $('#search input').keyup(function(){
-      var searchTerm = $(this).val();
-      var addDiv = 0;
-      $('.suggested').remove();
-      $('#suggestions').css('opacity', 0);
-      if(searchTerm != ''){
-	that.showSuggestions(searchTerm);
+    $('#search input').keyup(function(e){
+      if(e.keyCode !== 40 && e.keyCode !== 38 && e.keyCode !== 13){
+	var searchTerm = $(this).val();
+	var addDiv = 0;
+	$('.suggested').remove();
+	$('#suggestions').css('opacity', 0);
+	if(searchTerm != ''){
+	  that.showSuggestions(searchTerm);
+	}
       }
     });
     $('#suggestions').unbind;
@@ -199,12 +227,14 @@ function View(svg){
     $(window).resize(function (e){
       that.sections = that.setSections();
       var newh = that.sections[0][1] - HEADERH;
+      var neww = $(window).width();
       S.clear();
       $('#canvas').css('height', newh);
       S.attr({
-	width: $(window).width(), 
+	width: neww, 
 	height: newh
       });
+      that.fontsize = that.interval(neww * newh, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
       $('.label').fadeTo(SPEED, 0);
       rtime = new Date();
       if (timeout === false) {
@@ -221,7 +251,9 @@ function View(svg){
 	  }               
       }
     });
-    $.address.externalChange(function(){ that.updateLabels(); });
+    $(document).ready(function(){
+      $.address.externalChange(function(){ that.updateLabels(); });
+    })
     $('#labels').on("mouseenter", ".label:not(.selected)", function(e){
       var lid = $(this).attr('id');
       var typeN = lid.substr(0,1);
@@ -292,6 +324,58 @@ function View(svg){
       }
       S.selectAll(eid).attr({opacity: OPACFOCUS});
     });
+    $('#labels').on("mousedown", ".label-text", function(e){
+      that.selStatus[0] = $(this).parent().attr('id');
+      var cid = '';
+      $('#labels').on("mouseup", ".label-text:not(.pub)", function(e){
+	if(S.select('#lasso')){
+	  S.select('#lasso').remove();
+	}
+	that.selStatus[2] = $(this).parent().attr('id');
+	if(that.selStatus[0] != that.selStatus[2]){
+	  that.selStatus[1] = true;
+	}else{
+	  that.selStatus[1] = false;
+	}
+      })
+    });
+    $(document).on("mouseup", function(e){
+      if(e.target.className !== "label-text"){
+	that.selStatus = ['',false,''];
+	if(S.select('#lasso')){
+	  S.select('#lasso').remove();
+	}
+      }
+    });
+    $(document).on("mousemove", function(e){
+      if(that.selStatus[0] != '' && that.selStatus[0].substr(0,1) != 1){
+	if(S.select('#lasso')){
+	  S.select('#lasso').remove();
+	}
+	if(!S.select('lasso')){
+	  var fromElem = $('#'+that.selStatus[0]+'.label');
+	  var posFrom = [ fromElem.position().left + (fromElem.width()/2), fromElem.position().top + (fromElem.height()/2) - HEADERH] ;
+	  var currentPos = [ e.pageX, e.pageY - HEADERH ];
+	  var path = 'M'+posFrom[0]+','+posFrom[1]+'L'+currentPos[0]+','+currentPos[1]
+	  S.path(path).attr({ stroke: COLORS[that.selStatus[0].substr(0,1)], strokeWidth: 3, fill: "none", opacity: 0.8, id: "lasso" });
+	}
+      }
+    });
+    $('#labels').on("mouseup", ".label-text", function(e){
+// 	lid = $(this).parent().attr('id');
+      clearTimeout(to);
+      setTimeout(function(){
+	sel = that.selStatus;
+	if(that.selStatus[1] === false && sel[0].substr(0,1) != 1){
+	  S.clear();
+	  to = that.idToSelection(sel[0], 1);
+	}else if(that.selStatus[1] === true && sel[0].substr(0,1) != 1 && sel[2].substr(0,1) != 1){
+	  S.clear();
+	  to = that.idToSelection(sel[0], 1, sel[2]);
+	}
+	that.selStatus = ['',false,''];
+      }, SPEED/5);
+    });
     $('#labels').on("mouseleave", ".hovered", function(e){
       var id = $(this).attr('id');
       $(this).removeClass('hovered');
@@ -302,27 +386,16 @@ function View(svg){
       $('.label').removeClass('connected');
       S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
     });
-    $('#labels').on("mouseup", ".label-text:not(.selected)", function(e){
-      S.clear();
-      var to = null;
-      lid = $(this).parent().attr('id');
-      clearTimeout(to);
-      setTimeout(function(){
-	to = that.idToSelection(lid, 1);
-      }, SPEED/5);
-    })
     $('#labels').on("mouseup", ".compare", function(e){
       S.clear();
-      var to = null;
       lid = $(this).parent().attr('id');
       clearTimeout(to);
       setTimeout(function(){
 	to = that.idToSelection(lid, 2);
       }, SPEED/5);
     })
-    $('#labels').on("mouseup", ".remove", function(e){
+    $('#labels').on("mouseup", ".label-selected-remove", function(e){
       S.clear();
-      var to = null;
       lid = $(this).parent().attr('id');
       clearTimeout(to);
       setTimeout(function(){
@@ -355,49 +428,107 @@ function View(svg){
 	that.context.visible = true;
 	that.context.item = selItem;
 	if(selItem.type === 0){
-	  $('#context').append('<span id="context-head">'+selItem.fullname+'</span>');
-	  if(selItem.photo){
-	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.photo+'" /></span>');
+	  var pos = '';
+	  if(selItem.positions){
+	    pos = '<p style="max-width:280px;"><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
 	  }
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
+	  $('#context').append('<div id="context-head"><span>'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
+	  if(selItem.image){
+	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.image+'" /></span>');
+	  }
 	}else if(selItem.type === 1){
 	  $('#context').append('<span id="context-head">'+selItem.title+'</span>');
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Nachweis in VIVO</a></p>');
 	}else if(selItem.type === 2){
-	  $('#context').append('<span id="context-head">'+selItem.title+'</span>');
-	  $('#context').append('<p id="context-links"><a href="'+selItem.uri+'">Nachweis in VIVO</a></p>');
+	  $('#context').append('<span id="context-head"><span>'+selItem.title+'</span></span>');
+	  that.getGND(selItem.title);
+	}
+	$('#context').append('<p id="context-links"><a target="_blank" href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
+	if(selItem.type === 2){
+	  $('#context > p').append('<span class="loading-icon"><i class="fa fa-spinner fa-spin"></i></span>');
 	}
 	if(selItem.p[0][1] >= HEADERH + 200 ){
 	  styles.bottom = (that.sections[0][1] - selItem.p[0][1] + 10) + 'px';
 	}else{
 	  styles.top = (selItem.p[1][1]) + 'px';
 	}
-	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH && !selItem.selected){
 	  styles.right = OUTERMARGIN + 'px';
 	}else{
 	  styles.left = selItem.p[0][0] + 'px';
 	}
 	styles.border = '2px solid' + COLORS[splitID[0]];
-	styles.width = '350px';
+	if(selItem.image){
+	  styles.width = '400px';
+	}else{
+	  styles.width = '300px';
+	}
 	$('#context').css(styles);
 	$('#context').fadeTo(SPEED/5, 1);
       }
     })
     $(document).mouseup(function(e){
+      var parent = $(e.target).parent().attr('class');
       var subject = $("#context");
-      if(that.context.visible == true && $(e.target).parent().attr('class') != 'label-icon' && e.target.id != subject.attr('id') && !subject.has(e.target).length){
+      if(that.context.visible == true && parent != 'label-icon' && e.target.id != subject.attr('id') && !subject.has(e.target).length){
 	that.context.visible = false;
 	$('#context').children().remove();
 	$('#context').css({top: "", bottom:"", left: "", border: "", height: "", width: ""});
 	$('#context').fadeTo(SPEED/5, 0);
       }
+      if(parent != 'suggested' && $(e.target).id != 'search'){
+	$('#suggestions').css('opacity', 0);
+	$('.suggested').remove();
+	$('#search input').val('');
+      }
     })
   }
-  this.idToSelection = function(id, mode){
+  this.getGND = function(label){
+    var url = 'http://lobid.org/subject?format=full&name=' + label;
+    var obj = {};
+    var gndLink = '';
+    $.ajax({
+      url: url,
+      jsonp: 'callback',
+      jsonpCallback:'JSON_CALLBACK',
+      dataType: 'jsonp',
+      success: function(json){
+	if(json[1]){
+	  json.splice(0,1);
+	  $.each(json, function(k, v){
+	    var subject = this['@graph'][0];
+	    if(subject.preferredNameForTheSubjectHeading){
+	      if(subject.preferredNameForTheSubjectHeading == label){
+		obj.uri = subject['@id'];
+		obj.id = subject.gndIdentifier;
+		if(subject.definition){
+		  obj.definition = subject.definition['@value'];
+		}
+	      }
+	    }
+	  });
+	  if(obj.uri){
+	  $('.loading-icon').remove();
+	  $('#context > p').append('<a href="'+ obj.uri +'">GND-Eintrag</a>');
+	  }
+	}
+      },
+      error: function(e){
+	console.log(this);
+      }
+    })
+    if(obj.uri){
+      return obj;
+    }
+  }
+  this.idToSelection = function(id, mode, id2){
     var that = this;
     var splitID = [];
+    var splitID2 = [];
     if(id.indexOf('_') === 1){
       splitID = id.split('_');
+      if(id2){
+	splitID2 = id2.split('_');
+      }
     }
     if(mode === 0){
       if(that.selection[1]){
@@ -418,8 +549,15 @@ function View(svg){
 	var l = that.selection.length;
 	that.selection.splice(0, l);
       }
+      var cid = '';
       that.selection[0] = splitID;
-      $.address.value(id);
+      if(!id2){
+	cid = id;
+      }else if(id2 && id2.indexOf('_') === 1){
+	cid = id + ':' + id2;
+	that.selection[1] = splitID2;
+      }
+      $.address.value(cid);
     }else if(mode === 2){
       that.selection.splice(1,1);
       that.selection[1] = splitID;
@@ -474,7 +612,7 @@ function View(svg){
     var sel = that.selected.length;
     var selHeight = sel*2*FONTMAX;
     var pubsTotal = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*that.fontsize));
     var withinLimits = [0,0];
     $.each(that.pubSplit, function(key, pubs){
       v =  '';
@@ -506,7 +644,7 @@ function View(svg){
   this.drawLabels = function(){
     var that = this;
     var combID = '';
-    var remElem = '<span class="remove" title="Remove"><i class="fa fa-times"></i></span>';
+    var remElem = '<span class="label-selected-remove" title="Remove"><i class="fa fa-times"></i></span>';
     var rem = '';
     var sel = '';
     $('.label').remove();
@@ -533,7 +671,7 @@ function View(svg){
 	var pos = [];
 	if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
 	  pos = that.getPos(pub, i, key);
-	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'">'+shortt+' ('+pub.year+')</span>'+rem+'</div>');
+	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'">'+shortt+' ('+pub.year+')</span>'+rem+'</div>');
 	  var w = $(iid).width();
 	  var h = $(iid).height();
 	  pos[1][0] = pos[0][0] + w + 12;
@@ -610,10 +748,10 @@ function View(svg){
       }
     };
     $('.label').fadeTo(SPEED, 1);
+    that.drawEdges();
   }
   this.drawEdges = function(){
     var that = this;
-    var stroke = '#3377CC';
     $.each(that.authors, function(k, a){
       if(a.publications && !a.selected && a.active === true){
 	$.each(a.publications, function(pubID){
@@ -625,7 +763,7 @@ function View(svg){
 		var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
 		var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
-		S.path(path).attr({stroke: stroke, strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
+		S.path(path).attr({stroke: COLORS[a.type], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
 	      }
 	    });
 	  });
@@ -633,7 +771,6 @@ function View(svg){
       }
     });
     $.each(that.keywords, function(k, a){
-      var stroke = '#CC7733';
       if(a.publications && !a.selected && a.active === true){
 	$.each(a.publications, function(pubID){
 	  $.each(that.pubSplit, function(sector, pubs){
@@ -644,12 +781,12 @@ function View(svg){
 		var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
 		if(that.sections[0][0] > SIDEMINWIDTH){
 		  var cx = (a.p[0][0] + gv.p[1][0]) / 2;
-		  var path = 'M'+ a.p[0][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
+		  var path = 'M'+ (a.p[0][0] - 2) + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
 		}else{
 		  var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		  var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
 		}
-		S.path(path).attr({ stroke: stroke, strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
+		S.path(path).attr({ stroke: COLORS[a.type], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
 	      }
 	    });
 	  });
@@ -664,13 +801,12 @@ function View(svg){
     var selHeight = sel*2*FONTMAX;
     var p = [[],[]];
     var space = null;
-    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*FONTMAX));
+    var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*that.fontsize));
     var totalPubs = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
     if(totalPubs > 0 && totalPubs <= maxpubs){
       space = (that.sections[1][1] - HEADERH) / (totalPubs + sel);
     }else{
       space = (that.sections[1][1] - HEADERH - selHeight) / (maxpubs + 2);
-      console.log('test');
     }
     if(item.type == 1){
       p[0][0] = that.sections[0][0] + BORDERS;
@@ -678,9 +814,9 @@ function View(svg){
 	if(sector == 'top'){
 	  p[0][1] = HEADERH + space*no + (space/3);
 	}else if(sector == 'mid'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.5*selHeight + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + (space/3);
 	}else if(sector == 'bottom'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + selHeight + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + 0.4*(that.pubSplit.mid.length ? selHeight : 0) + (space/3);
 	}
 	
       }else if(that.selected.length == 1){
@@ -792,20 +928,20 @@ function View(svg){
 	  var xTop = '';
 	  if(item.selected == 1){
 	    if(pubsTop.length && pubsMid.length){
-	      p[0][1] = (pubsTop[that.offsets['top'][1]].p[1][1] + pubsMid[0].p[0][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - 0.8*FONTMAX;
 	    }else if(!pubsTop.length){
-	      p[0][1] = (HEADERH + pubsMid[0].p[0][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsMid[0].p[0][1] - space/2 - 0.8*FONTMAX;
 	    }else if(pubsTop.length && !pubsMid.length){
-	      p[0][1] = (pubsTop[that.offsets['top'][1]].p[1][1] + pubsBot[0].p[0][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - 0.8*FONTMAX;
 	    }
 	  }else if(item.selected == 2){
 	    if(pubsMid.length && pubsBot.length){
-	      p[0][1] = (pubsMid[that.offsets['mid'][1]].p[1][1] + pubsBot[0].p[0][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - 0.8*FONTMAX;
 	    }else if(!pubsMid.length){
-	      p[0][1] = (pubsTop[that.offsets['top'][1]].p[1][1] + pubsBot[0].p[0][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - 0.8*FONTMAX;
 	      p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
 	    }else if(pubsMid.length && !pubsBot.length){
-	      p[0][1] = (pubsMid[that.offsets['mid'][1]].p[1][1] + that.sections[1][1])/2 - 0.8*FONTMAX;
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - 0.8*FONTMAX;
 	    }
 	  }
 	}else if(that.selected.length === 1){
@@ -819,6 +955,7 @@ function View(svg){
     return p;
   }
   this.shortenLabel = function(type, label){
+    var that = this;
     function getTextWidth(text, font) {
 	var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
 	var context = canvas.getContext("2d");
@@ -827,18 +964,18 @@ function View(svg){
 	return metrics.width;
     };
     function trimByPixel(str, width) {
-      var spn = $('<span class="temp" style="visibility:hidden;font-size:15pt"></span>').text(str).appendTo('body');
+      var spn = $('<span class="temp" style="visibility:hidden;font-size:'+that.fontsize+'"></span>').text(str).appendTo('body');
       var txt = str;
       while (spn.width() > width) { txt = txt.slice(0, -1); spn.text(txt + "..."); }
       return txt;
     }
-    var lwidth = getTextWidth(label, "15pt 'Generika Light'" );
+    var lwidth = getTextWidth(label, that.fontsize+" Generika Light" );
     var slabel = '';
     var that =  this;
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
-      if(lwidth >= mwidth - 80){
-	slabel = trimByPixel(label, mwidth - 80);
+      if(lwidth >= mwidth - 12*that.fontsize){
+	slabel = trimByPixel(label, mwidth - 12*that.fontsize);
 	slabel += "...";
       }else{
 	slabel = label;
