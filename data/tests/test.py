@@ -20,14 +20,18 @@ Tasks:
 #    write.writelines(data[6:-3])
 
 # # # # WORKS # # # #
-       
-       
-       
-       
-       
-       
-       
-       
+
+# Siehe BAThesis auf GitHub wegen der Replacements == Loeschen
+
+
+
+import fnmatch  # https://docs.python.org/2/library/fnmatch.html
+import re       # https://docs.python.org/2/library/re.html       
+
+
+
+
+
 
 ######## TEST AREA ########
 
