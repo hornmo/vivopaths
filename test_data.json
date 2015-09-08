@@ -242,7 +242,7 @@
 	"id": "2",
 	"title": "Kommunikation",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n398",
-	"count": 6,
+	"count": 3,
 	"publications": {
 	  "33": 1,
 	  "60": 1,
@@ -264,7 +264,7 @@
 	"id": "3",
 	"title": "Open Science",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc78",
-	"count": 10,
+	"count": 6,
 	"publications": {
 	  "32": 1,
 	  "33": 1,

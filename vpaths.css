@@ -88,7 +88,7 @@ body{
   margin:10px 10px 45px 10px;
   max-width:310px;
 }
-#context-head span{
+.context-label{
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -114,6 +114,13 @@ body{
 }
 .loading-icon{
   margin-left:50px;
+  padding-right:0.3em;
+}
+.context-icon i{
+  padding-right:0.3em;
+  vertical-align:text-top;
+  line-height:inherit;
+  cursor:default;
 }
 #labels{ 
   z-index: 4; 
@@ -211,11 +218,6 @@ body{
 }
 
 
-.context-icon i{
-  padding-right:0.3em;
-  font-size: 0.7em;
-  cursor:default;
-}
 
 .compare{
   border-left:1px solid #ddd;

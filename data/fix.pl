@@ -20,8 +20,8 @@ my $json;
   $json = <$fh>;
   close $fh;
 }
-my $enable = true;
+my $enable = 'true';
 $json = $json->utf8 ([$enable]);
-$enabled = $json->get_utf8;
-my $data = decode_json($json);
-$output_handler->print($test);
+my $enabled = $json->get_utf8;
+# my $data = decode_json($json);
+$output_handler->print($enabled);

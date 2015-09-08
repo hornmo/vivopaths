@@ -432,14 +432,15 @@ function View(svg){
 	  if(selItem.positions){
 	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
 	  }
-	  $('#context').append('<div id="context-head"><span>'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
+	  $('#context').append('<div id="context-head"><span class="context-label">'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
 	  if(selItem.image){
 	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.image+'" /></span>');
 	  }
 	}else if(selItem.type === 1){
-	  $('#context').append('<span id="context-head">'+selItem.title+'</span>');
+	  var date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'+selItem.year+'</span></p>'
+	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span>'+date+'</span>');
 	}else if(selItem.type === 2){
-	  $('#context').append('<span id="context-head"><span>'+selItem.title+'</span></span>');
+	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span></span>');
 	  that.getGND(selItem.title);
 	}
 	$('#context').append('<p id="context-links"><a target="_blank" href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
@@ -458,9 +459,9 @@ function View(svg){
 	}
 	styles.border = '2px solid' + COLORS[splitID[0]];
 	if(selItem.image){
-	  styles.width = '430px';
+	  styles.width = '450px';
 	}else{
-	  styles.width = '300px';
+	  styles.maxWidth = '450px';
 	}
 	$('#context').css(styles);
 	$('#context').fadeTo(SPEED/5, 1);
@@ -671,7 +672,7 @@ function View(svg){
 	var pos = [];
 	if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
 	  pos = that.getPos(pub, i, key);
-	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'">'+shortt+' ('+pub.year+')</span>'+rem+'</div>');
+	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'\n ('+pub.year+')">'+shortt+'</span>'+rem+'</div>');
 	  var w = $(iid).width();
 	  var h = $(iid).height();
 	  pos[1][0] = pos[0][0] + w + 12;
@@ -747,6 +748,7 @@ function View(svg){
 	k.active = true;
       }
     };
+    $('.label.selected').not('.pub').css('font-size', that.fontsize);
     $('.label').fadeTo(SPEED, 1);
     that.drawEdges();
   }
@@ -763,7 +765,7 @@ function View(svg){
 		var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
 		var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
-		S.path(path).attr({stroke: COLORS[a.type], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
+		S.path(path).attr({stroke: COLORS[a.type], strokeWidth: 2, fill: "none", opacity: 0, class: "path", id: edgeID });
 	      }
 	    });
 	  });
@@ -786,7 +788,7 @@ function View(svg){
 		  var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		  var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
 		}
-		S.path(path).attr({ stroke: COLORS[a.type], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
+		S.path(path).attr({ stroke: COLORS[a.type], strokeWidth: 2, fill: "none", opacity: 0, class: "path", id: edgeID });
 	      }
 	    });
 	  });
@@ -893,24 +895,26 @@ function View(svg){
 	      p[0][1] = that.sections[0][1] - FONTMAX - BORDERS;
 	    }
 	    minoverlap = p[0][1] - FONTMAX - BORDERS;
-	    maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
+	    maxoverlap = p[0][1] + 2*FONTMAX + BORDERS;
 	  });
-	  $.each(oa, function(k,v){   
-	    var t = parseInt($(this).css('top'), 10);
-	    var h = $(this).height();
-	    var w = $(this).width();
-	    var xpos = '';
-	    if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
-	      xpos = parseInt($(this).css('left'),10);
-	    }else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-	      xpos = parseInt($(this).css('right'),10)
-	    }
-	    if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
-	      changeW = w;
-	    }
-	    minoverlap = p[0][1] - FONTMAX - BORDERS;
-	    maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
-	  });
+	  if(that.sections[0][0] != SIDEMINWIDTH){
+	    $.each(oa, function(k,v){   
+	      var t = parseInt($(this).css('top'), 10);
+	      var h = $(this).height();
+	      var w = $(this).width();
+	      var xpos = '';
+	      if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
+		xpos = parseInt($(this).css('left'),10);
+	      }else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+		xpos = parseInt($(this).css('right'),10)
+	      }
+	      if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
+		changeW = w;
+	      }
+	      minoverlap = p[0][1] - FONTMAX - BORDERS;
+	      maxoverlap = p[0][1] + 2*FONTMAX + BORDERS;
+	    });
+	  }
 	  if(changeW != 0){
 	    if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
 	      p[0][0] = OUTERMARGIN + BORDERS + changeW + 30;
@@ -975,7 +979,7 @@ function View(svg){
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
       if(lwidth >= mwidth - 12*that.fontsize){
-	slabel = trimByPixel(label, mwidth - 12*that.fontsize);
+	slabel = trimByPixel(label, mwidth - 10*that.fontsize);
 	slabel += "...";
       }else{
 	slabel = label;
