@@ -12,7 +12,7 @@ body{
 #top{
   padding:10px;
   height:60px;
-  background-color:rgb(85,85,85);
+  background-color:#fff;
 }
 #search{
   margin-top:15px;
@@ -35,11 +35,14 @@ body{
 }
 .suggested{
   border-bottom:1px solid #efefef;
-  width:300px;
+  width:302px;
   display:block;
   position:relative;
   padding: 0.3em;
   cursor:pointer;
+}
+.suggested:hover{
+  background-color:#eee;
 }
 .suggested-focus{
   background-color:#eee;
@@ -83,7 +86,7 @@ body{
 #context-head{
   float:left;
   margin:10px 10px 45px 10px;
-  max-width:290px;
+  max-width:310px;
 }
 #context-head span{
   font-size: 1.2em;
@@ -152,7 +155,6 @@ body{
   color:#3377CC;
 }
 .keyword.selected, .author.selected{
-  font-size:20px;
 }
 .author.selected{
   color:#fff;

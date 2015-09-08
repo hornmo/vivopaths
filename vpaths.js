@@ -430,7 +430,7 @@ function View(svg){
 	if(selItem.type === 0){
 	  var pos = '';
 	  if(selItem.positions){
-	    pos = '<p style="max-width:280px;"><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
+	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
 	  }
 	  $('#context').append('<div id="context-head"><span>'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
 	  if(selItem.image){
@@ -458,7 +458,7 @@ function View(svg){
 	}
 	styles.border = '2px solid' + COLORS[splitID[0]];
 	if(selItem.image){
-	  styles.width = '400px';
+	  styles.width = '430px';
 	}else{
 	  styles.width = '300px';
 	}
@@ -506,9 +506,9 @@ function View(svg){
 	      }
 	    }
 	  });
-	  if(obj.uri){
 	  $('.loading-icon').remove();
-	  $('#context > p').append('<a href="'+ obj.uri +'">GND-Eintrag</a>');
+	  if(obj.uri){
+	    $('#context > p').append('<a href="'+ obj.uri +'">GND-Eintrag</a>');
 	  }
 	}
       },

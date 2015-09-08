@@ -8,16 +8,12 @@
 	"image": "https://test.osl.tib.eu/vivo-tib/file/n2039/lambert.jpg",
 	"positions":["Leitung", "Open Science Lab", "Entwicklung"],
 	"name": "L Heller",
-	"count": "8",
+	"count": "4",
 	"publications": {
 	  "32": 1,
 	  "33": 1,
 	  "60": 1,
-	  "77": 1,
-	  "80": 1,
-	  "81": 1,
-	  "82": 1,
-	  "83": 1
+	  "77": 1
 	},
 	"authors": {
 	  "4": 2,
@@ -223,65 +219,6 @@
 	},
 	"year": "2014",
 	"type": 1
-      },
-      "80": {
-	"id": "80",
-	"title": "Taming the Wilderness of Open Research Information",
-	"uri": null,
-	"authors": {
-	  "26": 1
-	},
-	"abstract": null,
-	"keywords": {
-	  "3": 1
-	},
-	"year": "2014",
-	"type": 1
-      },
-      "81": {
-	"id": "81",
-	"title": "Aspekte der Kommunikation mit Twitter",
-	"uri": null,
-	"authors": {
-	  "26": 1
-	},
-	"abstract": null,
-	"keywords": {
-	  "2": 1,
-	  "3": 1
-	},
-	"year": "2014",
-	"type": 1
-      },
-      "82": {
-	"id": "82",
-	"title": "Aspekte der Kommunikation mit Twitter",
-	"uri": null,
-	"authors": {
-	  "26": 1
-	},
-	"abstract": null,
-	"keywords": {
-	  "2": 1,
-	  "3": 1
-	},
-	"year": "2014",
-	"type": 1
-      },
-      "83": {
-	"id": "83",
-	"title": "Aspekte der Kommunikation mit Twitter",
-	"uri": null,
-	"authors": {
-	  "26": 1
-	},
-	"abstract": null,
-	"keywords": {
-	  "2": 1,
-	  "3": 1
-	},
-	"year": "2014",
-	"type": 1
       }
     },
     "keywords": {
@@ -309,10 +246,7 @@
 	"publications": {
 	  "33": 1,
 	  "60": 1,
-	  "77": 1,
-	  "81": 1,
-	  "82": 1,
-	  "83": 1
+	  "77": 1
 	},
 	"authors": {
 	  "26": 3,
@@ -337,11 +271,7 @@
 	  "76": 1,
 	  "77": 1,
 	  "78": 1,
-	  "65": 1,
-	  "80": 1,
-	  "81": 1,
-	  "82": 1,
-	  "83": 1
+	  "65": 1
 	},
 	"authors": {
 	  "26": 3,
