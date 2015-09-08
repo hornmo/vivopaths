@@ -461,6 +461,7 @@ function View(svg){
 	if(selItem.image){
 	  styles.width = '450px';
 	}else{
+      styles.minWidth = '280px';
 	  styles.maxWidth = '450px';
 	}
 	$('#context').css(styles);
