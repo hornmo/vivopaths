@@ -10,10 +10,10 @@
 	"name": "L Heller",
 	"count": "4",
 	"publications": {
-	  "32": 1,
-	  "33": 1,
-	  "60": 1,
-	  "77": 1
+	  "article32": 1,
+	  "article33": 1,
+	  "article60": 1,
+	  "article77": 1
 	},
 	"authors": {
 	  "4": 2,
@@ -21,10 +21,10 @@
 	  "48": 1
 	},
 	"keywords": {
-	  "1": 1,
-	  "2": 3,
-	  "3": 4,
-	  "4": 1
+	  "conc61": 1,
+	  "n398": 3,
+	  "conc78": 4,
+	  "conc0": 1
 	},
 	"type": 0
       },
@@ -36,10 +36,10 @@
 	"positions":["Open Science Lab", "Entwicklung"],
 	"count": "4",
 	"publications": {
-	  "60": 1,
-	  "77": 1,
-	  "76": 1,
-	  "78": 1
+	  "article60": 1,
+	  "article77": 1,
+	  "article76": 1,
+	  "article78": 1
 	},
 	"authors": {
 	  "26": 2,
@@ -47,11 +47,11 @@
 	  "48": 1
 	},
 	"keywords":{
-	  "2": 2,
-	  "4": 1,
-	  "3": 2,
-	  "4653": 1,
-	  "7053": 1
+	  "n398": 2,
+	  "conc0": 1,
+	  "conc78": 2,
+	  "n4653": 1,
+	  "n7053": 1
 	},
 	"type": 0
       },
@@ -63,15 +63,15 @@
 	"positions":["Drittmittel und Transfer", "Entwicklung"],
 	"count": "1",
 	"publications": {
-	  "60": 1
+	  "article60": 1
 	},
 	"authors": {
 	  "4": 1,
 	  "26": 1
 	},
 	"keywords": {
-	  "2": 1,
-	  "4": 1
+	  "n398": 1,
+	  "conc0": 1
 	},
 	"type": 0
       },
@@ -82,12 +82,12 @@
 	"uri": "https://test.osl.tib.eu/vivo-tib/individual?uri=http%3A%2F%2Fvivo.mydomain.edu%2Findividual%2F45",
 	"count": "1",
 	"publications": {
-	  "65": 1
+	  "article65": 1
 	},
 	"authors": {
 	},
 	"keywords": {
-	  "54": 1
+	  "conc54": 1
 	},
 	"type": 0
       },
@@ -99,22 +99,22 @@
 	"positions":["Open Science Lab", "Entwicklung"],
 	"count": "1",
 	"publications": {
-	  "77": 1
+	  "article77": 1
 	},
 	"authors": {
 	  "26": 1,
 	  "4": 1
 	},
 	"keywords": {
-	  "2": 1,
-	  "3": 1
+	  "n398": 1,
+	  "conc78": 1
 	},
 	"type": 0
       }
     },
     "publications":{
-      "32": {
-	"id": "32",
+      "article32": {
+	"id": "article32",
 	"title": "Aspekte der Kommunikation mit Wissenschaftsblogs",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/article32",
 	"authors": {
@@ -122,14 +122,14 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "1": 1,
-	  "3": 1
+	  "conc61": 1,
+	  "conc78": 1
 	},
 	"year": "2014",
 	"type": 1
       },
-      "33": {
-	"id": "33",
+      "article33": {
+	"id": "article33",
 	"title": "Aspekte der Kommunikation mit Twitter",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/article33",
 	"authors": {
@@ -137,14 +137,14 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "2": 1,
-	  "3": 1
+	  "n398": 1,
+	  "conc78": 1
 	},
 	"year": "2014",
 	"type": 1
       },
-      "60": {
-	"id": "60",
+      "article60": {
+	"id": "article60",
 	"title": "Entwicklung eines Verfahrens zur automatischen Sammlung, Erschließung und Bereitstellung multimedialer Open-Access-Objekte mittels der Infrastruktur von Wikimedia Commons und Wikidata",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/article60",
 	"authors": {
@@ -154,16 +154,16 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "2": 1,
-	  "4": 1
+	  "n398": 1,
+	  "conc0": 1
 	},
 	"year": "2011",
 	"type": 1
       },
-      "77": {
-	"id": "77",
+      "article77": {
+	"id": "article77",
 	"title": "The Quest for Research Information",
-	"uri": "https://test.osl.tib.eu/vivo-tib/display/article77",
+	"uri": "https://test.osl.tib.eu/vivo-tib/display/articlearticle77",
 	"authors": {
 	  "26": 1,
 	  "4": 1,
@@ -171,14 +171,14 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "2": 1,
-	  "3": 1
+	  "n398": 1,
+	  "conc78": 1
 	},
 	"year": "2014",
 	"type": 1
       },
-      "76": {
-	"id": "76",
+      "article76": {
+	"id": "article76",
 	"title": "Taming the Wilderness of Open Research Information",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/article76",
 	"authors": {
@@ -186,13 +186,13 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "3": 1
+	  "conc78": 1
 	},
 	"year": "2014",
 	"type": 1
       },
-      "78": {
-	"id": "78",
+      "article78": {
+	"id": "article78",
 	"title": "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession",
 	"uri": null,
 	"authors": {
@@ -200,14 +200,14 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "4653": 1,
-	  "7053": 1
+	  "n4653": 1,
+	  "n7053": 1
 	},
 	"year": "2014",
 	"type": 1
       },
-      "65": {
-	"id": "65",
+      "article65": {
+	"id": "article65",
 	"title": "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium",
 	"uri": null,
 	"authors": {
@@ -215,38 +215,38 @@
 	},
 	"abstract": null,
 	"keywords": {
-	  "54": 1
+	  "conc54": 1
 	},
 	"year": "2014",
 	"type": 1
       }
     },
     "keywords": {
-      "1": {
-	"id": "1",
+      "conc61": {
+	"id": "conc61",
 	"title": "Literaturverwaltung",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc61",
 	"count": 1,
 	"publications": {
-	  "32": 1
+	  "article32": 1
 	},
 	"authors": {
 	  "26": 1
 	},
 	"keywords": {
-	  "3": 1
+	  "conc78": 1
 	},
 	"type": 2
       },
-      "2": {
-	"id": "2",
+      "n398": {
+	"id": "n398",
 	"title": "Kommunikation",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n398",
 	"count": 3,
 	"publications": {
-	  "33": 1,
-	  "60": 1,
-	  "77": 1
+	  "article33": 1,
+	  "article60": 1,
+	  "article77": 1
 	},
 	"authors": {
 	  "26": 3,
@@ -255,23 +255,23 @@
 	  "48": 1
 	},
 	"keywords": {
-	  "3": 2,
-	  "4": 1
+	  "conc78": 2,
+	  "conc0": 1
 	},
 	"type": 2
       },
-      "3": {
-	"id": "3",
+      "conc78": {
+	"id": "conc78",
 	"title": "Open Science",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc78",
 	"count": 6,
 	"publications": {
-	  "32": 1,
-	  "33": 1,
-	  "76": 1,
-	  "77": 1,
-	  "78": 1,
-	  "65": 1
+	  "article32": 1,
+	  "article33": 1,
+	  "article76": 1,
+	  "article77": 1,
+	  "article78": 1,
+	  "article65": 1
 	},
 	"authors": {
 	  "26": 3,
@@ -279,18 +279,18 @@
 	  "48": 1
 	},
 	"keywords": {
-	  "1": 1,
-	  "2": 2
+	  "conc61": 1,
+	  "n398": 2
 	},
 	"type": 2
       },
-      "4": {
-	"id": "4",
+      "conc0": {
+	"id": "conc0",
 	"title": "Open Access",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc0",
 	"count": 1,
 	"publications": {
-	  "60": 1
+	  "article60": 1
 	},
 	"authors": {
 	  "26": 1,
@@ -298,49 +298,49 @@
 	  "9": 1
 	},
 	"keywords": {
-	  "2": 1
+	  "n398": 1
 	},
 	"type": 2
       },
-      "4653": {
-	"id": "4653",
+      "n4653": {
+	"id": "n4653",
 	"title": "3D",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/n4653",
 	"count": 1,
 	"publications": {
-	  "78": 1
+	  "article78": 1
 	},
 	"authors": {
 	  "4": 1
 	},
 	"keywords": {
-	  "7053": 1
+	  "n7053": 1
 	},
 	"type": 2
       },
-      "7053": {
-	"id": "7053",
+      "n7053": {
+	"id": "n7053",
 	"title": "Punktwolken",
-	"uri": "https://test.osl.tib.eu/vivo-tib/display/n4653",
+	"uri": "https://test.osl.tib.eu/vivo-tib/display/n7053",
 	"count": 1,
 	"publications": {
-	  "78": 1
+	  "article78": 1
 	},
 	"authors": {
 	  "4": 1
 	},
 	"keywords": {
-	  "4653": 1
+	  "n4653": 1
 	},
 	"type": 2
       },
-      "54": {
-	"id": "54",
+      "conc54": {
+	"id": "conc54",
 	"title": "Langzeitarchivierung",
 	"uri": "https://test.osl.tib.eu/vivo-tib/display/conc54",
 	"count": 1,
 	"publications": {
-	  "65": 1
+	  "article65": 1
 	},
 	"authors": {
 	  "45": 1

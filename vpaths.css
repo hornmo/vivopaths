@@ -151,17 +151,26 @@ body{
   -ms-user-select: none;
   user-select: none;
 } 
-.label:hover{
+/*.label:hover{
   cursor:pointer;
   background-color:#fff;
-}
+}*/
 .label.hovered{
   opacity:1;
+  cursor:default;
+  background-color:#fff;
 }
 .author{
   color:#3377CC;
 }
-.keyword.selected, .author.selected{
+.keyword.selected:hover, .author.selected:hover{
+  cursor:default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .author.selected{
   color:#fff;
@@ -174,7 +183,7 @@ body{
   border: 2px solid #3377CC;
 }
 .pub{
-  color:#77AA33;
+  color:#66AA33;
 }
 .pub.label{
   margin-right:10px;
@@ -182,13 +191,13 @@ body{
 }
 .pub.selected{
   color:#fff;
-  background-color:#77AA33;
+  background-color:#66AA33;
 }
 .pub.connected{
-  background:rgba(228, 245, 214, 0.8);
+  background:rgba(102, 170, 51, 0.2);
 }
 .pub.hovered{
-  border: 2px solid #77AA33;
+  border: 2px solid #66AA33;
 }
 .keyword{
   color:#CC7733;
