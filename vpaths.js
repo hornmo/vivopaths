@@ -99,6 +99,7 @@ function View(svg){
     var s = {};
     var sel = [];
     if(that.selection.length >= 1 && that.data){
+      that.showSplash(false);
       $.each(that.selection, function(k,v){
 	  sel.push({
 	    type: TYPES[v[0]],
@@ -158,13 +159,14 @@ function View(svg){
     }else{
       S.clear();
       $('.label').remove();
+      this.showSplash(true);
     }
   };
   this.showSplash = function(bool){
-    if(bool){
-      $('#splash').append('<div class="splashmsg"><b><i>VIVOPaths</i></b> is a visualization tool to enable an interactive exploration through a</div>');
+    if(bool === true){
+      $('#splash').append('<div class="splashmsg"><b><i>VIVOPaths</i></b> is a visualization tool to enable an interactive exploration through a semantic representation of a research institution.</div>');
     }else{
-      $('#splash').children.remove();
+      $('#splash').children().remove();
     }
   }
   this.events = function(){
@@ -173,38 +175,37 @@ function View(svg){
     var to = null;
     var timeout = false;
     var delta = 200;
-    $('#search input').focus(function(event){
-      	var index = -1;
-      $(this).attr('placeholder', '');
-      $('#search input').keyup(function(event){
-	var suggestions = $('.suggested');
-	if(event.keyCode == 40 || event.keyCode == 38){
-	  event.preventDefault();
-	  if(event.keyCode == 40) {
-	    index = (index + 1) % suggestions.length;
-	  }else if(event.keyCode == 38){
-	    index = (index + suggestions.length - 1) % suggestions.length;
-	  }
-	  if(suggestions){
-	    var str = '#' + suggestions[index].id + '.suggested';
-	    $('.suggested.suggested-focus').removeClass('suggested-focus');
-	    $(str).addClass('suggested-focus');
-	    $(this).val(suggestions[index].innerText);
-	  }
-	}else if(event.keyCode === 13){
-	  var sid = $('.suggested-focus').attr('id');
-	  $('#suggestions').css('opacity', 0);
-	  $('.suggested').remove();
-	  $('#search input').val('');
-	  $('#search input').blur();
-	  index = -1;
-	  S.clear();
-	  $('.label').fadeTo(SPEED, 0);
-	  setTimeout(function(){
-	    that.idToSelection(sid, 1);
-	  },SPEED);
+    var index = -1;
+//     $(this).attr('placeholder', '');
+    $('#search input').keyup(function(event){
+      var suggestions = $('.suggested');
+      if(event.keyCode == 40 || event.keyCode == 38){
+	event.preventDefault();
+	if(event.keyCode == 40) {
+	  index = (index + 1) % suggestions.length;
+	}else if(event.keyCode == 38){
+	  index = (index + suggestions.length - 1) % suggestions.length;
 	}
-      })
+	if(suggestions){
+	  var str = '#' + suggestions[index].id + '.suggested';
+	  $('.suggested.suggested-focus').removeClass('suggested-focus');
+	  $(str).addClass('suggested-focus');
+	  $(this).val(suggestions[index].innerText);
+	}
+      }else if(event.keyCode === 13){
+	event.preventDefault();
+	var sid = $('.suggested-focus').attr('id');
+	$('#suggestions').css('opacity', 0);
+	$('#search input').val('');
+	$('#search input').blur();
+	index = -1;
+	S.clear();
+	$('.label').fadeTo(SPEED, 0);
+	setTimeout(function(){
+	  $('.suggested').remove();
+	  that.idToSelection(sid, 1);
+	},SPEED/5);
+      }
     });
     $('#search input').blur(function(){
       $(this).attr('placeholder', SEARCHPH);
@@ -220,7 +221,7 @@ function View(svg){
 	}
       }
     });
-    $('#suggestions').unbind;
+    //$('#suggestions').unbind;
     $('#suggestions').on("mouseup", ".suggested", function(e){
 	var sid = $(this).attr('id');
 	$('#suggestions').css('opacity', 0);
@@ -260,7 +261,7 @@ function View(svg){
       }
     });
     $(document).ready(function(){
-      $.address.externalChange(function(){ that.updateLabels(); });
+      $.address.externalChange(function(){ that.selection = that.getPars(); that.updateLabels();});
     })
     $('#labels').on("mouseenter", ".label:not(.selected)", function(e){
       var lid = $(this).attr('id');
@@ -448,7 +449,7 @@ function View(svg){
 	  var date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'+selItem.year+'</span></p>'
 	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span>'+date+'</span>');
 	}else if(selItem.type === 2){
-	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span></span>');
+	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span><p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></span>');
 	  that.getGND(selItem.title);
 	}
 	$('#context').append('<p id="context-links"><a target="_blank" href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
@@ -658,6 +659,7 @@ function View(svg){
     var rem = '';
     var sel = '';
     $('.label').remove();
+    S.clear();
     that.getOffsets();
     $.each(that.pubSplit, function(key, pubs){
       for(i=0;i<pubs.length;i++){
@@ -688,6 +690,7 @@ function View(svg){
 	  pos[1][1] = pos[0][1] + h + 10;
 	  pub.p = pos;
 	  pub.active = true;
+	  pos = [];
 	}else{
 	  delete pub.active;
 	  pub.active = false;
@@ -763,6 +766,7 @@ function View(svg){
   }
   this.drawEdges = function(){
     var that = this;
+    var w = that.sections[1][0] - that.sections[0][0];
     $.each(that.authors, function(k, a){
       if(a.publications && !a.selected && a.active === true){
 	$.each(a.publications, function(pubID){
@@ -804,12 +808,30 @@ function View(svg){
 	});
       }
     });
-//     if(that.pubSplit.mid.length){
-//       var mid = that.pubSplit.mid;
-//       var w = that.sections[1][0] - that.sections[0][0];
-//       var h = mid[mid.length-1].p[1][1] - mid[0].p[0][1] + 2*that.fontsize;
-//       S.rect(mid[0].p[0][0] - 10, mid[0].p[0][1] - HEADERH - that.fontsize, w, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 2, opacity: 0.2});
-//     }
+    if(that.selected.length == 2){
+      $.each(that.pubSplit, function(key, pubs){
+	if(this.length !== 0){
+	  var h = this[this.length-1].p[1][1] - this[0].p[0][1] - BORDERS;
+	  S.rect(this[0].p[0][0], this[0].p[0][1] - HEADERH, 1.4*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
+	  if(key === 'top'){
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: "#fff", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.8});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
+	    S.text(this[0].p[0][0] - 21, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I").attr({fill: "#bfbfbf"});
+	  }else if(key === 'mid'){
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 1});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
+	    S.text(this[0].p[0][0] - 36, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I + II").attr({fill: "#bfbfbf"});
+	  }else if(key === 'bottom'){
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: "#fff", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.8});
+// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
+	    S.text(this[0].p[0][0] - 25, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "II").attr({fill: "#bfbfbf"});
+	  }
+	}
+      });
+    }
     S.selectAll('.path').animate({opacity: 0.2}, SPEED/2);
   }
   this.getPos = function(item, no, sector){
@@ -947,24 +969,29 @@ function View(svg){
 	  var xTop = '';
 	  if(item.selected == 1){
 	    if(pubsTop.length && pubsMid.length){
-	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
 	    }else if(!pubsTop.length){
 	      p[0][1] = pubsMid[0].p[0][1] - space/2 - 0.5*that.fontsize;
 	    }else if(pubsTop.length && !pubsMid.length){
-	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
 	    }
 	  }else if(item.selected == 2){
 	    if(pubsMid.length && pubsBot.length){
-	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
 	    }else if(!pubsMid.length){
-	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
-	      p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
+	      if(totalPubs >= maxpubs){
+		p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
+	      }else{
+		p[0][1] = pubsBot[0].p[0][1] - space/2 - (0.5*that.fontsize + 2*BORDERS);
+//		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
+	      }
 	    }else if(pubsMid.length && !pubsBot.length){
-	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
 	    }
 	  }
 	}else if(that.selected.length === 1){
-	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 4*BORDERS);
+	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 2*BORDERS);
 	}
       }
       if(p[0][1] >= that.sections[0][1] - FONTMAX || p[0][1] <= HEADERH){

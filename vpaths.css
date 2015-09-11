@@ -62,6 +62,11 @@ body{
   font-family: FontAwesome;
   padding-right: 0.3em;
 }
+.splashmsg{
+  position:relative;
+  width: 70%;
+  margin: 50px auto;
+}
 #canvas{ 
   z-index: 2;
   position:absolute;
@@ -157,8 +162,13 @@ body{
 }*/
 .label.hovered{
   opacity:1;
-  cursor:default;
+  cursor:pointer;
   background-color:#fff;
+}
+.selected-number{
+  border:1px solid #eee;
+  border-radius: 10px;
+  width:20px;
 }
 .author{
   color:#3377CC;
