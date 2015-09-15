@@ -2,7 +2,7 @@ var SPEED = 500;
 var FONTMIN = 15;
 var FONTMAX = 21;
 var MIDMINWIDTH = 200;
-var SIDEMINWIDTH = 300;
+var SIDEMINWIDTH = 350;
 var HEADERH = 80;
 var SEARCHPH = "Suche";
 var MAXSUGGESTIONS = 15;
@@ -11,7 +11,8 @@ var BORDERS = 2;
 var OPACFOCUS = 0.8;
 var MAXSIDELABELWIDTH = 200;
 var OUTERMARGIN = 50;
-var COLORS = ["#3377CC","#66AA33","#CC7733"]
+var COLORS = ["#3377CC","#66AA33","#CC7733"];
+var BASEURI = "";
 
 function View(svg){
   var S = Snap(svg);
@@ -441,7 +442,7 @@ function View(svg){
 	that.context.item = selItem;
 	if(selItem.type === 0){
 	  var pos = '';
-	  if(selItem.positions){
+	  if(selItem.positions.length){
 	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
 	  }
 	  $('#context').append('<div id="context-head"><span class="context-label">'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
@@ -641,11 +642,11 @@ function View(svg){
     });
     if(pubsTotal > maxpubs){
       $.each(that.pubSplit, function(key, pubs){
-	if(this.length > Math.floor(maxpubs/3)){
+	if(this.length > Math.ceil(maxpubs/3)){
 	  if(withinLimits[0] == 0){
 	    that.offsets[key][1] = Math.floor(maxpubs/3);
 	  }else if(withinLimits[0] == 1){
-	    that.offsets[key][1] = Math.floor((maxpubs - withinLimits[1])/2)
+	    that.offsets[key][1] = Math.floor((maxpubs - withinLimits[1])/2) - 1;
 	  }else if(withinLimits[0] == 2){
 	    that.offsets[key][1] = (maxpubs - withinLimits[1] - 1)
 	  }
@@ -825,20 +826,18 @@ function View(svg){
       $.each(that.pubSplit, function(key, pubs){
 	if(this.length !== 0){
 	  var h = this[that.offsets[key][1]].p[1][1] - this[that.offsets[key][0]].p[0][1] - BORDERS;
-	  S.rect(this[that.offsets[key][0]].p[0][0], this[that.offsets[key][0]].p[0][1] - HEADERH, 1.4*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
+	  S.rect(this[that.offsets[key][0]].p[0][0] - 1.8*that.fontsize, this[that.offsets[key][0]].p[0][1] - HEADERH, 1.6*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
 	  if(key === 'top'){
-	    S.text(this[0].p[0][0] - 21, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I").attr({fill: "#bfbfbf"});
+	    S.text(this[0].p[0][0] - that.fontsize*1.15, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I").attr({fill: "#bfbfbf", fontSize: that.fontsize});
 	  }else if(key === 'mid'){
-	    S.text(this[0].p[0][0] - 36, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I + II").attr({fill: "#bfbfbf"});
+	    S.text(this[0].p[0][0] - that.fontsize*1.8, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I&II").attr({fill: "#bfbfbf", fontSize: that.fontsize});
 	  }else if(key === 'bottom'){
-	    S.text(this[0].p[0][0] - 25, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "II").attr({fill: "#bfbfbf"});
+	    S.text(this[0].p[0][0] - that.fontsize*1.15 - that.fontsize/8, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "II").attr({fill: "#bfbfbf", fontSize: that.fontsize});
 	  }
 	}
       });
       var t = $('#'+that.selected[0]+'.selected');
-      console.log(t);
       var b = $('#'+that.selected[1]+'.selected');
-      console.log(b);
       S.circle(t.position().left - that.fontsize, t.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
       S.text(t.position().left - that.fontsize*1.15, t.position().top - HEADERH + that.fontsize*1.17, "I").attr({fill: "#bfbfbf", border: "1px solid #bfbfbf", fontSize: that.fontsize});
       S.circle(b.position().left - that.fontsize, b.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
@@ -981,15 +980,15 @@ function View(svg){
 	  var xTop = '';
 	  if(item.selected == 1){
 	    if(pubsTop.length && pubsMid.length){
-	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
 	    }else if(!pubsTop.length){
 	      p[0][1] = pubsMid[0].p[0][1] - space/2 - 0.5*that.fontsize;
 	    }else if(pubsTop.length && !pubsMid.length){
-	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+	      p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
 	    }
 	  }else if(item.selected == 2){
 	    if(pubsMid.length && pubsBot.length){
-	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
 	    }else if(!pubsMid.length){
 	      if(totalPubs >= maxpubs){
 // 		p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
@@ -1000,11 +999,11 @@ function View(svg){
 //		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
 	      }
 	    }else if(pubsMid.length && !pubsBot.length){
-	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 4*BORDERS);
 	    }
 	  }
 	}else if(that.selected.length === 1){
-	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 2*BORDERS);
+	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 4*BORDERS);
 	}
       }
       if(p[0][1] >= that.sections[0][1] - FONTMAX - that.fontsize || p[0][1] <= HEADERH){

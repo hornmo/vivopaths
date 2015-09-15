@@ -81,12 +81,26 @@ foreach my $author (@imp_authors) {
   $id = substr $id, $uri_length, (length $id)-1;
   my $name = $author->{'name'}->{'value'};
   my @name_parts = split(',  ', $name);
-  my $fullname = "$name_parts[1] $name_parts[0]";
-  my $shortfirst = substr $name_parts[1], 0, 1;
-  $name = "$shortfirst $name_parts[0]";
+  my $fullname;
+  if($name_parts[1]){
+    $fullname = "$name_parts[1] $name_parts[0]";
+  }else{
+    $fullname = "$name_parts[0]";
+  }
+  my $shortfirst;
+  if($name_parts[1]){
+    $shortfirst = substr $name_parts[1], 0, 1;
+    $name = "$shortfirst $name_parts[0]";
+  }else{
+    $name = "$name_parts[0]";
+  }
+  
   my $count = $author->{'count'}->{'value'};
   my $uri = $author->{'uri'}->{'value'};
-  my @positions = split('; ', $author->{'positions'}->{'value'});
+  my @positions;
+  if($author->{'positions'}){
+    @positions = split('; ', $author->{'positions'}->{'value'});
+  }
   my @pubs = split('; ', $author->{'publications'}->{'value'});
   my %lpublications;
   foreach my $pub (@pubs) {
@@ -155,7 +169,7 @@ foreach my $keyword (%keywords){
     }
   };
 }
-print $dump_handler Dumper(%keywords);
+# print $dump_handler Dumper(%keywords);
 $combined[0]{'authors'} = \%authors;
 $combined[0]{'publications'} = \%publications;
 $combined[0]{'keywords'} = \%keywords;
