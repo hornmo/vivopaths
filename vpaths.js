@@ -56,8 +56,8 @@ function View(svg){
   }
   this.getData = function(){
     var that = this;
-    jQuery.getJSON("test_data.json", function(r,s){
-      that.data = r[0];
+    jQuery.getJSON("data/merged_data.json", function(r,s){
+      that.data = r;
       if(that.selection != ''){
 	that.updateLabels();
       }
@@ -119,7 +119,7 @@ function View(svg){
 	      var dupe = false;
 	      if(i === 1){
 		$.each(that[type], function(ik, iv){
-		  if(iv.id === relID){
+		  if(iv && iv.id === relID){
 		    dupe = true;
 		    if(iv.type === 1){
 		      for(j=0;j<that.pubSplit.top.length;j++){
@@ -381,6 +381,8 @@ function View(svg){
 	}else if(that.selStatus[1] === true && sel[0].substr(0,1) != 1 && sel[2].substr(0,1) != 1){
 	  S.clear();
 	  to = that.idToSelection(sel[0], 1, sel[2]);
+	}else if(sel[0].substr(0,1) == 1){
+	  to = that.idToSelection(sel[0], 1);
 	}
 	that.selStatus = ['',false,''];
       }, SPEED/5);
@@ -663,101 +665,107 @@ function View(svg){
     that.getOffsets();
     $.each(that.pubSplit, function(key, pubs){
       for(i=0;i<pubs.length;i++){
-	var pub = pubs[i];
-	var iid = '#'+ pub.type + '_' + pub.id;
-	sel = '';
-	rem = '';
-	combID = pub.type + '_' + pub.id;
-	for(j=0;j<that.selected.length;j++){
-	  if(combID === that.selected[j]){
-	    sel = ' selected';
-	    rem = remElem;
-	    pub.selected = j+1;
+	if(pubs[i]){
+	  var pub = pubs[i];
+	  var iid = '#'+ pub.type + '_' + pub.id;
+	  sel = '';
+	  rem = '';
+	  combID = pub.type + '_' + pub.id;
+	  for(j=0;j<that.selected.length;j++){
+	    if(combID === that.selected[j]){
+	      sel = ' selected';
+	      rem = remElem;
+	      pub.selected = j+1;
+	    }
 	  }
-	}
-	if(sel === ''){
-	  delete pub.selected;
-	}
-	var shortt = that.shortenLabel(pub.type, pub.title);
-	var maxwidth = that.sections[1][0] - that.sections[0][0];
-	var pos = [];
-	if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
-	  pos = that.getPos(pub, i, key);
-	  $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'\n ('+pub.year+')">'+shortt+'</span>'+rem+'</div>');
-	  var w = $(iid).width();
-	  var h = $(iid).height();
-	  pos[1][0] = pos[0][0] + w + 12;
-	  pos[1][1] = pos[0][1] + h + 10;
-	  pub.p = pos;
-	  pub.active = true;
-	  pos = [];
-	}else{
-	  delete pub.active;
-	  pub.active = false;
+	  if(sel === ''){
+	    delete pub.selected;
+	  }
+	  var shortt = that.shortenLabel(pub.type, pub.title);
+	  var maxwidth = that.sections[1][0] - that.sections[0][0];
+	  var pos = [];
+	  if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
+	    pos = that.getPos(pub, i, key);
+	    $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'\n ('+pub.year+')">'+shortt+'</span>'+rem+'</div>');
+	    var w = $(iid).width();
+	    var h = $(iid).height();
+	    pos[1][0] = pos[0][0] + w + 12;
+	    pos[1][1] = pos[0][1] + h + 10;
+	    pub.p = pos;
+	    pub.active = true;
+	    pos = [];
+	  }else{
+	    delete pub.active;
+	    pub.active = false;
+	  }
 	}
       }
     });
     
     for(i=0; i < that.authors.length; i++){
-      var a = that.authors[i];
-      combID = a.type + '_' + a.id;
-      sel = '';
-      rem = '';
-      for(j=0;j<that.selected.length;j++){
-	if(combID === that.selected[j]){
-	  sel = ' selected';
-	  rem = remElem;
-	  a.selected = j+1;
+      if(that.authors[i]){
+	var a = that.authors[i];
+	combID = a.type + '_' + a.id;
+	sel = '';
+	rem = '';
+	for(j=0;j<that.selected.length;j++){
+	  if(combID === that.selected[j]){
+	    sel = ' selected';
+	    rem = remElem;
+	    a.selected = j+1;
+	  }
 	}
-      }
-      if(sel === ''){
-	delete a.selected;
-      }
-      var pos = that.getPos(a, i);
-      var iid = '#'+ a.type + '_' + a.id;
-      if(pos[0][1] !== false){
-	$('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-user"></i></span><span class="label-text">'+a.name+'</span>'+rem+'</div>');
-	var w = $(iid).width();
-	var h = $(iid).height();
-	pos[1][0] = pos[0][0] + w + 10;
-	pos[1][1] = pos[0][1] + h + 10;
-	a.p = pos;
-	a.active = true;
-      }
-    };
-    for(i=0; i < that.keywords.length; i++){
-      var k = that.keywords[i];
-      combID = k.type + '_' + k.id;
-      sel = '';
-      rem = '';
-      for(j=0;j<that.selected.length;j++){
-	if(combID === that.selected[j]){
-	  sel = ' selected';
-	  rem = remElem;
-	  k.selected = j+1;
+	if(sel === ''){
+	  delete a.selected;
 	}
-      }
-      if(sel === ''){
-	delete k.selected;
-      }
-      var pos = that.getPos(k, i);
-      var iid = '#'+ k.type + '_' + k.id;
-      if(pos[0][1] !== false){
-	if(that.sections[0][0] > SIDEMINWIDTH && !k.selected){
-	  $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="right:'+pos[1][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
-	  var w = $(iid).width();
-	  var h = $(iid).height();
-	  pos[1][0] = that.sections[2][0] - pos[1][0];
-	  pos[0][0] = pos[1][0] - w - 10;
-	}else{
-	  $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
+	var pos = that.getPos(a, i);
+	var iid = '#'+ a.type + '_' + a.id;
+	if(pos[0][1] !== false){
+	  $('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-user"></i></span><span class="label-text">'+a.name+'</span>'+rem+'</div>');
 	  var w = $(iid).width();
 	  var h = $(iid).height();
 	  pos[1][0] = pos[0][0] + w + 10;
+	  pos[1][1] = pos[0][1] + h + 10;
+	  a.p = pos;
+	  a.active = true;
 	}
-	pos[1][1] = pos[0][1] + h + 10;
-	k.p = pos;
-	k.active = true;
+      }
+    };
+    for(i=0; i < that.keywords.length; i++){
+      if(that.keywords[i]){
+	var k = that.keywords[i];
+	combID = k.type + '_' + k.id;
+	sel = '';
+	rem = '';
+	for(j=0;j<that.selected.length;j++){
+	  if(combID === that.selected[j]){
+	    sel = ' selected';
+	    rem = remElem;
+	    k.selected = j+1;
+	  }
+	}
+	if(sel === ''){
+	  delete k.selected;
+	}
+	var pos = that.getPos(k, i);
+	var iid = '#'+ k.type + '_' + k.id;
+	if(pos[0][1] !== false){
+	  if(that.sections[0][0] > SIDEMINWIDTH && !k.selected){
+	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="right:'+pos[1][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
+	    var w = $(iid).width();
+	    var h = $(iid).height();
+	    pos[1][0] = that.sections[2][0] - pos[1][0];
+	    pos[0][0] = pos[1][0] - w - 10;
+	  }else{
+	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
+	    var w = $(iid).width();
+	    var h = $(iid).height();
+	    pos[1][0] = pos[0][0] + w + 10;
+	  }
+	  pos[1][1] = pos[0][1] + h + 10;
+	  k.p = pos;
+	  k.active = true;
+	}
       }
     };
     $('.label.selected').not('.pub').css('font-size', that.fontsize);
@@ -768,7 +776,7 @@ function View(svg){
     var that = this;
     var w = that.sections[1][0] - that.sections[0][0];
     $.each(that.authors, function(k, a){
-      if(a.publications && !a.selected && a.active === true){
+      if(a && a.publications && !a.selected && a.active === true){
 	$.each(a.publications, function(pubID){
 	  $.each(that.pubSplit, function(sector, pubs){
 	    $.each(pubs, function(gk, gv){
@@ -786,7 +794,7 @@ function View(svg){
       }
     });
     $.each(that.keywords, function(k, a){
-      if(a.publications && !a.selected && a.active === true){
+      if(a && a.publications && !a.selected && a.active === true){
 	$.each(a.publications, function(pubID){
 	  $.each(that.pubSplit, function(sector, pubs){
 	    $.each(pubs, function(gk, gv){
@@ -811,8 +819,8 @@ function View(svg){
     if(that.selected.length == 2){
       $.each(that.pubSplit, function(key, pubs){
 	if(this.length !== 0){
-	  var h = this[this.length-1].p[1][1] - this[0].p[0][1] - BORDERS;
-	  S.rect(this[0].p[0][0], this[0].p[0][1] - HEADERH, 1.4*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
+	  var h = this[that.offsets[key][1]].p[1][1] - this[that.offsets[key][0]].p[0][1] - BORDERS;
+	  S.rect(this[that.offsets[key][0]].p[0][0], this[that.offsets[key][0]].p[0][1] - HEADERH, 1.4*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
 	  if(key === 'top'){
 // 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1});
 // 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: "#fff", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.8});
@@ -843,9 +851,9 @@ function View(svg){
     var maxpubs = Math.floor((that.sections[0][1] - HEADERH - selHeight)/(2*that.fontsize));
     var totalPubs = that.pubSplit.top.length + that.pubSplit.mid.length + that.pubSplit.bottom.length;
     if(totalPubs > 0 && totalPubs <= maxpubs){
-      space = (that.sections[1][1] - HEADERH) / (totalPubs + sel);
+      space = (that.sections[1][1] - HEADERH - that.fontsize) / (totalPubs + sel);
     }else{
-      space = (that.sections[1][1] - HEADERH - selHeight) / (maxpubs + 2);
+      space = (that.sections[1][1] - HEADERH - selHeight - that.fontsize) / (maxpubs);
     }
     if(item.type == 1){
       p[0][0] = that.sections[0][0] + BORDERS;
@@ -980,8 +988,9 @@ function View(svg){
 	      p[0][1] = pubsMid[that.offsets['mid'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
 	    }else if(!pubsMid.length){
 	      if(totalPubs >= maxpubs){
-		p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
-		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
+// 		p[0][1] = pubsTop[that.offsets['top'][1]].p[1][1] + space/2 - (0.5*that.fontsize + 2*BORDERS);
+		p[0][1] = pubsBot[0].p[0][1] - space/2 - (0.5*that.fontsize + 2*BORDERS);
+// 		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
 	      }else{
 		p[0][1] = pubsBot[0].p[0][1] - space/2 - (0.5*that.fontsize + 2*BORDERS);
 //		p[0][0] = that.sections[0][0] + BORDERS + MAXSIDELABELWIDTH;
@@ -1015,12 +1024,12 @@ function View(svg){
       while (spn.width() > width) { txt = txt.slice(0, -1); spn.text(txt + "..."); }
       return txt;
     }
-    var lwidth = getTextWidth(label, that.fontsize+" Generika Light" );
+    var lwidth = getTextWidth(label, that.fontsize+" Helvetica" );
     var slabel = '';
     var that =  this;
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
-      if(lwidth >= mwidth - 12*that.fontsize){
+      if(lwidth >= mwidth - 16*that.fontsize){
 	slabel = trimByPixel(label, mwidth - 10*that.fontsize);
 	slabel += "...";
       }else{

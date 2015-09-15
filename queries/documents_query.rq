@@ -22,16 +22,20 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
-SELECT (?keyword_id AS ?id) (?bezeichnung AS ?title) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?author_id; separator="; ") AS ?authors)
+
+SELECT DISTINCT (?document_id AS ?id) ?title (?document_id AS ?uri) (GROUP_CONCAT(DISTINCT ?person_id; separator="; ") AS ?authors) ?abstract (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) ?year
 WHERE
 {
 ?document_id a bibo:Document .
-?document_id vivo:hasSubjectArea ?keyword_id .
-?keyword_id rdfs:label ?bezeichnung .
-?author_id a foaf:Person .
+?document_id rdfs:label ?title .
 ?authorship_id a vivo:Authorship .
-?authorship_id vivo:relates ?author_id .
-?document_id vivo:relatedBy ?authorship_id .
+?authorship_id vivo:relates ?document_id .
+?person_id a foaf:Person .
+?person_id vivo:relatedBy ?authorship_id .
+?person_id rdfs:label ?name .
+OPTIONAL { ?document_id bibo:abstract ?abstract }
+OPTIONAL { ?document_id vivo:hasSubjectArea ?keyword }
+OPTIONAL { ?document_id vivo:dateTimeValue ?year }
 }
-GROUP BY ?keyword_id ?bezeichnung
-ORDER BY ?bezeichnung
+GROUP BY ?document_id ?title ?abstract ?year
+ORDER BY ?title

@@ -22,20 +22,13 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
-
-SELECT DISTINCT (?document_id AS ?id) ?title (?document_id AS ?uri) (GROUP_CONCAT(DISTINCT ?person_id; separator="; ") AS ?authors) ?abstract (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) ?year
+SELECT (?keyword_id AS ?id) (?keyword_id AS ?uri) (?bezeichnung AS ?title) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (COUNT(DISTINCT ?document_id) AS ?count)
 WHERE
 {
 ?document_id a bibo:Document .
-?document_id rdfs:label ?title .
-?authorship_id a vivo:Authorship .
-?authorship_id vivo:relates ?document_id .
-?person_id a foaf:Person .
-?person_id vivo:relatedBy ?authorship_id .
-?person_id rdfs:label ?name .
-OPTIONAL { ?document_id bibo:abstract ?abstract }
-OPTIONAL { ?document_id vivo:freetextKeyword ?keyword }
-OPTIONAL { ?document_id vivo:dateTimeValue ?year }
+?document_id vivo:hasSubjectArea ?keyword_id .
+?keyword_id rdfs:label ?bezeichnung .
+  FILTER (regex(?bezeichnung, "(Concept)") != true ) .
 }
-GROUP BY ?document_id ?title ?abstract ?year
-ORDER BY ?title
+GROUP BY ?keyword_id ?bezeichnung
+ORDER BY ?bezeichnung
