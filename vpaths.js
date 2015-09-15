@@ -382,6 +382,7 @@ function View(svg){
 	  S.clear();
 	  to = that.idToSelection(sel[0], 1, sel[2]);
 	}else if(sel[0].substr(0,1) == 1){
+	  S.clear();
 	  to = that.idToSelection(sel[0], 1);
 	}
 	that.selStatus = ['',false,''];
@@ -464,7 +465,11 @@ function View(svg){
 	  styles.top = (selItem.p[1][1] + 7) + 'px';
 	}
 	if(selItem.type == 2 && that.sections[0][0] > SIDEMINWIDTH && !selItem.selected){
-	  styles.right = OUTERMARGIN + 'px';
+	  if(that.sections[2][0] - selItem.p[0][0] >= 300){
+	    styles.left = selItem.p[0][0] + 'px';
+	  }else{
+	    styles.right = (OUTERMARGIN - 18) + 'px';
+	  }
 	}else{
 	  styles.left = selItem.p[0][0] + 'px';
 	}
@@ -822,23 +827,22 @@ function View(svg){
 	  var h = this[that.offsets[key][1]].p[1][1] - this[that.offsets[key][0]].p[0][1] - BORDERS;
 	  S.rect(this[that.offsets[key][0]].p[0][0], this[that.offsets[key][0]].p[0][1] - HEADERH, 1.4*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
 	  if(key === 'top'){
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: "#fff", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.8});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
 	    S.text(this[0].p[0][0] - 21, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I").attr({fill: "#bfbfbf"});
 	  }else if(key === 'mid'){
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 1});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
 	    S.text(this[0].p[0][0] - 36, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I + II").attr({fill: "#bfbfbf"});
 	  }else if(key === 'bottom'){
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[1][0]], stroke: "#000", strokeWidth: 1});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH + h/3, 0.7*that.fontsize, h/3).attr({fill: "#fff", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.8});
-// 	    S.rect(this[0].p[0][0] - 30, this[0].p[0][1] - HEADERH, 0.7*that.fontsize, 2*h/3).attr({fill: COLORS[that.selection[0][0]], stroke: "#000", strokeWidth: 1, opacity: 0.2});
 	    S.text(this[0].p[0][0] - 25, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "II").attr({fill: "#bfbfbf"});
 	  }
 	}
       });
+      var t = $('#'+that.selected[0]+'.selected');
+      console.log(t);
+      var b = $('#'+that.selected[1]+'.selected');
+      console.log(b);
+      S.circle(t.position().left - that.fontsize, t.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
+      S.text(t.position().left - that.fontsize*1.15, t.position().top - HEADERH + that.fontsize*1.17, "I").attr({fill: "#bfbfbf", border: "1px solid #bfbfbf", fontSize: that.fontsize});
+      S.circle(b.position().left - that.fontsize, b.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
+      S.text(b.position().left - that.fontsize*1.15 - that.fontsize/8, b.position().top - HEADERH + that.fontsize*1.17, "II").attr({fill: "#bfbfbf", border: "1px solid #bfbfbf", fontSize: that.fontsize});
     }
     S.selectAll('.path').animate({opacity: 0.2}, SPEED/2);
   }
@@ -1003,8 +1007,9 @@ function View(svg){
 	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 2*BORDERS);
 	}
       }
-      if(p[0][1] >= that.sections[0][1] - FONTMAX || p[0][1] <= HEADERH){
-	p[0][1] = false;
+      if(p[0][1] >= that.sections[0][1] - FONTMAX - that.fontsize || p[0][1] <= HEADERH){
+	  var rndY = Math.random()*(that.sections[0][1] - HEADERH - FONTMAX); 
+	  p[0][1] = HEADERH + rndY;
       }
     }
     return p;
@@ -1029,7 +1034,7 @@ function View(svg){
     var that =  this;
     var mwidth = that.sections[1][0] - that.sections[0][0];
     if(type === 1){
-      if(lwidth >= mwidth - 16*that.fontsize){
+      if(lwidth >= mwidth - 17*that.fontsize){
 	slabel = trimByPixel(label, mwidth - 10*that.fontsize);
 	slabel += "...";
       }else{
