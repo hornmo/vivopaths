@@ -23,13 +23,21 @@ PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
 
-SELECT (?author_id AS ?id) (?name AS ?fullname) (?author_id AS ?uri) ?image (GROUP_CONCAT(DISTINCT ?org_label; separator="; ") AS ?positions) ?name (COUNT(DISTINCT ?document_id) AS ?count) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications)
+SELECT (?author_id AS ?id) (?name AS ?fullname) (?author_id AS ?uri) (?gnd_id AS ?gnd)(?bytestreamUri AS ?image) (GROUP_CONCAT(DISTINCT ?org_label; separator="; ") AS ?positions) ?name (COUNT(DISTINCT ?document_id) AS ?count) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications)
 WHERE
 {
 ?author_id a foaf:Person .
 ?author_id rdfs:label ?name .
-OPTIONAL {?author_id vitro-public:mainImage ?image }.
-OPTIONAL {?pos a vivo:Position .
+OPTIONAL {
+  ?author_id vitro-public:mainImage ?picture .
+  ?picture vitro-public:downloadLocation ?bytestreamUri .
+}
+OPTIONAL {
+  ?gnd_id a tib:gndId .
+  ?author_id tib:gndId ?gnd_id .
+}
+OPTIONAL {
+  ?pos a vivo:Position .
   ?author_id vivo:relatedBy ?pos .
   ?org a foaf:Organization .
   ?pos vivo:relates ?org .
@@ -40,5 +48,5 @@ OPTIONAL {?pos a vivo:Position .
 ?document_id a bibo:Document .
 ?document_id vivo:relatedBy ?authorship_id .
 }
-GROUP BY ?author_id ?image ?name
+GROUP BY ?author_id ?gnd_id ?bytestreamUri ?name
 ORDER BY ?name

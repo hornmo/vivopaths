@@ -57,6 +57,11 @@ body{
   font-family: FontAwesome;
   padding-right: 0.3em;
 }
+.suggested.project:before{
+  content:"\f0ea";
+  font-family: FontAwesome;
+  padding-right: 0.3em;
+}
 .suggested.pub:before{
   content:"\f15b";
   font-family: FontAwesome;
@@ -165,13 +170,8 @@ body{
   cursor:pointer;
   background-color:#fff;
 }
-.selected-number{
-  border:1px solid #eee;
-  border-radius: 10px;
-  width:20px;
-}
 .author{
-  color:#3377CC;
+  color:#0c6969;
 }
 .keyword.selected:hover, .author.selected:hover{
   cursor:default;
@@ -184,16 +184,16 @@ body{
 }
 .author.selected{
   color:#fff;
-  background-color:#3377CC;
+  background-color:#0c6969;
 }
 .author.connected{
-  background:rgba(214, 228, 245, 0.8);
+  background:rgba(82, 175, 175, 0.2);
 }
 .author.hovered{
-  border: 2px solid #3377CC;
+  border: 2px solid #0c6969;
 }
 .pub{
-  color:#66AA33;
+  color:#4B4B4B;
 }
 .pub.label{
   margin-right:10px;
@@ -201,26 +201,28 @@ body{
 }
 .pub.selected{
   color:#fff;
-  background-color:#66AA33;
+  background-color:#4B4B4B;
 }
 .pub.connected{
-  background:rgba(102, 170, 51, 0.2);
+  background:rgba(160, 160, 160, 0.2);
 }
 .pub.hovered{
-  border: 2px solid #66AA33;
+  font-weight:bold;
+/*   text-decoration:underline; */
+/*   border: 2px solid #4B4B4B; */
 }
 .keyword{
-  color:#CC7733;
+  color:#8C1E0F;
 }
 .keyword.selected{
   color:#fff;
-  background-color:#CC7733;
+  background-color:#8C1E0F;
 }
 .keyword.hovered{
-  border: 2px solid #CC7733;
+  border: 2px solid #8C1E0F;
 }
 .keyword.connected{
-  background:rgba(245, 228, 214, 0.8);
+  background:rgba(209, 133, 123, 0.2);
 }
 .organisation{
   color:#AA44AA;
@@ -233,7 +235,20 @@ body{
   border: 2px solid #AA44AA;
 }
 .organisation.connected{
-  background:rgba(170, 68, 170, 0.8);
+  background:rgba(170, 68, 170, 0.2);
+}
+.project{
+  color:#AA44AA;
+}
+.project.selected{
+  color:#fff;
+  background-color:#AA44AA;
+}
+.project.hovered{
+  border: 2px solid #AA44AA;
+}
+.project.connected{
+  background:rgba(170, 68, 170, 0.2);
 }
 
 
@@ -244,14 +259,19 @@ body{
   background-color:#fff;
   opacity: 0.35;
 }
+.compare i{
+  vertical-align:baseline;
+}
 .compare:hover{
   opacity: 1;
 }
 .label-selected-remove{
+  cursor:pointer;
   padding-left:0.3em;
   border-left:1px solid #fff;
 }
 .label-icon{
+  cursor:pointer;
   padding-right: 0.4em;
   opacity: 0.35;
 }

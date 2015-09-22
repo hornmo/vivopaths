@@ -61,9 +61,19 @@
         "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
         "fullname": { "type": "literal" , "value": "Heller,  Lambert" } ,
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
-        "image": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/n1322" } ,
+        "image": { "type": "uri" , "value": "http://test.osl.tib.eu/vivo-tib/individual/n2052" } ,
         "positions": { "type": "literal" , "value": "Open Science Lab" } ,
         "name": { "type": "literal" , "value": "Heller,  Lambert" } ,
+        "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
+        "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article48; http://vivo.mydomain.edu/individual/article66; http://vivo.mydomain.edu/individual/article50; http://vivo.mydomain.edu/individual/article43; http://vivo.mydomain.edu/individual/article51; http://vivo.mydomain.edu/individual/article6; http://vivo.mydomain.edu/individual/article52; http://vivo.mydomain.edu/individual/article32; http://vivo.mydomain.edu/individual/article23; http://vivo.mydomain.edu/individual/article64; http://vivo.mydomain.edu/individual/article39; http://vivo.mydomain.edu/individual/article49; http://vivo.mydomain.edu/individual/article5" }
+      } ,
+      {
+        "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "fullname": { "type": "literal" , "xml:lang": "en-US" , "value": "Heller,  Lambert" } ,
+        "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "image": { "type": "uri" , "value": "http://test.osl.tib.eu/vivo-tib/individual/n2052" } ,
+        "positions": { "type": "literal" , "value": "Open Science Lab" } ,
+        "name": { "type": "literal" , "xml:lang": "en-US" , "value": "Heller,  Lambert" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article48; http://vivo.mydomain.edu/individual/article66; http://vivo.mydomain.edu/individual/article50; http://vivo.mydomain.edu/individual/article43; http://vivo.mydomain.edu/individual/article51; http://vivo.mydomain.edu/individual/article6; http://vivo.mydomain.edu/individual/article52; http://vivo.mydomain.edu/individual/article32; http://vivo.mydomain.edu/individual/article23; http://vivo.mydomain.edu/individual/article64; http://vivo.mydomain.edu/individual/article39; http://vivo.mydomain.edu/individual/article49; http://vivo.mydomain.edu/individual/article5" }
       } ,

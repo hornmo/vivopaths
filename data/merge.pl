@@ -61,6 +61,13 @@ foreach my $publication (@imp_publications) {
     my $count = $publication->{'count'}->{'value'};
     my $uri = $publication->{'uri'}->{'value'};
     my $abstract = $publication->{'abstract'}->{'value'};
+    my $year;
+    if($publication->{'year'}){
+      $year = $publication->{'year'}->{'value'};
+      if(length $year > 4){
+	$year = substr $year, -4, (length $year)-1;
+      }
+    }
     my @auths = split('; ', $publication->{'authors'}->{'value'});
     foreach my $a (@auths) {
       my $aid = substr $a, $uri_length, (length $a)-1;
@@ -73,7 +80,7 @@ foreach my $publication (@imp_publications) {
 	$lkeywords{ $kid } = 1;
       }
     }
-    $publications{ $id } = { 'id' => $id, 'title' => $title, 'keywords' => { %lkeywords }, 'authors'=> { %lauthors }, 'abstract' => $abstract, 'uri' => $uri, 'type' => 1 };
+    $publications{ $id } = { 'id' => $id, 'title' => $title, 'keywords' => { %lkeywords }, 'year' => $year, 'authors'=> { %lauthors }, 'abstract' => $abstract, 'uri' => $uri, 'type' => 1 };
   }
 };
 foreach my $author (@imp_authors) {
@@ -94,7 +101,10 @@ foreach my $author (@imp_authors) {
   }else{
     $name = "$name_parts[0]";
   }
-  
+  my $image;
+  if($author->{'image'}){
+    $image = $author->{'image'}->{'value'};
+  }
   my $count = $author->{'count'}->{'value'};
   my $uri = $author->{'uri'}->{'value'};
   my @positions;
@@ -109,7 +119,7 @@ foreach my $author (@imp_authors) {
       $lpublications{ $pid } = 1;
     }
   }
-  $authors{ $id } = { 'id' => $id, 'name' => $name, 'fullname' => $fullname, 'positions' => [ @positions ], 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 0 };
+  $authors{ $id } = { 'id' => $id, 'name' => $name, 'fullname' => $fullname, 'image' => $image, 'positions' => [ @positions ], 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 0 };
 };
 foreach my $keyword (@imp_keywords) {
   my $id = $keyword->{'id'}->{'value'};
@@ -177,11 +187,3 @@ $combined[0]{'keywords'} = \%keywords;
 my @final = $json->pretty->encode(@combined);
 $output_handler->print(@final);
 # print $output_handler Dumper(@combined);
-# $imp_publications->each(sub {
-#   my $obj = $_[0];
-#   $output_handler->print($obj);
-# });
-# $imp_keywords->each(sub {
-#   my $obj = $_[0];
-#   $output_handler->print($obj);
-# });

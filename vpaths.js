@@ -11,8 +11,8 @@ var BORDERS = 2;
 var OPACFOCUS = 0.8;
 var MAXSIDELABELWIDTH = 200;
 var OUTERMARGIN = 50;
-var COLORS = ["#3377CC","#66AA33","#CC7733"];
-var BASEURI = "";
+var COLORS = ["#0c6969","#4B4B4B","#8C1E0F"];
+var BASEURI = "http://test.osl.tib.eu/vivo-tib/individual/";
 
 function View(svg){
   var S = Snap(svg);
@@ -165,7 +165,7 @@ function View(svg){
   };
   this.showSplash = function(bool){
     if(bool === true){
-      $('#splash').append('<div class="splashmsg"><b><i>VIVOPaths</i></b> is a visualization tool to enable an interactive exploration through a semantic representation of a research institution.</div>');
+      // $('#splash').append('<div class="splashmsg"><b><i>VIVOPaths</i></b> is a visualization tool to enable an interactive exploration through a semantic representation of a research institution.</div>');
     }else{
       $('#splash').children().remove();
     }
@@ -419,6 +419,7 @@ function View(svg){
       var id = $(this).parent().attr('id');
       var splitID = id.split('_');
       var selItem = '';
+      var foundImage = false;
       var styles = {
 	top: "",
 	left: "",
@@ -447,16 +448,32 @@ function View(svg){
 	  }
 	  $('#context').append('<div id="context-head"><span class="context-label">'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
 	  if(selItem.image){
-	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+selItem.image+'" /></span>');
+	    var imageURL = '';
+	    if(selItem.image.indexOf("http") != -1){
+	      imageURL = selItem.image;
+	    }else{
+	      imageURL = BASEURI + selItem.image;
+	    }
+	    $('#context').append('<span id="context-right"><img style="width:80px" src="'+ imageURL +'" /></span>');
+	    foundImage = true;
 	  }
 	}else if(selItem.type === 1){
-	  var date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'+selItem.year+'</span></p>'
+	  var date = '';
+	  if(selItem.year !== null){
+	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'+selItem.year+'</span></p>';
+	  }
 	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span>'+date+'</span>');
 	}else if(selItem.type === 2){
 	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span><p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></span>');
 	  that.getGND(selItem.title);
 	}
-	$('#context').append('<p id="context-links"><a target="_blank" href="'+selItem.uri+'">Zum VIVO-Profil</a></p>');
+// 	if(selItem.uri.indexOf(BASEURI) !== -1){
+// 	  vUrl = BASEURI + selItem.id;
+// 	}else{
+// 	  enc = encodeURIComponent(selItem.uri);
+// 	  vUrl = BASEURI.slice(0, -1) + "?uri=";
+// 	}
+	$('#context').append('<p id="context-links"><a target="_blank" href="'+ selItem.uri +'">Zum VIVO-Profil</a></p>');
 	if(selItem.type === 2){
 	  $('#context > p').append('<span class="loading-icon"><i class="fa fa-spinner fa-spin"></i></span>');
 	}
@@ -475,7 +492,7 @@ function View(svg){
 	  styles.left = selItem.p[0][0] + 'px';
 	}
 	styles.border = '2px solid' + COLORS[splitID[0]];
-	if(selItem.image){
+	if(foundImage){
 	  styles.width = '450px';
 	}else{
 	  styles.minWidth = '280px';
@@ -757,11 +774,11 @@ function View(svg){
 	var iid = '#'+ k.type + '_' + k.id;
 	if(pos[0][1] !== false){
 	  if(that.sections[0][0] > SIDEMINWIDTH && !k.selected){
-	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="right:'+pos[1][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
+	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
-	    pos[1][0] = that.sections[2][0] - pos[1][0];
-	    pos[0][0] = pos[1][0] - w - 10;
+// 	    pos[1][0] = that.sections[2][0] - pos[1][0];
+	    pos[1][0] = pos[1][0] + w + 10;
 	  }else{
 	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+k.title+'</span>'+rem+'</div>');
 	    var w = $(iid).width();
@@ -810,7 +827,7 @@ function View(svg){
 		var myp = ((gv.p[0][1] + gv.p[1][1]) / 2) - HEADERH;
 		if(that.sections[0][0] > SIDEMINWIDTH){
 		  var cx = (a.p[0][0] + gv.p[1][0]) / 2;
-		  var path = 'M'+ (a.p[0][0] - 2) + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
+		  var path = 'M'+ a.p[0][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[1][0] + ',' + myp;
 		}else{
 		  var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		  var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
@@ -822,27 +839,6 @@ function View(svg){
 	});
       }
     });
-    if(that.selected.length == 2){
-      $.each(that.pubSplit, function(key, pubs){
-	if(this.length !== 0){
-	  var h = this[that.offsets[key][1]].p[1][1] - this[that.offsets[key][0]].p[0][1] - BORDERS;
-	  S.rect(this[that.offsets[key][0]].p[0][0] - 1.8*that.fontsize, this[that.offsets[key][0]].p[0][1] - HEADERH, 1.6*that.fontsize, h).attr({fill: "none", stroke: "#bfbfbf", strokeWidth: 1, opacity: 0.2});
-	  if(key === 'top'){
-	    S.text(this[0].p[0][0] - that.fontsize*1.15, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I").attr({fill: "#bfbfbf", fontSize: that.fontsize});
-	  }else if(key === 'mid'){
-	    S.text(this[0].p[0][0] - that.fontsize*1.8, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "I&II").attr({fill: "#bfbfbf", fontSize: that.fontsize});
-	  }else if(key === 'bottom'){
-	    S.text(this[0].p[0][0] - that.fontsize*1.15 - that.fontsize/8, this[0].p[0][1] - HEADERH + h/2 + that.fontsize/3, "II").attr({fill: "#bfbfbf", fontSize: that.fontsize});
-	  }
-	}
-      });
-      var t = $('#'+that.selected[0]+'.selected');
-      var b = $('#'+that.selected[1]+'.selected');
-      S.circle(t.position().left - that.fontsize, t.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
-      S.text(t.position().left - that.fontsize*1.15, t.position().top - HEADERH + that.fontsize*1.17, "I").attr({fill: "#bfbfbf", border: "1px solid #bfbfbf", fontSize: that.fontsize});
-      S.circle(b.position().left - that.fontsize, b.position().top - HEADERH + that.fontsize*0.8, that.fontsize/1.5).attr({fill: "none", stroke: "#bfbfbf"});
-      S.text(b.position().left - that.fontsize*1.15 - that.fontsize/8, b.position().top - HEADERH + that.fontsize*1.17, "II").attr({fill: "#bfbfbf", border: "1px solid #bfbfbf", fontSize: that.fontsize});
-    }
     S.selectAll('.path').animate({opacity: 0.2}, SPEED/2);
   }
   this.getPos = function(item, no, sector){
@@ -880,9 +876,10 @@ function View(svg){
 	  $.each(that.authors, function(ak, av){
 	    
 	  });
-	  p[0][0] = OUTERMARGIN + BORDERS;
+	  p[0][0] = that.sections[0][0] - (0.6*that.sections[0][0]);
 	}else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-	  p[1][0] = OUTERMARGIN + BORDERS;
+	  p[0][0] = that.sections[1][0] + 0.3*(that.sections[2][0] - that.sections[1][0] - MAXSIDELABELWIDTH);
+	  
 	}
 	p[0][1] = 0;
 	$.each(item.publications, function(ik,iv){
@@ -906,6 +903,17 @@ function View(svg){
 	  }else{
 	    p[0][1] -= 30;
 	  }
+	  if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
+	    p[0][0] -= (i-1)*50;
+	    if(p[0][0] <= OUTERMARGIN){
+	      p[0][0] = OUTERMARGIN;
+	    }
+	  }else{
+	    p[0][0] += (i-1)*50;
+	    if(p[0][0] >= that.sections[2][0] - MAXSIDELABELWIDTH){
+	      p[0][0] = that.sections[2][0] - MAXSIDELABELWIDTH;
+	    }
+	  }
 	}else{
 	  var rndY = Math.random()*(that.sections[0][1] - HEADERH - FONTMAX); 
 	  p[0][1] = HEADERH + rndY;
@@ -913,7 +921,7 @@ function View(svg){
 	var ol = '';
 	var changeW = 0;
 	var minoverlap = p[0][1] - FONTMAX - BORDERS;
-	var maxoverlap = p[0][1] + FONTMAX + BORDERS + 10;
+	var maxoverlap = p[0][1] + FONTMAX + BORDERS;
 	if(item.type == 0){
 	  oa = $('.label.author');
 	}else if(item.type == 2){
@@ -932,9 +940,9 @@ function View(svg){
 	      var olmin = (t+h) - p[0][1];
 	      var olmax = t - (p[0][1] + h);
 	      if(olmin >= olmax){
-		p[0][1] += olmin + BORDERS + 8;
+		p[0][1] += olmin + BORDERS + FONTMAX;
 	      }else{
-		p[0][1] -= olmax - BORDERS + 8;
+		p[0][1] -= olmax - BORDERS - FONTMAX;
 	      }
 	    }
 	    if(p[0][1] <= HEADERH){
@@ -943,7 +951,7 @@ function View(svg){
 	      p[0][1] = that.sections[0][1] - FONTMAX - BORDERS;
 	    }
 	    minoverlap = p[0][1] - FONTMAX - BORDERS;
-	    maxoverlap = p[0][1] + 2*FONTMAX + BORDERS;
+	    maxoverlap = p[0][1] + FONTMAX + BORDERS;
 	  });
 	  if(that.sections[0][0] != SIDEMINWIDTH){
 	    $.each(oa, function(k,v){   
@@ -954,7 +962,7 @@ function View(svg){
 	      if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
 		xpos = parseInt($(this).css('left'),10);
 	      }else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-		xpos = parseInt($(this).css('right'),10)
+		xpos = parseInt($(this).css('left'),10)
 	      }
 	      if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
 		changeW = w;
