@@ -207,9 +207,7 @@ body{
   background:rgba(160, 160, 160, 0.2);
 }
 .pub.hovered{
-  font-weight:bold;
-/*   text-decoration:underline; */
-/*   border: 2px solid #4B4B4B; */
+  border: 2px solid #4B4B4B;
 }
 .keyword{
   color:#8C1E0F;
