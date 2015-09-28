@@ -23,19 +23,23 @@ PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
 
-SELECT DISTINCT (?document_id AS ?id) ?title (?document_id AS ?uri) (GROUP_CONCAT(DISTINCT ?person_id; separator="; ") AS ?authors) ?abstract (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) ?year
+SELECT DISTINCT (?document_id AS ?id) ?title (?document_id AS ?uri) (GROUP_CONCAT(DISTINCT ?person_id; separator="; ") AS ?authors) (GROUP_CONCAT(DISTINCT ?project_id; separator="; ") AS ?projects) ?abstract (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) ?year
 WHERE
 {
-?document_id a bibo:Document .
-?document_id rdfs:label ?title .
-?authorship_id a vivo:Authorship .
-?authorship_id vivo:relates ?document_id .
-?person_id a foaf:Person .
-?person_id vivo:relatedBy ?authorship_id .
-?person_id rdfs:label ?name .
-OPTIONAL { ?document_id bibo:abstract ?abstract }
-OPTIONAL { ?document_id vivo:hasSubjectArea ?keyword }
-OPTIONAL { ?document_id vivo:dateTimeValue ?year }
+  ?document_id a bibo:Document .
+  ?document_id rdfs:label ?title .
+  ?authorship_id a vivo:Authorship .
+  ?authorship_id vivo:relates ?document_id .
+  ?person_id a foaf:Person .
+  ?person_id vivo:relatedBy ?authorship_id .
+  ?person_id rdfs:label ?name .
+  OPTIONAL { ?document_id bibo:abstract ?abstract }
+  OPTIONAL { ?document_id vivo:hasSubjectArea ?keyword }
+  OPTIONAL { ?document_id vivo:dateTimeValue ?year }
+  OPTIONAL {
+    ?project_id a vivo:Grant .
+    ?document_id vivo:informationResourceSupportedBy ?project_id.
+  }
 }
 GROUP BY ?document_id ?title ?abstract ?year
 ORDER BY ?title

@@ -1,0 +1,19 @@
+{
+  "head": {
+    "vars": [ "id" , "title" , "uri" , "publications" , "keywords" , "investigators" , "start" , "end" , "abstract" , "principal_investigator" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/g10" } ,
+        "title": { "type": "literal" , "value": "PROBABO" } ,
+        "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/g10" } ,
+        "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article3" } ,
+        "investigators": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4; http://vivo.mydomain.edu/individual/74" } ,
+        "start": { "datatype": "http://www.w3.org/2001/XMLSchema#date" , "type": "typed-literal" , "value": "2005" } ,
+        "end": { "datatype": "http://www.w3.org/2001/XMLSchema#date" , "type": "typed-literal" , "value": "2010" } ,
+        "abstract": { "type": "literal" , "value": "Erschließung, Bereitstellung und Suche nach 3D-Modellen" }
+      }
+    ]
+  }
+}

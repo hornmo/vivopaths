@@ -1,1320 +1,736 @@
 {
-   "keywords" : {
-      "conc81" : {
-         "authors" : {
-            "58" : 1
-         },
-         "title" : "Personalmanagement",
-         "uri" : "http://vivo.mydomain.edu/individual/conc81",
-         "id" : "conc81",
-         "publications" : {
-            "article42" : 1
-         },
+   "publications" : {
+      "article25" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article25",
+         "type" : 1,
+         "id" : "article25",
+         "abstract" : null,
          "keywords" : {
-            "conc81" : 1
+            "conc39" : 1
          },
-         "count" : "1",
-         "type" : 2
-      },
-      "n5358" : {
-         "count" : "1",
-         "title" : "Virtuelle Forschungsumgebung",
-         "uri" : "http://vivo.mydomain.edu/individual/n5358",
-         "type" : 2,
-         "id" : "n5358",
-         "publications" : {}
-      },
-      "n511" : {
-         "count" : "3",
-         "title" : "GIS",
-         "type" : 2,
-         "uri" : "http://vivo.mydomain.edu/individual/n511",
-         "id" : "n511",
-         "publications" : {}
-      },
-      "conc24" : {
+         "year" : "2014",
+         "title" : "RADAR – Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft",
          "authors" : {
-            "67" : 1,
-            "27" : 1
-         },
-         "publications" : {
-            "article18" : 1,
-            "article41" : 1,
-            "article9" : 1
-         },
-         "title" : "digitale Bibliothek ",
-         "uri" : "http://vivo.mydomain.edu/individual/conc24",
-         "id" : "conc24",
-         "keywords" : {
-            "n3190" : 1,
-            "n7791" : 1,
-            "conc24" : 1
-         },
-         "count" : "3",
-         "type" : 2
-      },
-      "conc48" : {
-         "publications" : {},
-         "uri" : "http://vivo.mydomain.edu/individual/conc48",
-         "type" : 2,
-         "id" : "conc48",
-         "title" : "Informationskompetenz",
-         "count" : "1"
-      },
-      "conc11" : {
-         "type" : 2,
-         "count" : "3",
-         "keywords" : {
-            "conc11" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/conc11",
-         "id" : "conc11",
-         "title" : "Bibliothek",
-         "publications" : {
-            "article10" : 1,
-            "article24" : 1
-         },
-         "authors" : {
-            "6" : 1,
-            "83" : 1
+            "56" : 1
          }
       },
-      "conc22" : {
-         "type" : 2,
-         "count" : "1",
-         "keywords" : {
-            "conc22" : 1,
-            "conc6" : 1
-         },
-         "publications" : {
-            "article40" : 1
-         },
-         "id" : "conc22",
-         "uri" : "http://vivo.mydomain.edu/individual/conc22",
-         "title" : "Datenverwaltung",
+      "article54" : {
          "authors" : {
-            "1" : 1
-         }
-      },
-      "n7791" : {
+            "76" : 1
+         },
+         "abstract" : null,
          "keywords" : {
-            "n7791" : 1,
-            "conc24" : 1
+            "conc89" : 1
          },
-         "type" : 2,
-         "count" : "1",
-         "authors" : {
-            "27" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/n7791",
-         "id" : "n7791",
-         "title" : "Virtuelle Fachbibliotheken",
-         "publications" : {
-            "article41" : 1
-         }
+         "title" : "Präsentationsfolien als Buch - wer braucht das?",
+         "year" : "2012",
+         "type" : 1,
+         "id" : "article54",
+         "uri" : "http://vivo.mydomain.edu/individual/article54"
       },
-      "n398" : {
-         "type" : 2,
-         "count" : "1",
+      "article21" : {
+         "id" : "article21",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article21",
+         "authors" : {
+            "75" : 1
+         },
+         "title" : "Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition",
+         "year" : "2014",
          "keywords" : {
-            "conc78" : 1,
-            "n398" : 1
+            "n5680" : 1
          },
-         "id" : "n398",
-         "uri" : "http://vivo.mydomain.edu/individual/n398",
-         "title" : "Kommunikation",
-         "publications" : {
-            "article32" : 1
-         },
-         "authors" : {
-            "26" : 1
-         }
+         "abstract" : null
       },
-      "conc4" : {
-         "count" : "2",
-         "title" : "3D-Druck",
-         "id" : "conc4",
-         "type" : 2,
-         "uri" : "http://vivo.mydomain.edu/individual/conc4",
-         "publications" : {}
-      },
-      "conc18" : {
-         "publications" : {},
-         "uri" : "http://vivo.mydomain.edu/individual/conc18",
-         "type" : 2,
-         "id" : "conc18",
-         "title" : "Data Science",
-         "count" : "1"
-      },
-      "n1693" : {
-         "publications" : {
-            "article15" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/n1693",
-         "id" : "n1693",
-         "title" : "Bibliotheksbau",
-         "authors" : {
-            "17" : 1
-         },
-         "type" : 2,
-         "count" : "1",
-         "keywords" : {
-            "n1693" : 1
-         }
-      },
-      "n4653" : {
-         "authors" : {
-            "45" : 1,
-            "4" : 1
-         },
-         "publications" : {
-            "article69" : 1,
-            "article78" : 1,
-            "article71" : 1
-         },
-         "title" : "3D",
-         "uri" : "http://vivo.mydomain.edu/individual/n4653",
-         "id" : "n4653",
-         "keywords" : {
-            "conc54" : 1,
-            "conc35" : 1,
-            "n7053" : 1,
-            "n4653" : 1
-         },
-         "count" : "3",
-         "type" : 2
-      },
-      "conc61" : {
-         "publications" : {
-            "article48" : 1,
-            "article52" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/conc61",
-         "id" : "conc61",
-         "title" : "Literaturverwaltung",
+      "article52" : {
+         "id" : "article52",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article52",
          "authors" : {
             "26" : 1
          },
-         "type" : 2,
-         "count" : "2",
+         "title" : "1.000 Antworten auf die Frage: Literaturverwaltung — Was benutzen Sie, was brauchen Sie?",
+         "year" : "2012",
+         "abstract" : null,
          "keywords" : {
             "conc61" : 1
          }
       },
-      "n7053" : {
-         "publications" : {
-            "article78" : 1
+      "article18" : {
+         "keywords" : {
+            "conc24" : 1
          },
-         "uri" : "http://vivo.mydomain.edu/individual/n7053",
-         "id" : "n7053",
-         "title" : "Punktwolken",
+         "abstract" : null,
+         "title" : "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)",
+         "year" : "2014",
          "authors" : {
-            "4" : 1
+            "67" : 1
          },
-         "type" : 2,
-         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/article18",
+         "type" : 1,
+         "id" : "article18"
+      },
+      "article78" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article78",
+         "type" : 1,
+         "id" : "article78",
+         "abstract" : null,
          "keywords" : {
             "n4653" : 1,
             "n7053" : 1
-         }
-      },
-      "n4364" : {
-         "authors" : {
-            "75" : 1
          },
-         "publications" : {
-            "article22" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/n4364",
-         "id" : "n4364",
-         "title" : "Semantic",
-         "keywords" : {
-            "n4364" : 1
-         },
-         "type" : 2,
-         "count" : "1"
-      },
-      "conc85" : {
-         "publications" : {},
-         "count" : "1",
-         "title" : "Projektmanagement",
-         "uri" : "http://vivo.mydomain.edu/individual/conc85",
-         "type" : 2,
-         "id" : "conc85"
-      },
-      "conc77" : {
-         "publications" : {
-            "article5" : 1,
-            "article13" : 1
-         },
-         "title" : "Open Educational Resources",
-         "uri" : "http://vivo.mydomain.edu/individual/conc77",
-         "id" : "conc77",
-         "authors" : {
-            "26" : 1,
-            "12" : 1
-         },
-         "count" : "2",
-         "type" : 2,
-         "keywords" : {
-            "conc67" : 1,
-            "conc77" : 1,
-            "conc0" : 1
-         }
-      },
-      "conc53" : {
-         "authors" : {
-            "26" : 1
-         },
-         "publications" : {
-            "article6" : 1
-         },
-         "title" : "Kollaboration",
-         "id" : "conc53",
-         "uri" : "http://vivo.mydomain.edu/individual/conc53",
-         "keywords" : {
-            "conc53" : 1,
-            "conc78" : 1
-         },
-         "count" : "1",
-         "type" : 2
-      },
-      "n3608" : {
-         "authors" : {
-            "26" : 1
-         },
-         "publications" : {
-            "article39" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/n3608",
-         "id" : "n3608",
-         "title" : "Big Data",
-         "keywords" : {
-            "n3608" : 1
-         },
-         "type" : 2,
-         "count" : "2"
-      },
-      "conc32" : {
-         "authors" : {
-            "76" : 1,
-            "61" : 1,
-            "5" : 1
-         },
-         "publications" : {
-            "article20" : 1,
-            "article19" : 1,
-            "article12" : 1
-         },
-         "id" : "conc32",
-         "uri" : "http://vivo.mydomain.edu/individual/conc32",
-         "title" : "Dokumentlieferung",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "type" : 2,
-         "count" : "3"
-      },
-      "n998" : {
-         "publications" : {},
-         "type" : 2,
-         "uri" : "http://vivo.mydomain.edu/individual/n998",
-         "id" : "n998",
-         "count" : "1",
-         "title" : "Lernraum"
-      },
-      "conc54" : {
-         "publications" : {
-            "article65" : 1,
-            "article71" : 1,
-            "article73" : 1
-         },
-         "title" : "Langzeitarchivierung",
-         "id" : "conc54",
-         "uri" : "http://vivo.mydomain.edu/individual/conc54",
-         "authors" : {
-            "45" : 1
-         },
-         "count" : "4",
-         "type" : 2,
-         "keywords" : {
-            "conc54" : 1,
-            "n4653" : 1
-         }
-      },
-      "n1696" : {
-         "count" : "2",
-         "type" : 2,
-         "keywords" : {
-            "n1696" : 1,
-            "conc41" : 1
-         },
-         "publications" : {
-            "article80" : 1
-         },
-         "title" : "VIVO",
-         "uri" : "http://vivo.mydomain.edu/individual/n1696",
-         "id" : "n1696",
+         "title" : "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession",
+         "year" : null,
          "authors" : {
             "4" : 1
          }
       },
-      "n2793" : {
-         "authors" : {
-            "80" : 1
-         },
-         "publications" : {
-            "article33" : 1
-         },
-         "id" : "n2793",
-         "uri" : "http://vivo.mydomain.edu/individual/n2793",
-         "title" : "Lizenzierung",
-         "keywords" : {
-            "n2793" : 1
-         },
-         "type" : 2,
-         "count" : "2"
-      },
-      "conc78" : {
-         "authors" : {
-            "26" : 1
-         },
-         "publications" : {
-            "article50" : 1,
-            "article6" : 1,
-            "article32" : 1
-         },
-         "title" : "Open Science",
-         "id" : "conc78",
-         "uri" : "http://vivo.mydomain.edu/individual/conc78",
-         "keywords" : {
-            "conc78" : 1,
-            "n398" : 1,
-            "conc53" : 1
-         },
-         "count" : "4",
-         "type" : 2
-      },
-      "conc67" : {
-         "type" : 2,
-         "count" : "2",
-         "keywords" : {
-            "conc77" : 1,
-            "conc67" : 1
-         },
-         "publications" : {
-            "article66" : 1,
-            "article13" : 1
-         },
-         "id" : "conc67",
-         "uri" : "http://vivo.mydomain.edu/individual/conc67",
-         "title" : "Metadaten",
-         "authors" : {
-            "26" : 1,
-            "12" : 1
-         }
-      },
-      "n8148" : {
-         "authors" : {
-            "50" : 1
-         },
-         "publications" : {
-            "article14" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/n8148",
-         "id" : "n8148",
-         "title" : "Europeana",
-         "keywords" : {
-            "n8148" : 1
-         },
-         "type" : 2,
-         "count" : "1"
-      },
-      "conc74" : {
-         "count" : "3",
-         "type" : 2,
-         "keywords" : {
-            "conc74" : 1,
-            "conc89" : 1
-         },
-         "publications" : {
-            "article51" : 1,
-            "article49" : 1
-         },
-         "title" : "Nutzungsrechte",
-         "uri" : "http://vivo.mydomain.edu/individual/conc74",
-         "id" : "conc74",
-         "authors" : {
-            "26" : 1
-         }
-      },
-      "conc89" : {
-         "count" : "4",
-         "type" : 2,
-         "keywords" : {
-            "conc89" : 1,
-            "conc74" : 1
-         },
-         "title" : "Publizieren",
-         "id" : "conc89",
-         "uri" : "http://vivo.mydomain.edu/individual/conc89",
-         "publications" : {
-            "article51" : 1,
-            "article64" : 1,
-            "article54" : 1
-         },
-         "authors" : {
-            "76" : 1,
-            "26" : 1
-         }
-      },
-      "n5788" : {
-         "title" : "Nicht-textuelle Materialien",
-         "uri" : "http://vivo.mydomain.edu/individual/n5788",
-         "id" : "n5788",
-         "publications" : {
-            "article27" : 1,
-            "article74" : 1
-         },
-         "authors" : {
-            "65" : 1
-         },
-         "count" : "4",
-         "type" : 2,
-         "keywords" : {
-            "n5788" : 1
-         }
-      },
-      "conc62" : {
-         "keywords" : {
-            "conc62" : 1
-         },
-         "count" : "1",
-         "type" : 2,
-         "authors" : {
-            "76" : 1
-         },
-         "title" : "Literaturwissenschaften",
-         "uri" : "http://vivo.mydomain.edu/individual/conc62",
-         "id" : "conc62",
-         "publications" : {
-            "article70" : 1
-         }
-      },
-      "conc0" : {
-         "authors" : {
-            "80" : 1,
-            "26" : 1,
-            "76" : 1,
-            "77" : 1,
-            "68" : 1
-         },
-         "publications" : {
-            "article5" : 1,
-            "article46" : 1,
-            "article53" : 1,
-            "article47" : 1,
-            "article7" : 1,
-            "article45" : 1,
-            "article23" : 1,
-            "article34" : 1
-         },
-         "id" : "conc0",
-         "uri" : "http://vivo.mydomain.edu/individual/conc0",
-         "title" : " Open Access ",
-         "keywords" : {
-            "conc77" : 1,
-            "conc0" : 1
-         },
-         "type" : 2,
-         "count" : "10"
-      },
-      "conc6" : {
-         "publications" : {
-            "article81" : 1,
-            "article40" : 1,
-            "article30" : 1
-         },
-         "title" : "Archiv",
-         "uri" : "http://vivo.mydomain.edu/individual/conc6",
-         "id" : "conc6",
-         "authors" : {
-            "1" : 1,
-            "55" : 1
-         },
-         "count" : "3",
-         "type" : 2,
-         "keywords" : {
-            "conc35" : 1,
-            "conc22" : 1,
-            "conc6" : 1
-         }
-      },
-      "conc19" : {
-         "keywords" : {
-            "conc19" : 1,
-            "conc30" : 1
-         },
-         "type" : 2,
-         "count" : "5",
+      "article31" : {
+         "id" : "article31",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article31",
          "authors" : {
             "56" : 1
          },
-         "id" : "conc19",
-         "uri" : "http://vivo.mydomain.edu/individual/conc19",
-         "title" : "DataCite",
-         "publications" : {
-            "article26" : 1
-         }
-      },
-      "conc39" : {
-         "publications" : {
-            "article31" : 1,
-            "article25" : 1
-         },
-         "title" : "Forschungsdaten",
-         "uri" : "http://vivo.mydomain.edu/individual/conc39",
-         "id" : "conc39",
-         "authors" : {
-            "56" : 1
-         },
-         "count" : "3",
-         "type" : 2,
+         "title" : "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend",
+         "year" : "2014",
          "keywords" : {
             "conc39" : 1
-         }
+         },
+         "abstract" : null
       },
-      "conc35" : {
-         "authors" : {
-            "4" : 1,
-            "55" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/conc35",
-         "id" : "conc35",
-         "title" : "Erschließung",
-         "publications" : {
-            "article69" : 1,
-            "article30" : 1
-         },
-         "keywords" : {
-            "n4653" : 1,
-            "conc6" : 1,
-            "conc35" : 1
-         },
-         "type" : 2,
-         "count" : "2"
-      },
-      "conc30" : {
-         "keywords" : {
-            "conc30" : 1,
-            "conc19" : 1
-         },
-         "count" : "5",
-         "type" : 2,
-         "authors" : {
-            "56" : 1
-         },
-         "publications" : {
-            "article26" : 1
-         },
-         "title" : "DOI",
-         "id" : "conc30",
-         "uri" : "http://vivo.mydomain.edu/individual/conc30"
-      },
-      "n577" : {
+      "article4" : {
+         "type" : 1,
+         "id" : "article4",
+         "uri" : "http://vivo.mydomain.edu/individual/article4",
          "authors" : {
             "4" : 1
          },
-         "publications" : {
-            "article3" : 1
-         },
-         "title" : "3D@TIB",
-         "uri" : "http://vivo.mydomain.edu/individual/n577",
-         "id" : "n577",
-         "keywords" : {
-            "n577" : 1
-         },
-         "count" : "1",
-         "type" : 2
-      },
-      "n3190" : {
-         "title" : "Discovery",
-         "uri" : "http://vivo.mydomain.edu/individual/n3190",
-         "id" : "n3190",
-         "publications" : {
-            "article17" : 1,
-            "article9" : 1
-         },
-         "authors" : {
-            "77" : 1,
-            "67" : 1
-         },
-         "count" : "2",
-         "type" : 2,
-         "keywords" : {
-            "conc24" : 1,
-            "n3190" : 1
-         }
-      },
-      "conc41" : {
-         "keywords" : {
-            "conc41" : 1,
-            "n1696" : 1
-         },
-         "count" : "4",
-         "type" : 2,
-         "authors" : {
-            "4" : 1
-         },
-         "publications" : {
-            "article77" : 1,
-            "article76" : 1,
-            "article80" : 1
-         },
-         "title" : "Forschungsinformationssystem",
-         "id" : "conc41",
-         "uri" : "http://vivo.mydomain.edu/individual/conc41"
-      },
-      "n5680" : {
-         "authors" : {
-            "75" : 1
-         },
-         "publications" : {
-            "article21" : 1
-         },
-         "id" : "n5680",
-         "uri" : "http://vivo.mydomain.edu/individual/n5680",
-         "title" : "Semantische Suche",
-         "keywords" : {
-            "n5680" : 1
-         },
-         "type" : 2,
-         "count" : "1"
-      }
-   },
-   "authors" : {
-      "58" : {
-         "id" : "58",
-         "uri" : "http://vivo.mydomain.edu/individual/58",
-         "publications" : {
-            "article42" : 1
-         },
-         "authors" : {
-            "58" : 1
-         },
-         "count" : "1",
-         "positions" : [],
-         "type" : 0,
-         "image" : null,
-         "name" : "D Nürnberger",
-         "keywords" : {
-            "conc81" : 1
-         },
-         "fullname" : "Dorothee Nürnberger"
-      },
-      "26" : {
-         "authors" : {
-            "26" : 1
-         },
-         "id" : "26",
-         "uri" : "http://vivo.mydomain.edu/individual/26",
-         "publications" : {
-            "article49" : 1,
-            "article50" : 1,
-            "article64" : 1,
-            "article32" : 1,
-            "article48" : 1,
-            "article39" : 1,
-            "article5" : 1,
-            "article51" : 1,
-            "article43" : 1,
-            "article66" : 1,
-            "article23" : 1,
-            "article52" : 1,
-            "article6" : 1
-         },
-         "name" : "L Heller",
-         "image" : "http://test.osl.tib.eu/vivo-tib/individual/n6981",
-         "keywords" : {
-            "conc74" : 1,
-            "conc67" : 1,
-            "conc53" : 1,
-            "n3608" : 1,
-            "conc77" : 1,
-            "conc0" : 1,
-            "conc89" : 1,
-            "conc61" : 1,
-            "conc78" : 1,
-            "n398" : 1
-         },
-         "fullname" : "Lambert Heller",
-         "positions" : [
-            "Open Science Lab"
-         ],
-         "count" : "13",
-         "type" : 0
-      },
-      "n1094" : {
-         "authors" : {
-            "n1094" : 1
-         },
-         "publications" : {
-            "article29" : 1,
-            "article28" : 1
-         },
-         "id" : "n1094",
-         "uri" : "http://vivo.mydomain.edu/individual/n1094",
-         "name" : "Niemeyer, Sandra ",
-         "image" : null,
-         "fullname" : "Niemeyer, Sandra ",
-         "count" : "2",
-         "positions" : [],
-         "type" : 0
-      },
-      "77" : {
-         "id" : "77",
-         "uri" : "http://vivo.mydomain.edu/individual/77",
-         "publications" : {
-            "article46" : 1,
-            "article47" : 1,
-            "article45" : 1,
-            "article17" : 1
-         },
-         "authors" : {
-            "77" : 1
-         },
-         "type" : 0,
-         "positions" : [],
-         "count" : "4",
-         "keywords" : {
-            "conc0" : 1,
-            "n3190" : 1
-         },
-         "fullname" : "Esther Tobschall",
-         "image" : null,
-         "name" : "E Tobschall"
-      },
-      "80" : {
-         "uri" : "http://vivo.mydomain.edu/individual/80",
-         "id" : "80",
-         "publications" : {
-            "article33" : 1,
-            "article34" : 1
-         },
-         "authors" : {
-            "80" : 1
-         },
-         "positions" : [],
-         "count" : "2",
-         "type" : 0,
-         "image" : null,
-         "name" : "M Tullney",
-         "fullname" : "Marco Tullney",
-         "keywords" : {
-            "n2793" : 1,
-            "conc0" : 1
-         }
-      },
-      "65" : {
-         "authors" : {
-            "65" : 1
-         },
-         "publications" : {
-            "article74" : 1,
-            "article27" : 1
-         },
-         "id" : "65",
-         "uri" : "http://vivo.mydomain.edu/individual/65",
-         "image" : null,
-         "name" : "M Plank",
-         "keywords" : {
-            "n5788" : 1
-         },
-         "fullname" : "Margret Plank",
-         "count" : "2",
-         "positions" : [
-            "Nichttextuelle Materialien",
-            "Entwicklung"
-         ],
-         "type" : 0
-      },
-      "5" : {
-         "type" : 0,
-         "count" : "1",
-         "positions" : [
-            "Justitiariat"
-         ],
-         "fullname" : "Markus Brammer",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "name" : "M Brammer",
-         "image" : null,
-         "id" : "5",
-         "uri" : "http://vivo.mydomain.edu/individual/5",
-         "publications" : {
-            "article19" : 1
-         },
-         "authors" : {
-            "5" : 1
-         }
-      },
-      "56" : {
-         "id" : "56",
-         "uri" : "http://vivo.mydomain.edu/individual/56",
-         "publications" : {
-            "article26" : 1,
-            "article25" : 1,
-            "article31" : 1
-         },
-         "authors" : {
-            "56" : 1
-         },
-         "type" : 0,
-         "count" : "3",
-         "positions" : [],
-         "fullname" : "Janna Neumann",
-         "keywords" : {
-            "conc39" : 1,
-            "conc30" : 1,
-            "conc19" : 1
-         },
-         "name" : "J Neumann",
-         "image" : null
-      },
-      "55" : {
-         "publications" : {
-            "article30" : 1,
-            "article81" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/55",
-         "id" : "55",
-         "authors" : {
-            "55" : 1
-         },
-         "type" : 0,
-         "count" : "2",
-         "positions" : [
-            "Lokale Dienste und Uni-Archiv"
-         ],
-         "keywords" : {
-            "conc6" : 1,
-            "conc35" : 1
-         },
-         "fullname" : "Lars Nebelung",
-         "image" : null,
-         "name" : "L Nebelung"
-      },
-      "17" : {
-         "authors" : {
-            "17" : 1
-         },
-         "publications" : {
-            "article15" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/17",
-         "id" : "17",
-         "image" : null,
-         "name" : "A Franzkowiak",
-         "fullname" : "Anette Franzkowiak",
-         "keywords" : {
-            "n1693" : 1
-         },
-         "positions" : [],
-         "count" : "1",
-         "type" : 0
-      },
-      "75" : {
-         "publications" : {
-            "article21" : 1,
-            "article22" : 1
-         },
-         "id" : "75",
-         "uri" : "http://vivo.mydomain.edu/individual/75",
-         "authors" : {
-            "75" : 1
-         },
-         "positions" : [
-            "Nichttextuelle Materialien"
-         ],
-         "count" : "2",
-         "type" : 0,
-         "image" : null,
-         "name" : "S Strobel",
-         "fullname" : "Sven Strobel",
-         "keywords" : {
-            "n4364" : 1,
-            "n5680" : 1
-         }
-      },
-      "6" : {
-         "keywords" : {
-            "conc11" : 1
-         },
-         "fullname" : "Jan Brase",
-         "name" : "J Brase",
-         "image" : null,
-         "type" : 0,
-         "count" : "1",
-         "positions" : [
-            "Entwicklung",
-            "Drittmittel und Transfer"
-         ],
-         "authors" : {
-            "6" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/6",
-         "id" : "6",
-         "publications" : {
-            "article10" : 1
-         }
-      },
-      "12" : {
-         "authors" : {
-            "12" : 1
-         },
-         "id" : "12",
-         "uri" : "http://vivo.mydomain.edu/individual/12",
-         "publications" : {
-            "article13" : 1
-         },
-         "name" : "E Derr",
-         "image" : null,
-         "fullname" : "Elena Derr",
-         "keywords" : {
-            "conc67" : 1,
-            "conc77" : 1
-         },
-         "positions" : [
-            "TIB-Lizenzen"
-         ],
-         "count" : "1",
-         "type" : 0
-      },
-      "45" : {
-         "count" : "3",
-         "positions" : [],
-         "type" : 0,
-         "name" : "M Lindlar",
-         "image" : null,
-         "fullname" : "Michelle Lindlar",
-         "keywords" : {
-            "n4653" : 1,
-            "conc54" : 1
-         },
-         "publications" : {
-            "article71" : 1,
-            "article65" : 1,
-            "article73" : 1
-         },
-         "id" : "45",
-         "uri" : "http://vivo.mydomain.edu/individual/45",
-         "authors" : {
-            "45" : 1
-         }
-      },
-      "50" : {
-         "id" : "50",
-         "uri" : "http://vivo.mydomain.edu/individual/50",
-         "publications" : {
-            "article14" : 1
-         },
-         "authors" : {
-            "50" : 1
-         },
-         "count" : "1",
-         "positions" : [],
-         "type" : 0,
-         "image" : null,
-         "name" : "P Mensing",
-         "fullname" : "Petra Mensing",
-         "keywords" : {
-            "n8148" : 1
-         }
-      },
-      "61" : {
-         "publications" : {
-            "article12" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/61",
-         "id" : "61",
-         "authors" : {
-            "61" : 1
-         },
-         "type" : 0,
-         "count" : "1",
-         "positions" : [
-            "Volltextversorgung"
-         ],
-         "fullname" : "Jens Olf",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "name" : "J Olf",
-         "image" : null
-      },
-      "4" : {
-         "authors" : {
-            "4" : 1
-         },
-         "publications" : {
-            "article76" : 1,
-            "article77" : 1,
-            "article78" : 1,
-            "article3" : 1,
-            "article4" : 1,
-            "article69" : 1,
-            "article80" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/4",
-         "id" : "4",
-         "fullname" : "Ina Blümel",
-         "keywords" : {
-            "n1696" : 1,
-            "conc35" : 1,
-            "n7053" : 1,
-            "conc41" : 1,
-            "n577" : 1,
-            "n4653" : 1
-         },
-         "name" : "I Blümel",
-         "image" : null,
-         "type" : 0,
-         "count" : "7",
-         "positions" : [
-            "Open Science Lab"
-         ]
-      },
-      "1" : {
-         "authors" : {
-            "1" : 1
-         },
-         "id" : "1",
-         "uri" : "http://vivo.mydomain.edu/individual/1",
-         "publications" : {
-            "article2" : 1,
-            "article40" : 1
-         },
-         "image" : null,
-         "name" : "T Bähr",
-         "fullname" : "Thomas Bähr",
-         "keywords" : {
-            "conc22" : 1,
-            "conc6" : 1
-         },
-         "count" : "2",
-         "positions" : [
-            "Bestandserhaltung und LZA"
-         ],
-         "type" : 0
-      },
-      "76" : {
-         "authors" : {
-            "76" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/76",
-         "id" : "76",
-         "publications" : {
-            "article20" : 1,
-            "article70" : 1,
-            "article53" : 1,
-            "article54" : 1
-         },
-         "name" : "B Tempel",
-         "image" : null,
-         "fullname" : "Bernhard Tempel",
-         "keywords" : {
-            "conc32" : 1,
-            "conc89" : 1,
-            "conc62" : 1,
-            "conc0" : 1
-         },
-         "positions" : [],
-         "count" : "4",
-         "type" : 0
-      },
-      "67" : {
-         "type" : 0,
-         "count" : "2",
-         "positions" : [],
-         "fullname" : "Elena Roscoe",
-         "keywords" : {
-            "conc24" : 1,
-            "n3190" : 1
-         },
-         "name" : "E Roscoe",
-         "image" : null,
-         "id" : "67",
-         "uri" : "http://vivo.mydomain.edu/individual/67",
-         "publications" : {
-            "article9" : 1,
-            "article18" : 1
-         },
-         "authors" : {
-            "67" : 1
-         }
-      },
-      "83" : {
-         "type" : 0,
-         "count" : "1",
-         "positions" : [
-            "Erwerbung und Katalogisierung"
-         ],
-         "keywords" : {
-            "conc11" : 1
-         },
-         "fullname" : "Christine Wilhelm",
-         "name" : "C Wilhelm",
-         "image" : null,
-         "id" : "83",
-         "uri" : "http://vivo.mydomain.edu/individual/83",
-         "publications" : {
-            "article24" : 1
-         },
-         "authors" : {
-            "83" : 1
-         }
-      },
-      "68" : {
-         "count" : "1",
-         "positions" : [
-            "Vorstand"
-         ],
-         "type" : 0,
-         "name" : "U Rosemann",
-         "image" : null,
-         "fullname" : "Uwe Rosemann",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "publications" : {
-            "article7" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/68",
-         "id" : "68",
-         "authors" : {
-            "68" : 1
-         }
-      },
-      "27" : {
-         "image" : null,
-         "name" : "M Hohlfeld",
-         "fullname" : "Michael Hohlfeld",
-         "keywords" : {
-            "n7791" : 1,
-            "conc24" : 1
-         },
-         "count" : "1",
-         "positions" : [
-            "Entwicklung"
-         ],
-         "type" : 0,
-         "authors" : {
-            "27" : 1
-         },
-         "publications" : {
-            "article41" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/27",
-         "id" : "27"
-      }
-   },
-   "publications" : {
-      "article21" : {
-         "keywords" : {
-            "n5680" : 1
-         },
+         "keywords" : {},
          "abstract" : null,
-         "type" : 1,
-         "authors" : {
-            "75" : 1
-         },
-         "id" : "article21",
-         "uri" : "http://vivo.mydomain.edu/individual/article21",
-         "year" : "2014",
-         "title" : "Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition"
-      },
-      "article5" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "conc77" : 1,
-            "conc0" : 1
-         },
-         "id" : "article5",
-         "uri" : "http://vivo.mydomain.edu/individual/article5",
-         "year" : "2013",
-         "title" : "Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?",
-         "authors" : {
-            "26" : 1
-         }
-      },
-      "article32" : {
-         "keywords" : {
-            "n398" : 1,
-            "conc78" : 1
-         },
-         "abstract" : null,
-         "type" : 1,
-         "authors" : {
-            "26" : 1
-         },
-         "year" : "2014",
-         "title" : "Aspekte der Kommunikation mit Wissenschaftsblogs",
-         "uri" : "http://vivo.mydomain.edu/individual/article32",
-         "id" : "article32"
+         "title" : "3D @Technische Informationsbibliothek (TIB)",
+         "year" : "2012"
       },
       "article40" : {
          "authors" : {
             "1" : 1
          },
-         "uri" : "http://vivo.mydomain.edu/individual/article40",
-         "id" : "article40",
-         "year" : "2012",
-         "title" : "Speicherung & Datenverwaltung in Produktion und Archiv",
-         "abstract" : null,
          "keywords" : {
             "conc6" : 1,
             "conc22" : 1
          },
-         "type" : 1
-      },
-      "article4" : {
-         "year" : "2012",
-         "title" : "3D @Technische Informationsbibliothek (TIB)",
-         "uri" : "http://vivo.mydomain.edu/individual/article4",
-         "id" : "article4",
-         "authors" : {
-            "4" : 1
-         },
-         "type" : 1,
-         "keywords" : {},
-         "abstract" : null
-      },
-      "article29" : {
-         "authors" : {
-            "n1094" : 1
-         },
-         "id" : "article29",
-         "uri" : "http://vivo.mydomain.edu/individual/article29",
-         "year" : "2014",
-         "title" : "E-Books in wissenschaftlichen Bibliotheken",
          "abstract" : null,
-         "keywords" : {},
-         "type" : 1
-      },
-      "article49" : {
-         "title" : "\"Wow, someone wants to publish me!\" — Revisited",
+         "title" : "Speicherung & Datenverwaltung in Produktion und Archiv",
          "year" : "2012",
-         "uri" : "http://vivo.mydomain.edu/individual/article49",
-         "id" : "article49",
+         "type" : 1,
+         "id" : "article40",
+         "uri" : "http://vivo.mydomain.edu/individual/article40"
+      },
+      "article64" : {
+         "type" : 1,
+         "id" : "article64",
+         "uri" : "http://vivo.mydomain.edu/individual/article64",
          "authors" : {
             "26" : 1
          },
-         "type" : 1,
          "abstract" : null,
          "keywords" : {
-            "conc74" : 1
+            "conc89" : 1
+         },
+         "title" : "Das Netzwerk und die Institution",
+         "year" : null
+      },
+      "article34" : {
+         "abstract" : null,
+         "keywords" : {
+            "conc0" : 1
+         },
+         "title" : "Open Access",
+         "year" : "2014",
+         "authors" : {
+            "80" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article34",
+         "type" : 1,
+         "id" : "article34"
+      },
+      "article65" : {
+         "type" : 1,
+         "id" : "article65",
+         "uri" : "http://vivo.mydomain.edu/individual/article65",
+         "authors" : {
+            "45" : 1
+         },
+         "abstract" : null,
+         "keywords" : {
+            "conc54" : 1
+         },
+         "title" : "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ",
+         "year" : null
+      },
+      "article15" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article15",
+         "type" : 1,
+         "id" : "article15",
+         "abstract" : null,
+         "keywords" : {
+            "n1693" : 1
+         },
+         "title" : "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.",
+         "year" : "2014",
+         "authors" : {
+            "17" : 1
+         }
+      },
+      "article66" : {
+         "authors" : {
+            "26" : 1
+         },
+         "title" : "Discovery Metadata - Metadata Standards vs. New Requirements",
+         "year" : null,
+         "abstract" : null,
+         "keywords" : {
+            "conc67" : 1
+         },
+         "id" : "article66",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article66"
+      },
+      "article23" : {
+         "authors" : {
+            "26" : 1
+         },
+         "title" : "Wissen auf einen Klick",
+         "year" : "2014",
+         "abstract" : null,
+         "keywords" : {
+            "conc0" : 1
+         },
+         "id" : "article23",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article23"
+      },
+      "article48" : {
+         "title" : "Sieben Gründe Zotero auszuprobieren",
+         "year" : "2012",
+         "keywords" : {
+            "conc61" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "26" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article48",
+         "id" : "article48",
+         "type" : 1
+      },
+      "article13" : {
+         "id" : "article13",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article13",
+         "authors" : {
+            "12" : 1
+         },
+         "title" : "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB).",
+         "year" : "2013",
+         "keywords" : {
+            "conc77" : 1,
+            "conc67" : 1
+         },
+         "abstract" : null
+      },
+      "article43" : {
+         "id" : "article43",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article43",
+         "authors" : {
+            "26" : 1
+         },
+         "title" : "Open Access, Open Content und gemeinfreies Kulturerbe",
+         "year" : "2012",
+         "abstract" : null,
+         "keywords" : {}
+      },
+      "article45" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article45",
+         "id" : "article45",
+         "type" : 1,
+         "title" : "arXiv - Veteran und Vorreiter",
+         "year" : "2012",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "77" : 1
+         }
+      },
+      "article76" : {
+         "type" : 1,
+         "id" : "article76",
+         "uri" : "http://vivo.mydomain.edu/individual/article76",
+         "authors" : {
+            "4" : 1
+         },
+         "abstract" : null,
+         "keywords" : {
+            "conc41" : 1
+         },
+         "year" : null,
+         "title" : "Taming the Wilderness of Open Research Information"
+      },
+      "article51" : {
+         "abstract" : null,
+         "keywords" : {
+            "conc74" : 1,
+            "conc89" : 1
+         },
+         "year" : "2012",
+         "title" : "Publikationsberatung: Neun Thesen vom #iCamp12",
+         "authors" : {
+            "26" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article51",
+         "type" : 1,
+         "id" : "article51"
+      },
+      "article20" : {
+         "authors" : {
+            "76" : 1
+         },
+         "year" : "2014",
+         "title" : "Literaturauswahl und -bestellung leichter gemacht!",
+         "abstract" : null,
+         "keywords" : {
+            "conc32" : 1
+         },
+         "id" : "article20",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article20"
+      },
+      "article41" : {
+         "id" : "article41",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article41",
+         "authors" : {
+            "27" : 1
+         },
+         "title" : "Bibliotheksverbünde, Virtuelle Fachbibliotheken",
+         "year" : "2012",
+         "keywords" : {
+            "conc24" : 1,
+            "n7791" : 1
+         },
+         "abstract" : null
+      },
+      "article6" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article6",
+         "type" : 1,
+         "id" : "article6",
+         "abstract" : null,
+         "keywords" : {
+            "conc53" : 1,
+            "conc78" : 1
+         },
+         "year" : "2013",
+         "title" : "Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends",
+         "authors" : {
+            "26" : 1
+         }
+      },
+      "article12" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article12",
+         "id" : "article12",
+         "type" : 1,
+         "year" : "2013",
+         "title" : "Dokumentlieferung",
+         "keywords" : {
+            "conc32" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "61" : 1
+         }
+      },
+      "article3" : {
+         "abstract" : "Test Abstract. Delete it before real use.",
+         "keywords" : {
+            "n577" : 1
+         },
+         "year" : "2012",
+         "title" : "3D @Technische Informationsbibliothek (TIB)",
+         "authors" : {
+            "4" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article3",
+         "type" : 1,
+         "id" : "article3"
+      },
+      "article77" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article77",
+         "type" : 1,
+         "id" : "article77",
+         "keywords" : {
+            "conc41" : 1
+         },
+         "abstract" : null,
+         "title" : "The Quest for Research Information",
+         "year" : null,
+         "authors" : {
+            "4" : 1
+         }
+      },
+      "article22" : {
+         "keywords" : {
+            "n4364" : 1
+         },
+         "abstract" : null,
+         "year" : "2014",
+         "title" : "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems",
+         "authors" : {
+            "75" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article22",
+         "type" : 1,
+         "id" : "article22"
+      },
+      "article32" : {
+         "keywords" : {
+            "conc78" : 1,
+            "n398" : 1
+         },
+         "abstract" : null,
+         "year" : "2014",
+         "title" : "Aspekte der Kommunikation mit Wissenschaftsblogs",
+         "authors" : {
+            "26" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article32",
+         "type" : 1,
+         "id" : "article32"
+      },
+      "article46" : {
+         "authors" : {
+            "77" : 1
+         },
+         "abstract" : null,
+         "keywords" : {
+            "conc0" : 1
+         },
+         "year" : "2012",
+         "title" : "arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /",
+         "type" : 1,
+         "id" : "article46",
+         "uri" : "http://vivo.mydomain.edu/individual/article46"
+      },
+      "article7" : {
+         "abstract" : null,
+         "keywords" : {
+            "conc0" : 1
+         },
+         "year" : "2013",
+         "title" : "Open Access - Was sagen die Bibliotheken?",
+         "authors" : {
+            "68" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article7",
+         "type" : 1,
+         "id" : "article7"
+      },
+      "article19" : {
+         "type" : 1,
+         "id" : "article19",
+         "uri" : "http://vivo.mydomain.edu/individual/article19",
+         "authors" : {
+            "5" : 1
+         },
+         "keywords" : {
+            "conc32" : 1
+         },
+         "abstract" : null,
+         "title" : "Current developments in document delivery in Germany ",
+         "year" : "2014"
+      },
+      "article33" : {
+         "authors" : {
+            "80" : 1
+         },
+         "year" : "2014",
+         "title" : "Freie Lizenzen und Nachnutzung",
+         "keywords" : {
+            "n2793" : 1
+         },
+         "abstract" : null,
+         "id" : "article33",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article33"
+      },
+      "article14" : {
+         "id" : "article14",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article14",
+         "authors" : {
+            "50" : 1
+         },
+         "year" : "2013",
+         "title" : "Linked Heritage  - ein europäisches Projekt",
+         "keywords" : {
+            "n8148" : 1
+         },
+         "abstract" : null
+      },
+      "article69" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article69",
+         "id" : "article69",
+         "type" : 1,
+         "year" : null,
+         "title" : "Towards an automatic multi-label classification of 3D architectural models",
+         "keywords" : {
+            "n4653" : 1,
+            "conc35" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "4" : 1
+         }
+      },
+      "article29" : {
+         "id" : "article29",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article29",
+         "authors" : {
+            "n1094" : 1
+         },
+         "year" : "2014",
+         "title" : "E-Books in wissenschaftlichen Bibliotheken",
+         "keywords" : {},
+         "abstract" : null
+      },
+      "article71" : {
+         "title" : "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project",
+         "year" : null,
+         "keywords" : {
+            "n4653" : 1,
+            "conc54" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "45" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article71",
+         "id" : "article71",
+         "type" : 1
+      },
+      "article39" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article39",
+         "id" : "article39",
+         "type" : 1,
+         "year" : "2013",
+         "title" : "E-IRG White Paper 2013 ",
+         "abstract" : null,
+         "keywords" : {
+            "n3608" : 1
+         },
+         "authors" : {
+            "26" : 1
+         }
+      },
+      "article10" : {
+         "abstract" : null,
+         "keywords" : {
+            "conc11" : 1
+         },
+         "title" : "Development Thinking and Practice on the German National Science and Technology Library",
+         "year" : "2013",
+         "authors" : {
+            "6" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article10",
+         "type" : 1,
+         "id" : "article10"
+      },
+      "article42" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article42",
+         "type" : 1,
+         "id" : "article42",
+         "keywords" : {
+            "conc81" : 1
+         },
+         "abstract" : null,
+         "title" : "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken",
+         "year" : "2012",
+         "authors" : {
+            "58" : 1
+         }
+      },
+      "article30" : {
+         "type" : 1,
+         "id" : "article30",
+         "uri" : "http://vivo.mydomain.edu/individual/article30",
+         "authors" : {
+            "55" : 1
+         },
+         "keywords" : {
+            "conc6" : 1,
+            "conc35" : 1
+         },
+         "abstract" : null,
+         "title" : "Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext.",
+         "year" : "2014"
+      },
+      "article73" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article73",
+         "id" : "article73",
+         "type" : 1,
+         "title" : "Building Information Modeling – A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
+         "year" : null,
+         "abstract" : null,
+         "keywords" : {
+            "conc54" : 1
+         },
+         "authors" : {
+            "45" : 1
+         }
+      },
+      "article70" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article70",
+         "id" : "article70",
+         "type" : 1,
+         "title" : "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie",
+         "year" : null,
+         "abstract" : null,
+         "keywords" : {
+            "conc62" : 1
+         },
+         "authors" : {
+            "76" : 1
+         }
+      },
+      "article47" : {
+         "year" : "2012",
+         "title" : "arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "77" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article47",
+         "id" : "article47",
+         "type" : 1
+      },
+      "article9" : {
+         "year" : "2013",
+         "title" : "Digitale Bibliothek und Portal GetInfo in der TIB Hannover",
+         "keywords" : {
+            "n3190" : 1,
+            "conc24" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "67" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article9",
+         "id" : "article9",
+         "type" : 1
+      },
+      "article50" : {
+         "authors" : {
+            "26" : 1
+         },
+         "year" : null,
+         "title" : "ForscherInnen gemeinsam neue Wege im Web eröffnen — Das Open Science Lab der TIB Hannover",
+         "abstract" : null,
+         "keywords" : {
+            "conc78" : 1
+         },
+         "id" : "article50",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article50"
+      },
+      "article5" : {
+         "title" : "Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?",
+         "year" : "2013",
+         "keywords" : {
+            "conc0" : 1,
+            "conc77" : 1
+         },
+         "abstract" : null,
+         "authors" : {
+            "26" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article5",
+         "id" : "article5",
+         "type" : 1
+      },
+      "article17" : {
+         "id" : "article17",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article17",
+         "authors" : {
+            "77" : 1
+         },
+         "year" : "2014",
+         "title" : "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten",
+         "keywords" : {
+            "n3190" : 1
+         },
+         "abstract" : null
+      },
+      "article81" : {
+         "type" : 1,
+         "id" : "article81",
+         "uri" : "http://vivo.mydomain.edu/individual/article81",
+         "authors" : {
+            "55" : 1
+         },
+         "keywords" : {
+            "conc6" : 1
+         },
+         "abstract" : null,
+         "year" : null,
+         "title" : "Resümee: Was bleibt mir von dieser Tagung ?"
+      },
+      "article26" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article26",
+         "id" : "article26",
+         "type" : 1,
+         "year" : "2014",
+         "title" : "DataCite and DOI names for research data",
+         "abstract" : null,
+         "keywords" : {
+            "conc19" : 1,
+            "conc30" : 1
+         },
+         "authors" : {
+            "56" : 1
+         }
+      },
+      "article27" : {
+         "abstract" : null,
+         "keywords" : {
+            "n5788" : 1
+         },
+         "title" : "TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing",
+         "year" : "2014",
+         "authors" : {
+            "65" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article27",
+         "type" : 1,
+         "id" : "article27"
+      },
+      "article28" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article28",
+         "type" : 1,
+         "id" : "article28",
+         "abstract" : null,
+         "keywords" : {},
+         "year" : "2014",
+         "title" : "E-Books in wissenschaftlichen Bibliotheken",
+         "authors" : {
+            "n1094" : 1
          }
       },
       "article80" : {
@@ -1323,718 +739,1302 @@
          },
          "title" : "VIVO for Scientific Communities - Making researchers & their activities discoverable",
          "year" : null,
-         "uri" : "http://vivo.mydomain.edu/individual/article80",
-         "id" : "article80",
          "keywords" : {
             "conc41" : 1,
             "n1696" : 1
          },
          "abstract" : null,
-         "type" : 1
+         "id" : "article80",
+         "type" : 1,
+         "uri" : "http://vivo.mydomain.edu/individual/article80"
       },
-      "article27" : {
-         "uri" : "http://vivo.mydomain.edu/individual/article27",
-         "id" : "article27",
+      "article24" : {
+         "type" : 1,
+         "id" : "article24",
+         "uri" : "http://vivo.mydomain.edu/individual/article24",
+         "authors" : {
+            "83" : 1
+         },
+         "keywords" : {
+            "conc11" : 1
+         },
+         "abstract" : null,
          "year" : "2014",
-         "title" : "TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing",
-         "authors" : {
-            "65" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "n5788" : 1
-         }
-      },
-      "article52" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "conc61" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article52",
-         "id" : "article52",
-         "title" : "1.000 Antworten auf die Frage: Literaturverwaltung — Was benutzen Sie, was brauchen Sie?",
-         "year" : "2012",
-         "authors" : {
-            "26" : 1
-         }
+         "title" : "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon"
       },
       "article74" : {
-         "year" : null,
-         "title" : "TIB's Portal for audiovisual media - New ways of indexing and retrieval",
-         "id" : "article74",
-         "uri" : "http://vivo.mydomain.edu/individual/article74",
          "authors" : {
             "65" : 1
          },
-         "type" : 1,
+         "title" : "TIB's Portal for audiovisual media - New ways of indexing and retrieval",
+         "year" : null,
+         "abstract" : null,
          "keywords" : {
             "n5788" : 1
          },
-         "abstract" : null
-      },
-      "article3" : {
-         "authors" : {
-            "4" : 1
-         },
-         "title" : "3D @Technische Informationsbibliothek (TIB)",
-         "year" : "2012",
-         "id" : "article3",
-         "uri" : "http://vivo.mydomain.edu/individual/article3",
-         "keywords" : {
-            "n577" : 1
-         },
-         "abstract" : "Test Abstract. Delete it before real use.",
-         "type" : 1
-      },
-      "article78" : {
-         "uri" : "http://vivo.mydomain.edu/individual/article78",
-         "id" : "article78",
-         "year" : null,
-         "title" : "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession",
-         "authors" : {
-            "4" : 1
-         },
+         "id" : "article74",
          "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "n7053" : 1,
-            "n4653" : 1
-         }
+         "uri" : "http://vivo.mydomain.edu/individual/article74"
       },
-      "article34" : {
+      "article53" : {
+         "authors" : {
+            "76" : 1
+         },
          "abstract" : null,
          "keywords" : {
             "conc0" : 1
          },
+         "title" : "Open Access Week - Open Access für Geisteswissenschaftler?",
+         "year" : "2012",
          "type" : 1,
-         "authors" : {
-            "80" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article34",
-         "id" : "article34",
-         "year" : "2014",
-         "title" : "Open Access"
+         "id" : "article53",
+         "uri" : "http://vivo.mydomain.edu/individual/article53"
       },
-      "article15" : {
-         "type" : 1,
+      "article2" : {
+         "year" : "2012",
+         "title" : "Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
+         "keywords" : {},
          "abstract" : null,
+         "authors" : {
+            "1" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/article2",
+         "id" : "article2",
+         "type" : 1
+      },
+      "article49" : {
+         "uri" : "http://vivo.mydomain.edu/individual/article49",
+         "id" : "article49",
+         "type" : 1,
+         "title" : "\"Wow, someone wants to publish me!\" — Revisited",
+         "year" : "2012",
+         "abstract" : null,
+         "keywords" : {
+            "conc74" : 1
+         },
+         "authors" : {
+            "26" : 1
+         }
+      }
+   },
+   "keywords" : {
+      "n577" : {
+         "authors" : {
+            "4" : 1
+         },
+         "keywords" : {
+            "n577" : 1
+         },
+         "title" : "3D@TIB",
+         "publications" : {
+            "article3" : 1
+         },
+         "type" : 2,
+         "id" : "n577",
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/n577"
+      },
+      "conc39" : {
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/conc39",
+         "type" : 2,
+         "id" : "conc39",
+         "keywords" : {
+            "conc39" : 1
+         },
+         "title" : "Forschungsdaten",
+         "publications" : {
+            "article31" : 1,
+            "article25" : 1
+         },
+         "authors" : {
+            "56" : 1
+         }
+      },
+      "conc4" : {
+         "id" : "conc4",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/conc4",
+         "title" : "3D-Druck",
+         "publications" : {},
+         "count" : "2"
+      },
+      "conc35" : {
+         "authors" : {
+            "55" : 1,
+            "4" : 1
+         },
+         "publications" : {
+            "article30" : 1,
+            "article69" : 1
+         },
+         "title" : "Erschließung",
+         "keywords" : {
+            "conc35" : 1,
+            "n4653" : 1,
+            "conc6" : 1
+         },
+         "id" : "conc35",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/conc35",
+         "count" : "2"
+      },
+      "conc81" : {
+         "keywords" : {
+            "conc81" : 1
+         },
+         "title" : "Personalmanagement",
+         "publications" : {
+            "article42" : 1
+         },
+         "authors" : {
+            "58" : 1
+         },
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/conc81",
+         "type" : 2,
+         "id" : "conc81"
+      },
+      "conc22" : {
+         "type" : 2,
+         "id" : "conc22",
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/conc22",
+         "authors" : {
+            "1" : 1
+         },
+         "keywords" : {
+            "conc6" : 1,
+            "conc22" : 1
+         },
+         "publications" : {
+            "article40" : 1
+         },
+         "title" : "Datenverwaltung"
+      },
+      "conc24" : {
+         "id" : "conc24",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/conc24",
+         "count" : "3",
+         "authors" : {
+            "27" : 1,
+            "67" : 1
+         },
+         "publications" : {
+            "article18" : 1,
+            "article9" : 1,
+            "article41" : 1
+         },
+         "title" : "digitale Bibliothek ",
+         "keywords" : {
+            "n3190" : 1,
+            "conc24" : 1,
+            "n7791" : 1
+         }
+      },
+      "conc41" : {
+         "publications" : {
+            "article77" : 1,
+            "article76" : 1,
+            "article80" : 1
+         },
+         "title" : "Forschungsinformationssystem",
+         "keywords" : {
+            "conc41" : 1,
+            "n1696" : 1
+         },
+         "authors" : {
+            "4" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/conc41",
+         "count" : "4",
+         "id" : "conc41",
+         "type" : 2
+      },
+      "n1693" : {
+         "uri" : "http://vivo.mydomain.edu/individual/n1693",
+         "count" : "1",
+         "id" : "n1693",
+         "type" : 2,
+         "publications" : {
+            "article15" : 1
+         },
+         "title" : "Bibliotheksbau",
          "keywords" : {
             "n1693" : 1
          },
-         "title" : "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.",
-         "year" : "2014",
-         "uri" : "http://vivo.mydomain.edu/individual/article15",
-         "id" : "article15",
          "authors" : {
             "17" : 1
          }
       },
-      "article51" : {
-         "type" : 1,
-         "abstract" : null,
+      "conc89" : {
+         "authors" : {
+            "26" : 1,
+            "76" : 1
+         },
+         "title" : "Publizieren",
+         "publications" : {
+            "article54" : 1,
+            "article51" : 1,
+            "article64" : 1
+         },
          "keywords" : {
             "conc89" : 1,
             "conc74" : 1
          },
-         "title" : "Publikationsberatung: Neun Thesen vom #iCamp12",
-         "year" : "2012",
-         "id" : "article51",
-         "uri" : "http://vivo.mydomain.edu/individual/article51",
-         "authors" : {
-            "26" : 1
-         }
+         "id" : "conc89",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/conc89",
+         "count" : "4"
       },
-      "article2" : {
-         "type" : 1,
-         "keywords" : {},
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
-         "uri" : "http://vivo.mydomain.edu/individual/article2",
-         "id" : "article2",
-         "authors" : {
-            "1" : 1
-         }
-      },
-      "article81" : {
-         "uri" : "http://vivo.mydomain.edu/individual/article81",
-         "id" : "article81",
-         "title" : "Resümee: Was bleibt mir von dieser Tagung ?",
-         "year" : null,
-         "authors" : {
-            "55" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
+      "conc30" : {
+         "count" : "5",
+         "uri" : "http://vivo.mydomain.edu/individual/conc30",
+         "type" : 2,
+         "id" : "conc30",
          "keywords" : {
-            "conc6" : 1
-         }
-      },
-      "article73" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc54" : 1
+            "conc19" : 1,
+            "conc30" : 1
          },
-         "type" : 1,
-         "authors" : {
-            "45" : 1
+         "title" : "DOI",
+         "publications" : {
+            "article26" : 1
          },
-         "year" : null,
-         "title" : "Building Information Modeling – A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
-         "id" : "article73",
-         "uri" : "http://vivo.mydomain.edu/individual/article73"
-      },
-      "article76" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc41" : 1
-         },
-         "type" : 1,
-         "authors" : {
-            "4" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article76",
-         "id" : "article76",
-         "year" : null,
-         "title" : "Taming the Wilderness of Open Research Information"
-      },
-      "article31" : {
          "authors" : {
             "56" : 1
-         },
-         "id" : "article31",
-         "uri" : "http://vivo.mydomain.edu/individual/article31",
-         "title" : "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend",
-         "year" : "2014",
-         "keywords" : {
-            "conc39" : 1
-         },
-         "abstract" : null,
-         "type" : 1
+         }
       },
-      "article25" : {
-         "year" : "2014",
-         "title" : "RADAR – Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft",
-         "id" : "article25",
-         "uri" : "http://vivo.mydomain.edu/individual/article25",
+      "conc0" : {
+         "id" : "conc0",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/conc0",
+         "count" : "10",
          "authors" : {
-            "56" : 1
+            "26" : 1,
+            "77" : 1,
+            "80" : 1,
+            "76" : 1,
+            "68" : 1
          },
-         "type" : 1,
+         "title" : " Open Access ",
+         "publications" : {
+            "article53" : 1,
+            "article45" : 1,
+            "article23" : 1,
+            "article47" : 1,
+            "article46" : 1,
+            "article7" : 1,
+            "article5" : 1,
+            "article34" : 1
+         },
          "keywords" : {
-            "conc39" : 1
-         },
-         "abstract" : null
-      },
-      "article53" : {
-         "id" : "article53",
-         "uri" : "http://vivo.mydomain.edu/individual/article53",
-         "title" : "Open Access Week - Open Access für Geisteswissenschaftler?",
-         "year" : "2012",
-         "authors" : {
-            "76" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
+            "conc77" : 1,
             "conc0" : 1
          }
       },
-      "article12" : {
-         "authors" : {
-            "61" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article12",
-         "id" : "article12",
-         "title" : "Dokumentlieferung",
-         "year" : "2013",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "abstract" : null,
-         "type" : 1
+      "n511" : {
+         "type" : 2,
+         "id" : "n511",
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/n511",
+         "title" : "GIS",
+         "publications" : {}
       },
-      "article42" : {
-         "keywords" : {
-            "conc81" : 1
-         },
-         "abstract" : null,
-         "type" : 1,
-         "authors" : {
-            "58" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article42",
-         "id" : "article42",
-         "title" : "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken",
-         "year" : "2012"
+      "conc18" : {
+         "type" : 2,
+         "id" : "conc18",
+         "count" : "1",
+         "publications" : {},
+         "title" : "Data Science",
+         "uri" : "http://vivo.mydomain.edu/individual/conc18"
       },
-      "article71" : {
-         "abstract" : null,
+      "n5788" : {
+         "type" : 2,
+         "id" : "n5788",
+         "count" : "4",
+         "uri" : "http://vivo.mydomain.edu/individual/n5788",
+         "authors" : {
+            "65" : 1
+         },
+         "keywords" : {
+            "n5788" : 1
+         },
+         "title" : "Nicht-textuelle Materialien",
+         "publications" : {
+            "article27" : 1,
+            "article74" : 1
+         }
+      },
+      "conc54" : {
+         "type" : 2,
+         "id" : "conc54",
+         "count" : "4",
+         "uri" : "http://vivo.mydomain.edu/individual/conc54",
+         "authors" : {
+            "45" : 1
+         },
          "keywords" : {
             "n4653" : 1,
             "conc54" : 1
          },
-         "type" : 1,
-         "authors" : {
-            "45" : 1
+         "publications" : {
+            "article71" : 1,
+            "article73" : 1,
+            "article65" : 1
          },
-         "id" : "article71",
-         "uri" : "http://vivo.mydomain.edu/individual/article71",
-         "title" : "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project",
-         "year" : null
+         "title" : "Langzeitarchivierung"
       },
-      "article66" : {
-         "type" : 1,
-         "keywords" : {
-            "conc67" : 1
+      "n5680" : {
+         "id" : "n5680",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/n5680",
+         "count" : "1",
+         "authors" : {
+            "75" : 1
          },
-         "abstract" : null,
-         "uri" : "http://vivo.mydomain.edu/individual/article66",
-         "id" : "article66",
-         "title" : "Discovery Metadata - Metadata Standards vs. New Requirements",
-         "year" : null,
+         "title" : "Semantische Suche",
+         "publications" : {
+            "article21" : 1
+         },
+         "keywords" : {
+            "n5680" : 1
+         }
+      },
+      "conc62" : {
+         "authors" : {
+            "76" : 1
+         },
+         "keywords" : {
+            "conc62" : 1
+         },
+         "publications" : {
+            "article70" : 1
+         },
+         "title" : "Literaturwissenschaften",
+         "type" : 2,
+         "id" : "conc62",
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/conc62"
+      },
+      "conc11" : {
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/conc11",
+         "type" : 2,
+         "id" : "conc11",
+         "keywords" : {
+            "conc11" : 1
+         },
+         "title" : "Bibliothek",
+         "publications" : {
+            "article10" : 1,
+            "article24" : 1
+         },
+         "authors" : {
+            "83" : 1,
+            "6" : 1
+         }
+      },
+      "conc61" : {
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/conc61",
+         "type" : 2,
+         "id" : "conc61",
+         "keywords" : {
+            "conc61" : 1
+         },
+         "title" : "Literaturverwaltung",
+         "publications" : {
+            "article48" : 1,
+            "article52" : 1
+         },
          "authors" : {
             "26" : 1
          }
       },
-      "article43" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {},
-         "id" : "article43",
-         "uri" : "http://vivo.mydomain.edu/individual/article43",
-         "year" : "2012",
-         "title" : "Open Access, Open Content und gemeinfreies Kulturerbe",
+      "n1696" : {
          "authors" : {
-            "26" : 1
+            "4" : 1
+         },
+         "publications" : {
+            "article80" : 1
+         },
+         "title" : "VIVO",
+         "keywords" : {
+            "conc41" : 1,
+            "n1696" : 1
+         },
+         "id" : "n1696",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/n1696",
+         "count" : "2"
+      },
+      "conc19" : {
+         "count" : "5",
+         "uri" : "http://vivo.mydomain.edu/individual/conc19",
+         "type" : 2,
+         "id" : "conc19",
+         "keywords" : {
+            "conc30" : 1,
+            "conc19" : 1
+         },
+         "title" : "DataCite",
+         "publications" : {
+            "article26" : 1
+         },
+         "authors" : {
+            "56" : 1
          }
       },
-      "article23" : {
-         "keywords" : {
-            "conc0" : 1
-         },
-         "abstract" : null,
-         "type" : 1,
+      "n3190" : {
          "authors" : {
-            "26" : 1
+            "77" : 1,
+            "67" : 1
          },
-         "year" : "2014",
-         "title" : "Wissen auf einen Klick",
-         "uri" : "http://vivo.mydomain.edu/individual/article23",
-         "id" : "article23"
-      },
-      "article17" : {
-         "type" : 1,
-         "abstract" : null,
          "keywords" : {
+            "conc24" : 1,
             "n3190" : 1
          },
-         "id" : "article17",
-         "uri" : "http://vivo.mydomain.edu/individual/article17",
-         "title" : "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten",
-         "year" : "2014",
+         "publications" : {
+            "article9" : 1,
+            "article17" : 1
+         },
+         "title" : "Discovery",
+         "type" : 2,
+         "id" : "n3190",
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/n3190"
+      },
+      "conc77" : {
+         "type" : 2,
+         "id" : "conc77",
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/conc77",
          "authors" : {
-            "77" : 1
+            "12" : 1,
+            "26" : 1
+         },
+         "keywords" : {
+            "conc0" : 1,
+            "conc67" : 1,
+            "conc77" : 1
+         },
+         "title" : "Open Educational Resources",
+         "publications" : {
+            "article5" : 1,
+            "article13" : 1
          }
       },
-      "article13" : {
-         "abstract" : null,
+      "n7791" : {
+         "id" : "n7791",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/n7791",
+         "count" : "1",
+         "authors" : {
+            "27" : 1
+         },
+         "publications" : {
+            "article41" : 1
+         },
+         "title" : "Virtuelle Fachbibliotheken",
+         "keywords" : {
+            "conc24" : 1,
+            "n7791" : 1
+         }
+      },
+      "n8148" : {
+         "authors" : {
+            "50" : 1
+         },
+         "title" : "Europeana",
+         "publications" : {
+            "article14" : 1
+         },
+         "keywords" : {
+            "n8148" : 1
+         },
+         "id" : "n8148",
+         "type" : 2,
+         "uri" : "http://vivo.mydomain.edu/individual/n8148",
+         "count" : "1"
+      },
+      "conc6" : {
+         "authors" : {
+            "1" : 1,
+            "55" : 1
+         },
+         "keywords" : {
+            "conc35" : 1,
+            "conc22" : 1,
+            "conc6" : 1
+         },
+         "publications" : {
+            "article81" : 1,
+            "article30" : 1,
+            "article40" : 1
+         },
+         "title" : "Archiv",
+         "type" : 2,
+         "id" : "conc6",
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/conc6"
+      },
+      "n7053" : {
+         "keywords" : {
+            "n7053" : 1,
+            "n4653" : 1
+         },
+         "publications" : {
+            "article78" : 1
+         },
+         "title" : "Punktwolken",
+         "authors" : {
+            "4" : 1
+         },
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/n7053",
+         "type" : 2,
+         "id" : "n7053"
+      },
+      "conc67" : {
+         "title" : "Metadaten",
+         "publications" : {
+            "article66" : 1,
+            "article13" : 1
+         },
          "keywords" : {
             "conc67" : 1,
             "conc77" : 1
          },
-         "type" : 1,
          "authors" : {
-            "12" : 1
-         },
-         "id" : "article13",
-         "uri" : "http://vivo.mydomain.edu/individual/article13",
-         "title" : "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB).",
-         "year" : "2013"
-      },
-      "article28" : {
-         "year" : "2014",
-         "title" : "E-Books in wissenschaftlichen Bibliotheken",
-         "id" : "article28",
-         "uri" : "http://vivo.mydomain.edu/individual/article28",
-         "authors" : {
-            "n1094" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {}
-      },
-      "article39" : {
-         "authors" : {
+            "12" : 1,
             "26" : 1
          },
-         "title" : "E-IRG White Paper 2013 ",
-         "year" : "2013",
-         "uri" : "http://vivo.mydomain.edu/individual/article39",
-         "id" : "article39",
-         "keywords" : {
-            "n3608" : 1
-         },
-         "abstract" : null,
-         "type" : 1
+         "uri" : "http://vivo.mydomain.edu/individual/conc67",
+         "count" : "2",
+         "id" : "conc67",
+         "type" : 2
       },
-      "article9" : {
-         "abstract" : null,
-         "keywords" : {
-            "n3190" : 1,
-            "conc24" : 1
-         },
-         "type" : 1,
-         "authors" : {
-            "67" : 1
-         },
-         "year" : "2013",
-         "title" : "Digitale Bibliothek und Portal GetInfo in der TIB Hannover",
-         "id" : "article9",
-         "uri" : "http://vivo.mydomain.edu/individual/article9"
-      },
-      "article10" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "conc11" : 1
-         },
-         "id" : "article10",
-         "uri" : "http://vivo.mydomain.edu/individual/article10",
-         "title" : "Development Thinking and Practice on the German National Science and Technology Library",
-         "year" : "2013",
-         "authors" : {
-            "6" : 1
-         }
-      },
-      "article30" : {
-         "year" : "2014",
-         "title" : "Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext.",
-         "id" : "article30",
-         "uri" : "http://vivo.mydomain.edu/individual/article30",
-         "authors" : {
-            "55" : 1
-         },
-         "type" : 1,
-         "keywords" : {
-            "conc35" : 1,
-            "conc6" : 1
-         },
-         "abstract" : null
-      },
-      "article46" : {
-         "authors" : {
-            "77" : 1
-         },
-         "id" : "article46",
-         "uri" : "http://vivo.mydomain.edu/individual/article46",
-         "year" : "2012",
-         "title" : "arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /",
-         "abstract" : null,
-         "keywords" : {
-            "conc0" : 1
-         },
-         "type" : 1
-      },
-      "article50" : {
-         "uri" : "http://vivo.mydomain.edu/individual/article50",
-         "id" : "article50",
-         "title" : "ForscherInnen gemeinsam neue Wege im Web eröffnen — Das Open Science Lab der TIB Hannover",
-         "year" : null,
-         "authors" : {
-            "26" : 1
-         },
-         "type" : 1,
-         "keywords" : {
-            "conc78" : 1
-         },
-         "abstract" : null
-      },
-      "article24" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc11" : 1
-         },
-         "type" : 1,
-         "authors" : {
-            "83" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article24",
-         "id" : "article24",
-         "title" : "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon",
-         "year" : "2014"
-      },
-      "article19" : {
-         "type" : 1,
-         "abstract" : null,
+      "conc32" : {
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/conc32",
+         "type" : 2,
+         "id" : "conc32",
          "keywords" : {
             "conc32" : 1
          },
-         "id" : "article19",
-         "uri" : "http://vivo.mydomain.edu/individual/article19",
-         "year" : "2014",
-         "title" : "Current developments in document delivery in Germany ",
+         "title" : "Dokumentlieferung",
+         "publications" : {
+            "article12" : 1,
+            "article19" : 1,
+            "article20" : 1
+         },
          "authors" : {
+            "61" : 1,
+            "76" : 1,
             "5" : 1
          }
       },
-      "article47" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc0" : 1
+      "n4364" : {
+         "title" : "Semantic",
+         "publications" : {
+            "article22" : 1
          },
-         "type" : 1,
-         "authors" : {
-            "77" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article47",
-         "id" : "article47",
-         "year" : "2012",
-         "title" : "arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen"
-      },
-      "article20" : {
-         "uri" : "http://vivo.mydomain.edu/individual/article20",
-         "id" : "article20",
-         "title" : "Literaturauswahl und -bestellung leichter gemacht!",
-         "year" : "2014",
-         "authors" : {
-            "76" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "conc32" : 1
-         }
-      },
-      "article54" : {
-         "type" : 1,
-         "keywords" : {
-            "conc89" : 1
-         },
-         "abstract" : null,
-         "title" : "Präsentationsfolien als Buch - wer braucht das?",
-         "year" : "2012",
-         "uri" : "http://vivo.mydomain.edu/individual/article54",
-         "id" : "article54",
-         "authors" : {
-            "76" : 1
-         }
-      },
-      "article22" : {
-         "authors" : {
-            "75" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article22",
-         "id" : "article22",
-         "year" : "2014",
-         "title" : "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems",
-         "abstract" : null,
          "keywords" : {
             "n4364" : 1
          },
-         "type" : 1
-      },
-      "article77" : {
          "authors" : {
-            "4" : 1
+            "75" : 1
          },
-         "title" : "The Quest for Research Information",
-         "year" : null,
-         "id" : "article77",
-         "uri" : "http://vivo.mydomain.edu/individual/article77",
-         "abstract" : null,
-         "keywords" : {
-            "conc41" : 1
-         },
-         "type" : 1
+         "uri" : "http://vivo.mydomain.edu/individual/n4364",
+         "count" : "1",
+         "id" : "n4364",
+         "type" : 2
       },
-      "article41" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "n7791" : 1,
-            "conc24" : 1
-         },
-         "id" : "article41",
-         "uri" : "http://vivo.mydomain.edu/individual/article41",
-         "year" : "2012",
-         "title" : "Bibliotheksverbünde, Virtuelle Fachbibliotheken",
+      "n5358" : {
+         "count" : "1",
+         "publications" : {},
+         "uri" : "http://vivo.mydomain.edu/individual/n5358",
+         "title" : "Virtuelle Forschungsumgebung",
+         "type" : 2,
+         "id" : "n5358"
+      },
+      "conc48" : {
+         "publications" : {},
+         "uri" : "http://vivo.mydomain.edu/individual/conc48",
+         "title" : "Informationskompetenz",
+         "count" : "1",
+         "id" : "conc48",
+         "type" : 2
+      },
+      "n2793" : {
+         "type" : 2,
+         "id" : "n2793",
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/n2793",
          "authors" : {
-            "27" : 1
+            "80" : 1
+         },
+         "keywords" : {
+            "n2793" : 1
+         },
+         "title" : "Lizenzierung",
+         "publications" : {
+            "article33" : 1
          }
       },
-      "article48" : {
+      "n3608" : {
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/n3608",
+         "type" : 2,
+         "id" : "n3608",
+         "keywords" : {
+            "n3608" : 1
+         },
+         "title" : "Big Data",
+         "publications" : {
+            "article39" : 1
+         },
          "authors" : {
             "26" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article48",
-         "id" : "article48",
-         "title" : "Sieben Gründe Zotero auszuprobieren",
-         "year" : "2012",
-         "abstract" : null,
-         "keywords" : {
-            "conc61" : 1
-         },
-         "type" : 1
+         }
       },
-      "article64" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc89" : 1
-         },
-         "type" : 1,
-         "authors" : {
-            "26" : 1
-         },
-         "id" : "article64",
-         "uri" : "http://vivo.mydomain.edu/individual/article64",
-         "year" : null,
-         "title" : "Das Netzwerk und die Institution"
+      "n998" : {
+         "count" : "1",
+         "publications" : {},
+         "title" : "Lernraum",
+         "uri" : "http://vivo.mydomain.edu/individual/n998",
+         "type" : 2,
+         "id" : "n998"
       },
-      "article65" : {
-         "abstract" : null,
-         "keywords" : {
-            "conc54" : 1
-         },
-         "type" : 1,
-         "authors" : {
-            "45" : 1
-         },
-         "title" : "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ",
-         "year" : null,
-         "uri" : "http://vivo.mydomain.edu/individual/article65",
-         "id" : "article65"
-      },
-      "article18" : {
-         "authors" : {
-            "67" : 1
-         },
-         "year" : "2014",
-         "title" : "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)",
-         "uri" : "http://vivo.mydomain.edu/individual/article18",
-         "id" : "article18",
-         "keywords" : {
-            "conc24" : 1
-         },
-         "abstract" : null,
-         "type" : 1
-      },
-      "article6" : {
-         "type" : 1,
-         "abstract" : null,
+      "conc53" : {
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/conc53",
+         "type" : 2,
+         "id" : "conc53",
          "keywords" : {
             "conc78" : 1,
             "conc53" : 1
          },
-         "title" : "Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends",
-         "year" : "2013",
-         "uri" : "http://vivo.mydomain.edu/individual/article6",
-         "id" : "article6",
+         "publications" : {
+            "article6" : 1
+         },
+         "title" : "Kollaboration",
          "authors" : {
             "26" : 1
          }
       },
-      "article33" : {
-         "abstract" : null,
+      "n4653" : {
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/n4653",
+         "type" : 2,
+         "id" : "n4653",
          "keywords" : {
-            "n2793" : 1
+            "conc54" : 1,
+            "n4653" : 1,
+            "conc35" : 1,
+            "n7053" : 1
          },
-         "type" : 1,
+         "publications" : {
+            "article69" : 1,
+            "article71" : 1,
+            "article78" : 1
+         },
+         "title" : "3D",
          "authors" : {
-            "80" : 1
-         },
-         "uri" : "http://vivo.mydomain.edu/individual/article33",
-         "id" : "article33",
-         "title" : "Freie Lizenzen und Nachnutzung",
-         "year" : "2014"
+            "4" : 1,
+            "45" : 1
+         }
       },
-      "article7" : {
-         "id" : "article7",
-         "uri" : "http://vivo.mydomain.edu/individual/article7",
-         "year" : "2013",
-         "title" : "Open Access - Was sagen die Bibliotheken?",
+      "conc74" : {
          "authors" : {
-            "68" : 1
+            "26" : 1
          },
-         "type" : 1,
          "keywords" : {
-            "conc0" : 1
+            "conc89" : 1,
+            "conc74" : 1
          },
-         "abstract" : null
+         "title" : "Nutzungsrechte",
+         "publications" : {
+            "article49" : 1,
+            "article51" : 1
+         },
+         "type" : 2,
+         "id" : "conc74",
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/conc74"
       },
-      "article26" : {
-         "id" : "article26",
-         "uri" : "http://vivo.mydomain.edu/individual/article26",
-         "year" : "2014",
-         "title" : "DataCite and DOI names for research data",
+      "conc85" : {
+         "type" : 2,
+         "id" : "conc85",
+         "count" : "1",
+         "publications" : {},
+         "title" : "Projektmanagement",
+         "uri" : "http://vivo.mydomain.edu/individual/conc85"
+      },
+      "conc78" : {
+         "publications" : {
+            "article50" : 1,
+            "article6" : 1,
+            "article32" : 1
+         },
+         "title" : "Open Science",
+         "keywords" : {
+            "conc53" : 1,
+            "conc78" : 1,
+            "n398" : 1
+         },
+         "authors" : {
+            "26" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/conc78",
+         "count" : "4",
+         "id" : "conc78",
+         "type" : 2
+      },
+      "n398" : {
+         "uri" : "http://vivo.mydomain.edu/individual/n398",
+         "count" : "1",
+         "id" : "n398",
+         "type" : 2,
+         "publications" : {
+            "article32" : 1
+         },
+         "title" : "Kommunikation",
+         "keywords" : {
+            "n398" : 1,
+            "conc78" : 1
+         },
+         "authors" : {
+            "26" : 1
+         }
+      }
+   },
+   "authors" : {
+      "56" : {
          "authors" : {
             "56" : 1
          },
-         "type" : 1,
-         "abstract" : null,
+         "positions" : [],
          "keywords" : {
             "conc30" : 1,
-            "conc19" : 1
-         }
-      },
-      "article45" : {
-         "type" : 1,
-         "abstract" : null,
-         "keywords" : {
-            "conc0" : 1
+            "conc19" : 1,
+            "conc39" : 1
          },
-         "id" : "article45",
-         "uri" : "http://vivo.mydomain.edu/individual/article45",
-         "title" : "arXiv - Veteran und Vorreiter",
-         "year" : "2012",
-         "authors" : {
-            "77" : 1
-         }
-      },
-      "article70" : {
-         "keywords" : {
-            "conc62" : 1
+         "publications" : {
+            "article26" : 1,
+            "article25" : 1,
+            "article31" : 1
          },
-         "abstract" : null,
-         "type" : 1,
+         "fullname" : "Janna Neumann",
+         "type" : 0,
+         "id" : "56",
+         "image" : null,
+         "name" : "J Neumann",
+         "count" : "3",
+         "uri" : "http://vivo.mydomain.edu/individual/56"
+      },
+      "76" : {
+         "keywords" : {
+            "conc62" : 1,
+            "conc0" : 1,
+            "conc89" : 1,
+            "conc32" : 1
+         },
+         "publications" : {
+            "article20" : 1,
+            "article70" : 1,
+            "article54" : 1,
+            "article53" : 1
+         },
          "authors" : {
             "76" : 1
          },
-         "uri" : "http://vivo.mydomain.edu/individual/article70",
-         "id" : "article70",
-         "title" : "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie",
-         "year" : null
+         "positions" : [],
+         "count" : "4",
+         "uri" : "http://vivo.mydomain.edu/individual/76",
+         "type" : 0,
+         "fullname" : "Bernhard Tempel",
+         "id" : "76",
+         "image" : null,
+         "name" : "B Tempel"
       },
-      "article69" : {
-         "type" : 1,
+      "5" : {
          "keywords" : {
-            "conc35" : 1,
-            "n4653" : 1
+            "conc32" : 1
          },
-         "abstract" : null,
-         "year" : null,
-         "title" : "Towards an automatic multi-label classification of 3D architectural models",
-         "id" : "article69",
-         "uri" : "http://vivo.mydomain.edu/individual/article69",
+         "publications" : {
+            "article19" : 1
+         },
+         "authors" : {
+            "5" : 1
+         },
+         "positions" : [
+            "Justitiariat"
+         ],
+         "count" : "1",
+         "uri" : "http://vivo.mydomain.edu/individual/5",
+         "fullname" : "Markus Brammer",
+         "type" : 0,
+         "id" : "5",
+         "image" : null,
+         "name" : "M Brammer"
+      },
+      "4" : {
+         "type" : 0,
+         "fullname" : "Ina Blümel",
+         "image" : null,
+         "id" : "4",
+         "name" : "I Blümel",
+         "count" : "7",
+         "uri" : "http://vivo.mydomain.edu/individual/4",
          "authors" : {
             "4" : 1
+         },
+         "positions" : [
+            "Open Science Lab"
+         ],
+         "keywords" : {
+            "conc41" : 1,
+            "conc35" : 1,
+            "n4653" : 1,
+            "n7053" : 1,
+            "n1696" : 1,
+            "n577" : 1
+         },
+         "publications" : {
+            "article78" : 1,
+            "article77" : 1,
+            "article3" : 1,
+            "article76" : 1,
+            "article4" : 1,
+            "article80" : 1,
+            "article69" : 1
          }
       },
-      "article14" : {
-         "id" : "article14",
-         "uri" : "http://vivo.mydomain.edu/individual/article14",
-         "title" : "Linked Heritage  - ein europäisches Projekt",
-         "year" : "2013",
+      "n1094" : {
+         "type" : 0,
+         "fullname" : "Niemeyer, Sandra ",
+         "name" : "Niemeyer, Sandra ",
+         "image" : null,
+         "id" : "n1094",
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/n1094",
+         "authors" : {
+            "n1094" : 1
+         },
+         "positions" : [],
+         "publications" : {
+            "article28" : 1,
+            "article29" : 1
+         }
+      },
+      "45" : {
+         "publications" : {
+            "article65" : 1,
+            "article73" : 1,
+            "article71" : 1
+         },
+         "keywords" : {
+            "conc54" : 1,
+            "n4653" : 1
+         },
+         "positions" : [],
+         "authors" : {
+            "45" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/45",
+         "count" : "3",
+         "id" : "45",
+         "image" : null,
+         "name" : "M Lindlar",
+         "fullname" : "Michelle Lindlar",
+         "type" : 0
+      },
+      "65" : {
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/65",
+         "type" : 0,
+         "fullname" : "Margret Plank",
+         "image" : null,
+         "id" : "65",
+         "name" : "M Plank",
+         "keywords" : {
+            "n5788" : 1
+         },
+         "publications" : {
+            "article74" : 1,
+            "article27" : 1
+         },
+         "authors" : {
+            "65" : 1
+         },
+         "positions" : [
+            "Nichttextuelle Materialien",
+            "Entwicklung"
+         ]
+      },
+      "55" : {
+         "uri" : "http://vivo.mydomain.edu/individual/55",
+         "count" : "2",
+         "name" : "L Nebelung",
+         "id" : "55",
+         "image" : null,
+         "fullname" : "Lars Nebelung",
+         "type" : 0,
+         "publications" : {
+            "article30" : 1,
+            "article81" : 1
+         },
+         "keywords" : {
+            "conc35" : 1,
+            "conc6" : 1
+         },
+         "positions" : [
+            "Lokale Dienste und Uni-Archiv"
+         ],
+         "authors" : {
+            "55" : 1
+         }
+      },
+      "12" : {
+         "uri" : "http://vivo.mydomain.edu/individual/12",
+         "count" : "1",
+         "id" : "12",
+         "image" : null,
+         "name" : "E Derr",
+         "type" : 0,
+         "fullname" : "Elena Derr",
+         "publications" : {
+            "article13" : 1
+         },
+         "keywords" : {
+            "conc67" : 1,
+            "conc77" : 1
+         },
+         "positions" : [
+            "TIB-Lizenzen"
+         ],
+         "authors" : {
+            "12" : 1
+         }
+      },
+      "58" : {
+         "positions" : [],
+         "authors" : {
+            "58" : 1
+         },
+         "publications" : {
+            "article42" : 1
+         },
+         "keywords" : {
+            "conc81" : 1
+         },
+         "image" : null,
+         "id" : "58",
+         "name" : "D Nürnberger",
+         "fullname" : "Dorothee Nürnberger",
+         "type" : 0,
+         "uri" : "http://vivo.mydomain.edu/individual/58",
+         "count" : "1"
+      },
+      "27" : {
+         "id" : "27",
+         "image" : null,
+         "name" : "M Hohlfeld",
+         "fullname" : "Michael Hohlfeld",
+         "type" : 0,
+         "uri" : "http://vivo.mydomain.edu/individual/27",
+         "count" : "1",
+         "positions" : [
+            "Entwicklung"
+         ],
+         "authors" : {
+            "27" : 1
+         },
+         "publications" : {
+            "article41" : 1
+         },
+         "keywords" : {
+            "n7791" : 1,
+            "conc24" : 1
+         }
+      },
+      "26" : {
+         "fullname" : "Lambert Heller",
+         "type" : 0,
+         "name" : "L Heller",
+         "id" : "26",
+         "image" : "http://test.osl.tib.eu/vivo-tib/individual/n6981",
+         "count" : "13",
+         "uri" : "http://vivo.mydomain.edu/individual/26",
+         "authors" : {
+            "26" : 1
+         },
+         "positions" : [
+            "Open Science Lab"
+         ],
+         "keywords" : {
+            "conc89" : 1,
+            "conc61" : 1,
+            "n398" : 1,
+            "conc67" : 1,
+            "conc78" : 1,
+            "conc77" : 1,
+            "conc74" : 1,
+            "conc0" : 1,
+            "conc53" : 1,
+            "n3608" : 1
+         },
+         "publications" : {
+            "article6" : 1,
+            "article49" : 1,
+            "article64" : 1,
+            "article51" : 1,
+            "article48" : 1,
+            "article23" : 1,
+            "article50" : 1,
+            "article43" : 1,
+            "article5" : 1,
+            "article39" : 1,
+            "article52" : 1,
+            "article32" : 1,
+            "article66" : 1
+         }
+      },
+      "83" : {
+         "image" : null,
+         "id" : "83",
+         "name" : "C Wilhelm",
+         "fullname" : "Christine Wilhelm",
+         "type" : 0,
+         "uri" : "http://vivo.mydomain.edu/individual/83",
+         "count" : "1",
+         "positions" : [
+            "Erwerbung und Katalogisierung"
+         ],
+         "authors" : {
+            "83" : 1
+         },
+         "publications" : {
+            "article24" : 1
+         },
+         "keywords" : {
+            "conc11" : 1
+         }
+      },
+      "6" : {
+         "uri" : "http://vivo.mydomain.edu/individual/6",
+         "count" : "1",
+         "name" : "J Brase",
+         "image" : null,
+         "id" : "6",
+         "fullname" : "Jan Brase",
+         "type" : 0,
+         "publications" : {
+            "article10" : 1
+         },
+         "keywords" : {
+            "conc11" : 1
+         },
+         "positions" : [
+            "Entwicklung",
+            "Drittmittel und Transfer"
+         ],
+         "authors" : {
+            "6" : 1
+         }
+      },
+      "68" : {
+         "uri" : "http://vivo.mydomain.edu/individual/68",
+         "count" : "1",
+         "id" : "68",
+         "image" : null,
+         "name" : "U Rosemann",
+         "type" : 0,
+         "fullname" : "Uwe Rosemann",
+         "publications" : {
+            "article7" : 1
+         },
+         "keywords" : {
+            "conc0" : 1
+         },
+         "positions" : [
+            "Vorstand"
+         ],
+         "authors" : {
+            "68" : 1
+         }
+      },
+      "77" : {
+         "keywords" : {
+            "conc0" : 1,
+            "n3190" : 1
+         },
+         "publications" : {
+            "article17" : 1,
+            "article47" : 1,
+            "article46" : 1,
+            "article45" : 1
+         },
+         "authors" : {
+            "77" : 1
+         },
+         "positions" : [],
+         "count" : "4",
+         "uri" : "http://vivo.mydomain.edu/individual/77",
+         "fullname" : "Esther Tobschall",
+         "type" : 0,
+         "name" : "E Tobschall",
+         "image" : null,
+         "id" : "77"
+      },
+      "1" : {
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/1",
+         "fullname" : "Thomas Bähr",
+         "type" : 0,
+         "id" : "1",
+         "image" : null,
+         "name" : "T Bähr",
+         "keywords" : {
+            "conc6" : 1,
+            "conc22" : 1
+         },
+         "publications" : {
+            "article40" : 1,
+            "article2" : 1
+         },
+         "authors" : {
+            "1" : 1
+         },
+         "positions" : [
+            "Bestandserhaltung und LZA"
+         ]
+      },
+      "80" : {
+         "image" : null,
+         "id" : "80",
+         "name" : "M Tullney",
+         "type" : 0,
+         "fullname" : "Marco Tullney",
+         "uri" : "http://vivo.mydomain.edu/individual/80",
+         "count" : "2",
+         "positions" : [],
+         "authors" : {
+            "80" : 1
+         },
+         "publications" : {
+            "article33" : 1,
+            "article34" : 1
+         },
+         "keywords" : {
+            "conc0" : 1,
+            "n2793" : 1
+         }
+      },
+      "50" : {
+         "image" : null,
+         "id" : "50",
+         "name" : "P Mensing",
+         "fullname" : "Petra Mensing",
+         "type" : 0,
+         "uri" : "http://vivo.mydomain.edu/individual/50",
+         "count" : "1",
+         "positions" : [],
          "authors" : {
             "50" : 1
          },
-         "type" : 1,
+         "publications" : {
+            "article14" : 1
+         },
          "keywords" : {
             "n8148" : 1
+         }
+      },
+      "75" : {
+         "publications" : {
+            "article21" : 1,
+            "article22" : 1
          },
-         "abstract" : null
+         "keywords" : {
+            "n5680" : 1,
+            "n4364" : 1
+         },
+         "positions" : [
+            "Nichttextuelle Materialien"
+         ],
+         "authors" : {
+            "75" : 1
+         },
+         "uri" : "http://vivo.mydomain.edu/individual/75",
+         "count" : "2",
+         "name" : "S Strobel",
+         "image" : null,
+         "id" : "75",
+         "type" : 0,
+         "fullname" : "Sven Strobel"
+      },
+      "61" : {
+         "name" : "J Olf",
+         "image" : null,
+         "id" : "61",
+         "type" : 0,
+         "fullname" : "Jens Olf",
+         "uri" : "http://vivo.mydomain.edu/individual/61",
+         "count" : "1",
+         "positions" : [
+            "Volltextversorgung"
+         ],
+         "authors" : {
+            "61" : 1
+         },
+         "publications" : {
+            "article12" : 1
+         },
+         "keywords" : {
+            "conc32" : 1
+         }
+      },
+      "67" : {
+         "type" : 0,
+         "fullname" : "Elena Roscoe",
+         "id" : "67",
+         "image" : null,
+         "name" : "E Roscoe",
+         "count" : "2",
+         "uri" : "http://vivo.mydomain.edu/individual/67",
+         "authors" : {
+            "67" : 1
+         },
+         "positions" : [],
+         "keywords" : {
+            "conc24" : 1,
+            "n3190" : 1
+         },
+         "publications" : {
+            "article18" : 1,
+            "article9" : 1
+         }
+      },
+      "17" : {
+         "uri" : "http://vivo.mydomain.edu/individual/17",
+         "count" : "1",
+         "image" : null,
+         "id" : "17",
+         "name" : "A Franzkowiak",
+         "type" : 0,
+         "fullname" : "Anette Franzkowiak",
+         "publications" : {
+            "article15" : 1
+         },
+         "keywords" : {
+            "n1693" : 1
+         },
+         "positions" : [],
+         "authors" : {
+            "17" : 1
+         }
       }
    }
 }

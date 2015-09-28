@@ -22,19 +22,29 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
-SELECT (?keyword_id AS ?id) (?keyword_id AS ?uri) (?bezeichnung AS ?title) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?project_id; separator="; ") AS ?projects) (COUNT(DISTINCT ?document_id) AS ?count)
+
+SELECT DISTINCT (?grant_id AS ?id) ?title (?grant_id AS ?uri) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) (GROUP_CONCAT(DISTINCT ?inv_id; separator="; ")AS ?investigators) ?start ?end ?abstract ?principal_investigator
 WHERE
 {
+  ?grant_id a vivo:Grant .
+  ?grant_id rdfs:label ?title .
+  OPTIONAL { ?grant_id bibo:abstract ?abstract }
+  ?document_id a bibo:Document .
+  ?grant_id vivo:supportedInformationResource ?document_id .
+  OPTIONAL { ?grant_id vivo:hasSubjectArea ?keyword }
+  ?grant_id vivo:dateTimeInterval ?dateInterval .
+  ?dateInterval vivo:start ?startInd .
+  ?dateInterval vivo:end ?endInd .
+  ?startInd vivo:dateTime ?start .
+  ?endInd vivo:dateTime ?end .
   OPTIONAL{
-    ?document_id a bibo:Document .
-    ?document_id vivo:hasSubjectArea ?keyword_id .
+    ?principal_investigator a vivo:PrincipalInvestigatorRole .
+    ?grant_id  vivo:relatedBy ?principal_investigator . 
   }
-  ?keyword_id rdfs:label ?bezeichnung .
-    FILTER (regex(?bezeichnung, "(Concept)") != true ) .
-  OPTIONAL {
-    ?project_id a vivo:Grant .
-    ?author_id vivo:relatedBy ?project_id .
+  OPTIONAL { 
+    ?inv_id a foaf:Person .
+    ?inv_id vivo:relatedBy ?grant_id .
   }
 }
-GROUP BY ?keyword_id ?bezeichnung
-ORDER BY ?bezeichnung
+GROUP BY ?grant_id ?title ?abstract ?start ?end ?principal_investigator
+ORDER BY ?title

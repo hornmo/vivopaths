@@ -4,16 +4,19 @@ use utf8;
 use Path::Class;
 use JSON;
 use Data::Dumper;
+use Class::Date;
 use open ':encoding(utf8)';
 use open qw/:std :utf8/;
 binmode(STDOUT, ":utf8");
 
+my $date = new Class::Date;
 my $sparql_authors = 'spql_authors.json';
 my $sparql_publications = file('spql_pubs.json');
 my $sparql_keywords = file('spql_keywords.json');
-my $out = file('merged_data.json');
+my $sparql_keywords = file('spql_projects.json');
+my $out = file('merged_data - $date.json');
 my $output_handler = $out->openw();
-my $dump = file('dump_data.json');
+my $dump = file('dump_data - $date.json');
 my $dump_handler = $dump->openw();
 
 my $encoded_authors = do {
@@ -34,29 +37,37 @@ my $encoded_keywords = do {
    local $/;
    <$json_fh>
 };
+my $encoded_projects = do {
+   open(my $json_fh, "<:", $sparql_projects)
+      or die("Can't open \$sparql_projects\": $!\n");
+   local $/;
+   <$json_fh>
+};
 
 my $json = JSON->new->utf8;
 my $dec_authors = $json->decode($encoded_authors);
 my $dec_publications = $json->decode($encoded_publications);
 my $dec_keywords = $json->decode($encoded_keywords);
+my $dec_projects = $json->decode($encoded_projects);
 
 my %authors;
 my %publications;
 my %keywords;
-my $uri_stem = "http://vivo.mydomain.edu/individual/";
-my $uri_length = length $uri_stem;
+my %projects;
 my @combined;
 
 my @imp_authors = @{ $dec_authors->{'results'}->{'bindings'} };
 my @imp_publications = @{ $dec_publications->{'results'}->{'bindings'} };
 my @imp_keywords = @{ $dec_keywords->{'results'}->{'bindings'} };
+my @imp_projects = @{ $dec_projects->{'results'}->{'bindings'} };
 
 foreach my $publication (@imp_publications) {
   if($publication->{'authors'}){
     my $id = $publication->{'id'}->{'value'};
     my %lauthors;
     my %lkeywords;
-    $id = substr $id, $uri_length, (length $id)-1;
+    my $uri_length = rindex($id, '/') + 1;
+    $id = substr $id, $uri_length;
     my $title = $publication->{'title'}->{'value'};
     my $count = $publication->{'count'}->{'value'};
     my $uri = $publication->{'uri'}->{'value'};
@@ -85,7 +96,8 @@ foreach my $publication (@imp_publications) {
 };
 foreach my $author (@imp_authors) {
   my $id = $author->{'id'}->{'value'};
-  $id = substr $id, $uri_length, (length $id)-1;
+  my $uri_length = rindex($id, '/') + 1;
+  $id = substr $id, $uri_length;
   my $name = $author->{'name'}->{'value'};
   my @name_parts = split(',  ', $name);
   my $fullname;
@@ -123,7 +135,8 @@ foreach my $author (@imp_authors) {
 };
 foreach my $keyword (@imp_keywords) {
   my $id = $keyword->{'id'}->{'value'};
-  $id = substr $id, $uri_length, (length $id)-1;
+  my $uri_length = rindex($id, '/') + 1;
+  $id = substr $id, $uri_length;
   my $title = $keyword->{'title'}->{'value'};
   my $count = $keyword->{'count'}->{'value'};
   my $uri = $keyword->{'uri'}->{'value'};
@@ -137,6 +150,32 @@ foreach my $keyword (@imp_keywords) {
   }
   $keywords{ $id } = { 'id' => $id, 'title' => $title, 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 2 };
 };
+
+foreach my $project (@imp_projects) {
+  my $id = $project->{'id'}->{'value'};
+  my $uri_length = rindex($id, '/') + 1;
+  $id = substr $id, $uri_length;
+  my $title = $project->{'title'}->{'value'};
+  my $count = $project->{'count'}->{'value'};
+  my $uri = $project->{'uri'}->{'value'};
+  my @pubs = split('; ', $project->{'publications'}->{'value'});
+  my %lpublications;
+  foreach my $pub (@pubs) {
+    my $pid = substr $pub, $uri_length, (length $pub)-1;
+    if($publications{ $pid } && $publications{ $pid }{'projects'}){
+      $lpublications{ $pid } = 1;
+    }
+  }
+  my %lauthors;
+  my @auths = split('; ', $publication->{'authors'}->{'value'});
+  foreach my $a (@auths) {
+    my $aid = substr $a, $uri_length, (length $a)-1;
+    $lauthors{ $aid } = 1;
+  }
+  $keywords{ $id } = { 'id' => $id, 'title' => $title, 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 2 };
+};
+
+# Additional connections
 foreach my $author (%authors){
   my $aid = $author->{'id'};
   my $pubs = $author->{'publications'};

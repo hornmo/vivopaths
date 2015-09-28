@@ -11,7 +11,7 @@ body{
 }
 #top{
   padding:10px;
-  height:60px;
+  height:90px;
   background-color:#fff;
 }
 #search{
@@ -83,6 +83,9 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+#display{
+/*  background-color:#F3F0F0;*/
 }
 #context{
   z-index: 5;
@@ -171,7 +174,7 @@ body{
   background-color:#fff;
 }
 .author{
-  color:#0c6969;
+  color:#796823;
 }
 .keyword.selected:hover, .author.selected:hover{
   cursor:default;
@@ -184,13 +187,13 @@ body{
 }
 .author.selected{
   color:#fff;
-  background-color:#0c6969;
+  background-color:#796823;
 }
 .author.connected{
-  background:rgba(82, 175, 175, 0.2);
+  background:rgba(121, 104, 35, 0.2);
 }
 .author.hovered{
-  border: 2px solid #0c6969;
+  border: 2px solid #796823;
 }
 .pub{
   color:#4B4B4B;
@@ -210,17 +213,17 @@ body{
   border: 2px solid #4B4B4B;
 }
 .keyword{
-  color:#8C1E0F;
+  color:#27606B;
 }
 .keyword.selected{
   color:#fff;
-  background-color:#8C1E0F;
+  background-color:#27606B;
 }
 .keyword.hovered{
-  border: 2px solid #8C1E0F;
+  border: 2px solid #27606B;
 }
 .keyword.connected{
-  background:rgba(209, 133, 123, 0.2);
+  background:rgba(39, 96, 107, 0.2);
 }
 .organisation{
   color:#AA44AA;
@@ -236,17 +239,17 @@ body{
   background:rgba(170, 68, 170, 0.2);
 }
 .project{
-  color:#AA44AA;
+  color:#9A3557;
 }
 .project.selected{
   color:#fff;
-  background-color:#AA44AA;
+  background-color:#9A3557;
 }
 .project.hovered{
-  border: 2px solid #AA44AA;
+  border: 2px solid #9A3557;
 }
 .project.connected{
-  background:rgba(170, 68, 170, 0.2);
+  background:rgba(154, 53, 87, 0.2);
 }
 
 
