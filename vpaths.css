@@ -105,6 +105,9 @@ body{
   font-size: 1.2em;
   font-weight: bold;
 }
+.context-description{
+  font-style: italic;
+}
 #context-count{
 
 }
@@ -189,7 +192,7 @@ body{
   color:#fff;
   background-color:#796823;
 }
-.author.connected{
+.author.connected:not(.selected){
   background:rgba(121, 104, 35, 0.2);
 }
 .author.hovered{
@@ -206,7 +209,7 @@ body{
   color:#fff;
   background-color:#4B4B4B;
 }
-.pub.connected{
+.pub.connected:not(.selected){
   background:rgba(160, 160, 160, 0.2);
 }
 .pub.hovered{
@@ -222,7 +225,7 @@ body{
 .keyword.hovered{
   border: 2px solid #27606B;
 }
-.keyword.connected{
+.keyword.connected:not(.selected){
   background:rgba(39, 96, 107, 0.2);
 }
 .organisation{
@@ -235,7 +238,7 @@ body{
 .organisation.hovered{
   border: 2px solid #AA44AA;
 }
-.organisation.connected{
+.organisation.connected:not(.selected){
   background:rgba(170, 68, 170, 0.2);
 }
 .project{
@@ -248,11 +251,15 @@ body{
 .project.hovered{
   border: 2px solid #9A3557;
 }
-.project.connected{
+.project.connected:not(.selected){
   background:rgba(154, 53, 87, 0.2);
 }
 
-
+.selected.connected{
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.31);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.31);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.31);
+}
 
 .compare{
   border-left:1px solid #ddd;

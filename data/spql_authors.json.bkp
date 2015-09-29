@@ -1,6 +1,6 @@
 {
   "head": {
-    "vars": [ "id" , "fullname" , "uri" , "gnd" , "image" , "positions" , "name" , "count" , "projects" , "publications" ]
+    "vars": [ "id" , "fullname" , "uri" , "image" , "positions" , "name" , "count" , "publications" ]
   } ,
   "results": {
     "bindings": [
@@ -8,11 +8,9 @@
         "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/4" } ,
         "fullname": { "type": "literal" , "value": "Blümel,  Ina" } ,
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/4" } ,
-        "gnd": { "type": "literal" , "value": "1046404156; <a href=\"http://d-nb.info/gnd/1046185640\" title=\"http://d-nb.info/gnd/1046185640\">1046185640<\/a>" } ,
         "positions": { "type": "literal" , "value": "Open Science Lab" } ,
         "name": { "type": "literal" , "value": "Blümel,  Ina" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "7" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g10" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article76; http://vivo.mydomain.edu/individual/article69; http://vivo.mydomain.edu/individual/article77; http://vivo.mydomain.edu/individual/article78; http://vivo.mydomain.edu/individual/article80; http://vivo.mydomain.edu/individual/article3; http://vivo.mydomain.edu/individual/article4" }
       } ,
       {
@@ -22,7 +20,6 @@
         "positions": { "type": "literal" , "value": "Justitiariat" } ,
         "name": { "type": "literal" , "value": "Brammer,  Markus" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g17; http://vivo.mydomain.edu/individual/g9; http://vivo.mydomain.edu/individual/g8" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article19" }
       } ,
       {
@@ -32,7 +29,6 @@
         "positions": { "type": "literal" , "value": "Entwicklung; Drittmittel und Transfer" } ,
         "name": { "type": "literal" , "value": "Brase,  Jan" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g26; http://vivo.mydomain.edu/individual/g14" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article10" }
       } ,
       {
@@ -42,7 +38,6 @@
         "positions": { "type": "literal" , "value": "Bestandserhaltung und LZA" } ,
         "name": { "type": "literal" , "value": "Bähr,  Thomas" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g5; http://vivo.mydomain.edu/individual/g29" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article40; http://vivo.mydomain.edu/individual/article2" }
       } ,
       {
@@ -66,9 +61,19 @@
         "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
         "fullname": { "type": "literal" , "value": "Heller,  Lambert" } ,
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
-        "image": { "type": "uri" , "value": "http://test.osl.tib.eu/vivo-tib/individual/n6981" } ,
+        "image": { "type": "uri" , "value": "http://test.osl.tib.eu/vivo-tib/individual/n2052" } ,
         "positions": { "type": "literal" , "value": "Open Science Lab" } ,
         "name": { "type": "literal" , "value": "Heller,  Lambert" } ,
+        "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
+        "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article48; http://vivo.mydomain.edu/individual/article66; http://vivo.mydomain.edu/individual/article50; http://vivo.mydomain.edu/individual/article43; http://vivo.mydomain.edu/individual/article51; http://vivo.mydomain.edu/individual/article6; http://vivo.mydomain.edu/individual/article52; http://vivo.mydomain.edu/individual/article32; http://vivo.mydomain.edu/individual/article23; http://vivo.mydomain.edu/individual/article64; http://vivo.mydomain.edu/individual/article39; http://vivo.mydomain.edu/individual/article49; http://vivo.mydomain.edu/individual/article5" }
+      } ,
+      {
+        "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "fullname": { "type": "literal" , "xml:lang": "en-US" , "value": "Heller,  Lambert" } ,
+        "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/26" } ,
+        "image": { "type": "uri" , "value": "http://test.osl.tib.eu/vivo-tib/individual/n2052" } ,
+        "positions": { "type": "literal" , "value": "Open Science Lab" } ,
+        "name": { "type": "literal" , "xml:lang": "en-US" , "value": "Heller,  Lambert" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "13" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article48; http://vivo.mydomain.edu/individual/article66; http://vivo.mydomain.edu/individual/article50; http://vivo.mydomain.edu/individual/article43; http://vivo.mydomain.edu/individual/article51; http://vivo.mydomain.edu/individual/article6; http://vivo.mydomain.edu/individual/article52; http://vivo.mydomain.edu/individual/article32; http://vivo.mydomain.edu/individual/article23; http://vivo.mydomain.edu/individual/article64; http://vivo.mydomain.edu/individual/article39; http://vivo.mydomain.edu/individual/article49; http://vivo.mydomain.edu/individual/article5" }
       } ,
@@ -79,7 +84,6 @@
         "positions": { "type": "literal" , "value": "Entwicklung" } ,
         "name": { "type": "literal" , "value": "Hohlfeld,  Michael" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g7; http://vivo.mydomain.edu/individual/g22; http://vivo.mydomain.edu/individual/g6" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article41" }
       } ,
       {
@@ -96,7 +100,6 @@
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/50" } ,
         "name": { "type": "literal" , "value": "Mensing,  Petra" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g4" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article14" }
       } ,
       {
@@ -148,7 +151,6 @@
         "positions": { "type": "literal" , "value": "Nichttextuelle Materialien; Entwicklung" } ,
         "name": { "type": "literal" , "value": "Plank,  Margret" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "2" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g1" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article74; http://vivo.mydomain.edu/individual/article27" }
       } ,
       {
@@ -166,7 +168,6 @@
         "positions": { "type": "literal" , "value": "Vorstand" } ,
         "name": { "type": "literal" , "value": "Rosemann,  Uwe" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "1" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g19; http://vivo.mydomain.edu/individual/g29; http://vivo.mydomain.edu/individual/g15" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article7" }
       } ,
       {
@@ -184,7 +185,6 @@
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/76" } ,
         "name": { "type": "literal" , "value": "Tempel,  Bernhard" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g20" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article54; http://vivo.mydomain.edu/individual/article70; http://vivo.mydomain.edu/individual/article20; http://vivo.mydomain.edu/individual/article53" }
       } ,
       {
@@ -193,7 +193,6 @@
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/77" } ,
         "name": { "type": "literal" , "value": "Tobschall,  Esther" } ,
         "count": { "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "type": "typed-literal" , "value": "4" } ,
-        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g3" } ,
         "publications": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/article17; http://vivo.mydomain.edu/individual/article45; http://vivo.mydomain.edu/individual/article47; http://vivo.mydomain.edu/individual/article46" }
       } ,
       {

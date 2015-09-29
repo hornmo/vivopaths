@@ -23,14 +23,16 @@ PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
 
-SELECT DISTINCT (?grant_id AS ?id) ?title (?grant_id AS ?uri) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) (GROUP_CONCAT(DISTINCT ?inv_id; separator="; ")AS ?investigators) ?start ?end ?abstract ?principal_investigator
+SELECT DISTINCT (?grant_id AS ?id) ?title (?grant_id AS ?uri) (GROUP_CONCAT(DISTINCT ?document_id; separator="; ") AS ?publications) (COUNT(DISTINCT ?document_id) AS ?count) (GROUP_CONCAT(DISTINCT ?keyword; separator="; ") AS ?keywords) (GROUP_CONCAT(DISTINCT ?inv_id; separator="; ")AS ?investigators) ?start ?end ?abstract ?principal_investigator
 WHERE
 {
   ?grant_id a vivo:Grant .
   ?grant_id rdfs:label ?title .
   OPTIONAL { ?grant_id bibo:abstract ?abstract }
-  ?document_id a bibo:Document .
-  ?grant_id vivo:supportedInformationResource ?document_id .
+  OPTIONAL {
+    ?document_id a bibo:Document .
+    ?grant_id vivo:supportedInformationResource ?document_id .
+  }
   OPTIONAL { ?grant_id vivo:hasSubjectArea ?keyword }
   ?grant_id vivo:dateTimeInterval ?dateInterval .
   ?dateInterval vivo:start ?startInd .

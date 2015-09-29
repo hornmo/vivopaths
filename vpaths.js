@@ -76,7 +76,7 @@ function View(svg){
 	}else if(pair[0].indexOf('Article') != -1){
 	  pair[0] = '1';
 	}else if(pair[0].indexOf('Grant') != -1){
-	  pair[0] = '3';
+	  pair[0] = '2';
 	}
 	if(i < 2){
 	  ret.push(pair);
@@ -115,7 +115,10 @@ function View(svg){
 	  })
       });
       for(i=0;i<sel.length;i++){
-	var obj = that.data[sel[i].type][sel[i].value];
+	var obj = '';
+	if(that.data[sel[i].type]){
+	  obj = that.data[sel[i].type][sel[i].value];
+	}
 	if(obj){
 	  that[sel[i].type].push(obj);
 	  if(obj.type == 1){
@@ -215,6 +218,8 @@ function View(svg){
 	  $('.suggested').remove();
 	  that.idToSelection(sid, 1);
 	},SPEED/5);
+      }else{
+	index = -1;
       }
     });
     $('#search input').blur(function(){
@@ -284,6 +289,15 @@ function View(svg){
       var indirSame = {};
       var eid = '';
       var directEdges = null;
+      var item = that.data[TYPES[typeN]][id];
+      if(item[TYPES[that.selection[0][0]]][that.selection[0][1]]){
+	$('#'+that.selected[0]).addClass('connected');
+      }
+      if(that.selected.length == 2){
+	if(item[TYPES[that.selection[1][0]]][that.selection[1][1]]){
+	  $('#'+that.selected[1]).addClass('connected');
+	}
+      }
       $(this).addClass('hovered');
       if(typeN == 1){
 	eid = '[id$=' + typeC + id + ']';
@@ -453,9 +467,14 @@ function View(svg){
 	if(selItem.type === 0){
 	  var pos = '';
 	  if(selItem.positions.length){
-	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit"><i class="fa fa-building-o"></i></span>'+selItem.positions.join(', ')+'</p>';
+	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit">'
+	      + '<i class="fa fa-building-o"></i></span>'
+	      + selItem.positions.join(', ') + '</p>';
 	  }
-	  $('#context').append('<div id="context-head"><span class="context-label">'+selItem.fullname+'</span>'+pos+'<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></div>');
+	  $('#context').append('<div id="context-head"><span class="context-label">'
+	    + selItem.fullname+'</span>'+pos
+	    + '<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'
+	    + selItem.count +' Publikationen</p></div>');
 	  if(selItem.image){
 	    var imageURL = '';
 	    if(selItem.image.indexOf("http") != -1){
@@ -466,14 +485,32 @@ function View(svg){
 	    $('#context').append('<span id="context-right"><img title="VIVO-Profilfoto" style="width:80px" src="'+ imageURL +'" /></span>');
 	    foundImage = true;
 	  }
+	  
 	}else if(selItem.type === 1){
 	  var date = '';
 	  if(selItem.year !== null){
-	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'+selItem.year+'</span></p>';
+	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'
+	      + selItem.year + '</span></p>';
 	  }
-	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span>'+date+'</span>');
+	  $('#context').append('<span id="context-head"><span class="context-label">'
+	    + selItem.title + '</span>'+date+'</span>');
+	  
 	}else if(selItem.type === 2){
-	  $('#context').append('<span id="context-head"><span class="context-label">'+selItem.title+'</span><p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'+ selItem.count +' Publikationen</p></span>');
+	  var abs = '';
+	  var duration = '';
+	  if(selItem.abstract && selItem.abstract != null){
+	    abs = '<p><span class="context-description">'+ selItem.abstract +'</span></p>';
+	  }
+	  if(selItem.start && selItem.end){
+	    duration = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'
+	      + selItem.start + ' - ' + selItem.end +'</span></p>';
+	  }
+	  $('#context').append('<span id="context-head"><span class="context-label">'
+	    + selItem.title + '</span>'
+	    + abs
+	    + duration
+	    + '<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'
+	    + selItem.count + ' Publikationen</p></span>');
 	  that.getGND(selItem.title);
 	}
 	if(selItem.uri.indexOf(BASEURI) !== -1){
@@ -717,7 +754,10 @@ function View(svg){
 	  var pos = [];
 	  if(i <= that.offsets[key][1] && i >= that.offsets[key][0]){
 	    pos = that.getPos(pub, i, key);
-	    $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' + sel +'" style="font-size:'+that.fontsize+'px;left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;max-width:'+maxwidth+'px;"><span title="Details" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'+pub.title+'\n ('+pub.year+')">'+shortt+'</span>'+rem+'</div>');
+	    $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' 
+	    + sel + '" style="font-size:' + that.fontsize + 'px;left:' + pos[0][0] + 'px;top:' + pos[0][1]
+	    + 'px;max-width:'+maxwidth+'px;"><span title="Publikation" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'
+	    + pub.title + '\n (' + pub.year + ')">' +shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
 	    pos[1][0] = pos[0][0] + w + 12;
@@ -752,7 +792,10 @@ function View(svg){
 	var pos = that.getPos(a, i);
 	var iid = '#'+ a.type + '_' + a.id;
 	if(pos[0][1] !== false){
-	  $('#labels').append('<div id="'+a.type+'_'+a.id+'" class="label author'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-user"></i></span><span class="label-text">'+a.name+'</span>'+rem+'</div>');
+	  $('#labels').append('<div id="' + a.type + '_' + a.id + '" class="label author'
+	    + sel + '" style="left:' + pos[0][0] + 'px;top:' + pos[0][1]
+	    + 'px;"><span title="Autor" class="label-icon"><i class="fa fa-user"></i></span><span class="label-text">'
+	    + a.name + '</span>' + rem + '</div>');
 	  var w = $(iid).width();
 	  var h = $(iid).height();
 	  pos[1][0] = pos[0][0] + w + 10;
@@ -764,7 +807,13 @@ function View(svg){
     };
     for(i=0; i < that.keywords.length; i++){
       if(that.keywords[i]){
+	var css = 'keyword';
+	var icon = 'fa fa-tag';
 	var k = that.keywords[i];
+	if(k.start){
+	  css = 'project';
+	  icon = 'fa fa-hourglass';
+	}
 	combID = k.type + '_' + k.id;
 	sel = '';
 	rem = '';
@@ -783,13 +832,19 @@ function View(svg){
 	var iid = '#'+ k.type + '_' + k.id;
 	if(pos[0][1] != false){
 	  if(that.sections[0][0] > SIDEMINWIDTH && !k.selected){
-	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+shortt+'</span>'+rem+'</div>');
+	    $('#labels').append('<div id="' + k.type + '_' + k.id + '" class="label ' 
+	      + css + sel +'" style="left:' + pos[0][0] + 'px;top:' + pos[0][1] 
+	      + 'px;"><span title="Konzept" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
+	      + shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
 // 	    pos[1][0] = that.sections[2][0] - pos[1][0];
-	    pos[1][0] = pos[1][0] + w + 10;
+	    pos[1][0] = pos[1][0] + w;
 	  }else{
-	    $('#labels').append('<div id="'+k.type+'_'+k.id+'" class="label keyword'+ sel +'" style="left:'+pos[0][0]+'px;top:'+pos[0][1]+'px;"><span title="Details" class="label-icon"><i class="fa fa-tag"></i></span><span class="label-text">'+shortt+'</span>'+rem+'</div>');
+	    $('#labels').append('<div id="' + k.type + '_' + k.id + '" class="label '
+	      + css + sel +'" style="left:' + pos[0][0] + 'px;top:'+ pos[0][1]
+	      + 'px;"><span title="Konzept" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
+	      + shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
 	    pos[1][0] = pos[0][0] + w + 10;
@@ -827,6 +882,10 @@ function View(svg){
     });
     $.each(that.keywords, function(k, a){
       if(a && a.publications && !a.selected && a.active === true){
+	var t = a.type;
+	if(a.start && a.type == 2){
+	  t = 3;
+	}
 	$.each(a.publications, function(pubID){
 	  $.each(that.pubSplit, function(sector, pubs){
 	    $.each(pubs, function(gk, gv){
@@ -841,7 +900,7 @@ function View(svg){
 		  var cx = (a.p[1][0] + gv.p[0][0]) / 2;
 		  var path = 'M'+ a.p[1][0] + ',' + mya + ' C' + cx + ',' + mya + ' ' + cx + ',' + myp + ' ' + gv.p[0][0] + ',' + myp;
 		}
-		S.path(path).attr({ stroke: COLORS[a.type], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
+		S.path(path).attr({ stroke: COLORS[t], strokeWidth: 1, fill: "none", opacity: 0, class: "path", id: edgeID });
 	      }
 	    });
 	  });
@@ -882,9 +941,12 @@ function View(svg){
 	if(sector == 'top'){
 	  p[0][1] = HEADERH + space*no + (space/3);
 	}else if(sector == 'mid'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1) 
+	    + 0.4*(that.pubSplit.top.length ? selHeight : 0) + (space/3);
 	}else if(sector == 'bottom'){
-	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) + 0.4*(that.pubSplit.top.length ? selHeight : 0) + 0.4*(that.pubSplit.mid.length ? selHeight : 0) + (space/3);
+	  p[0][1] = HEADERH + space*(no + that.offsets.top[1] + 1 + that.offsets.mid[1] + 1) 
+	    + 0.4*(that.pubSplit.top.length ? selHeight : 0) 
+	    + 0.4*(that.pubSplit.mid.length ? selHeight : 0) + (space/3);
 	}
 	
       }else if(that.selected.length == 1){
@@ -951,7 +1013,7 @@ function View(svg){
 	    oa = $('.label.author');
 	  }else if(item.type == 2){
 	    if(that.sections[0][0] > SIDEMINWIDTH){
-	      oa = $('.label.keyword');
+	      oa = $('.label.keyword, .label.project');
 	    }else{
 	      oa = $('.label').not('.pub');
 	    }
@@ -964,14 +1026,10 @@ function View(svg){
 	      if(t + h >= minoverlap && t <= maxoverlap){
 		var olmin = (t+h) - p[0][1];
 		var olmax = t - (p[0][1] + h);
-		if(i<6){
-		  if(olmin >= olmax){
-		    p[0][1] += olmin + BORDERS + FONTMAX;
-		  }else{
-		    p[0][1] -= olmax - BORDERS - FONTMAX;
-		  }
+		if(olmin >= olmax){
+		  p[0][1] += olmin + BORDERS + FONTMAX;
 		}else{
-		  console.log(v.id + ' ' + item.id);
+		  p[0][1] -= olmax - BORDERS - FONTMAX;
 		}
 	      }
 	      if(p[0][1] <= HEADERH){
@@ -1043,7 +1101,11 @@ function View(svg){
 	    }
 	  }
 	}else if(that.selected.length === 1){
-	  p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 4*BORDERS);
+	  if(pubsTop.length){
+	    p[0][1] = (HEADERH + pubsTop[0].p[0][1])/2 - (0.5*that.fontsize + 4*BORDERS);
+	  }else{
+	    p[0][1] = (HEADERH + 100) - (0.5*that.fontsize + 4*BORDERS);
+	  }
 	}
       }
       if(p[0][1] >= that.sections[0][1] - FONTMAX - that.fontsize || p[0][1] <= HEADERH){

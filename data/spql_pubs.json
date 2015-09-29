@@ -32,15 +32,7 @@
         "title": { "type": "literal" , "value": "3D @Technische Informationsbibliothek (TIB)" } ,
         "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article3" } ,
         "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
-        "abstract": { "type": "literal" , "value": "Test Abstract. Delete it before real use." } ,
-        "keywords": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/n577" } ,
-        "year": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/n2315" }
-      } ,
-      {
-        "id": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article3" } ,
-        "title": { "type": "literal" , "value": "3D @Technische Informationsbibliothek (TIB)" } ,
-        "uri": { "type": "uri" , "value": "http://vivo.mydomain.edu/individual/article3" } ,
-        "authors": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/4" } ,
+        "projects": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/g10" },
         "abstract": { "type": "literal" , "value": "Test Abstract. Delete it before real use." } ,
         "keywords": { "type": "literal" , "value": "http://vivo.mydomain.edu/individual/n577" } ,
         "year": { "type": "literal" , "value": "2012" }

@@ -4,19 +4,24 @@ use utf8;
 use Path::Class;
 use JSON;
 use Data::Dumper;
-use Class::Date;
 use open ':encoding(utf8)';
 use open qw/:std :utf8/;
+use POSIX qw(strftime);
+use File::Copy;
 binmode(STDOUT, ":utf8");
 
-my $date = new Class::Date;
+my $ts = strftime "%Y%m%d", localtime;
+my $filename = 'merged_data.json';
+if (-e $filename) {
+  copy($filename, './old/merged_data'.$ts.'.json');
+} 
 my $sparql_authors = 'spql_authors.json';
-my $sparql_publications = file('spql_pubs.json');
-my $sparql_keywords = file('spql_keywords.json');
-my $sparql_keywords = file('spql_projects.json');
-my $out = file('merged_data - $date.json');
+my $sparql_publications = 'spql_pubs.json';
+my $sparql_keywords = 'spql_keywords.json';
+my $sparql_projects = 'spql_projects.json';
+my $out = file($filename);
 my $output_handler = $out->openw();
-my $dump = file('dump_data - $date.json');
+my $dump = file('dump_data.json');
 my $dump_handler = $dump->openw();
 
 my $encoded_authors = do {
@@ -91,9 +96,17 @@ foreach my $publication (@imp_publications) {
 	$lkeywords{ $kid } = 1;
       }
     }
+    if($publication->{'projects'}){
+      my @proj = split('; ', $publication->{'projects'}->{'value'});
+      foreach my $pr (@proj) {
+	my $prid = substr $pr, $uri_length, (length $pr)-1;
+	$lkeywords{ $prid } = 1;
+      }
+    }
     $publications{ $id } = { 'id' => $id, 'title' => $title, 'keywords' => { %lkeywords }, 'year' => $year, 'authors'=> { %lauthors }, 'abstract' => $abstract, 'uri' => $uri, 'type' => 1 };
   }
 };
+print $dump_handler Dumper(%publications);
 foreach my $author (@imp_authors) {
   my $id = $author->{'id'}->{'value'};
   my $uri_length = rindex($id, '/') + 1;
@@ -123,6 +136,14 @@ foreach my $author (@imp_authors) {
   if($author->{'positions'}){
     @positions = split('; ', $author->{'positions'}->{'value'});
   }
+  my %lkeywords;
+  if($publication->{'projects'}){
+    my @proj = split('; ', $publication->{'projects'}->{'value'});
+    foreach my $pr (@proj) {
+      my $prid = substr $pr, $uri_length, (length $pr)-1;
+      $lkeywords{ $prid } = 1;
+    }
+  }
   my @pubs = split('; ', $author->{'publications'}->{'value'});
   my %lpublications;
   foreach my $pub (@pubs) {
@@ -131,7 +152,8 @@ foreach my $author (@imp_authors) {
       $lpublications{ $pid } = 1;
     }
   }
-  $authors{ $id } = { 'id' => $id, 'name' => $name, 'fullname' => $fullname, 'image' => $image, 'positions' => [ @positions ], 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 0 };
+  $authors{ $id } = { 'id' => $id, 'name' => $name, 'fullname' => $fullname, 'image' => $image, 'positions' => [ @positions ],
+    'keywords' => { %lkeywords }, 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 0 };
 };
 foreach my $keyword (@imp_keywords) {
   my $id = $keyword->{'id'}->{'value'};
@@ -157,22 +179,32 @@ foreach my $project (@imp_projects) {
   $id = substr $id, $uri_length;
   my $title = $project->{'title'}->{'value'};
   my $count = $project->{'count'}->{'value'};
+  my $start = $project->{'start'}->{'value'};
+  my $end = $project->{'end'}->{'value'};
+  my $abstract = $project->{'abstract'}->{'value'};
   my $uri = $project->{'uri'}->{'value'};
-  my @pubs = split('; ', $project->{'publications'}->{'value'});
+  my @pubs;
+  if($project->{'publications'}){
+    @pubs = split('; ', $project->{'publications'}->{'value'});
+  }
   my %lpublications;
   foreach my $pub (@pubs) {
     my $pid = substr $pub, $uri_length, (length $pub)-1;
-    if($publications{ $pid } && $publications{ $pid }{'projects'}){
+    if($publications{ $pid }){
       $lpublications{ $pid } = 1;
     }
   }
-  my %lauthors;
-  my @auths = split('; ', $publication->{'authors'}->{'value'});
-  foreach my $a (@auths) {
-    my $aid = substr $a, $uri_length, (length $a)-1;
-    $lauthors{ $aid } = 1;
+  my %linvestigators;
+  my @inv;
+  if($project->{'investigators'}){
+    @inv = split('; ', $project->{'investigators'}->{'value'});
   }
-  $keywords{ $id } = { 'id' => $id, 'title' => $title, 'publications' => { %lpublications }, 'count' => $count, 'uri' => $uri, 'type' => 2 };
+  foreach my $i (@inv) {
+    my $iid = substr $i, $uri_length, (length $i)-1;
+    $linvestigators{ $iid } = 1;
+  }
+  $keywords{ $id } = { 'id' => $id, 'title' => $title, 'publications' => { %lpublications }, 'abstract' => $abstract,
+    'investigators' => { %linvestigators }, 'count' => $count, 'uri' => $uri, 'type' => 2, 'start' => $start, 'end' => $end };
 };
 
 # Additional connections
@@ -218,7 +250,7 @@ foreach my $keyword (%keywords){
     }
   };
 }
-# print $dump_handler Dumper(%keywords);
+
 $combined[0]{'authors'} = \%authors;
 $combined[0]{'publications'} = \%publications;
 $combined[0]{'keywords'} = \%keywords;
