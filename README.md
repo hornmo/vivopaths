@@ -18,7 +18,7 @@ Die manuelle Aktualisierung von Daten erfolgt in verschiedenen Schritten.
 
 2. Die erhaltenen Ergebnisse im RS_JSON-Format werden im Ordner [data](data) in entsprechend benannten JSON-Dateien zwischengespeichert.
 
-3. Das Perl-Script [merge.pl](merge.pl) fügt diese zu der finalen Datei [merged_data.json](merged_data.json) zusammen, auf die aus der ScriptDatei zugegriffen wird.
+3. Das Perl-Script [merge.pl](data/merge.pl) fügt diese zu der finalen Datei [merged_data.json](data/merged_data.json) zusammen, auf die aus der ScriptDatei zugegriffen wird.
 
 ### Mögliche Automatisierung
 
