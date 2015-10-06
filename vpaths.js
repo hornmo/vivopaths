@@ -1,3 +1,5 @@
+// Konstanten
+
 var SPEED = 500;
 var FONTMIN = 15;
 var FONTMAX = 21;
@@ -13,6 +15,8 @@ var MAXSIDELABELWIDTH = 200;
 var OUTERMARGIN = 50;
 var COLORS = ["#796823","#4B4B4B","#27606B","#9A3557"];
 var BASEURI = "http://test.osl.tib.eu/vivo-tib/individual/";
+
+// Applikationsfunktionen
 
 function View(svg){
   var S = Snap(svg);
@@ -318,10 +322,6 @@ function View(svg){
 	if(that.selection[0][0] != 1){
 	  $(this).append('<span class="compare" title="Compare"><i class="fa fa-plus"></i></span>');
 	}
-	if(typeN == 2 && that.sections[0][0] > SIDEMINWIDTH && that.selection[0][0] != 1){
-	  var compareWidth = $(this).children('.compare').width();
-	  $(this).css("right", function(i, v){ n = parseInt(v) - 20; return n + "px"});
-	}
 	eid = '[id^=' + typeC + id + 'X]';
 	directEdges = $(eid);
 	if(typeN == 0){
@@ -416,9 +416,6 @@ function View(svg){
       var id = $(this).attr('id');
       $(this).removeClass('hovered');
       $(this).children('.compare').remove();
-      if(id.substr(0,1) == 2 && that.sections[0][0] > SIDEMINWIDTH && that.selection[0][0] != 1){
-	$(this).css("right", function(i, v){ n = parseInt(v) + 20; return n + "px"})
-      }
       $('.label').removeClass('connected');
       S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
     });
@@ -442,6 +439,7 @@ function View(svg){
       var id = $(this).parent().attr('id');
       var splitID = id.split('_');
       var selItem = '';
+      var type = '';
       var foundImage = false;
       var styles = {
 	top: "",
@@ -465,6 +463,7 @@ function View(svg){
 	that.context.visible = true;
 	that.context.item = selItem;
 	if(selItem.type === 0){
+	  type = 'Autor';
 	  var pos = '';
 	  if(selItem.positions.length){
 	    pos = '<p style=""><span class="organisation context-icon" title="Organisationseinheit">'
@@ -472,7 +471,8 @@ function View(svg){
 	      + selItem.positions.join(', ') + '</p>';
 	  }
 	  $('#context').append('<div id="context-head"><span class="context-label">'
-	    + selItem.fullname+'</span>'+pos
+	    + selItem.fullname+'</span>'+ '<span class="author"> - '+ type + '</span>' 
+	    + pos
 	    + '<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'
 	    + selItem.count +' Publikationen</p></div>');
 	  if(selItem.image){
@@ -487,6 +487,7 @@ function View(svg){
 	  }
 	  
 	}else if(selItem.type === 1){
+	  type = 'Publikation';
 	  var date = '';
 	  if(selItem.year !== null){
 	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'
@@ -496,17 +497,24 @@ function View(svg){
 	    + selItem.title + '</span>'+date+'</span>');
 	  
 	}else if(selItem.type === 2){
+	  type = 'Schlagwort';
+	  var exactClass = "keyword";
 	  var abs = '';
 	  var duration = '';
 	  if(selItem.abstract && selItem.abstract != null){
 	    abs = '<p><span class="context-description">'+ selItem.abstract +'</span></p>';
 	  }
 	  if(selItem.start && selItem.end){
-	    duration = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'
-	      + selItem.start + ' - ' + selItem.end +'</span></p>';
+	    type = 'Projekt';
+	    exactClass = 'project';
+	    var dStart = new Date(selItem.start);
+	    var dEnd = new Date(selItem.end);
+	    duration = '<p><span class="context-icon" title="Zeitraum"><i class="fa fa-calendar"></i></span><span>'
+	      + dStart.getFullYear() + ' - ' + dEnd.getFullYear() +'</span></p>';
 	  }
 	  $('#context').append('<span id="context-head"><span class="context-label">'
 	    + selItem.title + '</span>'
+	    + '<span class="'+ exactClass +'"> - '+ type + '</span>'
 	    + abs
 	    + duration
 	    + '<p id="context-count"><span class="pub context-icon" title="Publikation"><i class="fa fa-file"></i></span>'
@@ -536,7 +544,11 @@ function View(svg){
 	}else{
 	  styles.left = selItem.p[0][0] + 'px';
 	}
-	styles.border = '2px solid' + COLORS[splitID[0]];
+	if(selItem.start){
+	  styles.border = '2px solid' + COLORS[3];
+	}else{
+	  styles.border = '2px solid' + COLORS[splitID[0]];
+	}
 	if(foundImage){
 	  styles.width = '450px';
 	}else{
@@ -678,7 +690,7 @@ function View(svg){
 	switch(s.type){
 	  case 0: type = 'author'; break;
 	  case 1: type = 'pub'; break;
-	  case 2: type = 'keyword'; break;
+	  case 2: if(s.start){ type = 'project'; break; }else{ type = 'keyword'; break;}
 	}
 	if(s.fullname){
 	  $('#suggestions').append('<div id="'+s.type+'_'+s.id+'" class="suggested '+type+'"><span>'+s.fullname+'</span></div>');
@@ -809,10 +821,12 @@ function View(svg){
       if(that.keywords[i]){
 	var css = 'keyword';
 	var icon = 'fa fa-tag';
+	var title = 'Konzept';
 	var k = that.keywords[i];
 	if(k.start){
 	  css = 'project';
-	  icon = 'fa fa-hourglass';
+	  icon = 'fa fa-briefcase';
+	  title = 'Projekt';
 	}
 	combID = k.type + '_' + k.id;
 	sel = '';
@@ -834,7 +848,7 @@ function View(svg){
 	  if(that.sections[0][0] > SIDEMINWIDTH && !k.selected){
 	    $('#labels').append('<div id="' + k.type + '_' + k.id + '" class="label ' 
 	      + css + sel +'" style="left:' + pos[0][0] + 'px;top:' + pos[0][1] 
-	      + 'px;"><span title="Konzept" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
+	      + 'px;"><span title="'+title+'" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
 	      + shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
@@ -843,7 +857,7 @@ function View(svg){
 	  }else{
 	    $('#labels').append('<div id="' + k.type + '_' + k.id + '" class="label '
 	      + css + sel +'" style="left:' + pos[0][0] + 'px;top:'+ pos[0][1]
-	      + 'px;"><span title="Konzept" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
+	      + 'px;"><span title="'+title+'" class="label-icon"><i class="'+ icon +'"></i></span><span class="label-text">'
 	      + shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();

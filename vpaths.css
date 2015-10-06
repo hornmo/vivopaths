@@ -18,6 +18,13 @@ body{
   margin-top:15px;
   width:300px;
   position:relative;
+  display:inline;
+  float:left;
+}
+#logo{
+  margin-left: 50px;
+  display:inline;
+  float:left;
 }
 #search input{
   padding: 3px 5px;
@@ -58,7 +65,7 @@ body{
   padding-right: 0.3em;
 }
 .suggested.project:before{
-  content:"\f0ea";
+  content:"\f0b1";
   font-family: FontAwesome;
   padding-right: 0.3em;
 }

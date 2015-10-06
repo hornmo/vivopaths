@@ -1,875 +1,953 @@
-$VAR1 = 'article47';
+$VAR1 = 'article5';
 $VAR2 = {
-          'abstract' => undef,
-          'id' => 'article47',
-          'type' => 1,
-          'title' => "arXiv - Die TIB \x{fc}bernimmt zentrale Finanzierung f\x{fc}r deutsche Hochschulen",
-          'keywords' => {
-                          'conc0' => 1
-                        },
-          'uri' => 'http://vivo.mydomain.edu/individual/article47',
-          'year' => '2012',
           'authors' => {
-                         '77' => 1
-                       }
+                         '26' => 1
+                       },
+          'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article5',
+          'keywords' => {
+                          'conc0' => 1,
+                          'conc77' => 1
+                        },
+          'id' => 'article5',
+          'type' => 1,
+          'title' => 'Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?',
+          'abstract' => undef,
+          'year' => '2013'
         };
-$VAR3 = 'article17';
+$VAR3 = 'article12';
 $VAR4 = {
-          'abstract' => undef,
-          'id' => 'article17',
-          'type' => 1,
-          'title' => "EIN Portal der TIB (nicht nur) f\x{fc}r Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten",
+          'id' => 'article12',
           'keywords' => {
-                          'n3190' => 1
+                          'conc32' => 1
                         },
-          'year' => '2014',
-          'uri' => 'http://vivo.mydomain.edu/individual/article17',
           'authors' => {
-                         '77' => 1
-                       }
+                         '68' => 1,
+                         '61' => 1
+                       },
+          'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article12',
+          'title' => 'Dokumentlieferung',
+          'abstract' => undef,
+          'year' => '2013',
+          'type' => 1
         };
-$VAR5 = 'article7';
+$VAR5 = 'article60';
 $VAR6 = {
           'type' => 1,
-          'title' => 'Open Access - Was sagen die Bibliotheken?',
-          'keywords' => {
-                          'conc0' => 1
-                        },
-          'year' => '2013',
-          'uri' => 'http://vivo.mydomain.edu/individual/article7',
+          'abstract' => undef,
+          'year' => undef,
+          'title' => 'Open Access Activities of the German National Library of Science and Tehcnology; SCOAP3-DH and arXiv-DH',
           'authors' => {
                          '68' => 1
                        },
-          'abstract' => undef,
-          'id' => 'article7'
-        };
-$VAR7 = 'article10';
-$VAR8 = {
-          'abstract' => undef,
-          'id' => 'article10',
-          'type' => 1,
-          'title' => 'Development Thinking and Practice on the German National Science and Technology Library',
+          'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article60',
+          'id' => 'article60',
           'keywords' => {
-                          'conc11' => 1
-                        },
-          'uri' => 'http://vivo.mydomain.edu/individual/article10',
-          'year' => '2013',
-          'authors' => {
-                         '6' => 1
-                       }
+                          'conc0' => 1
+                        }
         };
-$VAR9 = 'article69';
-$VAR10 = {
-           'keywords' => {
-                           'n4653' => 1,
-                           'conc35' => 1
-                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article69',
-           'year' => undef,
-           'authors' => {
-                          '4' => 1
+$VAR7 = 'article76';
+$VAR8 = {
+          'id' => 'article76',
+          'keywords' => {
+                          'conc41' => 1
                         },
-           'type' => 1,
-           'title' => 'Towards an automatic multi-label classification of 3D architectural models',
-           'id' => 'article69',
-           'abstract' => undef
+          'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article76',
+          'authors' => {
+                         '4' => 1
+                       },
+          'title' => 'Taming the Wilderness of Open Research Information',
+          'year' => undef,
+          'abstract' => undef,
+          'type' => 1
+        };
+$VAR9 = 'article48';
+$VAR10 = {
+           'id' => 'article48',
+           'keywords' => {},
+           'authors' => {
+                          '26' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article48',
+           'abstract' => undef,
+           'year' => '2012',
+           'title' => "Sieben Gr\x{fc}nde Zotero auszuprobieren",
+           'type' => 1
          };
-$VAR11 = 'article21';
+$VAR11 = 'article63';
 $VAR12 = {
            'abstract' => undef,
-           'id' => 'article21',
-           'authors' => {
-                          '75' => 1
-                        },
-           'uri' => 'http://vivo.mydomain.edu/individual/article21',
-           'year' => '2014',
+           'year' => undef,
+           'title' => 'Licensing of scientific audiovisual media in Germany',
+           'type' => 1,
            'keywords' => {
-                           'n5680' => 1
+                           'conc63' => 1,
+                           'conc73' => 1
                          },
-           'title' => 'Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition',
-           'type' => 1
+           'id' => 'article63',
+           'authors' => {
+                          '6' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article63'
          };
-$VAR13 = 'article71';
+$VAR13 = 'article77';
 $VAR14 = {
-           'id' => 'article71',
-           'abstract' => undef,
+           'id' => 'article77',
            'keywords' => {
-                           'conc54' => 1,
-                           'n4653' => 1
+                           'conc41' => 1
                          },
            'authors' => {
-                          '45' => 1
+                          '48' => 1,
+                          '4' => 1,
+                          '26' => 1
                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article71',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article77',
+           'title' => 'The Quest for Research Information',
+           'abstract' => undef,
            'year' => undef,
-           'title' => 'A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project',
            'type' => 1
          };
-$VAR15 = 'article81';
+$VAR15 = 'article13';
 $VAR16 = {
-           'id' => 'article81',
+           'year' => '2013',
            'abstract' => undef,
+           'title' => "Metadaten f\x{fc}r Open Educational Resources (OER). Eine Handreichung f\x{fc}r die \x{f6}ffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB).",
            'type' => 1,
-           'title' => "Res\x{fc}mee: Was bleibt mir von dieser Tagung ?",
+           'id' => 'article13',
            'keywords' => {
-                           'conc6' => 1
+                           'conc77' => 1,
+                           'conc67' => 1
                          },
-           'uri' => 'http://vivo.mydomain.edu/individual/article81',
-           'year' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article13',
            'authors' => {
-                          '55' => 1
+                          '56' => 1,
+                          '12' => 1
                         }
          };
-$VAR17 = 'article50';
+$VAR17 = 'article33';
 $VAR18 = {
-           'authors' => {
-                          '26' => 1
-                        },
-           'year' => undef,
-           'uri' => 'http://vivo.mydomain.edu/individual/article50',
-           'keywords' => {
-                           'conc78' => 1
-                         },
-           'title' => "ForscherInnen gemeinsam neue Wege im Web er\x{f6}ffnen \x{2014} Das Open Science Lab der TIB Hannover",
-           'type' => 1,
            'abstract' => undef,
-           'id' => 'article50'
-         };
-$VAR19 = 'article78';
-$VAR20 = {
-           'type' => 1,
-           'title' => 'From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession',
-           'keywords' => {
-                           'n4653' => 1,
-                           'n7053' => 1
-                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article78',
-           'year' => undef,
-           'authors' => {
-                          '4' => 1
-                        },
-           'abstract' => undef,
-           'id' => 'article78'
-         };
-$VAR21 = 'article52';
-$VAR22 = {
-           'abstract' => undef,
-           'id' => 'article52',
-           'type' => 1,
-           'title' => "1.000 Antworten auf die Frage: Literaturverwaltung \x{2014} Was benutzen Sie, was brauchen Sie?",
-           'uri' => 'http://vivo.mydomain.edu/individual/article52',
-           'year' => '2012',
-           'authors' => {
-                          '26' => 1
-                        },
-           'keywords' => {
-                           'conc61' => 1
-                         }
-         };
-$VAR23 = 'article20';
-$VAR24 = {
-           'title' => 'Literaturauswahl und -bestellung leichter gemacht!',
-           'type' => 1,
-           'authors' => {
-                          '76' => 1
-                        },
            'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article20',
-           'keywords' => {
-                           'conc32' => 1
-                         },
-           'abstract' => undef,
-           'id' => 'article20'
-         };
-$VAR25 = 'article29';
-$VAR26 = {
-           'abstract' => undef,
-           'id' => 'article29',
-           'type' => 1,
-           'title' => 'E-Books in wissenschaftlichen Bibliotheken',
-           'keywords' => {},
-           'uri' => 'http://vivo.mydomain.edu/individual/article29',
-           'year' => '2014',
-           'authors' => {
-                          'n1094' => 1
-                        }
-         };
-$VAR27 = 'article33';
-$VAR28 = {
-           'abstract' => undef,
-           'id' => 'article33',
-           'type' => 1,
            'title' => 'Freie Lizenzen und Nachnutzung',
+           'type' => 1,
+           'id' => 'article33',
            'keywords' => {
-                           'n2793' => 1
+                           'conc63' => 1
                          },
-           'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article33',
            'authors' => {
-                          '80' => 1
-                        }
-         };
-$VAR29 = 'article26';
-$VAR30 = {
-           'id' => 'article26',
-           'abstract' => undef,
-           'authors' => {
+                          '80' => 1,
                           '56' => 1
                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article26',
-           'year' => '2014',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article33'
+         };
+$VAR19 = 'article66';
+$VAR20 = {
            'keywords' => {
-                           'conc19' => 1,
-                           'conc30' => 1
+                           'conc67' => 1
                          },
-           'title' => 'DataCite and DOI names for research data',
+           'id' => 'article66',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article66',
+           'authors' => {
+                          '26' => 1
+                        },
+           'year' => undef,
+           'abstract' => undef,
+           'title' => 'Discovery Metadata - Metadata Standards vs. New Requirements',
            'type' => 1
          };
-$VAR31 = 'article34';
-$VAR32 = {
+$VAR21 = 'article40';
+$VAR22 = {
+           'year' => '2012',
+           'abstract' => undef,
+           'title' => 'Speicherung & Datenverwaltung in Produktion und Archiv',
            'type' => 1,
+           'keywords' => {
+                           'conc6' => 1,
+                           'conc22' => 1
+                         },
+           'id' => 'article40',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article40',
+           'authors' => {
+                          '1' => 1
+                        }
+         };
+$VAR23 = 'article34';
+$VAR24 = {
+           'year' => '2014',
+           'abstract' => undef,
            'title' => 'Open Access',
+           'type' => 1,
+           'id' => 'article34',
            'keywords' => {
                            'conc0' => 1
                          },
-           'uri' => 'http://vivo.mydomain.edu/individual/article34',
-           'year' => '2014',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article34',
            'authors' => {
                           '80' => 1
-                        },
-           'abstract' => undef,
-           'id' => 'article34'
+                        }
          };
-$VAR33 = 'article30';
-$VAR34 = {
-           'title' => "Archive ohne Grenzen. Erschlie\x{df}ung und Zugang im europ\x{e4}ischen und internationalen Kontext.",
-           'type' => 1,
+$VAR25 = 'article10';
+$VAR26 = {
+           'keywords' => {
+                           'conc11' => 1
+                         },
+           'id' => 'article10',
            'authors' => {
-                          '55' => 1
+                          '74' => 1,
+                          '68' => 1,
+                          '6' => 1
                         },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article10',
+           'abstract' => undef,
+           'year' => '2013',
+           'title' => 'Development Thinking and Practice on the German National Science and Technology Library',
+           'type' => 1
+         };
+$VAR27 = 'article18';
+$VAR28 = {
+           'type' => 1,
+           'title' => 'Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)',
            'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article30',
+           'abstract' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article18',
+           'authors' => {
+                          '67' => 1
+                        },
+           'id' => 'article18',
+           'keywords' => {
+                           'conc24' => 1
+                         }
+         };
+$VAR29 = 'article73';
+$VAR30 = {
+           'type' => 1,
+           'year' => undef,
+           'abstract' => undef,
+           'title' => "Building Information Modeling \x{2013} A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article73',
+           'authors' => {
+                          '45' => 1
+                        },
+           'keywords' => {
+                           'conc54' => 1
+                         },
+           'id' => 'article73'
+         };
+$VAR31 = 'article41';
+$VAR32 = {
+           'abstract' => undef,
+           'year' => '2012',
+           'title' => "Bibliotheksverb\x{fc}nde, Virtuelle Fachbibliotheken",
+           'type' => 1,
+           'keywords' => {
+                           'conc24' => 1,
+                           'conc106' => 1
+                         },
+           'id' => 'article41',
+           'authors' => {
+                          '76' => 1,
+                          '68' => 1,
+                          '27' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article41'
+         };
+$VAR33 = 'article39';
+$VAR34 = {
+           'type' => 1,
+           'year' => '2013',
+           'abstract' => undef,
+           'title' => 'E-IRG White Paper 2013 ',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article39',
+           'authors' => {
+                          '26' => 1
+                        },
+           'keywords' => {},
+           'id' => 'article39'
+         };
+$VAR35 = 'article22';
+$VAR36 = {
+           'keywords' => {
+                           'conc97' => 1
+                         },
+           'id' => 'article22',
+           'authors' => {
+                          '75' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article22',
+           'abstract' => undef,
+           'year' => '2014',
+           'title' => 'Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems',
+           'type' => 1
+         };
+$VAR37 = 'article4';
+$VAR38 = {
+           'type' => 1,
+           'abstract' => undef,
+           'year' => '2012',
+           'title' => '3D @Technische Informationsbibliothek (TIB)',
+           'authors' => {
+                          '4' => 1,
+                          '74' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article4',
+           'id' => 'article4',
+           'keywords' => {
+                           'g10' => 1
+                         }
+         };
+$VAR39 = 'article53';
+$VAR40 = {
+           'type' => 1,
+           'abstract' => undef,
+           'year' => '2012',
+           'title' => "Open Access Week - Open Access f\x{fc}r Geisteswissenschaftler?",
+           'authors' => {
+                          '76' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article53',
+           'keywords' => {
+                           'conc0' => 1
+                         },
+           'id' => 'article53'
+         };
+$VAR41 = 'article15';
+$VAR42 = {
+           'type' => 1,
+           'abstract' => undef,
+           'year' => '2014',
+           'title' => 'Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.',
+           'authors' => {
+                          '17' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article15',
+           'id' => 'article15',
+           'keywords' => {
+                           'conc11' => 1,
+                           'conc74' => 1
+                         }
+         };
+$VAR43 = 'article54';
+$VAR44 = {
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article54',
+           'authors' => {
+                          '76' => 1
+                        },
+           'id' => 'article54',
+           'keywords' => {
+                           'conc89' => 1
+                         },
+           'type' => 1,
+           'title' => "Pr\x{e4}sentationsfolien als Buch - wer braucht das?",
+           'year' => '2012',
+           'abstract' => undef
+         };
+$VAR45 = 'article17';
+$VAR46 = {
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article17',
+           'authors' => {
+                          '27' => 1,
+                          '77' => 1
+                        },
+           'keywords' => {
+                           'conc27' => 1
+                         },
+           'id' => 'article17',
+           'type' => 1,
+           'year' => '2014',
+           'abstract' => undef,
+           'title' => "EIN Portal der TIB (nicht nur) f\x{fc}r Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten"
+         };
+$VAR47 = 'article2';
+$VAR48 = {
+           'id' => 'article2',
+           'keywords' => {},
+           'authors' => {
+                          '1' => 1,
+                          '45' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article2',
+           'abstract' => undef,
+           'year' => '2012',
+           'title' => "Der Blick \x{fc}ber Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
+           'type' => 1
+         };
+$VAR49 = 'article57';
+$VAR50 = {
+           'year' => '2012',
+           'abstract' => undef,
+           'title' => 'DataCite search - part 2',
+           'type' => 1,
+           'keywords' => {
+                           'conc30' => 1,
+                           'conc19' => 1
+                         },
+           'id' => 'article57',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article57',
+           'authors' => {
+                          '6' => 1
+                        }
+         };
+$VAR51 = 'article23';
+$VAR52 = {
+           'type' => 1,
+           'year' => '2014',
+           'abstract' => undef,
+           'title' => 'Wissen auf einen Klick',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article23',
+           'authors' => {
+                          '26' => 1,
+                          '80' => 1
+                        },
+           'id' => 'article23',
+           'keywords' => {
+                           'conc0' => 1
+                         }
+         };
+$VAR53 = 'article47';
+$VAR54 = {
+           'type' => 1,
+           'title' => "arXiv - Die TIB \x{fc}bernimmt zentrale Finanzierung f\x{fc}r deutsche Hochschulen",
+           'abstract' => undef,
+           'year' => '2012',
+           'authors' => {
+                          '77' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article47',
+           'keywords' => {
+                           'conc0' => 1
+                         },
+           'id' => 'article47'
+         };
+$VAR55 = 'article26';
+$VAR56 = {
+           'type' => 1,
+           'title' => 'DataCite and DOI names for research data',
+           'abstract' => undef,
+           'year' => '2014',
+           'authors' => {
+                          '6' => 1,
+                          '56' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article26',
+           'keywords' => {
+                           'conc30' => 1,
+                           'conc19' => 1
+                         },
+           'id' => 'article26'
+         };
+$VAR57 = 'article7';
+$VAR58 = {
+           'title' => 'Open Access - Was sagen die Bibliotheken?',
+           'abstract' => undef,
+           'year' => '2013',
+           'type' => 1,
+           'id' => 'article7',
+           'keywords' => {
+                           'conc0' => 1
+                         },
+           'authors' => {
+                          '68' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article7'
+         };
+$VAR59 = 'article3';
+$VAR60 = {
+           'type' => 1,
+           'title' => '3D @Technische Informationsbibliothek (TIB)',
+           'year' => '2012',
+           'abstract' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article3',
+           'authors' => {
+                          '4' => 1,
+                          '74' => 1
+                        },
+           'id' => 'article3',
+           'keywords' => {
+                           'g10' => 1
+                         }
+         };
+$VAR61 = 'article19';
+$VAR62 = {
+           'authors' => {
+                          '5' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article19',
+           'keywords' => {
+                           'conc32' => 1
+                         },
+           'id' => 'article19',
+           'type' => 1,
+           'abstract' => undef,
+           'year' => '2014',
+           'title' => "Current developments in document delivery in Germany\x{a0}"
+         };
+$VAR63 = 'article71';
+$VAR64 = {
+           'title' => 'A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project',
+           'abstract' => undef,
+           'year' => undef,
+           'type' => 1,
+           'keywords' => {
+                           'conc5' => 1,
+                           'conc54' => 1
+                         },
+           'id' => 'article71',
+           'authors' => {
+                          '45' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article71'
+         };
+$VAR65 = 'article31';
+$VAR66 = {
+           'type' => 1,
+           'title' => "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplin\x{fc}bergreifend, nachhaltig, kostendeckend",
+           'year' => '2014',
+           'abstract' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article31',
+           'authors' => {
+                          '56' => 1
+                        },
+           'keywords' => {
+                           'conc39' => 1
+                         },
+           'id' => 'article31'
+         };
+$VAR67 = 'article64';
+$VAR68 = {
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article64',
+           'authors' => {
+                          '26' => 1
+                        },
+           'id' => 'article64',
+           'keywords' => {
+                           'conc25' => 1
+                         },
+           'type' => 1,
+           'title' => 'Das Netzwerk und die Institution',
+           'year' => undef,
+           'abstract' => undef
+         };
+$VAR69 = 'article16';
+$VAR70 = {
+           'keywords' => {
+                           'conc55' => 1
+                         },
+           'id' => 'article16',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article16',
+           'authors' => {
+                          '47' => 1
+                        },
+           'title' => "Entgrenzung und Zusammenarbeit\x{a0}- die Notwendigkeit von Kooperationen im Lernraum",
+           'year' => '2014',
+           'abstract' => undef,
+           'type' => 1
+         };
+$VAR71 = 'article20';
+$VAR72 = {
+           'type' => 1,
+           'year' => '2014',
+           'abstract' => undef,
+           'title' => 'Literaturauswahl und -bestellung leichter gemacht!',
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article20',
+           'authors' => {
+                          '76' => 1
+                        },
+           'id' => 'article20',
+           'keywords' => {
+                           'conc32' => 1
+                         }
+         };
+$VAR73 = 'article25';
+$VAR74 = {
+           'keywords' => {
+                           'conc39' => 1
+                         },
+           'id' => 'article25',
+           'authors' => {
+                          '56' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article25',
+           'abstract' => undef,
+           'year' => '2014',
+           'title' => "RADAR \x{2013} Ein Forschungsdaten-Repositorium als Dienstleistung f\x{fc}r die Wissenschaft",
+           'type' => 1
+         };
+$VAR75 = 'article21';
+$VAR76 = {
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article21',
+           'authors' => {
+                          '65' => 1,
+                          '75' => 1
+                        },
+           'keywords' => {
+                           'conc97' => 1
+                         },
+           'id' => 'article21',
+           'type' => 1,
+           'title' => 'Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition',
+           'year' => '2014',
+           'abstract' => undef
+         };
+$VAR77 = 'article78';
+$VAR78 = {
+           'type' => 1,
+           'title' => 'From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession',
+           'year' => undef,
+           'abstract' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article78',
+           'authors' => {
+                          '4' => 1
+                        },
+           'id' => 'article78',
+           'keywords' => {}
+         };
+$VAR79 = 'article30';
+$VAR80 = {
            'keywords' => {
                            'conc35' => 1,
                            'conc6' => 1
                          },
            'id' => 'article30',
-           'abstract' => undef
-         };
-$VAR35 = 'article46';
-$VAR36 = {
+           'authors' => {
+                          '55' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article30',
            'abstract' => undef,
-           'id' => 'article46',
+           'year' => '2014',
+           'title' => "Archive ohne Grenzen. Erschlie\x{df}ung und Zugang im europ\x{e4}ischen und internationalen Kontext.",
+           'type' => 1
+         };
+$VAR81 = 'article65';
+$VAR82 = {
+           'abstract' => undef,
+           'year' => undef,
+           'title' => 'Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ',
+           'type' => 1,
+           'id' => 'article65',
+           'keywords' => {
+                           'conc54' => 1
+                         },
+           'authors' => {
+                          '45' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article65'
+         };
+$VAR83 = 'article81';
+$VAR84 = {
+           'id' => 'article81',
+           'keywords' => {
+                           'conc6' => 1
+                         },
+           'authors' => {
+                          '55' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article81',
+           'abstract' => undef,
+           'year' => undef,
+           'title' => "Res\x{fc}mee: Was bleibt mir von dieser Tagung ?",
+           'type' => 1
+         };
+$VAR85 = 'article74';
+$VAR86 = {
+           'type' => 1,
+           'title' => 'TIB\'s Portal for audiovisual media - New ways of indexing and retrieval',
+           'abstract' => undef,
+           'year' => undef,
+           'authors' => {
+                          '65' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article74',
+           'keywords' => {
+                           'conc73' => 1
+                         },
+           'id' => 'article74'
+         };
+$VAR87 = 'article80';
+$VAR88 = {
+           'id' => 'article80',
+           'keywords' => {
+                           'conc41' => 1
+                         },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article80',
+           'authors' => {
+                          '4' => 1
+                        },
+           'year' => undef,
+           'abstract' => undef,
+           'title' => 'VIVO for Scientific Communities - Making researchers & their activities discoverable',
+           'type' => 1
+         };
+$VAR89 = 'article46';
+$VAR90 = {
+           'abstract' => undef,
+           'year' => '2012',
            'title' => 'arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /',
            'type' => 1,
            'keywords' => {
                            'conc0' => 1
                          },
+           'id' => 'article46',
            'authors' => {
                           '77' => 1
                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article46',
-           'year' => '2012'
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article46'
          };
-$VAR37 = 'article70';
-$VAR38 = {
-           'title' => "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identit\x{e4}t im Kontext der Rassenideologie",
-           'type' => 1,
-           'keywords' => {
-                           'conc62' => 1
-                         },
+$VAR91 = 'article58';
+$VAR92 = {
            'authors' => {
-                          '76' => 1
+                          '6' => 1
                         },
-           'year' => undef,
-           'uri' => 'http://vivo.mydomain.edu/individual/article70',
-           'abstract' => undef,
-           'id' => 'article70'
-         };
-$VAR39 = 'article42';
-$VAR40 = {
-           'id' => 'article42',
-           'abstract' => undef,
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article58',
            'keywords' => {
-                           'conc81' => 1
+                           'conc30' => 1,
+                           'conc19' => 1
                          },
-           'uri' => 'http://vivo.mydomain.edu/individual/article42',
+           'id' => 'article58',
+           'type' => 1,
+           'abstract' => undef,
            'year' => '2012',
-           'authors' => {
-                          '58' => 1
-                        },
-           'type' => 1,
-           'title' => 'Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken'
+           'title' => 'DataCite summer meeting and moving the blog'
          };
-$VAR41 = 'article54';
-$VAR42 = {
+$VAR93 = 'article49';
+$VAR94 = {
            'abstract' => undef,
-           'id' => 'article54',
-           'title' => "Pr\x{e4}sentationsfolien als Buch - wer braucht das?",
-           'type' => 1,
-           'keywords' => {
-                           'conc89' => 1
-                         },
-           'authors' => {
-                          '76' => 1
-                        },
            'year' => '2012',
-           'uri' => 'http://vivo.mydomain.edu/individual/article54'
-         };
-$VAR43 = 'article45';
-$VAR44 = {
-           'type' => 1,
-           'title' => 'arXiv - Veteran und Vorreiter',
-           'keywords' => {
-                           'conc0' => 1
-                         },
-           'year' => '2012',
-           'uri' => 'http://vivo.mydomain.edu/individual/article45',
-           'authors' => {
-                          '77' => 1
-                        },
-           'abstract' => undef,
-           'id' => 'article45'
-         };
-$VAR45 = 'article13';
-$VAR46 = {
-           'abstract' => undef,
-           'id' => 'article13',
-           'keywords' => {
-                           'conc67' => 1,
-                           'conc77' => 1
-                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article13',
-           'year' => '2013',
-           'authors' => {
-                          '12' => 1
-                        },
-           'type' => 1,
-           'title' => "Metadaten f\x{fc}r Open Educational Resources (OER). Eine Handreichung f\x{fc}r die \x{f6}ffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB)."
-         };
-$VAR47 = 'article12';
-$VAR48 = {
-           'type' => 1,
-           'title' => 'Dokumentlieferung',
-           'keywords' => {
-                           'conc32' => 1
-                         },
-           'year' => '2013',
-           'uri' => 'http://vivo.mydomain.edu/individual/article12',
-           'authors' => {
-                          '61' => 1
-                        },
-           'abstract' => undef,
-           'id' => 'article12'
-         };
-$VAR49 = 'article31';
-$VAR50 = {
-           'title' => "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplin\x{fc}bergreifend, nachhaltig, kostendeckend",
-           'type' => 1,
-           'keywords' => {
-                           'conc39' => 1
-                         },
-           'authors' => {
-                          '56' => 1
-                        },
-           'uri' => 'http://vivo.mydomain.edu/individual/article31',
-           'year' => '2014',
-           'id' => 'article31',
-           'abstract' => undef
-         };
-$VAR51 = 'article6';
-$VAR52 = {
-           'abstract' => undef,
-           'id' => 'article6',
-           'uri' => 'http://vivo.mydomain.edu/individual/article6',
-           'year' => '2013',
-           'authors' => {
-                          '26' => 1
-                        },
-           'keywords' => {
-                           'conc78' => 1,
-                           'conc53' => 1
-                         },
-           'type' => 1,
-           'title' => "Peer-to-peer und Dezentralit\x{e4}t - von den Wurzeln des Netzes zu den aktuellen Trends"
-         };
-$VAR53 = 'article80';
-$VAR54 = {
-           'abstract' => undef,
-           'id' => 'article80',
-           'title' => 'VIVO for Scientific Communities - Making researchers & their activities discoverable',
-           'type' => 1,
-           'keywords' => {
-                           'n1696' => 1,
-                           'conc41' => 1
-                         },
-           'authors' => {
-                          '4' => 1
-                        },
-           'year' => undef,
-           'uri' => 'http://vivo.mydomain.edu/individual/article80'
-         };
-$VAR55 = 'article49';
-$VAR56 = {
-           'id' => 'article49',
-           'abstract' => undef,
            'title' => "\"Wow, someone wants to publish me!\" \x{2014} Revisited",
            'type' => 1,
+           'id' => 'article49',
            'keywords' => {
                            'conc74' => 1
                          },
            'authors' => {
                           '26' => 1
                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article49',
-           'year' => '2012'
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article49'
          };
-$VAR57 = 'article19';
-$VAR58 = {
-           'id' => 'article19',
-           'abstract' => undef,
-           'type' => 1,
-           'title' => 'Current developments in document delivery in Germany ',
-           'uri' => 'http://vivo.mydomain.edu/individual/article19',
-           'year' => '2014',
-           'authors' => {
-                          '5' => 1
-                        },
-           'keywords' => {
-                           'conc32' => 1
-                         }
-         };
-$VAR59 = 'article76';
-$VAR60 = {
-           'keywords' => {
-                           'conc41' => 1
-                         },
-           'year' => undef,
-           'uri' => 'http://vivo.mydomain.edu/individual/article76',
-           'authors' => {
-                          '4' => 1
-                        },
-           'type' => 1,
-           'title' => 'Taming the Wilderness of Open Research Information',
-           'abstract' => undef,
-           'id' => 'article76'
-         };
-$VAR61 = 'article2';
-$VAR62 = {
-           'abstract' => undef,
-           'id' => 'article2',
-           'type' => 1,
-           'title' => "Der Blick \x{fc}ber Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
-           'keywords' => {},
-           'uri' => 'http://vivo.mydomain.edu/individual/article2',
-           'year' => '2012',
-           'authors' => {
-                          '1' => 1
-                        }
-         };
-$VAR63 = 'article74';
-$VAR64 = {
-           'title' => 'TIB\'s Portal for audiovisual media - New ways of indexing and retrieval',
-           'type' => 1,
-           'keywords' => {
-                           'n5788' => 1
-                         },
-           'authors' => {
-                          '65' => 1
-                        },
-           'uri' => 'http://vivo.mydomain.edu/individual/article74',
-           'year' => undef,
-           'abstract' => undef,
-           'id' => 'article74'
-         };
-$VAR65 = 'article18';
-$VAR66 = {
-           'uri' => 'http://vivo.mydomain.edu/individual/article18',
-           'year' => '2014',
-           'authors' => {
-                          '67' => 1
-                        },
-           'keywords' => {
-                           'conc24' => 1
-                         },
-           'type' => 1,
-           'title' => 'Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)',
-           'id' => 'article18',
-           'abstract' => undef
-         };
-$VAR67 = 'article28';
-$VAR68 = {
-           'authors' => {
-                          'n1094' => 1
-                        },
-           'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article28',
-           'keywords' => {},
-           'title' => 'E-Books in wissenschaftlichen Bibliotheken',
-           'type' => 1,
-           'abstract' => undef,
-           'id' => 'article28'
-         };
-$VAR69 = 'article27';
-$VAR70 = {
-           'abstract' => undef,
-           'id' => 'article27',
-           'title' => 'TIB\'s Portal for Audiovisual Media: Combining Manual and Automatic Indexing',
-           'type' => 1,
-           'authors' => {
-                          '65' => 1
-                        },
-           'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article27',
-           'keywords' => {
-                           'n5788' => 1
-                         }
-         };
-$VAR71 = 'article25';
-$VAR72 = {
-           'authors' => {
-                          '56' => 1
-                        },
-           'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article25',
-           'keywords' => {
-                           'conc39' => 1
-                         },
-           'title' => "RADAR \x{2013} Ein Forschungsdaten-Repositorium als Dienstleistung f\x{fc}r die Wissenschaft",
-           'type' => 1,
-           'abstract' => undef,
-           'id' => 'article25'
-         };
-$VAR73 = 'article4';
-$VAR74 = {
-           'id' => 'article4',
-           'abstract' => undef,
-           'year' => '2012',
-           'uri' => 'http://vivo.mydomain.edu/individual/article4',
-           'authors' => {
-                          '4' => 1
-                        },
-           'keywords' => {},
-           'type' => 1,
-           'title' => '3D @Technische Informationsbibliothek (TIB)'
-         };
-$VAR75 = 'article41';
-$VAR76 = {
-           'keywords' => {
-                           'n7791' => 1,
-                           'conc24' => 1
-                         },
-           'authors' => {
-                          '27' => 1
-                        },
-           'year' => '2012',
-           'uri' => 'http://vivo.mydomain.edu/individual/article41',
-           'title' => "Bibliotheksverb\x{fc}nde, Virtuelle Fachbibliotheken",
-           'type' => 1,
-           'id' => 'article41',
-           'abstract' => undef
-         };
-$VAR77 = 'article9';
-$VAR78 = {
-           'id' => 'article9',
-           'abstract' => undef,
-           'type' => 1,
-           'title' => 'Digitale Bibliothek und Portal GetInfo in der TIB Hannover',
-           'uri' => 'http://vivo.mydomain.edu/individual/article9',
-           'year' => '2013',
-           'authors' => {
-                          '67' => 1
-                        },
-           'keywords' => {
-                           'conc24' => 1,
-                           'n3190' => 1
-                         }
-         };
-$VAR79 = 'article15';
-$VAR80 = {
-           'abstract' => undef,
-           'id' => 'article15',
-           'keywords' => {
-                           'n1693' => 1
-                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article15',
-           'year' => '2014',
-           'authors' => {
-                          '17' => 1
-                        },
-           'type' => 1,
-           'title' => 'Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.'
-         };
-$VAR81 = 'article43';
-$VAR82 = {
-           'abstract' => undef,
-           'id' => 'article43',
-           'type' => 1,
-           'title' => 'Open Access, Open Content und gemeinfreies Kulturerbe',
-           'keywords' => {},
-           'uri' => 'http://vivo.mydomain.edu/individual/article43',
-           'year' => '2012',
-           'authors' => {
-                          '26' => 1
-                        }
-         };
-$VAR83 = 'article64';
-$VAR84 = {
-           'uri' => 'http://vivo.mydomain.edu/individual/article64',
-           'year' => undef,
-           'authors' => {
-                          '26' => 1
-                        },
-           'keywords' => {
-                           'conc89' => 1
-                         },
-           'type' => 1,
-           'title' => 'Das Netzwerk und die Institution',
-           'abstract' => undef,
-           'id' => 'article64'
-         };
-$VAR85 = 'article66';
-$VAR86 = {
-           'type' => 1,
-           'title' => 'Discovery Metadata - Metadata Standards vs. New Requirements',
-           'keywords' => {
-                           'conc67' => 1
-                         },
-           'uri' => 'http://vivo.mydomain.edu/individual/article66',
-           'year' => undef,
-           'authors' => {
-                          '26' => 1
-                        },
-           'id' => 'article66',
-           'abstract' => undef
-         };
-$VAR87 = 'article77';
-$VAR88 = {
-           'type' => 1,
-           'title' => 'The Quest for Research Information',
-           'keywords' => {
-                           'conc41' => 1
-                         },
-           'year' => undef,
-           'uri' => 'http://vivo.mydomain.edu/individual/article77',
-           'authors' => {
-                          '4' => 1
-                        },
-           'id' => 'article77',
-           'abstract' => undef
-         };
-$VAR89 = 'article51';
-$VAR90 = {
-           'year' => '2012',
-           'uri' => 'http://vivo.mydomain.edu/individual/article51',
-           'authors' => {
-                          '26' => 1
-                        },
-           'keywords' => {
-                           'conc74' => 1,
-                           'conc89' => 1
-                         },
-           'type' => 1,
-           'title' => 'Publikationsberatung: Neun Thesen vom #iCamp12',
-           'abstract' => undef,
-           'id' => 'article51'
-         };
-$VAR91 = 'article22';
-$VAR92 = {
-           'keywords' => {
-                           'n4364' => 1
-                         },
-           'year' => '2014',
-           'uri' => 'http://vivo.mydomain.edu/individual/article22',
-           'authors' => {
-                          '75' => 1
-                        },
-           'type' => 1,
-           'title' => 'Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems',
-           'abstract' => undef,
-           'id' => 'article22'
-         };
-$VAR93 = 'article5';
-$VAR94 = {
-           'id' => 'article5',
-           'abstract' => undef,
-           'title' => 'Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?',
-           'type' => 1,
-           'keywords' => {
-                           'conc77' => 1,
-                           'conc0' => 1
-                         },
-           'authors' => {
-                          '26' => 1
-                        },
-           'year' => '2013',
-           'uri' => 'http://vivo.mydomain.edu/individual/article5'
-         };
-$VAR95 = 'article39';
+$VAR95 = 'article69';
 $VAR96 = {
-           'id' => 'article39',
-           'abstract' => undef,
-           'title' => 'E-IRG White Paper 2013 ',
-           'type' => 1,
+           'authors' => {
+                          '4' => 1
+                        },
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article69',
+           'id' => 'article69',
            'keywords' => {
-                           'n3608' => 1
+                           'conc5' => 1,
+                           'conc35' => 1
                          },
+           'type' => 1,
+           'title' => 'Towards an automatic multi-label classification of 3D architectural models',
+           'abstract' => undef,
+           'year' => undef
+         };
+$VAR97 = 'article52';
+$VAR98 = {
+           'type' => 1,
+           'year' => '2012',
+           'abstract' => undef,
+           'title' => "1.000 Antworten auf die Frage: Literaturverwaltung \x{2014} Was benutzen Sie, was brauchen Sie?",
+           'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article52',
            'authors' => {
                           '26' => 1
                         },
-           'year' => '2013',
-           'uri' => 'http://vivo.mydomain.edu/individual/article39'
-         };
-$VAR97 = 'article48';
-$VAR98 = {
-           'id' => 'article48',
-           'abstract' => undef,
-           'title' => "Sieben Gr\x{fc}nde Zotero auszuprobieren",
-           'type' => 1,
            'keywords' => {
                            'conc61' => 1
                          },
-           'authors' => {
-                          '26' => 1
-                        },
-           'uri' => 'http://vivo.mydomain.edu/individual/article48',
-           'year' => '2012'
+           'id' => 'article52'
          };
-$VAR99 = 'article53';
+$VAR99 = 'article86';
 $VAR100 = {
-            'abstract' => undef,
-            'id' => 'article53',
+            'keywords' => {
+                            'conc54' => 1
+                          },
+            'id' => 'article86',
             'authors' => {
-                           '76' => 1
+                           '65' => 1
                          },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article86',
+            'title' => "GRASS GIS, Star Trek and old Video Tape \x{2013} a reference case on audiovisual preservation for the OSGeo communities",
+            'abstract' => undef,
+            'year' => undef,
+            'type' => 1
+          };
+$VAR101 = 'article32';
+$VAR102 = {
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article32',
+            'authors' => {
+                           '26' => 1
+                         },
+            'keywords' => {
+                            'conc78' => 1
+                          },
+            'id' => 'article32',
+            'type' => 1,
+            'title' => 'Aspekte der Kommunikation mit Wissenschaftsblogs',
+            'year' => '2014',
+            'abstract' => undef
+          };
+$VAR103 = 'article45';
+$VAR104 = {
+            'title' => 'arXiv - Veteran und Vorreiter',
             'year' => '2012',
-            'uri' => 'http://vivo.mydomain.edu/individual/article53',
+            'abstract' => undef,
+            'type' => 1,
+            'id' => 'article45',
             'keywords' => {
                             'conc0' => 1
                           },
-            'title' => "Open Access Week - Open Access f\x{fc}r Geisteswissenschaftler?",
-            'type' => 1
-          };
-$VAR101 = 'article40';
-$VAR102 = {
-            'type' => 1,
-            'title' => 'Speicherung & Datenverwaltung in Produktion und Archiv',
-            'keywords' => {
-                            'conc22' => 1,
-                            'conc6' => 1
-                          },
-            'uri' => 'http://vivo.mydomain.edu/individual/article40',
-            'year' => '2012',
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article45',
             'authors' => {
-                           '1' => 1
-                         },
-            'id' => 'article40',
-            'abstract' => undef
+                           '77' => 1
+                         }
           };
-$VAR103 = 'article24';
-$VAR104 = {
-            'id' => 'article24',
+$VAR105 = 'article43';
+$VAR106 = {
+            'type' => 1,
+            'year' => '2012',
+            'abstract' => undef,
+            'title' => 'Open Access, Open Content und gemeinfreies Kulturerbe',
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article43',
+            'authors' => {
+                           '26' => 1
+                         },
+            'id' => 'article43',
+            'keywords' => {
+                            'conc0' => 1
+                          }
+          };
+$VAR107 = 'article70';
+$VAR108 = {
+            'authors' => {
+                           '76' => 1
+                         },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article70',
+            'id' => 'article70',
+            'keywords' => {
+                            'conc62' => 1
+                          },
+            'type' => 1,
+            'abstract' => undef,
+            'year' => undef,
+            'title' => "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identit\x{e4}t im Kontext der Rassenideologie"
+          };
+$VAR109 = 'article51';
+$VAR110 = {
+            'title' => 'Publikationsberatung: Neun Thesen vom #iCamp12',
+            'year' => '2012',
             'abstract' => undef,
             'type' => 1,
-            'title' => 'Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon',
-            'uri' => 'http://vivo.mydomain.edu/individual/article24',
+            'keywords' => {
+                            'conc89' => 1,
+                            'conc74' => 1
+                          },
+            'id' => 'article51',
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article51',
+            'authors' => {
+                           '26' => 1
+                         }
+          };
+$VAR111 = 'article9';
+$VAR112 = {
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article9',
+            'authors' => {
+                           '67' => 1
+                         },
+            'id' => 'article9',
+            'keywords' => {
+                            'conc27' => 1,
+                            'conc24' => 1
+                          },
+            'type' => 1,
+            'year' => '2013',
+            'abstract' => undef,
+            'title' => 'Digitale Bibliothek und Portal GetInfo in der TIB Hannover'
+          };
+$VAR113 = 'article24';
+$VAR114 = {
+            'type' => 1,
             'year' => '2014',
+            'abstract' => undef,
+            'title' => 'Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon',
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article24',
             'authors' => {
                            '83' => 1
                          },
+            'id' => 'article24',
             'keywords' => {
                             'conc11' => 1
                           }
           };
-$VAR105 = 'article3';
-$VAR106 = {
-            'keywords' => {
-                            'n577' => 1,
-                            'g10' => 1
-                          },
-            'authors' => {
-                           '4' => 1
-                         },
-            'year' => '2012',
-            'uri' => 'http://vivo.mydomain.edu/individual/article3',
-            'title' => '3D @Technische Informationsbibliothek (TIB)',
-            'type' => 1,
-            'id' => 'article3',
-            'abstract' => 'Test Abstract. Delete it before real use.'
-          };
-$VAR107 = 'article23';
-$VAR108 = {
-            'type' => 1,
-            'title' => 'Wissen auf einen Klick',
-            'uri' => 'http://vivo.mydomain.edu/individual/article23',
-            'year' => '2014',
-            'authors' => {
-                           '26' => 1
-                         },
-            'keywords' => {
-                            'conc0' => 1
-                          },
-            'abstract' => undef,
-            'id' => 'article23'
-          };
-$VAR109 = 'article65';
-$VAR110 = {
-            'year' => undef,
-            'uri' => 'http://vivo.mydomain.edu/individual/article65',
-            'authors' => {
-                           '45' => 1
-                         },
-            'keywords' => {
-                            'conc54' => 1
-                          },
-            'type' => 1,
-            'title' => 'Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ',
-            'id' => 'article65',
-            'abstract' => undef
-          };
-$VAR111 = 'article32';
-$VAR112 = {
-            'title' => 'Aspekte der Kommunikation mit Wissenschaftsblogs',
-            'type' => 1,
-            'keywords' => {
-                            'conc78' => 1,
-                            'n398' => 1
-                          },
-            'authors' => {
-                           '26' => 1
-                         },
-            'uri' => 'http://vivo.mydomain.edu/individual/article32',
-            'year' => '2014',
-            'abstract' => undef,
-            'id' => 'article32'
-          };
-$VAR113 = 'article73';
-$VAR114 = {
-            'id' => 'article73',
-            'abstract' => undef,
-            'type' => 1,
-            'title' => "Building Information Modeling \x{2013} A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
-            'keywords' => {
-                            'conc54' => 1
-                          },
-            'uri' => 'http://vivo.mydomain.edu/individual/article73',
-            'year' => undef,
-            'authors' => {
-                           '45' => 1
-                         }
-          };
 $VAR115 = 'article14';
 $VAR116 = {
-            'title' => "Linked Heritage  - ein europ\x{e4}isches Projekt",
             'type' => 1,
+            'title' => "Linked Heritage\x{a0}\x{a0}- ein europ\x{e4}isches Projekt",
+            'year' => '2013',
+            'abstract' => undef,
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article14',
             'authors' => {
                            '50' => 1
                          },
-            'uri' => 'http://vivo.mydomain.edu/individual/article14',
-            'year' => '2013',
-            'keywords' => {
-                            'n8148' => 1
-                          },
             'id' => 'article14',
-            'abstract' => undef
+            'keywords' => {}
+          };
+$VAR117 = 'article42';
+$VAR118 = {
+            'type' => 1,
+            'abstract' => undef,
+            'year' => '2012',
+            'title' => 'Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken',
+            'authors' => {
+                           '58' => 1
+                         },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article42',
+            'id' => 'article42',
+            'keywords' => {
+                            'conc81' => 1
+                          }
+          };
+$VAR119 = 'article27';
+$VAR120 = {
+            'authors' => {
+                           '65' => 1,
+                           '43' => 1,
+                           '56' => 1
+                         },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article27',
+            'id' => 'article27',
+            'keywords' => {
+                            'conc73' => 1
+                          },
+            'type' => 1,
+            'abstract' => undef,
+            'year' => '2014',
+            'title' => 'TIB\'s Portal for Audiovisual Media: Combining Manual and Automatic Indexing'
+          };
+$VAR121 = 'article50';
+$VAR122 = {
+            'id' => 'article50',
+            'keywords' => {
+                            'conc78' => 1
+                          },
+            'authors' => {
+                           '26' => 1
+                         },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article50',
+            'abstract' => undef,
+            'year' => undef,
+            'title' => "ForscherInnen gemeinsam neue Wege im Web er\x{f6}ffnen \x{2014} Das Open Science Lab der TIB Hannover",
+            'type' => 1
+          };
+$VAR123 = 'article6';
+$VAR124 = {
+            'authors' => {
+                           '26' => 1
+                         },
+            'uri' => 'http://test.osl.tib.eu/vivo-test/individual/article6',
+            'id' => 'article6',
+            'keywords' => {
+                            'conc53' => 1,
+                            'conc78' => 1
+                          },
+            'type' => 1,
+            'abstract' => undef,
+            'year' => '2013',
+            'title' => "Peer-to-peer und Dezentralit\x{e4}t - von den Wurzeln des Netzes zu den aktuellen Trends"
           };
