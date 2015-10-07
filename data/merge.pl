@@ -66,6 +66,8 @@ my @imp_publications = @{ $dec_publications->{'results'}->{'bindings'} };
 my @imp_keywords = @{ $dec_keywords->{'results'}->{'bindings'} };
 my @imp_projects = @{ $dec_projects->{'results'}->{'bindings'} };
 
+sub  trim { my $s = shift; $s =~ s/^\s+|\s+$//g; return $s };
+
 foreach my $publication (@imp_publications) {
   if($publication->{'authors'}){
     my $id = $publication->{'id'}->{'value'};
@@ -73,7 +75,7 @@ foreach my $publication (@imp_publications) {
     my %lkeywords;
     my $uri_length = rindex($id, '/') + 1;
     $id = substr $id, $uri_length;
-    my $title = $publication->{'title'}->{'value'};
+    my $title = trim($publication->{'title'}->{'value'});
     my $count = $publication->{'count'}->{'value'};
     my $uri = $publication->{'uri'}->{'value'};
     my $abstract = $publication->{'abstract'}->{'value'};
@@ -111,7 +113,7 @@ foreach my $author (@imp_authors) {
   my $id = $author->{'id'}->{'value'};
   my $uri_length = rindex($id, '/') + 1;
   $id = substr $id, $uri_length;
-  my $name = $author->{'name'}->{'value'};
+  my $name = trim($author->{'name'}->{'value'});
   my @name_parts = split(',  ', $name);
   my $fullname;
   if($name_parts[1]){
@@ -159,7 +161,7 @@ foreach my $keyword (@imp_keywords) {
   my $id = $keyword->{'id'}->{'value'};
   my $uri_length = rindex($id, '/') + 1;
   $id = substr $id, $uri_length;
-  my $title = $keyword->{'title'}->{'value'};
+  my $title = trim($keyword->{'title'}->{'value'});
   my $count = $keyword->{'count'}->{'value'};
   my $uri = $keyword->{'uri'}->{'value'};
   my @pubs = split('; ', $keyword->{'publications'}->{'value'});
@@ -177,7 +179,7 @@ foreach my $project (@imp_projects) {
   my $id = $project->{'id'}->{'value'};
   my $uri_length = rindex($id, '/') + 1;
   $id = substr $id, $uri_length;
-  my $title = $project->{'title'}->{'value'};
+  my $title = trim($project->{'title'}->{'value'});
   my $count = $project->{'count'}->{'value'};
   my $start = $project->{'start'}->{'value'};
   my $end = $project->{'end'}->{'value'};

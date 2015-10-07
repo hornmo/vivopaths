@@ -1,32 +1,1723 @@
 {
    "keywords" : {
-      "conc6" : {
-         "id" : "conc6",
-         "keywords" : {
-            "conc22" : 1,
-            "conc6" : 1,
-            "conc35" : 1
+      "g5" : {
+         "count" : "0",
+         "abstract" : "Entwicklung einer nachnutzbaren und flexiblen Infrastruktur für die Langzeitarchivierung",
+         "investigators" : {
+            "1" : 1
          },
-         "count" : "3",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc6",
+         "publications" : {},
+         "type" : 2,
+         "id" : "g5",
+         "start" : "2010",
+         "end" : "2012",
+         "title" : "DP4lib",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g5"
+      },
+      "g22" : {
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "27" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Koordinierung, Organisationsentwicklung, strategische Steuerung des Wissenschaftsportals vascoda",
+         "title" : "vascoda",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g22",
+         "end" : "2007",
+         "id" : "g22",
+         "start" : "2005"
+      },
+      "conc62" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc62",
+         "title" : "Literaturwissenschaften",
+         "id" : "conc62",
+         "type" : 2,
+         "publications" : {
+            "article70" : 1
+         },
+         "keywords" : {
+            "conc62" : 1
+         },
+         "authors" : {
+            "76" : 1
+         },
+         "count" : "1"
+      },
+      "conc35" : {
+         "count" : "2",
+         "authors" : {
+            "55" : 1,
+            "4" : 1
+         },
+         "keywords" : {
+            "conc5" : 1,
+            "conc35" : 1,
+            "conc6" : 1
+         },
          "publications" : {
             "article30" : 1,
-            "article81" : 1,
+            "article69" : 1
+         },
+         "type" : 2,
+         "id" : "conc35",
+         "title" : "Erschließung",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc35"
+      },
+      "conc63" : {
+         "count" : "2",
+         "keywords" : {
+            "conc73" : 1,
+            "conc63" : 1
+         },
+         "authors" : {
+            "56" : 1,
+            "80" : 1,
+            "6" : 1
+         },
+         "publications" : {
+            "article33" : 1,
+            "article63" : 1
+         },
+         "type" : 2,
+         "id" : "conc63",
+         "title" : "Lizenz",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc63"
+      },
+      "g12" : {
+         "count" : "0",
+         "abstract" : "Virtuelle Fachbibliothek Chemie II",
+         "investigators" : {
+            "74" : 1,
+            "39" : 1
+         },
+         "publications" : {},
+         "type" : 2,
+         "start" : "2008",
+         "id" : "g12",
+         "end" : "2010",
+         "title" : "ViFaChem II",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g12"
+      },
+      "g0" : {
+         "investigators" : {
+            "9" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Entwicklung, Umsetzung und Professionalisierung eines Verwertungskonzeptes an der TIB.",
+         "publications" : {},
+         "type" : 2,
+         "end" : "2014",
+         "start" : "2011",
+         "id" : "g0",
+         "title" : "TIB-Transfer",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g0"
+      },
+      "conc81" : {
+         "count" : "1",
+         "keywords" : {
+            "conc81" : 1
+         },
+         "publications" : {
+            "article42" : 1
+         },
+         "authors" : {
+            "58" : 1
+         },
+         "type" : 2,
+         "id" : "conc81",
+         "title" : "Personalmanagement",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc81"
+      },
+      "g17" : {
+         "start" : "2006",
+         "id" : "g17",
+         "end" : "2008",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g17",
+         "title" : "Online-Datenbanken",
+         "abstract" : "Überregionale Bereitstellung von technisch-naturwissenschaftlichen Online-Datenbanken.",
+         "count" : "0",
+         "investigators" : {
+            "5" : 1,
+            "74" : 1
+         },
+         "type" : 2,
+         "publications" : {}
+      },
+      "conc4" : {
+         "id" : "conc4",
+         "count" : "2",
+         "title" : "3D-Druck",
+         "publications" : {},
+         "type" : 2,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc4"
+      },
+      "conc89" : {
+         "title" : "Publizieren",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc89",
+         "id" : "conc89",
+         "authors" : {
+            "26" : 1,
+            "76" : 1
+         },
+         "keywords" : {
+            "conc89" : 1,
+            "conc74" : 1
+         },
+         "publications" : {
+            "article51" : 1,
+            "article54" : 1
+         },
+         "type" : 2,
+         "count" : "2"
+      },
+      "g15" : {
+         "count" : "0",
+         "abstract" : "Chinesisch-Deutsche Kooperationsgruppe",
+         "investigators" : {
+            "68" : 1,
+            "74" : 1
+         },
+         "publications" : {},
+         "type" : 2,
+         "id" : "g15",
+         "start" : "2006",
+         "end" : "2009",
+         "title" : "Digitale Informationsversorgung",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g15"
+      },
+      "g32" : {
+         "end" : "Fri Feb 28 00:00:00 CET 2014",
+         "start" : "Thu Mar 01 00:00:00 CET 2012",
+         "id" : "g32",
+         "title" : "DeLiVerMATH",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g32",
+         "investigators" : {
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Dokumenterschließung und Retrieval für die Literaturversorgung in Virtuellen Forschungsumgebungen der Mathematik",
+         "publications" : {},
+         "type" : 2
+      },
+      "g16" : {
+         "type" : 2,
+         "publications" : {},
+         "investigators" : {
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Virtuelle Fachbibliothek Mathematik",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g16",
+         "title" : "ViFaMath",
+         "end" : "2009",
+         "id" : "g16",
+         "start" : "2007"
+      },
+      "g18" : {
+         "end" : "2007",
+         "id" : "g18",
+         "start" : "2005",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g18",
+         "title" : "GetInfo-Portal",
+         "investigators" : {
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Informationsangebot \"Naturwissenschaft und Technik\"",
+         "type" : 2,
+         "publications" : {}
+      },
+      "g8" : {
+         "title" : "Knowledge Exchange",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g8",
+         "end" : "2011",
+         "id" : "g8",
+         "start" : "2008",
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "5" : 1
+         },
+         "count" : "0",
+         "abstract" : "Initiative nationaler Fördereinrichtungen zum Ausbau der Informations- und Kommunikationstechnologie für Forschung und Lehre"
+      },
+      "conc78" : {
+         "id" : "conc78",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc78",
+         "title" : "Open Science",
+         "count" : "5",
+         "type" : 2,
+         "keywords" : {
+            "conc53" : 1,
+            "conc78" : 1
+         },
+         "authors" : {
+            "26" : 1
+         },
+         "publications" : {
+            "article6" : 1,
+            "article32" : 1,
+            "article50" : 1
+         }
+      },
+      "g9" : {
+         "count" : "0",
+         "abstract" : "Sicherung des Zugriffs auf elektronische Zeitschriftenarchive und Bücher für Hochschulen und außeruniversitäre Forschungseinrichtungen",
+         "investigators" : {
+            "5" : 1
+         },
+         "publications" : {},
+         "type" : 2,
+         "start" : "2002",
+         "id" : "g9",
+         "end" : "2010",
+         "title" : "Nationallizenzen",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g9"
+      },
+      "conc53" : {
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {
+            "conc78" : 1,
+            "conc53" : 1
+         },
+         "publications" : {
+            "article6" : 1
+         },
+         "type" : 2,
+         "count" : "1",
+         "title" : "Kollaboration",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc53",
+         "id" : "conc53"
+      },
+      "conc55" : {
+         "count" : "1",
+         "type" : 2,
+         "authors" : {
+            "47" : 1
+         },
+         "keywords" : {
+            "conc55" : 1
+         },
+         "publications" : {
+            "article16" : 1
+         },
+         "id" : "conc55",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc55",
+         "title" : "Lernort"
+      },
+      "g4" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g4",
+         "title" : "Linked Heritage",
+         "id" : "g4",
+         "start" : "2010",
+         "end" : "2013",
+         "type" : 2,
+         "publications" : {},
+         "count" : "0",
+         "abstract" : "Erweiterung des durchsuchbaren Contents der Europeana",
+         "investigators" : {
+            "50" : 1,
+            "74" : 1
+         }
+      },
+      "conc22" : {
+         "title" : "Datenverwaltung",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc22",
+         "id" : "conc22",
+         "authors" : {
+            "1" : 1
+         },
+         "keywords" : {
+            "conc22" : 1,
+            "conc6" : 1
+         },
+         "publications" : {
             "article40" : 1
          },
+         "type" : 2,
+         "count" : "1"
+      },
+      "g19" : {
+         "id" : "g19",
+         "start" : "2001",
+         "end" : "2007",
+         "title" : "INTAS",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g19",
+         "count" : "0",
+         "abstract" : "International Association for the promotion of cooperation with scientists from the Independent States of the former Soviet Union",
+         "investigators" : {
+            "68" : 1
+         },
+         "publications" : {},
+         "type" : 2
+      },
+      "conc30" : {
+         "id" : "conc30",
+         "title" : "DOI",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc30",
+         "count" : "5",
+         "keywords" : {
+            "conc30" : 1,
+            "conc19" : 1
+         },
+         "publications" : {
+            "article58" : 1,
+            "article26" : 1,
+            "article57" : 1
+         },
+         "authors" : {
+            "56" : 1,
+            "6" : 1
+         },
+         "type" : 2
+      },
+      "conc85" : {
+         "count" : "1",
+         "id" : "conc85",
+         "publications" : {},
+         "title" : "Projektmanagement",
+         "type" : 2,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc85"
+      },
+      "conc67" : {
+         "keywords" : {
+            "conc77" : 1,
+            "conc67" : 1
+         },
+         "authors" : {
+            "12" : 1,
+            "56" : 1,
+            "26" : 1
+         },
+         "publications" : {
+            "article66" : 1,
+            "article13" : 1
+         },
+         "type" : 2,
+         "count" : "2",
+         "title" : "Metadaten",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc67",
+         "id" : "conc67"
+      },
+      "conc97" : {
+         "id" : "conc97",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc97",
+         "title" : "Semantic Web",
+         "count" : "2",
+         "type" : 2,
+         "authors" : {
+            "65" : 1,
+            "75" : 1
+         },
+         "keywords" : {
+            "conc97" : 1
+         },
+         "publications" : {
+            "article22" : 1,
+            "article21" : 1
+         }
+      },
+      "g27" : {
+         "investigators" : {
+            "40" : 1,
+            "46" : 1
+         },
+         "abstract" : "Research Data Repositorium",
+         "count" : "0",
+         "type" : 2,
+         "publications" : {},
+         "end" : "Mon Aug 31 00:00:00 CEST 2015",
+         "start" : "Sun Sep 01 00:00:00 CEST 2013",
+         "id" : "g27",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g27",
+         "title" : "RADAR"
+      },
+      "g28" : {
+         "count" : "0",
+         "abstract" : "Durable Architectural Knowledge",
+         "investigators" : {
+            "10" : 1
+         },
+         "publications" : {},
+         "type" : 2,
+         "start" : "Fri Feb 01 00:00:00 CET 2013",
+         "id" : "g28",
+         "end" : "Sun Jan 31 00:00:00 CET 2016",
+         "title" : "DURAARK",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g28"
+      },
+      "conc77" : {
+         "authors" : {
+            "26" : 1,
+            "12" : 1,
+            "56" : 1
+         },
+         "keywords" : {
+            "conc0" : 1,
+            "conc67" : 1,
+            "conc77" : 1
+         },
+         "publications" : {
+            "article13" : 1,
+            "article5" : 1
+         },
+         "type" : 2,
+         "count" : "2",
+         "title" : "Open Educational Resources",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc77",
+         "id" : "conc77"
+      },
+      "conc27" : {
+         "publications" : {
+            "article9" : 1,
+            "article17" : 1
+         },
+         "keywords" : {
+            "conc24" : 1,
+            "conc27" : 1
+         },
+         "authors" : {
+            "77" : 1,
+            "67" : 1,
+            "27" : 1
+         },
+         "type" : 2,
+         "count" : "2",
+         "title" : "discovery system",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc27",
+         "id" : "conc27"
+      },
+      "g14" : {
+         "title" : "CODATA",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g14",
+         "end" : "2009",
+         "id" : "g14",
+         "start" : "2006",
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "6" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Etablierung der Publikation und Registrierung wissenschaftlicher Daten als eigenständigen, fächerübergreifenden Wissenschaftsservice"
+      },
+      "g3" : {
+         "title" : "arXiv-DH",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g3",
+         "end" : "2013",
+         "id" : "g3",
+         "start" : "2011",
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "74" : 1,
+            "77" : 1
+         },
+         "count" : "0",
+         "abstract" : "Entwicklung eines Modells zur gemeinschaftlichen Finanzierung der Open Access-Plattform arXiv für deutsche Hochschulen und weitere Einrichtungen."
+      },
+      "conc0" : {
+         "type" : 2,
+         "keywords" : {
+            "conc77" : 1,
+            "conc0" : 1
+         },
+         "authors" : {
+            "26" : 1,
+            "68" : 1,
+            "76" : 1,
+            "77" : 1,
+            "80" : 1
+         },
+         "publications" : {
+            "article23" : 1,
+            "article53" : 1,
+            "article7" : 1,
+            "article45" : 1,
+            "article5" : 1,
+            "article43" : 1,
+            "article60" : 1,
+            "article34" : 1,
+            "article46" : 1,
+            "article47" : 1
+         },
+         "count" : "11",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc0",
+         "title" : "Open Access",
+         "id" : "conc0"
+      },
+      "g1" : {
+         "investigators" : {
+            "65" : 1
+         },
+         "count" : "0",
+         "abstract" : "Entwicklung eines Portals für audiovisuelle Medien mit innovativen Multimedia Retrieval Techniken.",
+         "type" : 2,
+         "publications" : {},
+         "end" : "2014",
+         "id" : "g1",
+         "start" : "2011",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g1",
+         "title" : "AV-Portal"
+      },
+      "conc5" : {
+         "count" : "4",
+         "type" : 2,
+         "publications" : {
+            "article71" : 1,
+            "article69" : 1
+         },
+         "keywords" : {
+            "conc35" : 1,
+            "conc54" : 1,
+            "conc5" : 1
+         },
+         "authors" : {
+            "45" : 1,
+            "4" : 1
+         },
+         "id" : "conc5",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc5",
+         "title" : "3D-Modell"
+      },
+      "g10" : {
+         "end" : "2010",
+         "id" : "g10",
+         "start" : "2005",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g10",
+         "title" : "PROBABO",
+         "investigators" : {
+            "74" : 1,
+            "4" : 1
+         },
+         "count" : "2",
+         "abstract" : "Erschließung, Bereitstellung und Suche nach 3D-Modellen",
+         "type" : 2,
+         "keywords" : {
+            "g10" : 1
+         },
+         "authors" : {
+            "74" : 1,
+            "4" : 1
+         },
+         "publications" : {
+            "article3" : 1,
+            "article4" : 1
+         }
+      },
+      "conc73" : {
+         "title" : "nicht-textuelle Materialen",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc73",
+         "id" : "conc73",
+         "authors" : {
+            "6" : 1,
+            "43" : 1,
+            "56" : 1,
+            "65" : 1
+         },
+         "keywords" : {
+            "conc63" : 1,
+            "conc73" : 1
+         },
+         "publications" : {
+            "article74" : 1,
+            "article63" : 1,
+            "article27" : 1
+         },
+         "type" : 2,
+         "count" : "4"
+      },
+      "conc48" : {
+         "title" : "Informationskompetenz",
+         "publications" : {},
+         "type" : 2,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc48",
+         "id" : "conc48",
+         "count" : "1"
+      },
+      "g23" : {
+         "end" : "2007",
+         "start" : "2005",
+         "id" : "g23",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g23",
+         "title" : "ViFaChem",
+         "investigators" : {
+            "39" : 1,
+            "74" : 1
+         },
+         "abstract" : "Virtuelle Fachbibliothek Chemie",
+         "count" : "0",
+         "type" : 2,
+         "publications" : {}
+      },
+      "g21" : {
+         "id" : "g21",
+         "start" : "2005",
+         "end" : "2007",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g21",
+         "title" : "TEMPUS",
+         "count" : "0",
+         "abstract" : "Building Digital Educational Services and Content Creation Centre in Yerevan State University library",
+         "investigators" : {
+            "74" : 1
+         },
+         "type" : 2,
+         "publications" : {}
+      },
+      "conc106" : {
+         "type" : 2,
+         "authors" : {
+            "27" : 1,
+            "76" : 1,
+            "68" : 1
+         },
+         "keywords" : {
+            "conc24" : 1,
+            "conc106" : 1
+         },
+         "publications" : {
+            "article41" : 1
+         },
+         "count" : "1",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc106",
+         "title" : "Virtuelle Fachbibliothek",
+         "id" : "conc106"
+      },
+      "conc41" : {
+         "id" : "conc41",
+         "title" : "Forschungsinformationssystem",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc41",
+         "count" : "4",
+         "keywords" : {
+            "conc41" : 1
+         },
+         "publications" : {
+            "article80" : 1,
+            "article76" : 1,
+            "article77" : 1
+         },
+         "authors" : {
+            "26" : 1,
+            "4" : 1,
+            "48" : 1
+         },
+         "type" : 2
+      },
+      "conc18" : {
+         "count" : "1",
+         "id" : "conc18",
+         "title" : "Data Science",
+         "publications" : {},
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc18",
+         "type" : 2
+      },
+      "conc19" : {
+         "title" : "DataCite",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc19",
+         "id" : "conc19",
+         "authors" : {
+            "56" : 1,
+            "6" : 1
+         },
+         "keywords" : {
+            "conc19" : 1,
+            "conc30" : 1
+         },
+         "publications" : {
+            "article58" : 1,
+            "article57" : 1,
+            "article26" : 1
+         },
+         "type" : 2,
+         "count" : "5"
+      },
+      "conc54" : {
+         "count" : "6",
+         "type" : 2,
+         "keywords" : {
+            "conc5" : 1,
+            "conc54" : 1
+         },
+         "authors" : {
+            "65" : 1,
+            "45" : 1
+         },
+         "publications" : {
+            "article71" : 1,
+            "article65" : 1,
+            "article86" : 1,
+            "article73" : 1
+         },
+         "id" : "conc54",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc54",
+         "title" : "Langzeitarchivierung"
+      },
+      "conc24" : {
+         "count" : "3",
+         "publications" : {
+            "article41" : 1,
+            "article9" : 1,
+            "article18" : 1
+         },
+         "keywords" : {
+            "conc24" : 1,
+            "conc27" : 1,
+            "conc106" : 1
+         },
+         "authors" : {
+            "67" : 1,
+            "27" : 1,
+            "68" : 1,
+            "76" : 1
+         },
+         "type" : 2,
+         "id" : "conc24",
+         "title" : "digitale Bibliothek",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc24"
+      },
+      "conc32" : {
+         "count" : "3",
+         "type" : 2,
+         "publications" : {
+            "article19" : 1,
+            "article20" : 1,
+            "article12" : 1
+         },
+         "keywords" : {
+            "conc32" : 1
+         },
+         "authors" : {
+            "5" : 1,
+            "61" : 1,
+            "76" : 1,
+            "68" : 1
+         },
+         "id" : "conc32",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc32",
+         "title" : "Dokumentlieferung"
+      },
+      "conc11" : {
+         "count" : "4",
+         "type" : 2,
+         "publications" : {
+            "article10" : 1,
+            "article15" : 1,
+            "article24" : 1
+         },
+         "keywords" : {
+            "conc74" : 1,
+            "conc11" : 1
+         },
+         "authors" : {
+            "83" : 1,
+            "17" : 1,
+            "68" : 1,
+            "6" : 1,
+            "74" : 1
+         },
+         "id" : "conc11",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc11",
+         "title" : "Bibliothek"
+      },
+      "conc74" : {
+         "keywords" : {
+            "conc11" : 1,
+            "conc89" : 1,
+            "conc74" : 1
+         },
+         "authors" : {
+            "26" : 1,
+            "17" : 1
+         },
+         "publications" : {
+            "article15" : 1,
+            "article51" : 1,
+            "article49" : 1
+         },
+         "type" : 2,
+         "count" : "4",
+         "title" : "Nutzungsrechte",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc74",
+         "id" : "conc74"
+      },
+      "g24" : {
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Virtuelle Fachbibliothek Holztechnologie",
+         "title" : "ViFaHolz",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g24",
+         "end" : "2004",
+         "start" : "2003",
+         "id" : "g24"
+      },
+      "g26" : {
+         "type" : 2,
+         "publications" : {},
+         "investigators" : {
+            "6" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Kompetenzzentrum für Forschungsdaten aus Erde und Umwelt",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g26",
+         "title" : "KomFor",
+         "end" : "Mon Jun 30 00:00:00 CEST 2014",
+         "start" : "Fri Jul 01 00:00:00 CEST 2011",
+         "id" : "g26"
+      },
+      "conc6" : {
+         "title" : "Archiv",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc6",
+         "id" : "conc6",
          "authors" : {
             "55" : 1,
             "1" : 1
          },
-         "title" : "Archiv",
-         "type" : 2
-      },
-      "conc22" : {
-         "count" : "1",
-         "publications" : {
-            "article40" : 1
+         "keywords" : {
+            "conc35" : 1,
+            "conc6" : 1,
+            "conc22" : 1
          },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc22",
+         "publications" : {
+            "article30" : 1,
+            "article40" : 1,
+            "article81" : 1
+         },
+         "type" : 2,
+         "count" : "3"
+      },
+      "g13" : {
+         "title" : "LINSearch",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g13",
+         "end" : "2009",
+         "start" : "2006",
+         "id" : "g13",
+         "publications" : {},
+         "type" : 2,
+         "investigators" : {
+            "19" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Linguistisches Indexieren und Suchen."
+      },
+      "g2" : {
+         "count" : "0",
+         "abstract" : "Visueller Zugang zu Forschungsdaten",
+         "investigators" : {
+            "39" : 1,
+            "74" : 1
+         },
+         "type" : 2,
+         "publications" : {},
+         "id" : "g2",
+         "start" : "2010",
+         "end" : "2013",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g2",
+         "title" : "VisInfo"
+      },
+      "conc39" : {
+         "title" : "Forschungsdaten",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc39",
+         "id" : "conc39",
+         "publications" : {
+            "article31" : 1,
+            "article25" : 1
+         },
+         "keywords" : {
+            "conc39" : 1
+         },
+         "authors" : {
+            "56" : 1
+         },
+         "type" : 2,
+         "count" : "3"
+      },
+      "conc61" : {
+         "keywords" : {
+            "conc61" : 1
+         },
+         "authors" : {
+            "26" : 1
+         },
+         "publications" : {
+            "article52" : 1
+         },
+         "type" : 2,
+         "count" : "1",
+         "title" : "Literaturverwaltung",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc61",
+         "id" : "conc61"
+      },
+      "g6" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g6",
+         "title" : "vascoda 2010",
+         "end" : "2011",
+         "id" : "g6",
+         "start" : "2009",
+         "type" : 2,
+         "publications" : {},
+         "investigators" : {
+            "27" : 1,
+            "74" : 1
+         },
+         "count" : "0",
+         "abstract" : "Funktionale und inhaltliche Erweiterung des Einstiegsportals vascoda und der Fachportale"
+      },
+      "conc25" : {
+         "count" : "1",
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {
+            "conc25" : 1
+         },
+         "publications" : {
+            "article64" : 1
+         },
+         "type" : 2,
+         "id" : "conc25",
+         "title" : "digitales Publizieren",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc25"
+      },
+      "g20" : {
+         "end" : "2007",
+         "start" : "2004",
+         "id" : "g20",
+         "title" : "RusDML",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g20",
+         "investigators" : {
+            "76" : 1
+         },
+         "count" : "0",
+         "abstract" : "Russian Digital Mathematics Library",
+         "publications" : {},
+         "type" : 2
+      }
+   },
+   "publications" : {
+      "article78" : {
+         "id" : "article78",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article78",
+         "title" : "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession",
+         "abstract" : null,
+         "type" : 1,
+         "year" : null,
+         "authors" : {
+            "4" : 1
+         },
+         "keywords" : {}
+      },
+      "article46" : {
+         "id" : "article46",
+         "title" : "arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article46",
+         "abstract" : null,
+         "authors" : {
+            "77" : 1
+         },
+         "keywords" : {
+            "conc0" : 1
+         },
+         "year" : "2012",
+         "type" : 1
+      },
+      "article34" : {
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "80" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "id" : "article34",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article34",
+         "title" : "Open Access"
+      },
+      "article18" : {
+         "abstract" : null,
+         "year" : "2014",
+         "authors" : {
+            "67" : 1
+         },
+         "keywords" : {
+            "conc24" : 1
+         },
+         "type" : 1,
+         "id" : "article18",
+         "title" : "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article18"
+      },
+      "article33" : {
+         "id" : "article33",
+         "title" : "Freie Lizenzen und Nachnutzung",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article33",
+         "abstract" : null,
+         "year" : "2014",
+         "authors" : {
+            "56" : 1,
+            "80" : 1
+         },
+         "keywords" : {
+            "conc63" : 1
+         },
+         "type" : 1
+      },
+      "article69" : {
+         "type" : 1,
+         "year" : null,
+         "authors" : {
+            "4" : 1
+         },
+         "keywords" : {
+            "conc35" : 1,
+            "conc5" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article69",
+         "title" : "Towards an automatic multi-label classification of 3D architectural models",
+         "id" : "article69"
+      },
+      "article24" : {
+         "type" : 1,
+         "keywords" : {
+            "conc11" : 1
+         },
+         "authors" : {
+            "83" : 1
+         },
+         "year" : "2014",
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article24",
+         "title" : "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon",
+         "id" : "article24"
+      },
+      "article49" : {
+         "id" : "article49",
+         "title" : "\"Wow, someone wants to publish me!\" — Revisited",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article49",
+         "abstract" : null,
+         "keywords" : {
+            "conc74" : 1
+         },
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2012",
+         "type" : 1
+      },
+      "article22" : {
+         "id" : "article22",
+         "title" : "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article22",
+         "abstract" : null,
+         "keywords" : {
+            "conc97" : 1
+         },
+         "authors" : {
+            "75" : 1
+         },
+         "year" : "2014",
+         "type" : 1
+      },
+      "article65" : {
+         "id" : "article65",
+         "title" : "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article65",
+         "abstract" : null,
+         "authors" : {
+            "45" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc54" : 1
+         },
+         "type" : 1
+      },
+      "article14" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article14",
+         "title" : "Linked Heritage  - ein europäisches Projekt",
+         "id" : "article14",
+         "type" : 1,
+         "authors" : {
+            "50" : 1
+         },
+         "year" : "2013",
+         "keywords" : {},
+         "abstract" : null
+      },
+      "article41" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article41",
+         "title" : "Bibliotheksverbünde, Virtuelle Fachbibliotheken",
+         "id" : "article41",
+         "type" : 1,
+         "authors" : {
+            "27" : 1,
+            "76" : 1,
+            "68" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc106" : 1,
+            "conc24" : 1
+         },
+         "abstract" : null
+      },
+      "article32" : {
+         "year" : "2014",
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {
+            "conc78" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Aspekte der Kommunikation mit Wissenschaftsblogs",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article32",
+         "id" : "article32"
+      },
+      "article3" : {
+         "authors" : {
+            "4" : 1,
+            "74" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "g10" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "3D @Technische Informationsbibliothek (TIB)",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article3",
+         "id" : "article3"
+      },
+      "article81" : {
+         "title" : "Resümee: Was bleibt mir von dieser Tagung ?",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article81",
+         "id" : "article81",
+         "authors" : {
+            "55" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc6" : 1
+         },
+         "type" : 1,
+         "abstract" : null
+      },
+      "article5" : {
+         "abstract" : null,
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {
+            "conc77" : 1,
+            "conc0" : 1
+         },
+         "year" : "2013",
+         "type" : 1,
+         "id" : "article5",
+         "title" : "Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article5"
+      },
+      "article19" : {
+         "type" : 1,
+         "authors" : {
+            "5" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc32" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article19",
+         "title" : "Current developments in document delivery in Germany",
+         "id" : "article19"
+      },
+      "article25" : {
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "56" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc39" : 1
+         },
+         "id" : "article25",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article25",
+         "title" : "RADAR – Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft"
+      },
+      "article30" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article30",
+         "title" : "Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext.",
+         "id" : "article30",
+         "type" : 1,
+         "authors" : {
+            "55" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc6" : 1,
+            "conc35" : 1
+         },
+         "abstract" : null
+      },
+      "article73" : {
+         "abstract" : null,
+         "authors" : {
+            "45" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc54" : 1
+         },
+         "type" : 1,
+         "id" : "article73",
+         "title" : "Building Information Modeling – A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article73"
+      },
+      "article50" : {
+         "type" : 1,
+         "year" : null,
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {
+            "conc78" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article50",
+         "title" : "ForscherInnen gemeinsam neue Wege im Web eröffnen — Das Open Science Lab der TIB Hannover",
+         "id" : "article50"
+      },
+      "article71" : {
+         "authors" : {
+            "45" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc54" : 1,
+            "conc5" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article71",
+         "id" : "article71"
+      },
+      "article39" : {
+         "abstract" : null,
+         "type" : 1,
+         "year" : "2013",
+         "authors" : {
+            "26" : 1
+         },
+         "keywords" : {},
+         "id" : "article39",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article39",
+         "title" : "E-IRG White Paper 2013"
+      },
+      "article80" : {
+         "year" : null,
+         "authors" : {
+            "4" : 1
+         },
+         "keywords" : {
+            "conc41" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "VIVO for Scientific Communities - Making researchers & their activities discoverable",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article80",
+         "id" : "article80"
+      },
+      "article10" : {
+         "id" : "article10",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article10",
+         "title" : "Development Thinking and Practice on the German National Science and Technology Library",
+         "abstract" : null,
+         "type" : 1,
+         "year" : "2013",
+         "authors" : {
+            "74" : 1,
+            "68" : 1,
+            "6" : 1
+         },
+         "keywords" : {
+            "conc11" : 1
+         }
+      },
+      "article54" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article54",
+         "title" : "Präsentationsfolien als Buch - wer braucht das?",
+         "id" : "article54",
+         "type" : 1,
+         "year" : "2012",
+         "authors" : {
+            "76" : 1
+         },
+         "keywords" : {
+            "conc89" : 1
+         },
+         "abstract" : null
+      },
+      "article57" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article57",
+         "title" : "DataCite search - part 2",
+         "id" : "article57",
+         "type" : 1,
+         "year" : "2012",
+         "authors" : {
+            "6" : 1
+         },
+         "keywords" : {
+            "conc19" : 1,
+            "conc30" : 1
+         },
+         "abstract" : null
+      },
+      "article17" : {
+         "type" : 1,
+         "year" : "2014",
+         "authors" : {
+            "27" : 1,
+            "77" : 1
+         },
+         "keywords" : {
+            "conc27" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article17",
+         "title" : "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten",
+         "id" : "article17"
+      },
+      "article77" : {
+         "id" : "article77",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article77",
+         "title" : "The Quest for Research Information",
+         "abstract" : null,
+         "type" : 1,
+         "year" : null,
+         "authors" : {
+            "48" : 1,
+            "26" : 1,
+            "4" : 1
+         },
+         "keywords" : {
+            "conc41" : 1
+         }
+      },
+      "article21" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article21",
+         "title" : "Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition",
+         "id" : "article21",
+         "type" : 1,
+         "authors" : {
+            "75" : 1,
+            "65" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc97" : 1
+         },
+         "abstract" : null
+      },
+      "article13" : {
+         "keywords" : {
+            "conc67" : 1,
+            "conc77" : 1
+         },
+         "authors" : {
+            "56" : 1,
+            "12" : 1
+         },
+         "year" : "2013",
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB).",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article13",
+         "id" : "article13"
+      },
+      "article70" : {
+         "id" : "article70",
+         "title" : "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article70",
+         "abstract" : null,
+         "year" : null,
+         "authors" : {
+            "76" : 1
+         },
+         "keywords" : {
+            "conc62" : 1
+         },
+         "type" : 1
+      },
+      "article42" : {
+         "abstract" : null,
+         "keywords" : {
+            "conc81" : 1
+         },
+         "authors" : {
+            "58" : 1
+         },
+         "year" : "2012",
+         "type" : 1,
+         "id" : "article42",
+         "title" : "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article42"
+      },
+      "article51" : {
+         "abstract" : null,
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc74" : 1,
+            "conc89" : 1
+         },
+         "type" : 1,
+         "id" : "article51",
+         "title" : "Publikationsberatung: Neun Thesen vom #iCamp12",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article51"
+      },
+      "article76" : {
+         "authors" : {
+            "4" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc41" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Taming the Wilderness of Open Research Information",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article76",
+         "id" : "article76"
+      },
+      "article43" : {
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Open Access, Open Content und gemeinfreies Kulturerbe",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article43",
+         "id" : "article43"
+      },
+      "article2" : {
+         "authors" : {
+            "45" : 1,
+            "1" : 1
+         },
+         "year" : "2012",
+         "keywords" : {},
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article2",
+         "id" : "article2"
+      },
+      "article63" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article63",
+         "title" : "Licensing of scientific audiovisual media in Germany",
+         "id" : "article63",
+         "type" : 1,
+         "authors" : {
+            "6" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc63" : 1,
+            "conc73" : 1
+         },
+         "abstract" : null
+      },
+      "article58" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article58",
+         "title" : "DataCite summer meeting and moving the blog",
+         "id" : "article58",
+         "type" : 1,
+         "year" : "2012",
+         "authors" : {
+            "6" : 1
+         },
+         "keywords" : {
+            "conc19" : 1,
+            "conc30" : 1
+         },
+         "abstract" : null
+      },
+      "article52" : {
+         "id" : "article52",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article52",
+         "title" : "1.000 Antworten auf die Frage: Literaturverwaltung — Was benutzen Sie, was brauchen Sie?",
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc61" : 1
+         }
+      },
+      "article45" : {
+         "id" : "article45",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article45",
+         "title" : "arXiv - Veteran und Vorreiter",
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "77" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc0" : 1
+         }
+      },
+      "article23" : {
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "26" : 1,
+            "80" : 1
+         },
+         "keywords" : {
+            "conc0" : 1
+         },
+         "year" : "2014",
+         "id" : "article23",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article23",
+         "title" : "Wissen auf einen Klick"
+      },
+      "article9" : {
+         "id" : "article9",
+         "title" : "Digitale Bibliothek und Portal GetInfo in der TIB Hannover",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article9",
+         "abstract" : null,
+         "year" : "2013",
+         "authors" : {
+            "67" : 1
+         },
+         "keywords" : {
+            "conc27" : 1,
+            "conc24" : 1
+         },
+         "type" : 1
+      },
+      "article47" : {
+         "type" : 1,
+         "authors" : {
+            "77" : 1
+         },
+         "year" : "2012",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article47",
+         "title" : "arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen",
+         "id" : "article47"
+      },
+      "article12" : {
+         "id" : "article12",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article12",
+         "title" : "Dokumentlieferung",
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "61" : 1,
+            "68" : 1
+         },
+         "year" : "2013",
+         "keywords" : {
+            "conc32" : 1
+         }
+      },
+      "article4" : {
+         "id" : "article4",
+         "title" : "3D @Technische Informationsbibliothek (TIB)",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article4",
+         "abstract" : null,
+         "year" : "2012",
+         "authors" : {
+            "74" : 1,
+            "4" : 1
+         },
+         "keywords" : {
+            "g10" : 1
+         },
+         "type" : 1
+      },
+      "article27" : {
+         "abstract" : null,
+         "authors" : {
+            "65" : 1,
+            "56" : 1,
+            "43" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc73" : 1
+         },
+         "type" : 1,
+         "id" : "article27",
+         "title" : "TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article27"
+      },
+      "article60" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article60",
+         "title" : "Open Access Activities of the German National Library of Science and Tehcnology; SCOAP3-DH and arXiv-DH",
+         "id" : "article60",
+         "type" : 1,
+         "authors" : {
+            "68" : 1
+         },
+         "keywords" : {
+            "conc0" : 1
+         },
+         "year" : null,
+         "abstract" : null
+      },
+      "article15" : {
+         "type" : 1,
+         "authors" : {
+            "17" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc74" : 1,
+            "conc11" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article15",
+         "title" : "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.",
+         "id" : "article15"
+      },
+      "article40" : {
+         "title" : "Speicherung & Datenverwaltung in Produktion und Archiv",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article40",
+         "id" : "article40",
+         "year" : "2012",
          "authors" : {
             "1" : 1
          },
@@ -34,880 +1725,747 @@
             "conc6" : 1,
             "conc22" : 1
          },
-         "id" : "conc22",
-         "type" : 2,
-         "title" : "Datenverwaltung"
+         "type" : 1,
+         "abstract" : null
       },
-      "g12" : {
-         "type" : 2,
-         "title" : "ViFaChem II     ",
-         "end" : "2010",
-         "abstract" : "Virtuelle Fachbibliothek Chemie II",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g12",
-         "start" : "2008",
-         "count" : "0",
-         "id" : "g12",
-         "investigators" : {
-            "74" : 1,
-            "39" : 1
+      "article86" : {
+         "id" : "article86",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article86",
+         "title" : "GRASS GIS, Star Trek and old Video Tape – a reference case on audiovisual preservation for the OSGeo communities",
+         "abstract" : null,
+         "type" : 1,
+         "authors" : {
+            "65" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc54" : 1
          }
       },
-      "g18" : {
-         "end" : "2007",
-         "abstract" : "Informationsangebot \"Naturwissenschaft und Technik\"",
-         "title" : "GetInfo-Portal",
-         "type" : 2,
-         "id" : "g18",
-         "investigators" : {
-            "74" : 1
+      "article64" : {
+         "abstract" : null,
+         "authors" : {
+            "26" : 1
          },
-         "count" : "0",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g18",
-         "publications" : {},
-         "start" : "2005"
+         "year" : null,
+         "keywords" : {
+            "conc25" : 1
+         },
+         "type" : 1,
+         "id" : "article64",
+         "title" : "Das Netzwerk und die Institution",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article64"
       },
-      "conc19" : {
-         "type" : 2,
-         "title" : "DataCite",
+      "article26" : {
+         "title" : "DataCite and DOI names for research data",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article26",
+         "id" : "article26",
+         "year" : "2014",
          "authors" : {
             "6" : 1,
             "56" : 1
          },
-         "publications" : {
-            "article26" : 1,
-            "article57" : 1,
-            "article58" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc19",
-         "count" : "5",
-         "id" : "conc19",
-         "keywords" : {
-            "conc19" : 1,
-            "conc30" : 1
-         }
-      },
-      "conc5" : {
-         "id" : "conc5",
-         "keywords" : {
-            "conc5" : 1,
-            "conc35" : 1,
-            "conc54" : 1
-         },
-         "count" : "4",
-         "publications" : {
-            "article71" : 1,
-            "article69" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc5",
-         "authors" : {
-            "45" : 1,
-            "4" : 1
-         },
-         "title" : "3D-Modell",
-         "type" : 2
-      },
-      "g0" : {
-         "id" : "g0",
-         "investigators" : {
-            "9" : 1,
-            "74" : 1
-         },
-         "count" : "0",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g0",
-         "publications" : {},
-         "start" : "2011",
-         "end" : "2014",
-         "abstract" : "Entwicklung, Umsetzung und Professionalisierung eines Verwertungskonzeptes an der TIB.",
-         "title" : "TIB-Transfer",
-         "type" : 2
-      },
-      "g27" : {
-         "title" : "RADAR",
-         "abstract" : "Research Data Repositorium",
-         "end" : "Mon Aug 31 00:00:00 CEST 2015",
-         "type" : 2,
-         "investigators" : {
-            "46" : 1,
-            "40" : 1
-         },
-         "id" : "g27",
-         "start" : "Sun Sep 01 00:00:00 CEST 2013",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g27",
-         "count" : "0"
-      },
-      "g23" : {
-         "count" : "0",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g23",
-         "publications" : {},
-         "start" : "2005",
-         "id" : "g23",
-         "investigators" : {
-            "74" : 1,
-            "39" : 1
-         },
-         "type" : 2,
-         "end" : "2007",
-         "abstract" : "Virtuelle Fachbibliothek Chemie",
-         "title" : "ViFaChem"
-      },
-      "g15" : {
-         "type" : 2,
-         "title" : "Digitale Informationsversorgung",
-         "end" : "2009",
-         "abstract" : "Chinesisch-Deutsche Kooperationsgruppe",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g15",
-         "publications" : {},
-         "start" : "2006",
-         "count" : "0",
-         "id" : "g15",
-         "investigators" : {
-            "68" : 1,
-            "74" : 1
-         }
-      },
-      "g9" : {
-         "id" : "g9",
-         "investigators" : {
-            "5" : 1
-         },
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g9",
-         "start" : "2002",
-         "count" : "0",
-         "title" : "Nationallizenzen",
-         "end" : "2010",
-         "abstract" : "Sicherung des Zugriffs auf elektronische Zeitschriftenarchive und Bücher für Hochschulen und außeruniversitäre Forschungseinrichtungen",
-         "type" : 2
-      },
-      "g26" : {
-         "end" : "Mon Jun 30 00:00:00 CEST 2014",
-         "abstract" : "Kompetenzzentrum für Forschungsdaten aus Erde und Umwelt",
-         "title" : "KomFor",
-         "type" : 2,
-         "id" : "g26",
-         "investigators" : {
-            "74" : 1,
-            "6" : 1
-         },
-         "count" : "0",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g26",
-         "start" : "Fri Jul 01 00:00:00 CEST 2011"
-      },
-      "conc53" : {
-         "type" : 2,
-         "title" : "Kollaboration",
-         "authors" : {
-            "26" : 1
-         },
-         "publications" : {
-            "article6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc53",
-         "count" : "1",
-         "keywords" : {
-            "conc78" : 1,
-            "conc53" : 1
-         },
-         "id" : "conc53"
-      },
-      "g28" : {
-         "id" : "g28",
-         "investigators" : {
-            "10" : 1
-         },
-         "count" : "0",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g28",
-         "publications" : {},
-         "start" : "Fri Feb 01 00:00:00 CET 2013",
-         "end" : "Sun Jan 31 00:00:00 CET 2016",
-         "abstract" : "Durable Architectural Knowledge",
-         "title" : "DURAARK",
-         "type" : 2
-      },
-      "conc25" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc25",
-         "publications" : {
-            "article64" : 1
-         },
-         "authors" : {
-            "26" : 1
-         },
-         "count" : "1",
-         "keywords" : {
-            "conc25" : 1
-         },
-         "id" : "conc25",
-         "type" : 2,
-         "title" : "digitales Publizieren"
-      },
-      "conc74" : {
-         "authors" : {
-            "26" : 1,
-            "17" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc74",
-         "publications" : {
-            "article15" : 1,
-            "article51" : 1,
-            "article49" : 1
-         },
-         "count" : "4",
-         "id" : "conc74",
-         "keywords" : {
-            "conc11" : 1,
-            "conc89" : 1,
-            "conc74" : 1
-         },
-         "type" : 2,
-         "title" : "Nutzungsrechte"
-      },
-      "conc41" : {
-         "type" : 2,
-         "title" : "Forschungsinformationssystem",
-         "publications" : {
-            "article77" : 1,
-            "article80" : 1,
-            "article76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc41",
-         "authors" : {
-            "26" : 1,
-            "4" : 1,
-            "48" : 1
-         },
-         "count" : "4",
-         "keywords" : {
-            "conc41" : 1
-         },
-         "id" : "conc41"
-      },
-      "conc63" : {
-         "keywords" : {
-            "conc73" : 1,
-            "conc63" : 1
-         },
-         "id" : "conc63",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc63",
-         "publications" : {
-            "article33" : 1,
-            "article63" : 1
-         },
-         "authors" : {
-            "6" : 1,
-            "56" : 1,
-            "80" : 1
-         },
-         "count" : "2",
-         "title" : "Lizenz",
-         "type" : 2
-      },
-      "g16" : {
-         "type" : 2,
-         "end" : "2009",
-         "abstract" : "Virtuelle Fachbibliothek Mathematik",
-         "title" : "ViFaMath",
-         "count" : "0",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g16",
-         "start" : "2007",
-         "id" : "g16",
-         "investigators" : {
-            "74" : 1
-         }
-      },
-      "conc0" : {
-         "type" : 2,
-         "title" : " Open Access ",
-         "count" : "11",
-         "authors" : {
-            "77" : 1,
-            "68" : 1,
-            "26" : 1,
-            "80" : 1,
-            "76" : 1
-         },
-         "publications" : {
-            "article5" : 1,
-            "article60" : 1,
-            "article45" : 1,
-            "article43" : 1,
-            "article23" : 1,
-            "article47" : 1,
-            "article7" : 1,
-            "article34" : 1,
-            "article46" : 1,
-            "article53" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc0",
-         "id" : "conc0",
-         "keywords" : {
-            "conc0" : 1,
-            "conc77" : 1
-         }
-      },
-      "g14" : {
-         "id" : "g14",
-         "investigators" : {
-            "74" : 1,
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g14",
-         "publications" : {},
-         "start" : "2006",
-         "count" : "0",
-         "title" : "CODATA ",
-         "end" : "2009",
-         "abstract" : "Etablierung der Publikation und Registrierung wissenschaftlicher Daten als eigenständigen, fächerübergreifenden Wissenschaftsservice",
-         "type" : 2
-      },
-      "conc30" : {
-         "id" : "conc30",
          "keywords" : {
             "conc30" : 1,
             "conc19" : 1
          },
-         "authors" : {
-            "56" : 1,
-            "6" : 1
-         },
-         "publications" : {
-            "article58" : 1,
-            "article57" : 1,
-            "article26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc30",
-         "count" : "5",
-         "title" : "DOI",
-         "type" : 2
+         "type" : 1,
+         "abstract" : null
       },
-      "conc54" : {
-         "type" : 2,
-         "title" : "Langzeitarchivierung",
-         "publications" : {
-            "article86" : 1,
-            "article65" : 1,
-            "article73" : 1,
-            "article71" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc54",
-         "authors" : {
-            "65" : 1,
-            "45" : 1
-         },
-         "count" : "6",
-         "id" : "conc54",
-         "keywords" : {
-            "conc5" : 1,
-            "conc54" : 1
-         }
-      },
-      "conc24" : {
-         "id" : "conc24",
-         "keywords" : {
-            "conc27" : 1,
-            "conc24" : 1,
-            "conc106" : 1
-         },
-         "authors" : {
-            "76" : 1,
-            "67" : 1,
-            "68" : 1,
-            "27" : 1
-         },
-         "publications" : {
-            "article18" : 1,
-            "article9" : 1,
-            "article41" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc24",
-         "count" : "3",
-         "title" : "digitale Bibliothek ",
-         "type" : 2
-      },
-      "g1" : {
-         "count" : "0",
-         "start" : "2011",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g1",
-         "publications" : {},
-         "investigators" : {
-            "65" : 1
-         },
-         "id" : "g1",
-         "type" : 2,
-         "abstract" : "Entwicklung eines Portals für audiovisuelle Medien mit innovativen Multimedia Retrieval Techniken.",
-         "end" : "2014",
-         "title" : "AV-Portal"
-      },
-      "conc85" : {
-         "count" : "1",
-         "type" : 2,
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc85",
-         "id" : "conc85",
-         "title" : "Projektmanagement"
-      },
-      "g13" : {
-         "type" : 2,
-         "title" : "LINSearch",
-         "end" : "2009",
-         "abstract" : "Linguistisches Indexieren und Suchen.",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g13",
-         "publications" : {},
-         "start" : "2006",
-         "count" : "0",
-         "id" : "g13",
-         "investigators" : {
-            "19" : 1,
-            "74" : 1
-         }
-      },
-      "g24" : {
-         "investigators" : {
-            "74" : 1
-         },
-         "id" : "g24",
-         "count" : "0",
-         "start" : "2003",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g24",
-         "publications" : {},
-         "abstract" : "Virtuelle Fachbibliothek Holztechnologie",
-         "end" : "2004",
-         "title" : "ViFaHolz",
-         "type" : 2
-      },
-      "conc18" : {
-         "count" : "1",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc18",
-         "publications" : {},
-         "type" : 2,
-         "id" : "conc18",
-         "title" : "Data Science"
-      },
-      "conc89" : {
-         "id" : "conc89",
-         "keywords" : {
-            "conc89" : 1,
-            "conc74" : 1
-         },
-         "count" : "2",
-         "authors" : {
-            "26" : 1,
-            "76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc89",
-         "publications" : {
-            "article51" : 1,
-            "article54" : 1
-         },
-         "title" : "Publizieren",
-         "type" : 2
-      },
-      "g10" : {
-         "count" : "2",
-         "start" : "2005",
-         "authors" : {
-            "74" : 1,
-            "4" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g10",
-         "publications" : {
-            "article4" : 1,
-            "article3" : 1
-         },
-         "investigators" : {
-            "74" : 1,
-            "4" : 1
-         },
-         "keywords" : {
-            "g10" : 1
-         },
-         "id" : "g10",
-         "type" : 2,
-         "abstract" : "Erschließung, Bereitstellung und Suche nach 3D-Modellen",
-         "end" : "2010",
-         "title" : "PROBABO"
-      },
-      "conc67" : {
-         "type" : 2,
-         "title" : "Metadaten",
-         "count" : "2",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc67",
-         "publications" : {
-            "article13" : 1,
-            "article66" : 1
-         },
-         "authors" : {
-            "56" : 1,
-            "12" : 1,
-            "26" : 1
-         },
-         "id" : "conc67",
-         "keywords" : {
-            "conc77" : 1,
-            "conc67" : 1
-         }
-      },
-      "conc11" : {
-         "keywords" : {
-            "conc74" : 1,
-            "conc11" : 1
-         },
-         "id" : "conc11",
-         "count" : "4",
-         "authors" : {
-            "6" : 1,
-            "68" : 1,
-            "83" : 1,
-            "74" : 1,
-            "17" : 1
-         },
-         "publications" : {
-            "article15" : 1,
-            "article24" : 1,
-            "article10" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc11",
-         "title" : "Bibliothek",
-         "type" : 2
-      },
-      "conc78" : {
-         "type" : 2,
-         "title" : "Open Science",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc78",
-         "publications" : {
-            "article50" : 1,
-            "article6" : 1,
-            "article32" : 1
-         },
-         "authors" : {
-            "26" : 1
-         },
-         "count" : "5",
-         "keywords" : {
-            "conc53" : 1,
-            "conc78" : 1
-         },
-         "id" : "conc78"
-      },
-      "conc55" : {
-         "count" : "1",
-         "publications" : {
-            "article16" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc55",
+      "article16" : {
+         "title" : "Entgrenzung und Zusammenarbeit - die Notwendigkeit von Kooperationen im Lernraum",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article16",
+         "id" : "article16",
+         "year" : "2014",
          "authors" : {
             "47" : 1
          },
          "keywords" : {
             "conc55" : 1
          },
-         "id" : "conc55",
-         "type" : 2,
-         "title" : "Lernort"
+         "type" : 1,
+         "abstract" : null
       },
-      "g22" : {
-         "title" : "vascoda",
-         "end" : "2007",
-         "abstract" : "Koordinierung, Organisationsentwicklung, strategische Steuerung des Wissenschaftsportals vascoda",
-         "type" : 2,
-         "id" : "g22",
-         "investigators" : {
-            "27" : 1,
-            "74" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g22",
-         "publications" : {},
-         "start" : "2005",
-         "count" : "0"
-      },
-      "g21" : {
-         "type" : 2,
-         "title" : "TEMPUS",
-         "end" : "2007",
-         "abstract" : "Building Digital Educational Services and Content Creation Centre in Yerevan State University library",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g21",
-         "start" : "2005",
-         "count" : "0",
-         "id" : "g21",
-         "investigators" : {
-            "74" : 1
-         }
-      },
-      "g5" : {
-         "type" : 2,
-         "title" : "DP4lib",
-         "end" : "2012",
-         "abstract" : "Entwicklung einer nachnutzbaren und flexiblen Infrastruktur für die Langzeitarchivierung",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g5",
-         "start" : "2010",
-         "count" : "0",
-         "id" : "g5",
-         "investigators" : {
-            "1" : 1
-         }
-      },
-      "conc61" : {
-         "count" : "1",
+      "article66" : {
+         "type" : 1,
          "authors" : {
             "26" : 1
          },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc61",
-         "publications" : {
-            "article52" : 1
-         },
-         "id" : "conc61",
          "keywords" : {
-            "conc61" : 1
+            "conc67" : 1
          },
-         "type" : 2,
-         "title" : "Literaturverwaltung"
+         "year" : null,
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article66",
+         "title" : "Discovery Metadata - Metadata Standards vs. New Requirements",
+         "id" : "article66"
       },
-      "conc62" : {
-         "title" : "Literaturwissenschaften",
-         "type" : 2,
-         "keywords" : {
-            "conc62" : 1
-         },
-         "id" : "conc62",
-         "authors" : {
-            "76" : 1
-         },
-         "publications" : {
-            "article70" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc62",
-         "count" : "1"
-      },
-      "g3" : {
-         "title" : "arXiv-DH",
-         "abstract" : "Entwicklung eines Modells zur gemeinschaftlichen Finanzierung der Open Access-Plattform arXiv für deutsche Hochschulen und weitere Einrichtungen.",
-         "end" : "2013",
-         "type" : 2,
-         "investigators" : {
-            "74" : 1,
-            "77" : 1
-         },
-         "id" : "g3",
-         "start" : "2011",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g3",
-         "publications" : {},
-         "count" : "0"
-      },
-      "g17" : {
-         "count" : "0",
-         "start" : "2006",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g17",
-         "investigators" : {
-            "74" : 1,
-            "5" : 1
-         },
-         "id" : "g17",
-         "type" : 2,
-         "abstract" : "Überregionale Bereitstellung von technisch-naturwissenschaftlichen Online-Datenbanken.",
-         "end" : "2008",
-         "title" : "Online-Datenbanken"
-      },
-      "conc48" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc48",
-         "publications" : {},
-         "type" : 2,
-         "count" : "1",
-         "title" : "Informationskompetenz",
-         "id" : "conc48"
-      },
-      "g2" : {
-         "type" : 2,
-         "title" : "VisInfo",
-         "abstract" : "Visueller Zugang zu Forschungsdaten",
-         "end" : "2013",
-         "start" : "2010",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g2",
-         "count" : "0",
-         "investigators" : {
-            "39" : 1,
-            "74" : 1
-         },
-         "id" : "g2"
-      },
-      "conc77" : {
-         "title" : "Open Educational Resources",
-         "type" : 2,
-         "id" : "conc77",
-         "keywords" : {
-            "conc67" : 1,
-            "conc0" : 1,
-            "conc77" : 1
-         },
-         "publications" : {
-            "article13" : 1,
-            "article5" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc77",
-         "authors" : {
-            "56" : 1,
-            "12" : 1,
-            "26" : 1
-         },
-         "count" : "2"
-      },
-      "g20" : {
-         "title" : "RusDML",
-         "abstract" : "Russian Digital Mathematics Library",
-         "end" : "2007",
-         "type" : 2,
-         "investigators" : {
-            "76" : 1
-         },
-         "id" : "g20",
-         "start" : "2004",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g20",
-         "count" : "0"
-      },
-      "conc73" : {
-         "count" : "4",
-         "authors" : {
-            "43" : 1,
-            "56" : 1,
-            "65" : 1,
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc73",
-         "publications" : {
-            "article63" : 1,
-            "article27" : 1,
-            "article74" : 1
-         },
-         "keywords" : {
-            "conc73" : 1,
-            "conc63" : 1
-         },
-         "id" : "conc73",
-         "type" : 2,
-         "title" : "nicht-textuelle Materialen"
-      },
-      "conc35" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc35",
-         "publications" : {
-            "article30" : 1,
-            "article69" : 1
-         },
-         "authors" : {
-            "4" : 1,
-            "55" : 1
-         },
-         "count" : "2",
-         "id" : "conc35",
-         "keywords" : {
-            "conc35" : 1,
-            "conc6" : 1,
-            "conc5" : 1
-         },
-         "type" : 2,
-         "title" : "Erschließung"
-      },
-      "conc39" : {
-         "type" : 2,
-         "title" : "Forschungsdaten",
-         "publications" : {
-            "article25" : 1,
-            "article31" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc39",
+      "article31" : {
+         "id" : "article31",
+         "title" : "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article31",
+         "abstract" : null,
          "authors" : {
             "56" : 1
          },
-         "count" : "3",
-         "id" : "conc39",
+         "year" : "2014",
          "keywords" : {
             "conc39" : 1
-         }
-      },
-      "conc27" : {
-         "type" : 2,
-         "title" : "discovery system",
-         "authors" : {
-            "77" : 1,
-            "67" : 1,
-            "27" : 1
          },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc27",
+         "type" : 1
+      },
+      "article48" : {
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2012",
+         "keywords" : {},
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Sieben Gründe Zotero auszuprobieren",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article48",
+         "id" : "article48"
+      },
+      "article7" : {
+         "authors" : {
+            "68" : 1
+         },
+         "year" : "2013",
+         "keywords" : {
+            "conc0" : 1
+         },
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Open Access - Was sagen die Bibliotheken?",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article7",
+         "id" : "article7"
+      },
+      "article74" : {
+         "abstract" : null,
+         "authors" : {
+            "65" : 1
+         },
+         "year" : null,
+         "keywords" : {
+            "conc73" : 1
+         },
+         "type" : 1,
+         "id" : "article74",
+         "title" : "TIB's Portal for audiovisual media - New ways of indexing and retrieval",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article74"
+      },
+      "article53" : {
+         "keywords" : {
+            "conc0" : 1
+         },
+         "authors" : {
+            "76" : 1
+         },
+         "year" : "2012",
+         "type" : 1,
+         "abstract" : null,
+         "title" : "Open Access Week - Open Access für Geisteswissenschaftler?",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article53",
+         "id" : "article53"
+      },
+      "article20" : {
+         "type" : 1,
+         "authors" : {
+            "76" : 1
+         },
+         "year" : "2014",
+         "keywords" : {
+            "conc32" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article20",
+         "title" : "Literaturauswahl und -bestellung leichter gemacht!",
+         "id" : "article20"
+      },
+      "article6" : {
+         "type" : 1,
+         "authors" : {
+            "26" : 1
+         },
+         "year" : "2013",
+         "keywords" : {
+            "conc78" : 1,
+            "conc53" : 1
+         },
+         "abstract" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article6",
+         "title" : "Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends",
+         "id" : "article6"
+      }
+   },
+   "authors" : {
+      "65" : {
+         "count" : "4",
+         "image" : null,
+         "type" : 0,
+         "fullname" : "Margret Plank",
+         "authors" : {
+            "75" : 1,
+            "56" : 1,
+            "65" : 1,
+            "43" : 1
+         },
+         "keywords" : {
+            "conc73" : 1,
+            "conc97" : 1,
+            "conc54" : 1
+         },
+         "publications" : {
+            "article21" : 1,
+            "article27" : 1,
+            "article74" : 1,
+            "article86" : 1
+         },
+         "name" : "M Plank",
+         "positions" : [],
+         "id" : "65",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/65"
+      },
+      "67" : {
+         "positions" : [],
+         "id" : "67",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/67",
+         "count" : "2",
+         "image" : null,
+         "type" : 0,
+         "fullname" : "Elena Roscoe",
          "publications" : {
             "article9" : 1,
-            "article17" : 1
+            "article18" : 1
          },
-         "count" : "2",
-         "id" : "conc27",
+         "authors" : {
+            "67" : 1
+         },
+         "name" : "E Roscoe",
          "keywords" : {
-            "conc24" : 1,
-            "conc27" : 1
+            "conc27" : 1,
+            "conc24" : 1
          }
       },
-      "conc32" : {
-         "type" : 2,
-         "title" : "Dokumentlieferung",
-         "count" : "3",
+      "55" : {
+         "count" : "2",
+         "image" : null,
+         "type" : 0,
+         "fullname" : "Lars Nebelung",
+         "authors" : {
+            "55" : 1
+         },
+         "keywords" : {
+            "conc35" : 1,
+            "conc6" : 1
+         },
+         "publications" : {
+            "article81" : 1,
+            "article30" : 1
+         },
+         "name" : "L Nebelung",
+         "positions" : [],
+         "id" : "55",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/55"
+      },
+      "47" : {
+         "count" : "1",
+         "image" : null,
+         "fullname" : "Anne May",
+         "publications" : {
+            "article16" : 1
+         },
+         "authors" : {
+            "47" : 1
+         },
+         "keywords" : {
+            "conc55" : 1
+         },
+         "name" : "A May",
+         "type" : 0,
+         "positions" : [],
+         "id" : "47",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/47"
+      },
+      "1" : {
+         "fullname" : "Thomas Bähr",
+         "authors" : {
+            "45" : 1,
+            "1" : 1
+         },
+         "publications" : {
+            "article2" : 1,
+            "article40" : 1
+         },
+         "keywords" : {
+            "conc6" : 1,
+            "conc22" : 1
+         },
+         "name" : "T Bähr",
+         "type" : 0,
+         "count" : "2",
+         "image" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/1",
+         "positions" : [],
+         "id" : "1"
+      },
+      "58" : {
+         "id" : "58",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/58",
+         "image" : null,
+         "count" : "1",
+         "authors" : {
+            "58" : 1
+         },
+         "keywords" : {
+            "conc81" : 1
+         },
+         "publications" : {
+            "article42" : 1
+         },
+         "name" : "D Nürnberger",
+         "fullname" : "Dorothee Nürnberger",
+         "type" : 0
+      },
+      "6" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/6",
+         "id" : "6",
+         "positions" : [],
+         "type" : 0,
+         "authors" : {
+            "56" : 1,
+            "74" : 1,
+            "68" : 1,
+            "6" : 1
+         },
+         "publications" : {
+            "article10" : 1,
+            "article26" : 1,
+            "article57" : 1,
+            "article63" : 1,
+            "article58" : 1
+         },
+         "name" : "J Brase",
+         "keywords" : {
+            "conc11" : 1,
+            "conc19" : 1,
+            "conc30" : 1,
+            "conc73" : 1,
+            "conc63" : 1
+         },
+         "fullname" : "Jan Brase",
+         "image" : null,
+         "count" : "5"
+      },
+      "26" : {
+         "image" : null,
+         "count" : "14",
+         "fullname" : "Lambert Heller",
+         "authors" : {
+            "48" : 1,
+            "80" : 1,
+            "26" : 1,
+            "4" : 1
+         },
+         "publications" : {
+            "article39" : 1,
+            "article6" : 1,
+            "article23" : 1,
+            "article52" : 1,
+            "article49" : 1,
+            "article48" : 1,
+            "article50" : 1,
+            "article66" : 1,
+            "article51" : 1,
+            "article64" : 1,
+            "article43" : 1,
+            "article5" : 1,
+            "article32" : 1,
+            "article77" : 1
+         },
+         "keywords" : {
+            "conc77" : 1,
+            "conc89" : 1,
+            "conc41" : 1,
+            "conc25" : 1,
+            "conc61" : 1,
+            "conc74" : 1,
+            "conc53" : 1,
+            "conc78" : 1,
+            "conc0" : 1,
+            "conc67" : 1
+         },
+         "name" : "L Heller",
+         "type" : 0,
+         "positions" : [],
+         "id" : "26",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/26"
+      },
+      "83" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/83",
+         "id" : "83",
+         "positions" : [],
+         "keywords" : {
+            "conc11" : 1
+         },
+         "authors" : {
+            "83" : 1
+         },
+         "publications" : {
+            "article24" : 1
+         },
+         "name" : "C Wilhelm",
+         "fullname" : "Christine Wilhelm",
+         "type" : 0,
+         "count" : "1",
+         "image" : null
+      },
+      "27" : {
+         "id" : "27",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/27",
+         "count" : "2",
+         "image" : null,
+         "type" : 0,
+         "authors" : {
+            "76" : 1,
+            "77" : 1,
+            "68" : 1,
+            "27" : 1
+         },
+         "publications" : {
+            "article17" : 1,
+            "article41" : 1
+         },
+         "keywords" : {
+            "conc24" : 1,
+            "conc27" : 1,
+            "conc106" : 1
+         },
+         "name" : "M Hohlfeld",
+         "fullname" : "Michael Hohlfeld"
+      },
+      "77" : {
+         "count" : "4",
+         "image" : null,
+         "fullname" : "Esther Tobschall",
+         "keywords" : {
+            "conc0" : 1,
+            "conc27" : 1
+         },
+         "authors" : {
+            "27" : 1,
+            "77" : 1
+         },
+         "publications" : {
+            "article47" : 1,
+            "article45" : 1,
+            "article46" : 1,
+            "article17" : 1
+         },
+         "name" : "E Tobschall",
+         "type" : 0,
+         "positions" : [],
+         "id" : "77",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/77"
+      },
+      "43" : {
+         "image" : null,
+         "count" : "1",
+         "type" : 0,
+         "authors" : {
+            "56" : 1,
+            "65" : 1,
+            "43" : 1
+         },
+         "publications" : {
+            "article27" : 1
+         },
+         "name" : "A Lichtenstein",
+         "keywords" : {
+            "conc73" : 1
+         },
+         "fullname" : "Anna Lichtenstein",
+         "id" : "43",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/43"
+      },
+      "61" : {
+         "count" : "1",
+         "image" : null,
+         "fullname" : "Jens Olf",
          "authors" : {
             "61" : 1,
+            "68" : 1
+         },
+         "publications" : {
+            "article12" : 1
+         },
+         "name" : "J Olf",
+         "keywords" : {
+            "conc32" : 1
+         },
+         "type" : 0,
+         "positions" : [],
+         "id" : "61",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/61"
+      },
+      "56" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/56",
+         "positions" : [],
+         "id" : "56",
+         "fullname" : "Janna Neumann",
+         "authors" : {
+            "6" : 1,
+            "43" : 1,
+            "65" : 1,
+            "56" : 1,
+            "80" : 1,
+            "12" : 1
+         },
+         "name" : "J Neumann",
+         "publications" : {
+            "article26" : 1,
+            "article33" : 1,
+            "article25" : 1,
+            "article13" : 1,
+            "article31" : 1,
+            "article27" : 1
+         },
+         "keywords" : {
+            "conc39" : 1,
+            "conc19" : 1,
+            "conc30" : 1,
+            "conc77" : 1,
+            "conc73" : 1,
+            "conc67" : 1,
+            "conc63" : 1
+         },
+         "type" : 0,
+         "count" : "6",
+         "image" : null
+      },
+      "17" : {
+         "type" : 0,
+         "fullname" : "Anette Franzkowiak",
+         "authors" : {
+            "17" : 1
+         },
+         "keywords" : {
+            "conc11" : 1,
+            "conc74" : 1
+         },
+         "publications" : {
+            "article15" : 1
+         },
+         "name" : "A Franzkowiak",
+         "count" : "1",
+         "image" : null,
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/17",
+         "positions" : [],
+         "id" : "17"
+      },
+      "76" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/76",
+         "id" : "76",
+         "positions" : [],
+         "type" : 0,
+         "authors" : {
+            "68" : 1,
+            "76" : 1,
+            "27" : 1
+         },
+         "name" : "B Tempel",
+         "publications" : {
+            "article41" : 1,
+            "article70" : 1,
+            "article53" : 1,
+            "article20" : 1,
+            "article54" : 1
+         },
+         "keywords" : {
+            "conc0" : 1,
+            "conc106" : 1,
+            "conc62" : 1,
+            "conc24" : 1,
+            "conc32" : 1,
+            "conc89" : 1
+         },
+         "fullname" : "Bernhard Tempel",
+         "count" : "5",
+         "image" : null
+      },
+      "4" : {
+         "id" : "4",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/4",
+         "count" : "7",
+         "image" : null,
+         "authors" : {
+            "48" : 1,
+            "26" : 1,
+            "4" : 1,
+            "74" : 1
+         },
+         "publications" : {
+            "article77" : 1,
+            "article78" : 1,
+            "article69" : 1,
+            "article3" : 1,
+            "article4" : 1,
+            "article80" : 1,
+            "article76" : 1
+         },
+         "name" : "I Blümel",
+         "keywords" : {
+            "g10" : 1,
+            "conc5" : 1,
+            "conc41" : 1,
+            "conc35" : 1
+         },
+         "fullname" : "Ina Blümel",
+         "type" : 0
+      },
+      "68" : {
+         "count" : "5",
+         "image" : null,
+         "publications" : {
+            "article10" : 1,
+            "article41" : 1,
+            "article12" : 1,
+            "article60" : 1,
+            "article7" : 1
+         },
+         "authors" : {
+            "61" : 1,
+            "27" : 1,
+            "74" : 1,
             "76" : 1,
             "68" : 1,
+            "6" : 1
+         },
+         "keywords" : {
+            "conc106" : 1,
+            "conc0" : 1,
+            "conc32" : 1,
+            "conc24" : 1,
+            "conc11" : 1
+         },
+         "name" : "U Rosemann",
+         "fullname" : "Uwe Rosemann",
+         "type" : 0,
+         "id" : "68",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/68"
+      },
+      "50" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/50",
+         "id" : "50",
+         "positions" : [],
+         "keywords" : {},
+         "authors" : {
+            "50" : 1
+         },
+         "publications" : {
+            "article14" : 1
+         },
+         "name" : "P Mensing",
+         "fullname" : "Petra Mensing",
+         "type" : 0,
+         "count" : "1",
+         "image" : null
+      },
+      "80" : {
+         "id" : "80",
+         "positions" : [],
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/80",
+         "image" : null,
+         "count" : "3",
+         "keywords" : {
+            "conc0" : 1,
+            "conc63" : 1
+         },
+         "authors" : {
+            "80" : 1,
+            "56" : 1,
+            "26" : 1
+         },
+         "publications" : {
+            "article34" : 1,
+            "article33" : 1,
+            "article23" : 1
+         },
+         "name" : "M Tullney",
+         "fullname" : "Marco Tullney",
+         "type" : 0
+      },
+      "12" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/12",
+         "positions" : [],
+         "id" : "12",
+         "fullname" : "Elena Derr",
+         "keywords" : {
+            "conc67" : 1,
+            "conc77" : 1
+         },
+         "authors" : {
+            "56" : 1,
+            "12" : 1
+         },
+         "publications" : {
+            "article13" : 1
+         },
+         "name" : "E Derr",
+         "type" : 0,
+         "count" : "1",
+         "image" : null
+      },
+      "45" : {
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/45",
+         "positions" : [],
+         "id" : "45",
+         "type" : 0,
+         "fullname" : "Michelle Lindlar",
+         "authors" : {
+            "1" : 1,
+            "45" : 1
+         },
+         "name" : "M Lindlar",
+         "publications" : {
+            "article65" : 1,
+            "article71" : 1,
+            "article2" : 1,
+            "article73" : 1
+         },
+         "keywords" : {
+            "conc5" : 1,
+            "conc54" : 1
+         },
+         "image" : null,
+         "count" : "4"
+      },
+      "5" : {
+         "positions" : [],
+         "id" : "5",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/5",
+         "count" : "1",
+         "image" : null,
+         "type" : 0,
+         "fullname" : "Markus Brammer",
+         "authors" : {
             "5" : 1
          },
          "publications" : {
-            "article12" : 1,
-            "article20" : 1,
             "article19" : 1
          },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc32",
-         "id" : "conc32",
+         "name" : "M Brammer",
          "keywords" : {
             "conc32" : 1
          }
       },
-      "g6" : {
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g6",
-         "start" : "2009",
-         "count" : "0",
-         "id" : "g6",
-         "investigators" : {
-            "74" : 1,
-            "27" : 1
-         },
-         "type" : 2,
-         "title" : "vascoda 2010",
-         "end" : "2011",
-         "abstract" : "Funktionale und inhaltliche Erweiterung des Einstiegsportals vascoda und der Fachportale"
-      },
-      "g19" : {
-         "investigators" : {
-            "68" : 1
-         },
-         "id" : "g19",
-         "start" : "2001",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g19",
-         "publications" : {},
-         "count" : "0",
-         "title" : "INTAS",
-         "abstract" : "International Association for the promotion of cooperation with scientists from the Independent States of the former Soviet Union",
-         "end" : "2007",
-         "type" : 2
-      },
-      "conc97" : {
-         "title" : "Semantic Web",
-         "type" : 2,
-         "keywords" : {
-            "conc97" : 1
-         },
-         "id" : "conc97",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc97",
+      "75" : {
+         "type" : 0,
          "publications" : {
             "article21" : 1,
             "article22" : 1
@@ -916,1620 +2474,62 @@
             "65" : 1,
             "75" : 1
          },
-         "count" : "2"
-      },
-      "g4" : {
-         "start" : "2010",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g4",
-         "publications" : {},
-         "count" : "0",
-         "investigators" : {
-            "74" : 1,
-            "50" : 1
-         },
-         "id" : "g4",
-         "type" : 2,
-         "title" : "Linked Heritage",
-         "abstract" : "Erweiterung des durchsuchbaren Contents der Europeana",
-         "end" : "2013"
-      },
-      "g32" : {
-         "start" : "Thu Mar 01 00:00:00 CET 2012",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g32",
-         "publications" : {},
-         "count" : "0",
-         "investigators" : {
-            "74" : 1
-         },
-         "id" : "g32",
-         "type" : 2,
-         "title" : "DeLiVerMATH",
-         "abstract" : "Dokumenterschließung und Retrieval für die Literaturversorgung in Virtuellen Forschungsumgebungen der Mathematik",
-         "end" : "Fri Feb 28 00:00:00 CET 2014"
-      },
-      "g8" : {
-         "title" : "Knowledge Exchange",
-         "abstract" : "Initiative nationaler Fördereinrichtungen zum Ausbau der Informations- und Kommunikationstechnologie für Forschung und Lehre",
-         "end" : "2011",
-         "type" : 2,
-         "investigators" : {
-            "5" : 1
-         },
-         "id" : "g8",
-         "start" : "2008",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/g8",
-         "count" : "0"
-      },
-      "conc106" : {
-         "id" : "conc106",
-         "keywords" : {
-            "conc106" : 1,
-            "conc24" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc106",
-         "publications" : {
-            "article41" : 1
-         },
-         "authors" : {
-            "76" : 1,
-            "27" : 1,
-            "68" : 1
-         },
-         "count" : "1",
-         "title" : "Virtuelle Fachbibliothek",
-         "type" : 2
-      },
-      "conc4" : {
-         "title" : "3D-Druck",
-         "id" : "conc4",
-         "publications" : {},
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc4",
-         "type" : 2,
-         "count" : "2"
-      },
-      "conc81" : {
-         "authors" : {
-            "58" : 1
-         },
-         "publications" : {
-            "article42" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/conc81",
-         "count" : "1",
-         "keywords" : {
-            "conc81" : 1
-         },
-         "id" : "conc81",
-         "type" : 2,
-         "title" : "Personalmanagement"
-      }
-   },
-   "publications" : {
-      "article5" : {
-         "authors" : {
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article5",
-         "keywords" : {
-            "conc0" : 1,
-            "conc77" : 1
-         },
-         "id" : "article5",
-         "type" : 1,
-         "title" : "Editorial: Wie gestalten wir die Zukunft mit Open Access und Open Educational Resources?",
-         "abstract" : null,
-         "year" : "2013"
-      },
-      "article12" : {
-         "id" : "article12",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "authors" : {
-            "68" : 1,
-            "61" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article12",
-         "title" : "Dokumentlieferung",
-         "abstract" : null,
-         "year" : "2013",
-         "type" : 1
-      },
-      "article60" : {
-         "type" : 1,
-         "abstract" : null,
-         "year" : null,
-         "title" : "Open Access Activities of the German National Library of Science and Tehcnology; SCOAP3-DH and arXiv-DH",
-         "authors" : {
-            "68" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article60",
-         "id" : "article60",
-         "keywords" : {
-            "conc0" : 1
-         }
-      },
-      "article76" : {
-         "id" : "article76",
-         "keywords" : {
-            "conc41" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article76",
-         "authors" : {
-            "4" : 1
-         },
-         "title" : "Taming the Wilderness of Open Research Information",
-         "year" : null,
-         "abstract" : null,
-         "type" : 1
-      },
-      "article48" : {
-         "id" : "article48",
-         "keywords" : {},
-         "authors" : {
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article48",
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Sieben Gründe Zotero auszuprobieren",
-         "type" : 1
-      },
-      "article63" : {
-         "abstract" : null,
-         "year" : null,
-         "title" : "Licensing of scientific audiovisual media in Germany",
-         "type" : 1,
-         "keywords" : {
-            "conc63" : 1,
-            "conc73" : 1
-         },
-         "id" : "article63",
-         "authors" : {
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article63"
-      },
-      "article77" : {
-         "id" : "article77",
-         "keywords" : {
-            "conc41" : 1
-         },
-         "authors" : {
-            "48" : 1,
-            "4" : 1,
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article77",
-         "title" : "The Quest for Research Information",
-         "abstract" : null,
-         "year" : null,
-         "type" : 1
-      },
-      "article13" : {
-         "year" : "2013",
-         "abstract" : null,
-         "title" : "Metadaten für Open Educational Resources (OER). Eine Handreichung für die öffentliche Hand, erstellt von der Technischen Informationsbibliothek (TIB).",
-         "type" : 1,
-         "id" : "article13",
-         "keywords" : {
-            "conc77" : 1,
-            "conc67" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article13",
-         "authors" : {
-            "56" : 1,
-            "12" : 1
-         }
-      },
-      "article33" : {
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "Freie Lizenzen und Nachnutzung",
-         "type" : 1,
-         "id" : "article33",
-         "keywords" : {
-            "conc63" : 1
-         },
-         "authors" : {
-            "80" : 1,
-            "56" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article33"
-      },
-      "article66" : {
-         "keywords" : {
-            "conc67" : 1
-         },
-         "id" : "article66",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article66",
-         "authors" : {
-            "26" : 1
-         },
-         "year" : null,
-         "abstract" : null,
-         "title" : "Discovery Metadata - Metadata Standards vs. New Requirements",
-         "type" : 1
-      },
-      "article40" : {
-         "year" : "2012",
-         "abstract" : null,
-         "title" : "Speicherung & Datenverwaltung in Produktion und Archiv",
-         "type" : 1,
-         "keywords" : {
-            "conc6" : 1,
-            "conc22" : 1
-         },
-         "id" : "article40",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article40",
-         "authors" : {
-            "1" : 1
-         }
-      },
-      "article34" : {
-         "year" : "2014",
-         "abstract" : null,
-         "title" : "Open Access",
-         "type" : 1,
-         "id" : "article34",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article34",
-         "authors" : {
-            "80" : 1
-         }
-      },
-      "article10" : {
-         "keywords" : {
-            "conc11" : 1
-         },
-         "id" : "article10",
-         "authors" : {
-            "74" : 1,
-            "68" : 1,
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article10",
-         "abstract" : null,
-         "year" : "2013",
-         "title" : "Development Thinking and Practice on the German National Science and Technology Library",
-         "type" : 1
-      },
-      "article18" : {
-         "type" : 1,
-         "title" : "Technische Informationsbibliothek - Dienstleistungen der digitalen Bibliothek (russischsprachig)",
-         "year" : "2014",
-         "abstract" : null,
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article18",
-         "authors" : {
-            "67" : 1
-         },
-         "id" : "article18",
-         "keywords" : {
-            "conc24" : 1
-         }
-      },
-      "article73" : {
-         "type" : 1,
-         "year" : null,
-         "abstract" : null,
-         "title" : "Building Information Modeling – A Game Changer for Interoperability and a Chance for Digital Preservation of Architectural Data?",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article73",
-         "authors" : {
-            "45" : 1
-         },
-         "keywords" : {
-            "conc54" : 1
-         },
-         "id" : "article73"
-      },
-      "article41" : {
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Bibliotheksverbünde, Virtuelle Fachbibliotheken",
-         "type" : 1,
-         "keywords" : {
-            "conc24" : 1,
-            "conc106" : 1
-         },
-         "id" : "article41",
-         "authors" : {
-            "76" : 1,
-            "68" : 1,
-            "27" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article41"
-      },
-      "article39" : {
-         "type" : 1,
-         "year" : "2013",
-         "abstract" : null,
-         "title" : "E-IRG White Paper 2013 ",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article39",
-         "authors" : {
-            "26" : 1
-         },
-         "keywords" : {},
-         "id" : "article39"
-      },
-      "article22" : {
+         "name" : "S Strobel",
          "keywords" : {
             "conc97" : 1
          },
-         "id" : "article22",
-         "authors" : {
-            "75" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article22",
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "Englischsprachige Erweiterung des TIB|AV-Portals. Ein GND-DBpedia-Mapping zur Gewinnung eines englischen Begriffssystems",
-         "type" : 1
-      },
-      "article4" : {
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "3D @Technische Informationsbibliothek (TIB)",
-         "authors" : {
-            "4" : 1,
-            "74" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article4",
-         "id" : "article4",
-         "keywords" : {
-            "g10" : 1
-         }
-      },
-      "article53" : {
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Open Access Week - Open Access für Geisteswissenschaftler?",
-         "authors" : {
-            "76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article53",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "id" : "article53"
-      },
-      "article15" : {
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "Learning - connecting - relaxing: TIB/UB, relaunching the public spaces.",
-         "authors" : {
-            "17" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article15",
-         "id" : "article15",
-         "keywords" : {
-            "conc11" : 1,
-            "conc74" : 1
-         }
-      },
-      "article54" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article54",
-         "authors" : {
-            "76" : 1
-         },
-         "id" : "article54",
-         "keywords" : {
-            "conc89" : 1
-         },
-         "type" : 1,
-         "title" : "Präsentationsfolien als Buch - wer braucht das?",
-         "year" : "2012",
-         "abstract" : null
-      },
-      "article17" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article17",
-         "authors" : {
-            "27" : 1,
-            "77" : 1
-         },
-         "keywords" : {
-            "conc27" : 1
-         },
-         "id" : "article17",
-         "type" : 1,
-         "year" : "2014",
-         "abstract" : null,
-         "title" : "EIN Portal der TIB (nicht nur) für Ingenieure, Naturwissenschaftler, Informatiker, Mathematiker und Architekten"
-      },
-      "article2" : {
-         "id" : "article2",
-         "keywords" : {},
-         "authors" : {
-            "1" : 1,
-            "45" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article2",
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Der Blick über Tellerrand - internationaler Austausch auf institutioneller Ebene - Besuch der Technischen Informationsbibliothek Hannover an der National Library of New Zealand und auf der Future Perfect 2012",
-         "type" : 1
-      },
-      "article57" : {
-         "year" : "2012",
-         "abstract" : null,
-         "title" : "DataCite search - part 2",
-         "type" : 1,
-         "keywords" : {
-            "conc30" : 1,
-            "conc19" : 1
-         },
-         "id" : "article57",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article57",
-         "authors" : {
-            "6" : 1
-         }
-      },
-      "article23" : {
-         "type" : 1,
-         "year" : "2014",
-         "abstract" : null,
-         "title" : "Wissen auf einen Klick",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article23",
-         "authors" : {
-            "26" : 1,
-            "80" : 1
-         },
-         "id" : "article23",
-         "keywords" : {
-            "conc0" : 1
-         }
-      },
-      "article47" : {
-         "type" : 1,
-         "title" : "arXiv - Die TIB übernimmt zentrale Finanzierung für deutsche Hochschulen",
-         "abstract" : null,
-         "year" : "2012",
-         "authors" : {
-            "77" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article47",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "id" : "article47"
-      },
-      "article26" : {
-         "type" : 1,
-         "title" : "DataCite and DOI names for research data",
-         "abstract" : null,
-         "year" : "2014",
-         "authors" : {
-            "6" : 1,
-            "56" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article26",
-         "keywords" : {
-            "conc30" : 1,
-            "conc19" : 1
-         },
-         "id" : "article26"
-      },
-      "article7" : {
-         "title" : "Open Access - Was sagen die Bibliotheken?",
-         "abstract" : null,
-         "year" : "2013",
-         "type" : 1,
-         "id" : "article7",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "authors" : {
-            "68" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article7"
-      },
-      "article3" : {
-         "type" : 1,
-         "title" : "3D @Technische Informationsbibliothek (TIB)",
-         "year" : "2012",
-         "abstract" : null,
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article3",
-         "authors" : {
-            "4" : 1,
-            "74" : 1
-         },
-         "id" : "article3",
-         "keywords" : {
-            "g10" : 1
-         }
-      },
-      "article19" : {
-         "authors" : {
-            "5" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article19",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "id" : "article19",
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "Current developments in document delivery in Germany "
-      },
-      "article71" : {
-         "title" : "A Domain-driven Approach to Digital Curation and Preservation of 3D Architectural Data: Stakeholder Identification and Alignment in the DURAARK project",
-         "abstract" : null,
-         "year" : null,
-         "type" : 1,
-         "keywords" : {
-            "conc5" : 1,
-            "conc54" : 1
-         },
-         "id" : "article71",
-         "authors" : {
-            "45" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article71"
-      },
-      "article31" : {
-         "type" : 1,
-         "title" : "Das RADAR Projekt: Datenarchivierung und -publikation als Dienstleistung - disziplinübergreifend, nachhaltig, kostendeckend",
-         "year" : "2014",
-         "abstract" : null,
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article31",
-         "authors" : {
-            "56" : 1
-         },
-         "keywords" : {
-            "conc39" : 1
-         },
-         "id" : "article31"
-      },
-      "article64" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article64",
-         "authors" : {
-            "26" : 1
-         },
-         "id" : "article64",
-         "keywords" : {
-            "conc25" : 1
-         },
-         "type" : 1,
-         "title" : "Das Netzwerk und die Institution",
-         "year" : null,
-         "abstract" : null
-      },
-      "article16" : {
-         "keywords" : {
-            "conc55" : 1
-         },
-         "id" : "article16",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article16",
-         "authors" : {
-            "47" : 1
-         },
-         "title" : "Entgrenzung und Zusammenarbeit - die Notwendigkeit von Kooperationen im Lernraum",
-         "year" : "2014",
-         "abstract" : null,
-         "type" : 1
-      },
-      "article20" : {
-         "type" : 1,
-         "year" : "2014",
-         "abstract" : null,
-         "title" : "Literaturauswahl und -bestellung leichter gemacht!",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article20",
-         "authors" : {
-            "76" : 1
-         },
-         "id" : "article20",
-         "keywords" : {
-            "conc32" : 1
-         }
-      },
-      "article25" : {
-         "keywords" : {
-            "conc39" : 1
-         },
-         "id" : "article25",
-         "authors" : {
-            "56" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article25",
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "RADAR – Ein Forschungsdaten-Repositorium als Dienstleistung für die Wissenschaft",
-         "type" : 1
-      },
-      "article21" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article21",
-         "authors" : {
-            "65" : 1,
-            "75" : 1
-         },
-         "keywords" : {
-            "conc97" : 1
-         },
-         "id" : "article21",
-         "type" : 1,
-         "title" : "Semantische Suche nach wissenschaftlichen Videos. Automatische Verschlagwortung durch Named Entity Recognition",
-         "year" : "2014",
-         "abstract" : null
-      },
-      "article78" : {
-         "type" : 1,
-         "title" : "From Point Clouds to Definitions of Architectural Space - Potentials of Automated Extraction of Semantic Information from Point Clouds for the Building Profession",
-         "year" : null,
-         "abstract" : null,
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article78",
-         "authors" : {
-            "4" : 1
-         },
-         "id" : "article78",
-         "keywords" : {}
-      },
-      "article30" : {
-         "keywords" : {
-            "conc35" : 1,
-            "conc6" : 1
-         },
-         "id" : "article30",
-         "authors" : {
-            "55" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article30",
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "Archive ohne Grenzen. Erschließung und Zugang im europäischen und internationalen Kontext.",
-         "type" : 1
-      },
-      "article65" : {
-         "abstract" : null,
-         "year" : null,
-         "title" : "Benefits of geographical, organizational and collection factors in digital preservation cooperations: The experience of the Goportis consortium ",
-         "type" : 1,
-         "id" : "article65",
-         "keywords" : {
-            "conc54" : 1
-         },
-         "authors" : {
-            "45" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article65"
-      },
-      "article81" : {
-         "id" : "article81",
-         "keywords" : {
-            "conc6" : 1
-         },
-         "authors" : {
-            "55" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article81",
-         "abstract" : null,
-         "year" : null,
-         "title" : "Resümee: Was bleibt mir von dieser Tagung ?",
-         "type" : 1
-      },
-      "article74" : {
-         "type" : 1,
-         "title" : "TIB's Portal for audiovisual media - New ways of indexing and retrieval",
-         "abstract" : null,
-         "year" : null,
-         "authors" : {
-            "65" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article74",
-         "keywords" : {
-            "conc73" : 1
-         },
-         "id" : "article74"
-      },
-      "article80" : {
-         "id" : "article80",
-         "keywords" : {
-            "conc41" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article80",
-         "authors" : {
-            "4" : 1
-         },
-         "year" : null,
-         "abstract" : null,
-         "title" : "VIVO for Scientific Communities - Making researchers & their activities discoverable",
-         "type" : 1
-      },
-      "article46" : {
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "arXiv - Who pays? Auf der Suche nach Nachhaltigkeit /",
-         "type" : 1,
-         "keywords" : {
-            "conc0" : 1
-         },
-         "id" : "article46",
-         "authors" : {
-            "77" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article46"
-      },
-      "article58" : {
-         "authors" : {
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article58",
-         "keywords" : {
-            "conc30" : 1,
-            "conc19" : 1
-         },
-         "id" : "article58",
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "DataCite summer meeting and moving the blog"
-      },
-      "article49" : {
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "\"Wow, someone wants to publish me!\" — Revisited",
-         "type" : 1,
-         "id" : "article49",
-         "keywords" : {
-            "conc74" : 1
-         },
-         "authors" : {
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article49"
-      },
-      "article69" : {
-         "authors" : {
-            "4" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article69",
-         "id" : "article69",
-         "keywords" : {
-            "conc5" : 1,
-            "conc35" : 1
-         },
-         "type" : 1,
-         "title" : "Towards an automatic multi-label classification of 3D architectural models",
-         "abstract" : null,
-         "year" : null
-      },
-      "article52" : {
-         "type" : 1,
-         "year" : "2012",
-         "abstract" : null,
-         "title" : "1.000 Antworten auf die Frage: Literaturverwaltung — Was benutzen Sie, was brauchen Sie?",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article52",
-         "authors" : {
-            "26" : 1
-         },
-         "keywords" : {
-            "conc61" : 1
-         },
-         "id" : "article52"
-      },
-      "article86" : {
-         "keywords" : {
-            "conc54" : 1
-         },
-         "id" : "article86",
-         "authors" : {
-            "65" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article86",
-         "title" : "GRASS GIS, Star Trek and old Video Tape – a reference case on audiovisual preservation for the OSGeo communities",
-         "abstract" : null,
-         "year" : null,
-         "type" : 1
-      },
-      "article32" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article32",
-         "authors" : {
-            "26" : 1
-         },
-         "keywords" : {
-            "conc78" : 1
-         },
-         "id" : "article32",
-         "type" : 1,
-         "title" : "Aspekte der Kommunikation mit Wissenschaftsblogs",
-         "year" : "2014",
-         "abstract" : null
-      },
-      "article45" : {
-         "title" : "arXiv - Veteran und Vorreiter",
-         "year" : "2012",
-         "abstract" : null,
-         "type" : 1,
-         "id" : "article45",
-         "keywords" : {
-            "conc0" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article45",
-         "authors" : {
-            "77" : 1
-         }
-      },
-      "article43" : {
-         "type" : 1,
-         "year" : "2012",
-         "abstract" : null,
-         "title" : "Open Access, Open Content und gemeinfreies Kulturerbe",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article43",
-         "authors" : {
-            "26" : 1
-         },
-         "id" : "article43",
-         "keywords" : {
-            "conc0" : 1
-         }
-      },
-      "article70" : {
-         "authors" : {
-            "76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article70",
-         "id" : "article70",
-         "keywords" : {
-            "conc62" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "year" : null,
-         "title" : "Schlesien versus Sparta. Gerhart Hauptmanns Besinnung auf schlesische Identität im Kontext der Rassenideologie"
-      },
-      "article51" : {
-         "title" : "Publikationsberatung: Neun Thesen vom #iCamp12",
-         "year" : "2012",
-         "abstract" : null,
-         "type" : 1,
-         "keywords" : {
-            "conc89" : 1,
-            "conc74" : 1
-         },
-         "id" : "article51",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article51",
-         "authors" : {
-            "26" : 1
-         }
-      },
-      "article9" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article9",
-         "authors" : {
-            "67" : 1
-         },
-         "id" : "article9",
-         "keywords" : {
-            "conc27" : 1,
-            "conc24" : 1
-         },
-         "type" : 1,
-         "year" : "2013",
-         "abstract" : null,
-         "title" : "Digitale Bibliothek und Portal GetInfo in der TIB Hannover"
-      },
-      "article24" : {
-         "type" : 1,
-         "year" : "2014",
-         "abstract" : null,
-         "title" : "Confluence for Knowledge. Der 80. IFLA-Weltkongress in Lyon",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article24",
-         "authors" : {
-            "83" : 1
-         },
-         "id" : "article24",
-         "keywords" : {
-            "conc11" : 1
-         }
-      },
-      "article14" : {
-         "type" : 1,
-         "title" : "Linked Heritage  - ein europäisches Projekt",
-         "year" : "2013",
-         "abstract" : null,
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article14",
-         "authors" : {
-            "50" : 1
-         },
-         "id" : "article14",
-         "keywords" : {}
-      },
-      "article42" : {
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2012",
-         "title" : "Allgemeine Herausforderungen an das Personalmanagement in Bibliotheken",
-         "authors" : {
-            "58" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article42",
-         "id" : "article42",
-         "keywords" : {
-            "conc81" : 1
-         }
-      },
-      "article27" : {
-         "authors" : {
-            "65" : 1,
-            "43" : 1,
-            "56" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article27",
-         "id" : "article27",
-         "keywords" : {
-            "conc73" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2014",
-         "title" : "TIB's Portal for Audiovisual Media: Combining Manual and Automatic Indexing"
-      },
-      "article50" : {
-         "id" : "article50",
-         "keywords" : {
-            "conc78" : 1
-         },
-         "authors" : {
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article50",
-         "abstract" : null,
-         "year" : null,
-         "title" : "ForscherInnen gemeinsam neue Wege im Web eröffnen — Das Open Science Lab der TIB Hannover",
-         "type" : 1
-      },
-      "article6" : {
-         "authors" : {
-            "26" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/article6",
-         "id" : "article6",
-         "keywords" : {
-            "conc53" : 1,
-            "conc78" : 1
-         },
-         "type" : 1,
-         "abstract" : null,
-         "year" : "2013",
-         "title" : "Peer-to-peer und Dezentralität - von den Wurzeln des Netzes zu den aktuellen Trends"
-      }
-   },
-   "authors" : {
-      "56" : {
-         "positions" : [],
-         "count" : "6",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/56",
-         "publications" : {
-            "article25" : 1,
-            "article31" : 1,
-            "article26" : 1,
-            "article33" : 1,
-            "article13" : 1,
-            "article27" : 1
-         },
-         "authors" : {
-            "6" : 1,
-            "65" : 1,
-            "43" : 1,
-            "80" : 1,
-            "56" : 1,
-            "12" : 1
-         },
-         "keywords" : {
-            "conc77" : 1,
-            "conc30" : 1,
-            "conc19" : 1,
-            "conc73" : 1,
-            "conc63" : 1,
-            "conc39" : 1,
-            "conc67" : 1
-         },
-         "id" : "56",
-         "fullname" : "Janna Neumann",
-         "name" : "J Neumann",
+         "fullname" : "Sven Strobel",
+         "count" : "2",
          "image" : null,
-         "type" : 0
-      },
-      "12" : {
-         "keywords" : {
-            "conc67" : 1,
-            "conc77" : 1
-         },
-         "id" : "12",
-         "fullname" : "Elena Derr",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/12",
-         "publications" : {
-            "article13" : 1
-         },
-         "authors" : {
-            "56" : 1,
-            "12" : 1
-         },
-         "positions" : [],
-         "count" : "1",
-         "image" : null,
-         "type" : 0,
-         "name" : "E Derr"
-      },
-      "83" : {
-         "keywords" : {
-            "conc11" : 1
-         },
-         "id" : "83",
-         "fullname" : "Christine Wilhelm",
-         "positions" : [],
-         "count" : "1",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/83",
-         "publications" : {
-            "article24" : 1
-         },
-         "authors" : {
-            "83" : 1
-         },
-         "name" : "C Wilhelm",
-         "image" : null,
-         "type" : 0
-      },
-      "74" : {
-         "name" : "I Sens",
-         "image" : null,
-         "type" : 0,
-         "fullname" : "Irina Sens",
-         "keywords" : {
-            "g10" : 1,
-            "conc11" : 1
-         },
-         "id" : "74",
-         "count" : "3",
-         "positions" : [],
-         "authors" : {
-            "4" : 1,
-            "74" : 1,
-            "6" : 1,
-            "68" : 1
-         },
-         "publications" : {
-            "article4" : 1,
-            "article3" : 1,
-            "article10" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/74"
-      },
-      "6" : {
-         "type" : 0,
-         "image" : null,
-         "name" : "J Brase",
-         "fullname" : "Jan Brase",
-         "keywords" : {
-            "conc73" : 1,
-            "conc30" : 1,
-            "conc19" : 1,
-            "conc11" : 1,
-            "conc63" : 1
-         },
-         "id" : "6",
-         "authors" : {
-            "74" : 1,
-            "56" : 1,
-            "68" : 1,
-            "6" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/6",
-         "publications" : {
-            "article58" : 1,
-            "article10" : 1,
-            "article63" : 1,
-            "article57" : 1,
-            "article26" : 1
-         },
-         "count" : "5",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/75",
+         "id" : "75",
          "positions" : []
       },
-      "45" : {
-         "name" : "M Lindlar",
-         "type" : 0,
-         "image" : null,
-         "fullname" : "Michelle Lindlar",
-         "keywords" : {
-            "conc54" : 1,
-            "conc5" : 1
-         },
-         "id" : "45",
-         "count" : "4",
-         "positions" : [],
-         "authors" : {
-            "1" : 1,
-            "45" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/45",
-         "publications" : {
-            "article65" : 1,
-            "article73" : 1,
-            "article2" : 1,
-            "article71" : 1
-         }
-      },
-      "50" : {
-         "type" : 0,
-         "image" : null,
-         "name" : "P Mensing",
-         "authors" : {
-            "50" : 1
-         },
-         "publications" : {
-            "article14" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/50",
-         "count" : "1",
-         "positions" : [],
-         "fullname" : "Petra Mensing",
-         "id" : "50",
-         "keywords" : {}
-      },
-      "47" : {
-         "fullname" : "Anne May",
-         "keywords" : {
-            "conc55" : 1
-         },
-         "id" : "47",
-         "authors" : {
-            "47" : 1
-         },
-         "publications" : {
-            "article16" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/47",
-         "count" : "1",
-         "positions" : [],
-         "image" : null,
-         "type" : 0,
-         "name" : "A May"
-      },
-      "67" : {
-         "name" : "E Roscoe",
-         "type" : 0,
-         "image" : null,
-         "fullname" : "Elena Roscoe",
-         "id" : "67",
-         "keywords" : {
-            "conc27" : 1,
-            "conc24" : 1
-         },
-         "count" : "2",
-         "positions" : [],
-         "authors" : {
-            "67" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/67",
-         "publications" : {
-            "article18" : 1,
-            "article9" : 1
-         }
-      },
-      "80" : {
-         "image" : null,
-         "type" : 0,
-         "name" : "M Tullney",
-         "authors" : {
-            "26" : 1,
-            "80" : 1,
-            "56" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/80",
-         "publications" : {
-            "article23" : 1,
-            "article33" : 1,
-            "article34" : 1
-         },
-         "count" : "3",
-         "positions" : [],
-         "fullname" : "Marco Tullney",
-         "id" : "80",
-         "keywords" : {
-            "conc0" : 1,
-            "conc63" : 1
-         }
-      },
       "48" : {
-         "keywords" : {
-            "conc41" : 1
-         },
-         "id" : "48",
+         "count" : "1",
+         "image" : null,
          "fullname" : "Martin Mehlberg",
          "publications" : {
             "article77" : 1
          },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/48",
-         "authors" : {
-            "48" : 1,
-            "26" : 1,
-            "4" : 1
-         },
-         "positions" : [],
-         "count" : "1",
-         "image" : null,
-         "type" : 0,
-         "name" : "M Mehlberg"
-      },
-      "58" : {
-         "authors" : {
-            "58" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/58",
-         "publications" : {
-            "article42" : 1
-         },
-         "count" : "1",
-         "positions" : [],
-         "fullname" : "Dorothee Nürnberger",
-         "id" : "58",
-         "keywords" : {
-            "conc81" : 1
-         },
-         "image" : null,
-         "type" : 0,
-         "name" : "D Nürnberger"
-      },
-      "77" : {
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/77",
-         "publications" : {
-            "article47" : 1,
-            "article46" : 1,
-            "article45" : 1,
-            "article17" : 1
-         },
-         "authors" : {
-            "77" : 1,
-            "27" : 1
-         },
-         "positions" : [],
-         "count" : "4",
-         "keywords" : {
-            "conc27" : 1,
-            "conc0" : 1
-         },
-         "id" : "77",
-         "fullname" : "Esther Tobschall",
-         "image" : null,
-         "type" : 0,
-         "name" : "E Tobschall"
-      },
-      "65" : {
-         "authors" : {
-            "56" : 1,
-            "75" : 1,
-            "43" : 1,
-            "65" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/65",
-         "publications" : {
-            "article21" : 1,
-            "article74" : 1,
-            "article86" : 1,
-            "article27" : 1
-         },
-         "count" : "4",
-         "positions" : [],
-         "fullname" : "Margret Plank",
-         "id" : "65",
-         "keywords" : {
-            "conc73" : 1,
-            "conc97" : 1,
-            "conc54" : 1
-         },
-         "type" : 0,
-         "image" : null,
-         "name" : "M Plank"
-      },
-      "27" : {
-         "fullname" : "Michael Hohlfeld",
-         "id" : "27",
-         "keywords" : {
-            "conc27" : 1,
-            "conc24" : 1,
-            "conc106" : 1
-         },
-         "authors" : {
-            "77" : 1,
-            "68" : 1,
-            "27" : 1,
-            "76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/27",
-         "publications" : {
-            "article17" : 1,
-            "article41" : 1
-         },
-         "count" : "2",
-         "positions" : [],
-         "image" : null,
-         "type" : 0,
-         "name" : "M Hohlfeld"
-      },
-      "76" : {
-         "positions" : [],
-         "count" : "5",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/76",
-         "publications" : {
-            "article54" : 1,
-            "article41" : 1,
-            "article70" : 1,
-            "article53" : 1,
-            "article20" : 1
-         },
-         "authors" : {
-            "68" : 1,
-            "27" : 1,
-            "76" : 1
-         },
-         "keywords" : {
-            "conc24" : 1,
-            "conc89" : 1,
-            "conc106" : 1,
-            "conc0" : 1,
-            "conc62" : 1,
-            "conc32" : 1
-         },
-         "id" : "76",
-         "fullname" : "Bernhard Tempel",
-         "name" : "B Tempel",
-         "type" : 0,
-         "image" : null
-      },
-      "61" : {
-         "authors" : {
-            "68" : 1,
-            "61" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/61",
-         "publications" : {
-            "article12" : 1
-         },
-         "count" : "1",
-         "positions" : [],
-         "fullname" : "Jens Olf",
-         "keywords" : {
-            "conc32" : 1
-         },
-         "id" : "61",
-         "type" : 0,
-         "image" : null,
-         "name" : "J Olf"
-      },
-      "75" : {
-         "name" : "S Strobel",
-         "type" : 0,
-         "image" : null,
-         "count" : "2",
-         "positions" : [],
-         "authors" : {
-            "65" : 1,
-            "75" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/75",
-         "publications" : {
-            "article22" : 1,
-            "article21" : 1
-         },
-         "fullname" : "Sven Strobel",
-         "id" : "75",
-         "keywords" : {
-            "conc97" : 1
-         }
-      },
-      "68" : {
-         "name" : "U Rosemann",
-         "image" : null,
-         "type" : 0,
-         "id" : "68",
-         "keywords" : {
-            "conc11" : 1,
-            "conc24" : 1,
-            "conc106" : 1,
-            "conc0" : 1,
-            "conc32" : 1
-         },
-         "fullname" : "Uwe Rosemann",
-         "positions" : [],
-         "count" : "5",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/68",
-         "publications" : {
-            "article41" : 1,
-            "article10" : 1,
-            "article60" : 1,
-            "article12" : 1,
-            "article7" : 1
-         },
-         "authors" : {
-            "61" : 1,
-            "76" : 1,
-            "74" : 1,
-            "6" : 1,
-            "27" : 1,
-            "68" : 1
-         }
-      },
-      "4" : {
-         "image" : null,
-         "type" : 0,
-         "name" : "I Blümel",
-         "publications" : {
-            "article4" : 1,
-            "article3" : 1,
-            "article69" : 1,
-            "article77" : 1,
-            "article78" : 1,
-            "article80" : 1,
-            "article76" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/4",
          "authors" : {
             "26" : 1,
-            "48" : 1,
             "4" : 1,
-            "74" : 1
-         },
-         "positions" : [],
-         "count" : "7",
-         "keywords" : {
-            "conc35" : 1,
-            "g10" : 1,
-            "conc41" : 1,
-            "conc5" : 1
-         },
-         "id" : "4",
-         "fullname" : "Ina Blümel"
-      },
-      "26" : {
-         "image" : null,
-         "type" : 0,
-         "name" : "L Heller",
-         "keywords" : {
-            "conc67" : 1,
-            "conc53" : 1,
-            "conc61" : 1,
-            "conc41" : 1,
-            "conc89" : 1,
-            "conc74" : 1,
-            "conc25" : 1,
-            "conc78" : 1,
-            "conc77" : 1,
-            "conc0" : 1
-         },
-         "id" : "26",
-         "fullname" : "Lambert Heller",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/26",
-         "publications" : {
-            "article6" : 1,
-            "article50" : 1,
-            "article39" : 1,
-            "article52" : 1,
-            "article64" : 1,
-            "article49" : 1,
-            "article66" : 1,
-            "article51" : 1,
-            "article23" : 1,
-            "article77" : 1,
-            "article48" : 1,
-            "article43" : 1,
-            "article5" : 1,
-            "article32" : 1
-         },
-         "authors" : {
-            "80" : 1,
-            "4" : 1,
-            "26" : 1,
             "48" : 1
          },
-         "positions" : [],
-         "count" : "14"
-      },
-      "43" : {
-         "fullname" : "Anna Lichtenstein",
-         "id" : "43",
+         "name" : "M Mehlberg",
          "keywords" : {
-            "conc73" : 1
+            "conc41" : 1
          },
-         "authors" : {
-            "65" : 1,
-            "56" : 1,
-            "43" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/43",
-         "publications" : {
-            "article27" : 1
-         },
-         "count" : "1",
-         "positions" : [],
          "type" : 0,
-         "image" : null,
-         "name" : "A Lichtenstein"
-      },
-      "55" : {
-         "count" : "2",
          "positions" : [],
-         "authors" : {
-            "55" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/55",
-         "publications" : {
-            "article81" : 1,
-            "article30" : 1
-         },
-         "fullname" : "Lars Nebelung",
-         "id" : "55",
-         "keywords" : {
-            "conc35" : 1,
-            "conc6" : 1
-         },
-         "name" : "L Nebelung",
-         "image" : null,
-         "type" : 0
+         "id" : "48",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/48"
       },
-      "17" : {
+      "74" : {
          "type" : 0,
+         "fullname" : "Irina Sens",
+         "authors" : {
+            "74" : 1,
+            "68" : 1,
+            "4" : 1,
+            "6" : 1
+         },
+         "name" : "I Sens",
+         "publications" : {
+            "article3" : 1,
+            "article4" : 1,
+            "article10" : 1
+         },
+         "keywords" : {
+            "conc11" : 1,
+            "g10" : 1
+         },
+         "count" : "3",
          "image" : null,
-         "name" : "A Franzkowiak",
-         "authors" : {
-            "17" : 1
-         },
-         "publications" : {
-            "article15" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/17",
-         "count" : "1",
+         "uri" : "http://test.osl.tib.eu/vivo-test/individual/74",
          "positions" : [],
-         "fullname" : "Anette Franzkowiak",
-         "id" : "17",
-         "keywords" : {
-            "conc74" : 1,
-            "conc11" : 1
-         }
-      },
-      "5" : {
-         "positions" : [],
-         "count" : "1",
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/5",
-         "publications" : {
-            "article19" : 1
-         },
-         "authors" : {
-            "5" : 1
-         },
-         "keywords" : {
-            "conc32" : 1
-         },
-         "id" : "5",
-         "fullname" : "Markus Brammer",
-         "name" : "M Brammer",
-         "type" : 0,
-         "image" : null
-      },
-      "1" : {
-         "name" : "T Bähr",
-         "image" : null,
-         "type" : 0,
-         "count" : "2",
-         "positions" : [],
-         "authors" : {
-            "1" : 1,
-            "45" : 1
-         },
-         "publications" : {
-            "article2" : 1,
-            "article40" : 1
-         },
-         "uri" : "http://test.osl.tib.eu/vivo-test/individual/1",
-         "fullname" : "Thomas Bähr",
-         "keywords" : {
-            "conc22" : 1,
-            "conc6" : 1
-         },
-         "id" : "1"
+         "id" : "74"
       }
    }
 }
