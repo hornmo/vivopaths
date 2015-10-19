@@ -31,6 +31,24 @@ body{
   width:300px;
   display:inline;
 }
+#help{
+  position:relative;
+  display:inline;
+  margin-top:19px;
+  margin-left:30px;
+  float:left;
+}
+.help-icon{
+  border:1px solid #AAA;
+  padding:2px 8px;
+  width:27px;
+  height:27px;
+  border-radius:3px;
+}
+.help-icon:hover{
+  cursor:pointer;
+  background-color:#eee;
+}
 #suggestions{
   border:1px solid #AAA;
   width:312px;
@@ -74,10 +92,56 @@ body{
   font-family: FontAwesome;
   padding-right: 0.3em;
 }
-.splashmsg{
+#splashmsg{
+  z-index:1000;
+  background-color:#fff;
+  clear:both;
+  height:60%;
+  overflow:auto;
+  position:absolute;
+  width: 50%;
+  left:20%;
+  padding: 25px;
+  border: 2px solid #bbb;
+  border-radius:4px;
+
+  -webkit-box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.75);
+}
+#closesplash{
+  position:absolute;
+  font-size:1.4em;
+  color:#666;
+  top:5px;
+  right:10px;
+}
+#closesplash:hover{
+  color:#AAA;
+  cursor:pointer;
+}
+.splashmsg-heading{
+  margin-bottom:5px;
+  font-size:1.25em;
+}
+.splashmsg-body{
   position:relative;
-  width: 70%;
-  margin: 50px auto;
+  overflow:auto;
+  height:auto;
+  clear:both;
+  margin:0px 0px 15px 0px;
+}
+.splashmsg-body ul{
+  list-style-type:none;
+}
+.splashlabel{
+  display:inline;
+  float:left;
+  padding:2px;
+  margin-right:15px;
+}
+.splashlabel span{
+  padding:3px;
 }
 #canvas{ 
   z-index: 2;

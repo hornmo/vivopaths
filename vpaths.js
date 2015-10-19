@@ -30,14 +30,16 @@ function View(svg){
       height: this.height - HEADERH
     });
     $('#search input').attr('placeholder', SEARCHPH);
-    this.fontsize = this.interval(this.width * this.height, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
+    this.fontsize = this.interval(this.width * this.height, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, true);
     this.authors = {};
     this.selected = [];
+    this.splash = false;
     this.publications = {};
     this.keywords = {};
     this.order = 'year';
     this.getData();
     this.events();
+    this.focus = [ false, ''];
     this.pubSplit = {top: [], mid: [], bottom:[]};
     this.offsets = { top: [0,0], mid: [0,0], bottom: [0,0] };
     this.context = {visible: false, item: '' };
@@ -81,6 +83,8 @@ function View(svg){
 	  pair[0] = '1';
 	}else if(pair[0].indexOf('Grant') != -1){
 	  pair[0] = '2';
+	}else if(pair[0].indexOf('Person') != -1){
+	  pair[0] = '0';
 	}
 	if(i < 2){
 	  ret.push(pair);
@@ -180,10 +184,35 @@ function View(svg){
     }
   };
   this.showSplash = function(bool){
+    $('#splash').children().remove();
+    $('#splashmsg').children().remove();
     if(bool === true){
-      // $('#splash').append('<div class="splashmsg"><b><i>VIVOPaths</i></b> is a visualization tool to enable an interactive exploration through a semantic representation of a research institution.</div>');
-    }else{
-      $('#splash').children().remove();
+      $('#splash').append('<div id="splashmsg"></div>');
+      $('#splashmsg').append('<span id="closesplash"><i class="fa fa-remove"></i></span>');
+      $('#splashmsg').append('<div class="splashmsg-body"><b><i>VIVOPaths</i></b> ist eine Applikation zur Visualisierung von semantischen Verbindungen zwischen Entitäten in einer Instanz des Forschungsdatennetzwerks VIVO.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading"><b>Typen</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Zur Zeit werden vier verschiedene Typen in VIVOPaths dargestellt:</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><div class="author hovered splashlabel"><span class="label-icon"><i class="fa fa-user"></i></span><span>Autoren</span></div><div class="pub hovered splashlabel"><span class="label-icon"><i class="fa fa-file"></i></span><span>Publikationen</span></div><div class="keyword hovered splashlabel"><span class="label-icon"><i class="fa fa-tag"></i></span><span>Schlagwörter</span></div><div class="project hovered splashlabel"><span class="label-icon"><i class="fa fa-briefcase"></i></span><span>Projekte</span></div></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Es können bis zu zwei Entitäten ausgewählt werden, über deren Publikationen Verbindungen zu anderen Entitäten angezeigt werden. Dabei stehen die ausgewählten Entitäten und ihre Veröffentlichungen in der Mitte, die mit diesen Verbundenen links und rechts davon. Ausgewählte Entitäten werden durch weiße Schrift auf dunklem Hintergrund gekennzeichnet. Ist eine Publikation ausgewählt, kann keine zweite Entität dazu ausgewählt werden. Ist lediglich eine Entität ausgewählt, werden die zugehörigen Publikationen unter dem Label aufgelistet.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Sind zwei Entitäten ausgewählt, so wird die Schnittmenge der Publikationen (also solche, die mit beiden Entitäten verbunden sind) zwischen diesen angezeigt, und die restlichen oberhalb (erste Auswahl) bzw. unterhalb (zweite Auswahl) der jeweiligen verbundenen Entität.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading"><b>Labels</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Wird der Mauszeiger über eins der verbundenen Label bewegt, werden dieses Label, sowie alle mit diesem über Publikationen verbundenen Label und deren Verbindungen hervorgehoben. Ein Linksklick auf den Titel speichert diese Ansicht, bis ein anderes Label ausgewählt wird. Ein ausgewähltes Label hat drei Bereiche:</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span style="float:left;"><b>Das Kontext-Symbol</b>, z.B.</span><div class="author splashlabel"><span class="label-icon"><i class="fa fa-user" style="vertical-align:top;"></i></span></div></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Ein Klick auf dieses Symbol ruft ein Fenster mit zusätzlichen Informationen zu der betroffenen Entität auf. In diesem Fenster gibt es auch die Möglichkeit, über einen Link auf die VIVO-Profilseite dieses Eintrags zu gelangen.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><b>Name / Titel</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Ein erneuter Linksklick auf den Namen des Labels wählt diesen als aktive Entität aus. Alle Verbindungen werden neu berechnet, und die Anzeige wird neu aufgebaut.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><b>Hinzufügen</b><span class="compare"><i class="fa fa-plus"></i></span></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Durch die Auswahl dieses Feldes wird der Titel als zweite (untere) Entität ausgewählt. Ist bereits eine zweite Auswahl getroffen, wird diese ersetzt.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><b>Entfernen (bei Ausgewählten)</b><span class="label-selected-remove"><i class="fa fa-remove"></i></span></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Ausgewählt Begriffe können durch diese Funktion deselektiert werden.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading"><b>Doppelauswahl</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Neben der einfachen Auswahl einzelner Labels können auch zwei Labels gleichzeitig ausgewählt werden. Hierzu muss die Maus über dem Titel eines Labels gedrückt werden und vor dem Loslassen auf den Titel eines anderen Labels gezogen werden. Als optische Rückmeldung auf diesen Prozess wird eine Linie von dem Startpunkt zur aktuellen Cursorposition gezeichnet. Die Auswahl von Publikationen ist so nicht möglich, da eine Publikation nur einzeln ausgewählt werden kann.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading"><b>Suche</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Die Suche erfolgt über alle im Datenbestand vorhandenen Titel und Namen. Eine Selektion aus der Trefferliste wählt den Term in der Anzeige aus.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading"><b>Eindeutige URL</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Um einen direkten Zugriff auf eine bestimmte Auswahl an Entitäten von außerhalb zu ermöglichen, wird die aktuelle Auswahl stets in der Addresszeile repräsentiert. Das Format ergibt sich wie folgt:</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><i>{vivopaths-url}/#/{Typ1}_{ID1}(:{Typ2}_{ID2})</i></div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><b><i>Typ1</i></b> bezeichnet den Typ der ersten Auswahl und kann entweder numerisch (0=Autor, 1=Publikation, 2=Schlagwort/Projekt) oder mit englischen Begriffen, basierend auf dem VIVO-RDF-Schema (Person, Article, Grant, Concept) angegeben werden. Danach folgt ein Unterstrich, auf welchen die ID der Entität folgt. Gibt es einen zweiten ausgewählten Term, wird dieser nach einem Doppelpunkt in der gleichen From angehängt.</div>');
     }
   }
   this.events = function(){
@@ -207,7 +236,7 @@ function View(svg){
 	  var str = '#' + suggestions[index].id + '.suggested';
 	  $('.suggested.suggested-focus').removeClass('suggested-focus');
 	  $(str).addClass('suggested-focus');
-	  $(this).val(suggestions[index].innerText);
+	  $(this).val(suggestions[index].textContent);
 	}
       }else if(event.keyCode === 13){
 	event.preventDefault();
@@ -252,8 +281,24 @@ function View(svg){
 	  that.idToSelection(sid, 1);
 	},SPEED);
     });
+    $('#help').on("mouseup", ".help-icon", function(e){
+      if(that.splash == false){
+	that.showSplash(true);
+	that.splash = true;
+      }else{
+	that.splash = false;
+	that.showSplash(false);
+      }
+    });
+    $('#closesplash').mouseup(function(e){
+	console.log('close');
+	that.splash = false;
+	that.showSplash(false);
+    })
     $(window).resize(function (e){
       that.sections = that.setSections();
+      that.splash = false;
+      that.showSplash(false);
       var newh = that.sections[0][1] - HEADERH;
       var neww = $(window).width();
       S.clear();
@@ -262,7 +307,7 @@ function View(svg){
 	width: neww, 
 	height: newh
       });
-      that.fontsize = that.interval(neww * newh, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, false);
+      that.fontsize = that.interval(neww * newh, 800 * 600, 1920 * 1080, FONTMIN, FONTMAX, true);
       $('.label').fadeTo(SPEED, 0);
       rtime = new Date();
       if (timeout === false) {
@@ -282,6 +327,8 @@ function View(svg){
     $(document).ready(function(){
       $.address.externalChange(function(){ that.selection = that.getPars(); that.updateLabels();});
     })
+    $('#labels').on("mouseup", ".label:not(.selected)", function(e){
+    });
     $('#labels').on("mouseenter", ".label:not(.selected)", function(e){
       var lid = $(this).attr('id');
       var typeN = lid.substr(0,1);
@@ -294,6 +341,13 @@ function View(svg){
       var eid = '';
       var directEdges = null;
       var item = that.data[TYPES[typeN]][id];
+      if(that.focus[0] && that.focus[1] != lid){
+	$('#'+that.focus[1]).removeClass('hovered');
+	$('#'+that.focus[1]).children('.compare').remove();
+	$('.label').removeClass('connected');
+	S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
+	that.focus = [false, ''];
+      }
       if(item[TYPES[that.selection[0][0]]][that.selection[0][1]]){
 	$('#'+that.selected[0]).addClass('connected');
       }
@@ -319,7 +373,7 @@ function View(svg){
 	})
       }
       else if(typeN == 0 || typeN == 2){
-	if(that.selection[0][0] != 1){
+	if(that.selection[0][0] != 1 && !that.focus[0]){
 	  $(this).append('<span class="compare" title="Compare"><i class="fa fa-plus"></i></span>');
 	}
 	eid = '[id^=' + typeC + id + 'X]';
@@ -395,14 +449,20 @@ function View(svg){
       }
     });
     $('#labels').on("mouseup", ".label-text", function(e){
-// 	lid = $(this).parent().attr('id');
+      lid = $(this).parent().attr('id');
       clearTimeout(to);
       setTimeout(function(){
 	sel = that.selStatus;
-	if(that.selStatus[1] === false && sel[0].substr(0,1) != 1){
-	  S.clear();
-	  to = that.idToSelection(sel[0], 1);
-	}else if(that.selStatus[1] === true && sel[0].substr(0,1) != 1 && sel[2].substr(0,1) != 1){
+	if(that.selStatus[1] === false && sel[0].substr(0,1) != 1){ // no lasso
+	  if(that.focus[0] && that.focus[1] == lid){
+	    $('hovered').remove();
+	    S.clear();
+	    to = that.idToSelection(sel[0], 1);
+	  }else if(that.focus[1] != lid){
+	    that.focus = [true, lid];
+	    $('#'+lid).addClass('hovered');
+	  }
+	}else if(that.selStatus[1] === true && sel[0].substr(0,1) != 1 && sel[2].substr(0,1) != 1){ // lasso-end
 	  S.clear();
 	  to = that.idToSelection(sel[0], 1, sel[2]);
 	}else if(sel[0].substr(0,1) == 1){
@@ -414,10 +474,12 @@ function View(svg){
     });
     $('#labels').on("mouseleave", ".hovered", function(e){
       var id = $(this).attr('id');
-      $(this).removeClass('hovered');
-      $(this).children('.compare').remove();
-      $('.label').removeClass('connected');
-      S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
+      if(!that.focus[0] || that.focus[1] != id){
+	$(this).removeClass('hovered');
+	$(this).children('.compare').remove();
+	$('.label').removeClass('connected');
+	S.selectAll('path').attr({opacity: 0.2, strokeDasharray: "0"});
+      }
     });
     $('#labels').on("mouseup", ".compare", function(e){
       S.clear();
@@ -634,7 +696,9 @@ function View(svg){
 	}
       }else{
 	delete that.selection[0];
-	that.selection = [];
+	that.selection[0] = [];
+	that.selection[0][0] = '';
+	that.selection[0][1] = '';
 	$.address.value('');
       }
     }else if(mode === 1){
@@ -1019,66 +1083,80 @@ function View(svg){
 	  p[0][1] = false;
 	}
 	if(p[0][1] !== false){ // spot and fix possible overlapping
-	  var ol = '';
+	  var ol = false;
+	  var slots = Math.ceil((that.height - HEADERH)/FONTMAX);
 	  var changeW = 0;
-	  var minoverlap = p[0][1] - BORDERS;
-	  var maxoverlap = p[0][1] + that.fontsize + BORDERS;
+	  var minoverlap = p[0][1] - 6*BORDERS;
+	  var maxoverlap = p[0][1] + FONTMAX + 6*BORDERS;
 	  if(item.type == 0){
-	    oa = $('.label.author');
+	    oa = $('.label.author').not('.selected');
 	  }else if(item.type == 2){
 	    if(that.sections[0][0] > SIDEMINWIDTH){
-	      oa = $('.label.keyword, .label.project');
+	      oa = $('.label.keyword, .label.project').not('.selected');
 	    }else{
-	      oa = $('.label').not('.pub');
+	      oa = $('.label').not('.pub, .selected');
 	    }
 	  }
-	  for(i=0;i<=6;i++){
+	  for(i=0;i<=slots;i++){
 	    $.each(oa, function(k,v){   
-	      var t = parseInt($(this).css('top'), 10);
-	      var h = $(this).height();
+	      var otherT = parseInt($(this).css('top'), 10);
+	      var otherH = $(this).height();
 	      
-	      if(t + h >= minoverlap && t <= maxoverlap){
-		var olmin = (t+h) - p[0][1];
-		var olmax = t - (p[0][1] + h);
-		if(olmin >= olmax){
-		  p[0][1] += olmin + BORDERS + FONTMAX;
+	      if(otherT + otherH >= minoverlap && otherT <= maxoverlap){
+		var olmin = (otherT+otherH) - p[0][1];
+		var olmax = otherT - (p[0][1] + otherH);
+		if(i<8){
+		  if(olmin >= olmax){
+		    p[0][1] += olmin + BORDERS + that.fontsize;
+		  }else{
+		    p[0][1] += olmax - BORDERS - that.fontsize;
+		  }
 		}else{
-		  p[0][1] -= olmax - BORDERS - FONTMAX;
+		  p[0][1] = HEADERH + (i-7)*FONTMAX + 6;
 		}
+		ol = true;
+	      }else{
+		ol = false;
 	      }
 	      if(p[0][1] <= HEADERH){
-		p[0][1] = HEADERH + 6;
-	      }else if(p[0][1] >= that.sections[0][1] - FONTMAX - BORDERS){
 		p[0][1] = that.sections[0][1] - FONTMAX - BORDERS;
+	      }else if(p[0][1] >= that.sections[0][1] - FONTMAX){
+		p[0][1] = HEADERH + 6;
 	      }
-	      minoverlap = p[0][1] - BORDERS;
-	      maxoverlap = p[0][1] + that.fontsize + BORDERS;
+	      minoverlap = p[0][1] - 6*BORDERS;
+	      maxoverlap = p[0][1] + that.fontsize + 6*BORDERS;
+// 	      if(p[0][1] >= that.sections[0][1] - FONTMAX - that.fontsize || p[0][1] <= HEADERH){
+// 		if(p[0][1] !== false){
+// 		  var rndY = Math.random()*(that.sections[0][1] - HEADERH - FONTMAX); 
+// 		  p[0][1] = HEADERH + rndY;
+// 		}
+// 	      }
 	    });
-	    if(that.sections[0][0] != SIDEMINWIDTH){
-	      $.each(oa, function(k,v){   
-		var t = parseInt($(this).css('top'), 10);
-		var h = $(this).height();
-		var w = $(this).width();
-		var xpos = '';
-		if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
-		  xpos = parseInt($(this).css('left'),10);
-		}else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-		  xpos = parseInt($(this).css('left'),10)
-		}
-		if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
-		  changeW = w;
-		}
-		minoverlap = p[0][1] - FONTMAX - BORDERS;
-		maxoverlap = p[0][1] + 2*FONTMAX + BORDERS;
-	      });
-	    }
-	    if(changeW != 0){
+// 	    if(that.sections[0][0] != SIDEMINWIDTH){
+// 	      $.each(oa, function(k,v){   
+// 		var t = parseInt($(this).css('top'), 10);
+// 		var h = $(this).height();
+// 		var w = $(this).width();
+// 		var xpos = '';
+// 		if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
+// 		  xpos = parseInt($(this).css('left'),10);
+// 		}else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
+// 		  xpos = parseInt($(this).css('left'),10)
+// 		}
+// 		if(t + h >= minoverlap && t <= maxoverlap && xpos == OUTERMARGIN + BORDERS){
+// 		  changeW = w;
+// 		}
+// 	      });
+// 	    }
+// 	    if(changeW != 0){
+// 	    }
+	  }
+	  if(ol == true){
 	      if(item.type == 0 || that.sections[0][0] == SIDEMINWIDTH){
-		p[0][0] = OUTERMARGIN + BORDERS + changeW + 30;
+		p[0][0] += MAXSIDELABELWIDTH;
 	      }else if(item.type == 2 && that.sections[0][0] > SIDEMINWIDTH){
-		p[1][0] = OUTERMARGIN + BORDERS + changeW + 30;
+		p[0][0] -= MAXSIDELABELWIDTH;
 	      }
-	    }
 	  }
 	}else{
 	  p[0][1] = false;
@@ -1120,12 +1198,6 @@ function View(svg){
 	  }else{
 	    p[0][1] = (HEADERH + 100) - (0.5*that.fontsize + 4*BORDERS);
 	  }
-	}
-      }
-      if(p[0][1] >= that.sections[0][1] - FONTMAX - that.fontsize || p[0][1] <= HEADERH){
-	if(p[0][1] !== false){
-	  var rndY = Math.random()*(that.sections[0][1] - HEADERH - FONTMAX); 
-	  p[0][1] = HEADERH + rndY;
 	}
       }
     }
