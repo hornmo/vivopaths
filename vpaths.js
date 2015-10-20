@@ -184,35 +184,42 @@ function View(svg){
     }
   };
   this.showSplash = function(bool){
+    var that = this;
     $('#splash').children().remove();
     $('#splashmsg').children().remove();
     if(bool === true){
-      $('#splash').append('<div id="splashmsg"></div>');
-      $('#splashmsg').append('<span id="closesplash"><i class="fa fa-remove"></i></span>');
+      $('#splash').append('<div id="splash-border"></div>');
+      $('#splash-border').append('<div id="splashmsg"></div>');
+      $('#splash-border').append('<div class="close-splash"><i class="fa fa-remove"></i></div>');
       $('#splashmsg').append('<div class="splashmsg-body"><b><i>VIVOPaths</i></b> ist eine Applikation zur Visualisierung von semantischen Verbindungen zwischen Entitäten in einer Instanz des Forschungsdatennetzwerks VIVO.</div>');
-      $('#splashmsg').append('<div class="splashmsg-heading"><b>Typen</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Typen</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Zur Zeit werden vier verschiedene Typen in VIVOPaths dargestellt:</div>');
       $('#splashmsg').append('<div class="splashmsg-body"><div class="author hovered splashlabel"><span class="label-icon"><i class="fa fa-user"></i></span><span>Autoren</span></div><div class="pub hovered splashlabel"><span class="label-icon"><i class="fa fa-file"></i></span><span>Publikationen</span></div><div class="keyword hovered splashlabel"><span class="label-icon"><i class="fa fa-tag"></i></span><span>Schlagwörter</span></div><div class="project hovered splashlabel"><span class="label-icon"><i class="fa fa-briefcase"></i></span><span>Projekte</span></div></div>');
       $('#splashmsg').append('<div class="splashmsg-body">Es können bis zu zwei Entitäten ausgewählt werden, über deren Publikationen Verbindungen zu anderen Entitäten angezeigt werden. Dabei stehen die ausgewählten Entitäten und ihre Veröffentlichungen in der Mitte, die mit diesen Verbundenen links und rechts davon. Ausgewählte Entitäten werden durch weiße Schrift auf dunklem Hintergrund gekennzeichnet. Ist eine Publikation ausgewählt, kann keine zweite Entität dazu ausgewählt werden. Ist lediglich eine Entität ausgewählt, werden die zugehörigen Publikationen unter dem Label aufgelistet.</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Sind zwei Entitäten ausgewählt, so wird die Schnittmenge der Publikationen (also solche, die mit beiden Entitäten verbunden sind) zwischen diesen angezeigt, und die restlichen oberhalb (erste Auswahl) bzw. unterhalb (zweite Auswahl) der jeweiligen verbundenen Entität.</div>');
-      $('#splashmsg').append('<div class="splashmsg-heading"><b>Labels</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Labels</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Wird der Mauszeiger über eins der verbundenen Label bewegt, werden dieses Label, sowie alle mit diesem über Publikationen verbundenen Label und deren Verbindungen hervorgehoben. Ein Linksklick auf den Titel speichert diese Ansicht, bis ein anderes Label ausgewählt wird. Ein ausgewähltes Label hat drei Bereiche:</div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><span style="float:left;"><b>Das Kontext-Symbol</b>, z.B.</span><div class="author splashlabel"><span class="label-icon"><i class="fa fa-user" style="vertical-align:top;"></i></span></div></div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span style="float:left;"><span class="splash-body-title">Das Kontext-Symbol</span></span><div class="author splashlabel"><span class="label-icon"><i class="fa fa-user" style="vertical-align:top;"></i></span></div></div>');
       $('#splashmsg').append('<div class="splashmsg-body">Ein Klick auf dieses Symbol ruft ein Fenster mit zusätzlichen Informationen zu der betroffenen Entität auf. In diesem Fenster gibt es auch die Möglichkeit, über einen Link auf die VIVO-Profilseite dieses Eintrags zu gelangen.</div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><b>Name / Titel</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title">Name / Titel</span></div>');
       $('#splashmsg').append('<div class="splashmsg-body">Ein erneuter Linksklick auf den Namen des Labels wählt diesen als aktive Entität aus. Alle Verbindungen werden neu berechnet, und die Anzeige wird neu aufgebaut.</div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><b>Hinzufügen</b><span class="compare"><i class="fa fa-plus"></i></span></div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title">Hinzufügen</span><span class="compare"><i class="fa fa-plus"></i></span></div>');
       $('#splashmsg').append('<div class="splashmsg-body">Durch die Auswahl dieses Feldes wird der Titel als zweite (untere) Entität ausgewählt. Ist bereits eine zweite Auswahl getroffen, wird diese ersetzt.</div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><b>Entfernen (bei Ausgewählten)</b><span class="label-selected-remove"><i class="fa fa-remove"></i></span></div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title"><span class="splash-body-title">Entfernen (bei Ausgewählten)</span><span class="label-selected-remove"><i class="fa fa-remove"></i></span></div>');
       $('#splashmsg').append('<div class="splashmsg-body">Ausgewählt Begriffe können durch diese Funktion deselektiert werden.</div>');
-      $('#splashmsg').append('<div class="splashmsg-heading"><b>Doppelauswahl</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Doppelauswahl</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Neben der einfachen Auswahl einzelner Labels können auch zwei Labels gleichzeitig ausgewählt werden. Hierzu muss die Maus über dem Titel eines Labels gedrückt werden und vor dem Loslassen auf den Titel eines anderen Labels gezogen werden. Als optische Rückmeldung auf diesen Prozess wird eine Linie von dem Startpunkt zur aktuellen Cursorposition gezeichnet. Die Auswahl von Publikationen ist so nicht möglich, da eine Publikation nur einzeln ausgewählt werden kann.</div>');
-      $('#splashmsg').append('<div class="splashmsg-heading"><b>Suche</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Suche</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Die Suche erfolgt über alle im Datenbestand vorhandenen Titel und Namen. Eine Selektion aus der Trefferliste wählt den Term in der Anzeige aus.</div>');
-      $('#splashmsg').append('<div class="splashmsg-heading"><b>Eindeutige URL</b></div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Eindeutige URL</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Um einen direkten Zugriff auf eine bestimmte Auswahl an Entitäten von außerhalb zu ermöglichen, wird die aktuelle Auswahl stets in der Addresszeile repräsentiert. Das Format ergibt sich wie folgt:</div>');
       $('#splashmsg').append('<div class="splashmsg-body"><i>{vivopaths-url}/#/{Typ1}_{ID1}(:{Typ2}_{ID2})</i></div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><b><i>Typ1</i></b> bezeichnet den Typ der ersten Auswahl und kann entweder numerisch (0=Autor, 1=Publikation, 2=Schlagwort/Projekt) oder mit englischen Begriffen, basierend auf dem VIVO-RDF-Schema (Person, Article, Grant, Concept) angegeben werden. Danach folgt ein Unterstrich, auf welchen die ID der Entität folgt. Gibt es einen zweiten ausgewählten Term, wird dieser nach einem Doppelpunkt in der gleichen From angehängt.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title"><i>Typ1</i></span> bezeichnet den Typ der ersten Auswahl und kann entweder numerisch (0=Autor, 1=Publikation, 2=Schlagwort/Projekt) oder mit englischen Begriffen, basierend auf dem VIVO-RDF-Schema (Person, Article, Grant, Concept) angegeben werden. Danach folgt ein Unterstrich, auf welchen die ID der Entität folgt. Gibt es einen zweiten ausgewählten Term, wird dieser nach einem Doppelpunkt in der gleichen From angehängt.</div>');
+      $('.close-splash').on("mouseup", function(e){
+	  e.preventDefault();
+	  that.splash = false;
+	  that.showSplash(false);
+      });
     }
   }
   this.events = function(){
@@ -290,11 +297,6 @@ function View(svg){
 	that.showSplash(false);
       }
     });
-    $('#closesplash').mouseup(function(e){
-	console.log('close');
-	that.splash = false;
-	that.showSplash(false);
-    })
     $(window).resize(function (e){
       that.sections = that.setSections();
       that.splash = false;
