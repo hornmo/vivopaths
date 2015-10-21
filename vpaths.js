@@ -185,12 +185,18 @@ function View(svg){
   };
   this.showSplash = function(bool){
     var that = this;
+    var splashHeight = '';
+    var splashTop = '';
     $('#splash').children().remove();
     $('#splashmsg').children().remove();
     if(bool === true){
       $('#splash').append('<div id="splash-border"></div>');
       $('#splash-border').append('<div id="splashmsg"></div>');
+      $('#splash-border').append('<div class="splash-title">Informationen</div>');
       $('#splash-border').append('<div class="close-splash"><i class="fa fa-remove"></i></div>');
+      splashHeight = $('#splash-border').height();
+      splashTop = parseInt($('#splash-border').css('padding-top'), 10);
+      $('#splashmsg').css('height', splashHeight - splashTop);
       $('#splashmsg').append('<div class="splashmsg-body"><b><i>VIVOPaths</i></b> ist eine Applikation zur Visualisierung von semantischen Verbindungen zwischen Entitäten in einer Instanz des Forschungsdatennetzwerks VIVO.</div>');
       $('#splashmsg').append('<div class="splashmsg-heading">Typen</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Zur Zeit werden vier verschiedene Typen in VIVOPaths dargestellt:</div>');
@@ -214,7 +220,9 @@ function View(svg){
       $('#splashmsg').append('<div class="splashmsg-heading">Eindeutige URL</div>');
       $('#splashmsg').append('<div class="splashmsg-body">Um einen direkten Zugriff auf eine bestimmte Auswahl an Entitäten von außerhalb zu ermöglichen, wird die aktuelle Auswahl stets in der Addresszeile repräsentiert. Das Format ergibt sich wie folgt:</div>');
       $('#splashmsg').append('<div class="splashmsg-body"><i>{vivopaths-url}/#/{Typ1}_{ID1}(:{Typ2}_{ID2})</i></div>');
-      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title"><i>Typ1</i></span> bezeichnet den Typ der ersten Auswahl und kann entweder numerisch (0=Autor, 1=Publikation, 2=Schlagwort/Projekt) oder mit englischen Begriffen, basierend auf dem VIVO-RDF-Schema (Person, Article, Grant, Concept) angegeben werden. Danach folgt ein Unterstrich, auf welchen die ID der Entität folgt. Gibt es einen zweiten ausgewählten Term, wird dieser nach einem Doppelpunkt in der gleichen From angehängt.</div>');
+      $('#splashmsg').append('<div class="splashmsg-body"><span class="splash-body-title"><i>Typ1</i></span> bezeichnet den Typ der ersten Auswahl und kann entweder numerisch (0=Autor, 1=Publikation, 2=Schlagwort/Projekt) oder mit englischen Begriffen, basierend auf dem VIVO-RDF-Schema (Person, Article, Grant, Concept) angegeben werden. Danach folgt ein Unterstrich, auf welchen die ID der Entität folgt. Gibt es einen zweiten ausgewählten Term, wird dieser nach einem Doppelpunkt in der gleichen Form angehängt.</div>');
+      $('#splashmsg').append('<div class="splashmsg-heading">Repository</div>');
+      $('#splashmsg').append('<div class="splashmsg-body">Der Quellcode von VIVOPaths wird unter <a href="https://github.com/hornmo/vivopaths">https://github.com/hornmo/vivopaths</a> gepflegt. Dort finden sich weitere technische Informationen, etwa bezüglich der Intergrierung in eine VIVO-Instanz.</div>');
       $('.close-splash').on("mouseup", function(e){
 	  e.preventDefault();
 	  that.splash = false;
@@ -556,6 +564,8 @@ function View(svg){
 	  if(selItem.year !== null){
 	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>'
 	      + selItem.year + '</span></p>';
+	  }else{
+	    date = '<p><span class="context-icon" title="Erscheinungsjahr"><i class="fa fa-calendar"></i></span><span>N/A</span></p>';
 	  }
 	  $('#context').append('<span id="context-head"><span class="context-label">'
 	    + selItem.title + '</span>'+date+'</span>');
@@ -835,7 +845,7 @@ function View(svg){
 	    $('#labels').append('<div id="'+pub.type+'_'+pub.id+'" class="label pub' 
 	    + sel + '" style="font-size:' + that.fontsize + 'px;left:' + pos[0][0] + 'px;top:' + pos[0][1]
 	    + 'px;max-width:'+maxwidth+'px;"><span title="Publikation" class="label-icon"><i class="fa fa-file"></i></span><span class="label-text" title="'
-	    + pub.title + '\n (' + pub.year + ')">' +shortt + '</span>' + rem + '</div>');
+	    + pub.title + ' (' + (pub.year ? pub.year : 'NA') + ')">' +shortt + '</span>' + rem + '</div>');
 	    var w = $(iid).width();
 	    var h = $(iid).height();
 	    pos[1][0] = pos[0][0] + w + 12;

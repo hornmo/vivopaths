@@ -96,11 +96,12 @@ body{
   background-color:#fff;
   clear:both;
   max-height:700px;
-  overflow:hidden;
-  padding-top:33px;
-  height:60%;
+  padding-top:35px;
+  padding-bottom:20px;
   position:absolute;
+  overflow:hidden;
   background-color: #efefef;
+  height:65%;
   width: 50%;
   left: 25%;
   border: 1px solid #bbb;
@@ -113,20 +114,27 @@ body{
 #splashmsg{
   z-index:1000;
   background-color:#fff;
-  max-height:85%;
   clear:both;
+  float:left;
   overflow:auto;
   position:absolute;
   padding: 25px;
   border-top:1px solid #ccc;
   border-bottom:1px solid #ccc;
 }
+.splash-title{
+  position:absolute;
+  display:inline-block;
+  font-size:1.4em;
+  top:4px;
+  left:25px;
+}
 .close-splash{
   position:absolute;
   display:inline-block;
   font-size:1.4em;
   color:#666;
-  top:5px;
+  top:4px;
   right:10px;
 }
 .close-splash:hover{
